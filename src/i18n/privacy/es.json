@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">Cuando usas el formulario de contacto:</strong> tu nombre, tu dirección de correo electrónico, tu número de teléfono (si lo indicas) y lo que escribas en el campo de mensaje. Estos datos se envían a Formspree, un servicio externo de gestión de formularios, que los procesa y los entrega en mi bandeja de entrada. Formspree tiene su propia <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">política de privacidad</a> sobre cómo trata esos datos durante el envío."
+            "html": "<strong class=\"text-warning\">Cuando usas el formulario de contacto:</strong> tu nombre, tu dirección de correo electrónico, tu número de teléfono (si lo indicas) y lo que escribas en el campo de mensaje. Estos datos se envían al propio endpoint de contacto de este sitio y se entregan en mi bandeja de entrada mediante Resend, un servicio de correo transaccional. Resend tiene su propia <a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">política de privacidad</a> sobre cómo trata esos datos durante el envío."
           },
           {
             "tag": "p",

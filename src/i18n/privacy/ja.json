@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">お問い合わせフォームをご利用の場合：</strong> お名前、メールアドレス、電話番号（ご記入の場合）、およびメッセージ欄にご記入いただいた内容。これらの情報は第三者のフォーム処理サービスである Formspree に送信・処理され、私のメール受信箱に届けられます。送信中のデータの取り扱いについては、Formspree 独自の<a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">プライバシーポリシー</a>が適用されます。"
+            "html": "<strong class=\"text-warning\">お問い合わせフォームをご利用の場合：</strong> お名前、メールアドレス、電話番号（ご記入の場合）、およびメッセージ欄にご記入いただいた内容。これらの情報はこのサイト自体の問い合わせ用エンドポイントに送信され、トランザクションメールサービスである Resend を通じて私のメール受信箱に届けられます。送信中のデータの取り扱いについては、Resend 独自の<a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">プライバシーポリシー</a>が適用されます。"
           },
           {
             "tag": "p",

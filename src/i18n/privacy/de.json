@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">Wenn Sie das Kontaktformular nutzen:</strong> Ihr Name, Ihre E-Mail-Adresse, Ihre Telefonnummer (falls angegeben) und alles, was Sie ins Nachrichtenfeld schreiben. Diese Angaben werden an Formspree, einen Formulardienst eines Drittanbieters, übermittelt, dort verarbeitet und in mein E-Mail-Postfach zugestellt. Wie Formspree diese Daten auf dem Übertragungsweg behandelt, regelt dessen eigene <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">Datenschutzerklärung</a>."
+            "html": "<strong class=\"text-warning\">Wenn Sie das Kontaktformular nutzen:</strong> Ihr Name, Ihre E-Mail-Adresse, Ihre Telefonnummer (falls angegeben) und alles, was Sie ins Nachrichtenfeld schreiben. Diese Angaben werden an den eigenen Kontakt-Endpunkt dieser Website übermittelt und über Resend, einen Dienst für transaktionale E-Mails, in mein E-Mail-Postfach zugestellt. Wie Resend diese Daten auf dem Übertragungsweg behandelt, regelt dessen eigene <a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">Datenschutzerklärung</a>."
           },
           {
             "tag": "p",

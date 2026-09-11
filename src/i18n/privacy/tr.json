@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">İletişim formunu kullandığınızda:</strong> adınız, e-posta adresiniz, telefon numaranız (belirttiyseniz) ve mesaj alanına yazdığınız her şey. Bu bilgiler, üçüncü taraf bir form işleme hizmeti olan Formspree'ye gönderilir, orada işlenir ve e-posta gelen kutuma iletilir. Formspree'nin, bu verileri aktarım sırasında nasıl ele aldığını açıklayan kendi <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">gizlilik politikası</a> vardır."
+            "html": "<strong class=\"text-warning\">İletişim formunu kullandığınızda:</strong> adınız, e-posta adresiniz, telefon numaranız (belirttiyseniz) ve mesaj alanına yazdığınız her şey. Bu bilgiler, bu sitenin kendi iletişim uç noktasına gönderilir ve işlemsel e-posta hizmeti olan Resend aracılığıyla e-posta gelen kutuma iletilir. Resend'in, bu verileri aktarım sırasında nasıl ele aldığını açıklayan kendi <a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">gizlilik politikası</a> vardır."
           },
           {
             "tag": "p",

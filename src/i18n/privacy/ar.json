@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">عند استخدام نموذج التواصل:</strong> اسمك وبريدك الإلكتروني ورقم هاتفك (إن أدخلته) وما تكتبه في حقل الرسالة. تُرسل هذه البيانات إلى Formspree، وهي خدمة خارجية لمعالجة النماذج، حيث تُعالج ثم تُسلَّم إلى صندوق بريدي الإلكتروني. ولدى Formspree <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">سياسة خصوصية</a> خاصة بها تحكم كيفية تعاملها مع هذه البيانات أثناء نقلها."
+            "html": "<strong class=\"text-warning\">عند استخدام نموذج التواصل:</strong> اسمك وبريدك الإلكتروني ورقم هاتفك (إن أدخلته) وما تكتبه في حقل الرسالة. تُرسل هذه البيانات إلى نقطة التواصل الخاصة بالموقع نفسه، ثم تُسلَّم إلى صندوق بريدي الإلكتروني عبر Resend، وهي خدمة بريد إلكتروني للمعاملات. ولدى Resend <a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">سياسة خصوصية</a> خاصة بها تحكم كيفية تعاملها مع هذه البيانات أثناء نقلها."
           },
           {
             "tag": "p",

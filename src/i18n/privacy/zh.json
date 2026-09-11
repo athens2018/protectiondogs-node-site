@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">当您使用联系表单时：</strong>您的姓名、电子邮箱、电话号码（如填写）以及您在留言栏中填写的内容。这些信息会发送至第三方表单处理服务 Formspree 进行处理，并投递到我的电子邮箱。Formspree 有其自己的<a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">隐私政策</a>，说明其在传输过程中如何处理这些数据。"
+            "html": "<strong class=\"text-warning\">当您使用联系表单时：</strong>您的姓名、电子邮箱、电话号码（如填写）以及您在留言栏中填写的内容。这些信息会发送至本网站自己的联系端点，并通过事务性邮件服务 Resend 投递到我的电子邮箱。Resend 有其自己的<a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">隐私政策</a>，说明其在传输过程中如何处理这些数据。"
           },
           {
             "tag": "p",

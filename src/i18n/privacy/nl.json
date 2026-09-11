@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">Wanneer u het contactformulier gebruikt:</strong> uw naam, e-mailadres, telefoonnummer (indien opgegeven) en alles wat u in het berichtveld schrijft. Dit wordt verzonden naar en verwerkt door Formspree, een formulierdienst van een derde partij, en afgeleverd in mijn e-mailinbox. Formspree heeft een eigen <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacybeleid</a> die beschrijft hoe zij die gegevens onderweg behandelen."
+            "html": "<strong class=\"text-warning\">Wanneer u het contactformulier gebruikt:</strong> uw naam, e-mailadres, telefoonnummer (indien opgegeven) en alles wat u in het berichtveld schrijft. Dit wordt verzonden naar het eigen contactsysteem van deze site en afgeleverd in mijn e-mailinbox via Resend, een dienst voor transactionele e-mail. Resend heeft een eigen <a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacybeleid</a> die beschrijft hoe zij die gegevens onderweg behandelen."
           },
           {
             "tag": "p",
