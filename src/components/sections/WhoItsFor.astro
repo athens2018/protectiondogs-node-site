@@ -1,0 +1,76 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+import Icon from '../ui/Icon.astro';
+
+// Real shape differs from a uniform {tag, html}: a "p" block carries a
+// singular `html` string, but a "ul" block carries an `items` array (one
+// plain string per <li>) instead of pre-built <li> markup.
+type Block = { tag: 'p'; html: string } | { tag: 'ul'; items: string[] };
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  blocks: Block[];
+}
+
+const { eyebrow, h2, blocks } = Astro.props;
+---
+
+<section id="who-its-for" class="section section--dark">
+  <div class="container container--narrow">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+    <Card padding="lg" class="who-its-for__card reveal" style="--reveal-delay: 100ms">
+      {blocks.map((block) =>
+        block.tag === 'ul' ? (
+          <ul class="who-its-for__list">
+            {block.items.map((item) => (
+              <li>
+                <Icon name="check" class="who-its-for__check" />
+                <span set:html={item} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p set:html={block.html} />
+        ),
+      )}
+    </Card>
+  </div>
+</section>
+
+<style>
+  .who-its-for__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .who-its-for__card p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+
+  .who-its-for__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .who-its-for__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    color: var(--text);
+    line-height: var(--leading-snug);
+  }
+
+  .who-its-for__check {
+    flex-shrink: 0;
+    margin-top: 0.2em;
+    color: var(--gold);
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  paragraphs: string[];
+}
+
+const { eyebrow, h2, paragraphs } = Astro.props;
+---
+
+<section id="testing" class="section section--light">
+  <div class="container container--narrow">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+    <Card padding="lg" class="testing__card reveal" style="--reveal-delay: 100ms">
+      {paragraphs.map((p) => <p set:html={p} />)}
+    </Card>
+  </div>
+</section>
+
+<style>
+  .testing__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .testing__card p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+</style>

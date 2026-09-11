@@ -1,0 +1,78 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+
+interface BreedingCard {
+  h3: string;
+  paragraphs: string[];
+}
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  cards: BreedingCard[];
+}
+
+const { eyebrow, h2, cards } = Astro.props;
+---
+
+<section id="breeding" class="section section--light">
+  <div class="container">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+    <div class="breeding__grid">
+      {cards.map((card, i) => (
+        <Card padding="lg" class="breeding__card reveal" style={`--reveal-delay: ${100 + i * 100}ms`}>
+          <h3 set:html={card.h3} />
+          <div class="breeding__paragraphs">
+            {card.paragraphs.map((p) => <p set:html={p} />)}
+          </div>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .breeding__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+    max-width: var(--container-wide);
+    margin-inline: auto;
+  }
+
+  .breeding__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .breeding__card h3 {
+    color: var(--gold);
+  }
+
+  .breeding__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .breeding__paragraphs p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+
+  /* The extracted copy still carries the legacy Bootstrap "text-warning"
+     class on <strong> emphasis (see en.json breeding.cards[1].paragraphs);
+     this design system uses --gold instead, so map it locally. */
+  .breeding__paragraphs :global(.text-warning) {
+    color: var(--gold);
+  }
+
+  @media (max-width: 767px) {
+    .breeding__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

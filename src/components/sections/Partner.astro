@@ -1,0 +1,117 @@
+---
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+
+interface PartnerLink {
+  /** Raw HTML label */
+  label: string;
+  href: string;
+  target: string | null;
+  /** Font-Awesome class string from the source, e.g. "fas fa-external-link-alt ms-2" */
+  icon: string;
+}
+
+interface Props {
+  logo: { src: string; alt: string };
+  text: string;
+  links: PartnerLink[];
+}
+
+const { logo, text, links } = Astro.props;
+
+// Only two partner links exist and their FA classes don't map 1:1 onto our
+// icon keys (fa-external-link-alt vs our "external-link"), so a small
+// explicit lookup is clearer here than a generic suffix-stripping regex.
+const ICON_MAP: Record<string, string> = {
+  'external-link-alt': 'external-link',
+  'book-open': 'book-open',
+};
+
+function iconName(fa: string): string {
+  const token = fa.split(' ').find((c) => c.startsWith('fa-'))?.slice(3) ?? '';
+  return ICON_MAP[token] ?? 'external-link';
+}
+---
+
+<!-- The live source has no id on this section (it sits right after
+     #testimonial-widgets, see en.json partner._sourceSection). -->
+<section class="section section--dark">
+  <div class="container">
+    <Card padding="lg" class="partner__card reveal">
+      <div class="partner__logo">
+        <img src={logo.src} alt={logo.alt} width="150" height="150" loading="lazy" decoding="async" />
+      </div>
+      <div class="partner__body">
+        <p set:html={text} />
+        <div class="partner__actions">
+          {links.map((link, i) => (
+            <Button
+              href={link.href}
+              target={link.target ?? undefined}
+              rel={link.target === '_blank' ? 'noopener noreferrer' : undefined}
+              variant={i === 0 ? 'primary' : 'outline'}
+              size="md"
+            >
+              <span set:html={link.label} /> <Icon name={iconName(link.icon)} />
+            </Button>
+          ))}
+        </div>
+      </div>
+    </Card>
+  </div>
+</section>
+
+<style>
+  .partner__card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-7);
+  }
+
+  .partner__logo {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+  }
+
+  .partner__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .partner__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    flex: 1;
+  }
+
+  .partner__body p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+
+  .partner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 767px) {
+    .partner__card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .partner__actions {
+      justify-content: center;
+    }
+  }
+</style>

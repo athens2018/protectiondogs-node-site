@@ -1,0 +1,35 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  paragraphs: string[];
+}
+
+const { eyebrow, h2, paragraphs } = Astro.props;
+---
+
+<section id="watch-develop" class="section section--light">
+  <div class="container container--narrow">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+    <Card padding="lg" class="watch-develop__card reveal" style="--reveal-delay: 100ms">
+      {paragraphs.map((p) => <p set:html={p} />)}
+    </Card>
+  </div>
+</section>
+
+<style>
+  .watch-develop__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .watch-develop__card p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+</style>

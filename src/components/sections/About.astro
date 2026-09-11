@@ -1,0 +1,189 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+
+interface AboutCard {
+  h3: string;
+  paragraphs: string[];
+}
+
+interface AboutLink {
+  /** Raw HTML label */
+  label: string;
+  href: string;
+  /** Font-Awesome class string, e.g. "fas fa-envelope me-2" */
+  icon: string;
+}
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  intro: { h3: string; paragraphs: string[] };
+  /** Raw HTML, contains <span class="text-warning"> highlights */
+  pullQuote: string;
+  cards: AboutCard[];
+  cta: { h3: string; paragraphs: string[]; links: AboutLink[] };
+}
+
+const { eyebrow, h2, intro, pullQuote, cards, cta } = Astro.props;
+
+function iconName(fa: string): string {
+  return fa.split(' ').find((c) => c.startsWith('fa-'))?.slice(3) ?? 'envelope';
+}
+---
+
+<section id="about" class="section section--dark">
+  <div class="container">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+
+    <Card padding="lg" class="about__intro reveal" style="--reveal-delay: 100ms">
+      <h3 set:html={intro.h3} />
+      <div class="about__paragraphs">
+        {intro.paragraphs.map((p) => <p set:html={p} />)}
+      </div>
+    </Card>
+
+    <blockquote class="about__pull-quote reveal reveal--scale" style="--reveal-delay: 180ms">
+      <Icon name="quote" class="about__pull-quote-mark" />
+      <p set:html={pullQuote} />
+    </blockquote>
+
+    <div class="about__cards">
+      {cards.map((card, i) => (
+        <Card padding="lg" interactive class="about__card reveal" style={`--reveal-delay: ${240 + i * 80}ms`}>
+          <h3 set:html={card.h3} />
+          <div class="about__paragraphs">
+            {card.paragraphs.map((p) => <p set:html={p} />)}
+          </div>
+        </Card>
+      ))}
+    </div>
+
+    <Card tone="elevated" padding="lg" class="about__cta reveal" style="--reveal-delay: 420ms">
+      <h3 set:html={cta.h3} />
+      <div class="about__paragraphs">
+        {cta.paragraphs.map((p) => <p set:html={p} />)}
+      </div>
+      <div class="about__cta-links">
+        {cta.links.map((link) => (
+          <Button href={link.href} variant="primary">
+            <Icon name={iconName(link.icon)} /> <span set:html={link.label} />
+          </Button>
+        ))}
+      </div>
+    </Card>
+  </div>
+</section>
+
+<style>
+  .about__intro {
+    max-width: var(--container-narrow);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .about__intro h3 {
+    color: var(--gold);
+    margin-bottom: var(--space-4);
+  }
+
+  .about__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .about__paragraphs p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+
+  .about__intro .about__paragraphs p {
+    margin-inline: auto;
+  }
+
+  .about__pull-quote {
+    position: relative;
+    max-width: var(--container-narrow);
+    margin: var(--space-8) auto;
+    padding: 0 var(--space-6);
+    text-align: center;
+  }
+
+  .about__pull-quote-mark {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--gold-40);
+    margin-bottom: var(--space-3);
+  }
+
+  .about__pull-quote p {
+    margin: 0 auto;
+    max-width: 34ch;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 600;
+    font-size: var(--text-2xl);
+    line-height: var(--leading-snug);
+    color: var(--text-strong);
+    text-wrap: balance;
+  }
+
+  .about__pull-quote p :global(.text-warning) {
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  .about__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin-top: var(--space-8);
+  }
+
+  .about__card h3 {
+    color: var(--gold);
+    margin-bottom: var(--space-3);
+  }
+
+  .about__cta {
+    max-width: var(--container-narrow);
+    margin: var(--space-8) auto 0;
+    text-align: center;
+  }
+
+  .about__cta h3 {
+    color: var(--gold);
+    margin-bottom: var(--space-3);
+  }
+
+  .about__cta .about__paragraphs {
+    margin-bottom: var(--space-5);
+  }
+
+  .about__cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 991px) {
+    .about__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .about__pull-quote p {
+      font-size: var(--text-xl);
+    }
+
+    .about__cta-links :global(.btn) {
+      flex: 1 1 100%;
+    }
+  }
+</style>

@@ -1,0 +1,105 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Icon from '../ui/Icon.astro';
+
+interface FaqItem {
+  id: string;
+  answerId: string;
+  /** Raw HTML */
+  question: string;
+  /** Raw HTML */
+  answer: string;
+}
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  items: FaqItem[];
+}
+
+const { eyebrow, h2, items } = Astro.props;
+
+// content.faq.schema (FAQPage JSON-LD) is intentionally not rendered here —
+// a parallel task injects it into the page <head>.
+---
+
+<section id="faq" class="section section--light">
+  <div class="container container--narrow">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+    <div class="faq-list">
+      {items.map((item, i) => (
+        <div class="faq-item reveal" style={`--reveal-delay: ${Math.min(i * 60, 300)}ms`}>
+          <button type="button" class="faq-question" id={item.id} aria-expanded="false" aria-controls={item.answerId}>
+            <span set:html={item.question} />
+            <span class="toggle-icon" aria-hidden="true"><Icon name="plus" size="1em" /></span>
+          </button>
+          <div class="faq-answer" id={item.answerId} role="region" aria-labelledby={item.id}>
+            <p set:html={item.answer} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--line);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    width: 100%;
+    padding: var(--space-5) var(--space-2);
+    text-align: start;
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--text-strong);
+    transition: color var(--dur-base) var(--ease-out);
+  }
+
+  .faq-question:hover,
+  .faq-question.active {
+    color: var(--gold);
+  }
+
+  .toggle-icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--line-gold);
+    color: var(--gold);
+    transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out);
+  }
+
+  .faq-question.active .toggle-icon {
+    transform: rotate(135deg);
+    background: var(--gold-10);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--dur-slow) var(--ease-out);
+  }
+
+  .faq-answer p {
+    padding: 0 var(--space-2) var(--space-5);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+</style>

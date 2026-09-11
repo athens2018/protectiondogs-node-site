@@ -1,0 +1,80 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  consent: { text: string; button: string };
+  embeds: { iframeTitle: string; jsIframeTitle: string };
+}
+
+const { eyebrow, h2, consent, embeds } = Astro.props;
+---
+
+<!-- DOM contract from src/scripts/testimonials.ts: #testimonial-consent,
+     #testimonial-load, #testimonial-embeds[hidden], the iframe's
+     data-src (fetched only on consent/click) and .testimonial-to-embed's
+     data-* attributes (data-frame-title is new: testimonials.ts reads
+     container.dataset.frameTitle so the injected iframe's title isn't
+     hardcoded in English). -->
+<section id="testimonial-widgets" class="section section--dark">
+  <div class="container">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+  </div>
+  <div class="container container--narrow">
+    <Card padding="lg" id="testimonial-consent" class="testimonial-consent reveal">
+      <p set:html={consent.text} />
+      <Button type="button" id="testimonial-load" variant="primary" set:html={consent.button} />
+    </Card>
+  </div>
+  <div id="testimonial-embeds" hidden>
+    <iframe
+      id="testimonialto-carousel-pdg-tag-all-light"
+      title={embeds.iframeTitle}
+      data-src="https://embed-v2.testimonial.to/carousel/all/pdg?theme=light&autoplay=off&showmore=off&one-row=on&same-height=off&tag=all&arrowColor=9BA9B4&column-scale=0&cc=off"
+      frameborder="0"
+      scrolling="no"
+      width="100%"
+    ></iframe>
+    <div
+      class="testimonial-to-embed"
+      data-url="https://embed-v2.testimonial.to/c/pdg?theme=dark"
+      data-allow="camera;microphone"
+      data-resize="true"
+      data-frame-title={embeds.jsIframeTitle}
+    >
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-consent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-5);
+    text-align: center;
+  }
+
+  .testimonial-consent p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+  }
+
+  #testimonial-embeds {
+    max-width: var(--container-wide);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    margin-top: var(--space-6);
+  }
+
+  #testimonial-embeds[hidden] {
+    display: none;
+  }
+
+  .testimonial-to-embed {
+    margin-top: var(--space-6);
+  }
+</style>

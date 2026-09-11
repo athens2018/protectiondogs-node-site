@@ -1,0 +1,198 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+
+interface PricingCard {
+  h3: string;
+  features: string[];
+  /** Small print shown above the price; null on the non-priced card */
+  note: string | null;
+  /** Raw HTML amount (may contain the facts-merge comment markers) */
+  price: { currency: string; amount: string } | null;
+  smallPrint: string | null;
+}
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  cards: PricingCard[];
+  closing: {
+    paragraphs: string[];
+    cta: { label: string; href: string; data: { 'data-interest': string } };
+  };
+}
+
+const { eyebrow, h2, cards, closing } = Astro.props;
+---
+
+<section id="pricing" class="section section--dark">
+  <div class="container">
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+    <div class="pricing__grid">
+      {cards.map((card, i) => (
+        <Card
+          tone={card.price ? 'gold' : 'default'}
+          padding="lg"
+          class="pricing__card reveal reveal--scale"
+          style={`--reveal-delay: ${100 + i * 100}ms`}
+        >
+          <h3 set:html={card.h3} />
+          <ul class="pricing__features">
+            {card.features.map((feature) => (
+              <li>
+                <Icon name="check" class="pricing__check" />
+                <span set:html={feature} />
+              </li>
+            ))}
+          </ul>
+
+          {card.price && (
+            <div class="pricing__price-block">
+              {card.note && <p class="pricing__note" set:html={card.note} />}
+              <p class="price-tag">
+                <span class="price-tag__currency" set:html={card.price.currency} />
+                <span class="price-tag__amount" set:html={card.price.amount} />
+              </p>
+              <span class="price-tag__rule" aria-hidden="true"></span>
+              {card.smallPrint && <p class="pricing__small-print" set:html={card.smallPrint} />}
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+
+    <div class="pricing__closing reveal" style="--reveal-delay: 320ms">
+      {closing.paragraphs.map((p) => <p set:html={p} />)}
+      <Button href={closing.cta.href} variant="primary" size="lg" set:html={closing.cta.label} {...closing.cta.data} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+    max-width: var(--container-wide);
+    margin-inline: auto;
+  }
+
+  .pricing__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .pricing__card h3 {
+    color: var(--gold);
+  }
+
+  .pricing__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    list-style: none;
+    padding-inline-start: 0;
+    flex: 1;
+  }
+
+  .pricing__features li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    color: var(--text);
+    line-height: var(--leading-snug);
+  }
+
+  .pricing__check {
+    flex-shrink: 0;
+    margin-top: 0.2em;
+    color: var(--gold);
+  }
+
+  .pricing__price-block {
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--line-gold);
+    text-align: center;
+  }
+
+  .pricing__note {
+    margin-bottom: var(--space-3);
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+  }
+
+  /* The single most important typographic moment on the page: a real
+     price tag for a five-figure purchase decision, not an inline string. */
+  .price-tag {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums lining-nums;
+    letter-spacing: var(--tracking-tight);
+    color: var(--text-strong);
+  }
+
+  .price-tag__currency {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 600;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--gold);
+    align-self: flex-start;
+    margin-top: 0.6em;
+  }
+
+  .price-tag__amount {
+    font-size: clamp(2.75rem, 2rem + 3.5vw, 4.5rem);
+    line-height: 1;
+  }
+
+  .price-tag__rule {
+    display: block;
+    width: 3rem;
+    height: 2px;
+    margin: var(--space-4) auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .pricing__small-print {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+    opacity: 0.85;
+  }
+
+  .pricing__closing {
+    max-width: var(--container-narrow);
+    margin: var(--space-8) auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  .pricing__closing p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+  }
+
+  .pricing__closing :global(.btn) {
+    margin-top: var(--space-2);
+  }
+
+  @media (max-width: 767px) {
+    .pricing__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

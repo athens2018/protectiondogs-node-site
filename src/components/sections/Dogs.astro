@@ -1,0 +1,435 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Badge from '../ui/Badge.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+
+interface DogStat {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  eyebrow: string;
+  h2: string;
+  /** Raw HTML, contains the facts-merge count marker */
+  availability: string;
+  intro: string;
+  bobo: {
+    /** Target id of BoboStoryModal */
+    storyOpen: string;
+    image: { src: string; alt: string };
+    name: string;
+    /** Raw HTML */
+    tagline: string;
+    stats: DogStat[];
+    meetButton: { label: string; icon: string; data: { 'data-story-open': string } };
+    paragraphs: string[];
+    aboutHeading: string;
+    /** Raw HTML, one entry per checklist row */
+    features: string[];
+    reservation: {
+      eyebrow: string;
+      price: { currency: string; amount: string };
+      notes: string[];
+      cta: {
+        label: string;
+        href: string;
+        data: { 'data-interest': string; 'data-stop-propagation': string };
+      };
+    };
+  };
+  future: {
+    name: string;
+    tagline: string;
+    stats: DogStat[];
+    paragraph: string;
+    cta: { label: string; href: string; data: { 'data-interest': string } };
+  };
+}
+
+const { eyebrow, h2, availability, intro, bobo, future } = Astro.props;
+
+function iconName(fa: string): string {
+  return fa.split(' ').find((c) => c.startsWith('fa-'))?.slice(3) ?? 'paw';
+}
+---
+
+<section id="dogs" class="section section--dark">
+  <div class="container">
+    <SectionHeader eyebrow={eyebrow} heading={h2}>
+      <Badge variant="solid" html={availability} class="dogs__availability reveal" style="--reveal-delay: 200ms" />
+      <p class="dogs__intro reveal" style="--reveal-delay: 260ms" set:html={intro} />
+    </SectionHeader>
+
+    <div class="dogs__grid">
+      <!-- Bobo: the whole card is a click trigger for the story modal (the
+           inner "Meet Bobo" button carries the same data-story-open, so
+           story.ts's guarded open() just no-ops on the second bubbled
+           click); the reservation CTA carries data-stop-propagation so its
+           own click doesn't also open the modal. -->
+      <div
+        class="dog-card dog-card--bobo reveal reveal--scale"
+        style="--reveal-delay: 320ms"
+        data-story-open={bobo.storyOpen}
+        role="button"
+        tabindex="0"
+      >
+        <div class="dog-card__photo">
+          <img src={bobo.image.src} alt={bobo.image.alt} loading="lazy" decoding="async" />
+          <div class="dog-card__overlay">
+            <h3 class="dog-card__name" set:html={bobo.name} />
+            <p class="dog-card__tagline" set:html={bobo.tagline} />
+          </div>
+        </div>
+
+        <div class="dog-card__stats">
+          {bobo.stats.map((stat) => (
+            <div class="dog-card__stat">
+              <span class="dog-card__stat-label" set:html={stat.label} />
+              <span class="dog-card__stat-value" set:html={stat.value} />
+            </div>
+          ))}
+        </div>
+
+        <div class="dog-card__body">
+          <button type="button" class="dog-card__meet-btn" {...bobo.meetButton.data}>
+            <Icon name={iconName(bobo.meetButton.icon)} /> <span set:html={bobo.meetButton.label} />
+          </button>
+
+          <div class="dog-card__paragraphs">
+            {bobo.paragraphs.map((p) => <p set:html={p} />)}
+          </div>
+
+          <h4 class="dog-card__about-heading" set:html={bobo.aboutHeading} />
+          <ul class="dog-card__features">
+            {bobo.features.map((feature) => (
+              <li>
+                <Icon name="check" class="dog-card__feature-check" />
+                <span set:html={feature} />
+              </li>
+            ))}
+          </ul>
+
+          <div class="dog-card__reservation">
+            <p class="eyebrow" set:html={bobo.reservation.eyebrow} />
+            <p class="price-tag">
+              <span class="price-tag__currency" set:html={bobo.reservation.price.currency} />
+              <span class="price-tag__amount" set:html={bobo.reservation.price.amount} />
+            </p>
+            <span class="price-tag__rule" aria-hidden="true"></span>
+            {bobo.reservation.notes.map((note) => <p class="dog-card__note" set:html={note} />)}
+            <Button
+              href={bobo.reservation.cta.href}
+              variant="primary"
+              block
+              set:html={bobo.reservation.cta.label}
+              {...bobo.reservation.cta.data}
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Future Availability: no whole-card click trigger, so no
+           data-story-open/role/tabindex and no data-stop-propagation
+           needed on its cta. -->
+      <div class="dog-card dog-card--future reveal reveal--scale" style="--reveal-delay: 400ms">
+        <div class="dog-card__photo dog-card__photo--placeholder">
+          <Icon name="paw" class="dog-card__placeholder-icon" />
+          <div class="dog-card__overlay">
+            <h3 class="dog-card__name" set:html={future.name} />
+            <p class="dog-card__tagline" set:html={future.tagline} />
+          </div>
+        </div>
+
+        <div class="dog-card__stats">
+          {future.stats.map((stat) => (
+            <div class="dog-card__stat">
+              <span class="dog-card__stat-label" set:html={stat.label} />
+              <span class="dog-card__stat-value" set:html={stat.value} />
+            </div>
+          ))}
+        </div>
+
+        <div class="dog-card__body dog-card__body--centered">
+          <p set:html={future.paragraph} />
+          <Button href={future.cta.href} variant="outline" set:html={future.cta.label} {...future.cta.data} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dogs__availability {
+    margin-top: var(--space-2);
+  }
+
+  .dogs__intro {
+    max-width: var(--measure);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .dogs__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+    align-items: start;
+    max-width: var(--container-wide);
+    margin-inline: auto;
+  }
+
+  .dog-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-4);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform var(--dur-slow) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  }
+
+  .dog-card--bobo {
+    cursor: pointer;
+  }
+
+  .dog-card--bobo:hover,
+  .dog-card--bobo:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--line-gold);
+  }
+
+  .dog-card__photo {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    background: var(--bg-2);
+  }
+
+  .dog-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dog-card__photo--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, var(--bg-3), var(--bg-1));
+  }
+
+  .dog-card__placeholder-icon {
+    width: 25%;
+    height: 25%;
+    color: var(--gold-20);
+  }
+
+  .dog-card__overlay {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: var(--space-6) var(--space-5) var(--space-4);
+    background: linear-gradient(0deg, rgba(13, 13, 13, 0.88) 0%, transparent 100%);
+  }
+
+  .dog-card__name {
+    color: var(--text-strong);
+    margin-bottom: 0.2em;
+  }
+
+  .dog-card__tagline {
+    color: var(--gold);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  .dog-card__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-block: 1px solid var(--line);
+  }
+
+  .dog-card__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+    padding: var(--space-4) var(--space-2);
+    text-align: center;
+  }
+
+  .dog-card__stat:not(:last-child) {
+    border-inline-end: 1px solid var(--line);
+  }
+
+  .dog-card__stat-label {
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .dog-card__stat-value {
+    font-weight: 600;
+    color: var(--text-strong);
+  }
+
+  .dog-card__body {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-6);
+    flex: 1;
+  }
+
+  .dog-card__body--centered {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--space-5);
+  }
+
+  .dog-card__body--centered p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+  }
+
+  .dog-card__meet-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    margin-bottom: var(--space-5);
+    padding: 0.75em 1.5em;
+    border-radius: var(--radius-sm);
+    background: var(--gold);
+    color: var(--text-on-gold);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: background-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+  }
+
+  .dog-card__meet-btn:hover {
+    background: var(--gold-hover);
+    transform: translateY(-2px);
+  }
+
+  .dog-card__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .dog-card__paragraphs p {
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+    max-width: none;
+  }
+
+  .dog-card__about-heading {
+    color: var(--gold);
+    margin-bottom: var(--space-3);
+  }
+
+  .dog-card__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: var(--space-6);
+  }
+
+  .dog-card__features li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    color: var(--text);
+    line-height: var(--leading-snug);
+  }
+
+  .dog-card__feature-check {
+    flex-shrink: 0;
+    margin-top: 0.2em;
+    color: var(--gold);
+  }
+
+  .dog-card__reservation {
+    margin-top: auto;
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--line-gold);
+    text-align: center;
+  }
+
+  .dog-card__reservation .eyebrow {
+    margin-bottom: var(--space-2);
+  }
+
+  .price-tag {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.4em;
+    margin: 0;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums lining-nums;
+    letter-spacing: var(--tracking-tight);
+    color: var(--text-strong);
+  }
+
+  .price-tag__currency {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--gold);
+    align-self: flex-start;
+    margin-top: 0.5em;
+  }
+
+  .price-tag__amount {
+    font-size: clamp(2.25rem, 1.8rem + 2vw, 3rem);
+    line-height: 1;
+  }
+
+  .price-tag__rule {
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    margin: var(--space-3) auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .dog-card__note {
+    margin-bottom: var(--space-3);
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+  }
+
+  .dog-card__reservation :global(.btn) {
+    margin-top: var(--space-4);
+  }
+
+  @media (max-width: 991px) {
+    .dogs__grid {
+      grid-template-columns: 1fr;
+      max-width: 560px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .dog-card__stats {
+      grid-template-columns: 1fr;
+    }
+
+    .dog-card__stat:not(:last-child) {
+      border-inline-end: 0;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+</style>
