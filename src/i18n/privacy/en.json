@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Privacy Policy | Protection Dogs GR",
+    "description": "How Protection Dogs GR collects, uses, and protects your personal information when you contact us or use this website.",
+    "ogTitle": "Privacy Policy | Protection Dogs GR",
+    "ogDescription": "How Protection Dogs GR collects, uses, and protects your personal information when you contact us or use this website.",
+    "ogLocale": "en_US",
+    "ogUrl": "https://www.protectiondogs.gr/privacy-policy.html",
+    "twitterTitle": null,
+    "twitterDescription": null,
+    "canonical": "https://www.protectiondogs.gr/privacy-policy.html",
+    "lang": "en",
+    "dir": null,
+    "jsonld": {}
+  },
+  "skipLink": {
+    "label": "Skip to main content",
+    "href": "#main-content"
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "brand": {
+      "href": "/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Toggle navigation",
+    "items": [
+      {
+        "label": "Dogs",
+        "href": "/#dogs"
+      },
+      {
+        "label": "Process",
+        "href": "/#training"
+      },
+      {
+        "label": "Breeding",
+        "href": "/#breeding"
+      },
+      {
+        "label": "Placement",
+        "href": "/#pricing"
+      },
+      {
+        "label": "About",
+        "href": "/#about"
+      },
+      {
+        "label": "Enquire",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Legal",
+    "h1": "Privacy Policy",
+    "lastUpdated": "Last updated: September 2026",
+    "disclaimer": null,
+    "intro": [
+      {
+        "tag": "p",
+        "html": "This page explains what personal information this website collects, why, and what you can do about it. It's written to reflect what this site actually does — not a generic template."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Who This Is",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Protection Dogs GR, operating this website at protectiondogs.gr, based in Greece. For any privacy question or request, contact <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>."
+          }
+        ]
+      },
+      {
+        "heading": "What Information Is Collected",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">When you use the contact form:</strong> your name, email address, phone number (if provided), and whatever you write in the message field. This is sent to and processed by Formspree, a third-party form-handling service, and delivered to my email inbox. Formspree has its own <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacy policy</a> covering how they handle that data in transit."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Only if you accept — via Google Analytics:</strong> this site can use Google Analytics (Google's gtag.js) to understand how visitors use it — pages viewed, general location (country/region level), device type, and how you arrived here. This involves cookies and similar tracking technology. <strong class=\"text-warning\">Nothing analytics-related loads unless you accept the cookie banner:</strong> if you choose \"Necessary Only\", or simply ignore the banner, the Google Analytics script is never loaded and no analytics data is collected at all. Google's own <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacy policy</a> covers how they process this data if you do accept."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">A few small flags in your browser's local storage:</strong> your cookie-banner choice (so you are not asked again), your language choice if you use the language switcher, and yes/no flags if you dismiss a site announcement banner or the &ldquo;install the app&rdquo; prompt (so they do not reappear). These contain no personal information, are only ever read by this site, and never leave your device. The same storage also keeps a one-word note of whether the site’s offline support installed correctly, so problems can be diagnosed."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Third-party embedded content:</strong> this site embeds a client testimonial widget (testimonial.to) on the homepage. Nothing from that provider is loaded until you accept cookies or press the &ldquo;Load reviews&rdquo; button in that section; once loaded, the provider may set its own cookies or collect data according to its own privacy policy."
+          }
+        ]
+      },
+      {
+        "heading": "Why This Information Is Collected",
+        "blocks": [
+          {
+            "tag": "ul",
+            "items": [
+              "To respond to your inquiry about a dog, training, or anything else you contact me about",
+              "To understand which parts of the site are actually useful, so I can improve it",
+              "To keep the site running securely and diagnose problems"
+            ]
+          },
+          {
+            "tag": "p",
+            "html": "I do not sell your information to anyone. I do not use it for anything beyond what's described here."
+          }
+        ]
+      },
+      {
+        "heading": "How Long It's Kept",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Contact form submissions are kept as long as needed to handle your inquiry and any resulting relationship, then deleted when no longer relevant. Analytics data is retained according to Google Analytics' standard retention settings."
+          }
+        ]
+      },
+      {
+        "heading": "Your Rights",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "If you're in the EU/EEA or UK, you have the right under GDPR to ask what personal data I hold about you, request a copy of it, ask for it to be corrected or deleted, and object to how it's used. To exercise any of these, email <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>."
+          }
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "The only cookies this site sets itself come from Google Analytics, and only if you accept them on the cookie banner shown on your first visit. Choosing \"Necessary Only\" means the analytics script is never loaded, so those cookies are never set. You can also control or clear cookies through your browser settings at any time. Either way, browsing the site and contacting me work exactly the same."
+          }
+        ]
+      },
+      {
+        "heading": "Changes to This Policy",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "If what this site collects or how it's used changes meaningfully, this page will be updated with a new \"last updated\" date above."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Contact Me",
+      "href": "/#contact",
+      "data": {}
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "A small, trainer-led working-dog program developing protection Malinois from proven working lines."
+    },
+    "quickLinks": {
+      "h3": "Quick Links",
+      "ariaLabel": "Footer navigation",
+      "links": [
+        {
+          "label": "Dogs",
+          "href": "/#dogs"
+        },
+        {
+          "label": "Process",
+          "href": "/#training"
+        },
+        {
+          "label": "Breeding",
+          "href": "/#breeding"
+        },
+        {
+          "label": "Placement",
+          "href": "/#pricing"
+        },
+        {
+          "label": "About",
+          "href": "/#about"
+        },
+        {
+          "label": "Enquire",
+          "href": "/#contact"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Connect",
+      "links": [
+        {
+          "ariaLabel": "Visit my Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "Contact me on WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "Send me an email",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
+  }
+}

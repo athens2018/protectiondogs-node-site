@@ -1,0 +1,2165 @@
+{
+  "meta": {
+    "title": "Belgische Malinois Beschermhonden | Protection Dogs GR",
+    "description": "Getrainde Belgische Malinois beschermhonden, ontwikkeld via een hands-on systeem voor echte beschermingsbehoeften. Een klein aantal tegelijk grootgebracht.",
+    "ogTitle": "Belgische Malinois Beschermhonden | Protection Dogs GR",
+    "ogDescription": "Getrainde Belgische Malinois beschermhonden en beveiligingshonden, ontwikkeld in een klein, door de trainer geleid programma voor particulieren en gezinnen met een oprechte beschermingsbehoefte.",
+    "ogLocale": "nl_NL",
+    "ogUrl": "https://www.protectiondogs.gr/nl/",
+    "twitterTitle": "Belgische Malinois Beschermhonden & Beveiligingshonden",
+    "twitterDescription": "Getrainde Belgische Malinois beschermhonden en beveiligingshonden, ontwikkeld in een klein, door de trainer geleid programma voor particulieren en gezinnen met een oprechte beschermingsbehoefte.",
+    "canonical": "https://www.protectiondogs.gr/nl/",
+    "lang": "nl",
+    "dir": null,
+    "jsonld": {
+      "organization": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Protection Dogs GR",
+        "description": "Een klein, door de trainer geleid Belgische Malinois beschermhondenprogramma gevestigd in Griekenland, dat een beperkt aantal werklijnhonden tegelijk ontwikkelt voor particulieren en gezinnen met een oprechte beschermingsbehoefte.",
+        "url": "https://www.protectiondogs.gr/",
+        "logo": "https://www.protectiondogs.gr/images/logo.png",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Kostas",
+            "jobTitle": "Founder and Lead Trainer"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+306931736026",
+            "email": "contact@protectiondogs.gr",
+            "contactType": "Customer Service",
+            "availableLanguage": [
+              "en",
+              "el"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/protectiondogsgr",
+          "https://wa.me/306931736026"
+        ]
+      },
+      "faqpage": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat maakt jullie fokprogramma anders?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ik houd het fokprogramma klein en selectief. Werkvermogen, zenuwgestel, gezondheid, stamboomdiepte en complementaire eigenschappen tussen vader- en moederdier zijn allemaal van belang. Het doel is niet om meer nesten te produceren; het doel is om het trainingsprogramma beter uitgangsmateriaal te geven om mee te werken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe test je het werkvermogen van je honden?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Elke hond wordt getest onder echte, gelaagde druk - geen enkel gecontroleerd scenario, maar samengestelde, onvoorspelbare stress die weergeeft hoe een echte veiligheidssituatie er daadwerkelijk uitziet. Waar ik naar kijk is helderheid onder druk, inzet, hoe snel de hond herstelt en zich weer inzet, en of hij terugkeert naar controle wanneer de situatie verandert. Dit zijn geen standaard beschermhonden - het zijn werkhonden ontwikkeld voor echte veiligheidsbehoeften."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welk niveau van ervaring is vereist van de geleider?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deze honden vereisen ervaren handling. Het zijn echte werk-Malinois met sterke drift - geen standaard huisdieren. Geleiders moeten toegewijd zijn aan het onderhouden van de training en het managen van een werkhond met hoge drift. Ik bied geleiderstraining en doorlopende ondersteuning om een succesvolle integratie te ondersteunen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welke training krijgen jullie honden?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De ontwikkeling begint met vroege handling en omgevingswerk, gevolgd door socialisatie, gehoorzaamheid, driftontwikkeling, beschermingsfundamenten, progressief scenariowerk, eindevaluatie en integratie met de geleider. Elke hond volgt dezelfde kernstandaard; later werk kan worden afgestemd op de toekomstige geleider en omgeving."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welke gezondheidstesten voeren jullie uit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Elke fokkandidaat ondergaat uitgebreide gezondheidstesten, waaronder heup- en elleboogcertificering, uitgebreide DNA-screening en volledig veterinair onderzoek. Ik fok alleen met honden die voldoen aan mijn strenge gezondheids- en werkeisen om de standaard van het programma te behouden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe verloopt jullie klantselectieproces?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ik beoordeel elke potentiële klant zorgvuldig om er zeker van te zijn dat ze de vereiste inzet voor een echte werkhond begrijpen. Dit omvat het beoordelen van ervaring met honden, beveiligingsbehoeften en het vermogen om de training te onderhouden. Deze honden zijn voor serieuze beschermingsbehoeften en vereisen ervaren handling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe lang is de wachttijd?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Er is geen vaste wachttijd, omdat de beschikbaarheid afhangt van de honden die momenteel in ontwikkeling zijn en hoeveel ik er tegelijk goed kan trainen. Neem contact met me op om de honden die momenteel in ontwikkeling zijn en de aankomende beschikbaarheid te bespreken."
+            }
+          }
+        ]
+      },
+      "product": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bobo - Malinois Beschermhond",
+        "description": "Bobo heeft de selectiefase doorlopen en is toegelaten tot mijn beschermhondenprogramma. Hij is nu actief in ontwikkeling en beschikbaar voor vroege reservering, terwijl ik zijn training voortzet tot aan de uiteindelijke overdracht.",
+        "image": "https://www.protectiondogs.gr/images/bobo-beach-15840.avif",
+        "brand": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/nl/"
+        },
+        "category": "Beschermhonden",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "50000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/nl/#dogs",
+          "description": "Laatste hond beschikbaar op dit prijsniveau. Vanaf het volgende nest gaat de prijs naar €70.000."
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Ras",
+            "value": "Belgian Malinois"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Geboortedatum",
+            "value": "2026-03-11"
+          }
+        ],
+        "disambiguatingDescription": "Werklijn beschermhond ontwikkeld voor echte beveiligingsbehoeften en zorgvuldig gematcht met de juiste geleider"
+      },
+      "service": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Volledig Ontwikkelde Beschermhond",
+        "description": "Een Malinois uit werklijnen, ontwikkeld volgens één standaard door middel van geavanceerde commandotraining, discipline in openbare ruimtes, en voorbereiding op voertuig en reizen. Vroege reservering tijdens de ontwikkeling is mogelijk met een gefaseerd maandelijks betalingsplan.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/nl/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "70000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/nl/#pricing",
+          "description": "Standaardprijs vanaf het volgende nest."
+        }
+      }
+    }
+  },
+  "nav": {
+    "ariaLabel": "Hoofdnavigatie",
+    "brand": {
+      "href": "/nl/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Menu openen",
+    "items": [
+      {
+        "label": "Honden",
+        "href": "#dogs"
+      },
+      {
+        "label": "Proces",
+        "href": "#training"
+      },
+      {
+        "label": "Fokkerij",
+        "href": "#breeding"
+      },
+      {
+        "label": "Plaatsing",
+        "href": "#pricing"
+      },
+      {
+        "label": "Over",
+        "href": "#about"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "langTrigger": {
+      "current": "NL",
+      "ariaControls": "langDrawer"
+    },
+    "mobileLangTrigger": {
+      "current": "NL",
+      "ariaControls": "langDrawer"
+    },
+    "langDrawer": {
+      "ariaLabel": "Kies taal",
+      "title": "Kies taal",
+      "close": {
+        "label": "&times;",
+        "ariaLabel": "Sluiten"
+      },
+      "options": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": true
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "langSuggest": null
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Ga naar hoofdinhoud",
+      "href": "#main-content"
+    },
+    "backToTopAriaLabel": "Terug naar boven",
+    "scrollProgressAriaLabel": null,
+    "heroAriaLabel": "Introductiesectie",
+    "sectionDots": {
+      "ariaLabel": "Paginasecties",
+      "items": [
+        {
+          "href": "#main-content",
+          "section": "main-content",
+          "ariaLabel": "Home",
+          "tooltip": "Home"
+        },
+        {
+          "href": "#about",
+          "section": "about",
+          "ariaLabel": "Over",
+          "tooltip": "Over"
+        },
+        {
+          "href": "#dogs",
+          "section": "dogs",
+          "ariaLabel": "Honden",
+          "tooltip": "Honden"
+        },
+        {
+          "href": "#training",
+          "section": "training",
+          "ariaLabel": "Proces",
+          "tooltip": "Proces"
+        },
+        {
+          "href": "#breeding",
+          "section": "breeding",
+          "ariaLabel": "Fokkerij",
+          "tooltip": "Fokkerij"
+        },
+        {
+          "href": "#pricing",
+          "section": "pricing",
+          "ariaLabel": "Plaatsing",
+          "tooltip": "Plaatsing"
+        },
+        {
+          "href": "#faq",
+          "section": "faq",
+          "ariaLabel": "FAQ",
+          "tooltip": "FAQ"
+        },
+        {
+          "href": "#contact",
+          "section": "contact",
+          "ariaLabel": "Contact",
+          "tooltip": "Contact"
+        }
+      ]
+    },
+    "contactIcons": {
+      "ariaLabel": "Snel contact",
+      "items": [
+        {
+          "ariaLabel": "Stuur me een e-mail",
+          "href": "mailto:contact@protectiondogs.gr",
+          "label": "Email",
+          "icon": "fas fa-envelope"
+        },
+        {
+          "ariaLabel": "Neem contact op via WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "label": "WhatsApp",
+          "icon": "fab fa-whatsapp"
+        },
+        {
+          "ariaLabel": "Bezoek mijn Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "label": "Instagram",
+          "icon": "fab fa-instagram"
+        }
+      ]
+    }
+  },
+  "cookie": {
+    "ariaLabel": "Cookiemelding",
+    "text": "Deze site gebruikt cookies voor basisanalyse om te begrijpen hoe de site wordt gebruikt. Er worden geen gegevens verzameld totdat je akkoord gaat.",
+    "reject": "Alleen Noodzakelijk",
+    "accept": "Accepteren"
+  },
+  "hero": {
+    "eyebrow": "Belgische Malinois &middot; Griekenland",
+    "h1": "<span>Eén</span> <span>voor</span> <span>één</span> <span>opgebouwd.</span>",
+    "lead": "Ik fok, breng groot en train een klein aantal Belgische Malinois uit werklijnen voor serieuze persoons- en eigendomsbeveiliging. Door het programma klein te houden, blijf ik direct betrokken bij elke hond — en bij de klant die er uiteindelijk mee gaat samenleven.",
+    "ctas": [
+      {
+        "label": "Bekijk Beschikbare Honden",
+        "href": "#dogs",
+        "data": {}
+      },
+      {
+        "label": "Bespreek een Plaatsing",
+        "href": "#contact",
+        "data": {}
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/hero1.jpg",
+        "alt": "Belgische Malinois beschermhond in training"
+      },
+      {
+        "src": "/images/hero2.jpg",
+        "alt": "Belgische Malinois beveiligingshond toont alertheid"
+      },
+      {
+        "src": "/images/hero3.jpg",
+        "alt": "Getrainde Belgische Malinois beschermhond met gezin"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Het Programma",
+    "h2": "Over Protection Dogs GR",
+    "intro": {
+      "h3": "Een Klein Programma, Gebouwd Rond de Hond",
+      "paragraphs": [
+        "Protection Dogs GR is een klein werkhondenprogramma gericht op het ontwikkelen van capabele, stabiele Malinois voor echt beschermingswerk. Ik begin met bewezen werkgenetica en beoordeel vervolgens wat elke hond daadwerkelijk laat zien tijdens ontwikkeling en training.",
+        "Het doel is niet om een hond er indrukwekkend uit te laten zien tijdens een demonstratie. Het doel is een hond te ontwikkelen die met intensiteit kan werken, helder blijft denken onder druk, en terugkeert naar controle wanneer de situatie verandert."
+      ]
+    },
+    "pullQuote": "Een bloedlijn geeft je <span class=\"text-warning\">potentieel</span>. De <span class=\"text-warning\">trainer</span> bepaalt wat ervan wordt.",
+    "cards": [
+      {
+        "h3": "Het Programma",
+        "paragraphs": [
+          "Protection Dogs GR is een klein, door de trainer geleid werkhondenprogramma. Ik fok, breng groot en ontwikkel een beperkt aantal Malinois, zodat ik nauw betrokken kan blijven bij elke hond, van vroege ontwikkeling tot uiteindelijke plaatsing."
+        ]
+      },
+      {
+        "h3": "De Standaard",
+        "paragraphs": [
+          "Ik wil inzet zonder verlies van helderheid, stabiliteit buiten het werk, en het vermogen om te herstellen en terug te keren naar controle wanneer de druk wegvalt. Niet elke hond hoort thuis in beschermingswerk, en ik plaats er geen enkel simpelweg omdat hij een demonstratie kan uitvoeren."
+        ]
+      },
+      {
+        "h3": "De Relatie",
+        "paragraphs": [
+          "Omdat het programma klein is, hebben klanten gedurende het hele proces rechtstreeks met mij te maken. Wanneer een hond tijdens de ontwikkeling wordt gereserveerd, kan de toekomstige eigenaar de voortgang volgen, vragen stellen, actuele foto's en video's ontvangen, en geleidelijk deel worden van de voorbereiding van de hond vóór de overdracht."
+        ]
+      }
+    ],
+    "cta": {
+      "h3": "Waarom Beschikbaarheid Beperkt Is",
+      "paragraphs": [
+        "Ik werk maar met een klein aantal honden tegelijk, omdat ik ze zelf train en beoordeel. Beschikbaarheid wordt daarom beperkt door trainingscapaciteit, niet door kunstmatige schaarste.",
+        "Wil je een huidige of toekomstige hond bespreken, neem dan rechtstreeks contact met me op:"
+      ],
+      "links": [
+        {
+          "label": "contact@protectiondogs.gr",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope me-2"
+        },
+        {
+          "label": "@protectiondogsgr",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram me-2"
+        },
+        {
+          "label": "+30 693 173 6026",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp me-2"
+        }
+      ]
+    }
+  },
+  "dogs": {
+    "eyebrow": "Beschikbaar voor Reservering",
+    "h2": "Beschikbare Beschermhonden",
+    "availability": "Nu beschikbaar voor reservering: <!--pdg:fact_available_for_reservation-->1<!--/pdg-->",
+    "intro": "Honden die momenteel in ontwikkeling zijn, worden hier getoond naarmate ze vorderen. Elke hond volgt dezelfde kernstandaard van training en wordt continu beoordeeld vóór de uiteindelijke overdracht.",
+    "bobo": {
+      "storyOpen": "bobo-story-modal",
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, Belgische Malinois beschermhond in ontwikkeling"
+      },
+      "name": "Bobo",
+      "tagline": "<!--pdg:stage_display-->Beschermhond &middot; In Ontwikkeling<!--/pdg-->",
+      "stats": [
+        {
+          "label": "Geboren",
+          "value": "<!--pdg:dob_display-->11 maart 2026<!--/pdg-->"
+        },
+        {
+          "label": "Lijn",
+          "value": "Werklijn"
+        },
+        {
+          "label": "Status",
+          "value": "<!--pdg:status_display-->Beschikbaar voor Reservering<!--/pdg-->"
+        }
+      ],
+      "meetButton": {
+        "label": "Maak Kennis met Bobo",
+        "icon": "fas fa-paw me-2",
+        "data": {
+          "data-story-open": "bobo-story-modal"
+        }
+      },
+      "paragraphs": [
+        "Bobo heeft de selectiefase doorlopen en is toegelaten tot mijn beschermhondenprogramma. Hij is nu actief in ontwikkeling en beschikbaar voor vroege reservering, terwijl ik zijn training voortzet tot aan de uiteindelijke overdracht.",
+        "Door Bobo tijdens zijn ontwikkeling te reserveren, kan de toekomstige eigenaar zijn voortgang volgen, actuele updates ontvangen, en krijg ik de tijd om de latere fasen van zijn training af te stemmen op het toekomstige huishouden, de dagelijkse routine en de specifieke wensen."
+      ],
+      "aboutHeading": "Over Bobo",
+      "features": [
+        "Bewezen werklijngenetica met sterke drift",
+        "Sterk omgevingsvertrouwen en vroege ontwikkeling",
+        "Sterke focus en situationeel bewustzijn",
+        "Nu in beschermingsontwikkeling, training gericht op overdracht",
+        "Uitgebreid gesocialiseerd in echte, alledaagse omgevingen",
+        "Wordt opgevoed tot een serieuze beschermer van personen en eigendom"
+      ],
+      "reservation": {
+        "eyebrow": "Vroege Reservering",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_current-->50.000<!--/pdg-->"
+        },
+        "notes": [
+          "Bobo is de laatste hond op dit prijsniveau. Vanaf het volgende nest gaat de prijs naar €<!--pdg:price_future-->70.000<!--/pdg-->.",
+          "In overleg kan een gefaseerd maandelijks betalingsplan worden afgesproken, zodat de kosten worden gespreid over zijn resterende ontwikkeling in plaats van in één keer te worden voldaan."
+        ],
+        "cta": {
+          "label": "Bespreek Bobo &amp; Reservering",
+          "href": "#contact",
+          "data": {
+            "data-interest": "Bobo - Early Reservation",
+            "data-stop-propagation": ""
+          }
+        }
+      }
+    },
+    "future": {
+      "name": "Toekomstige Beschikbaarheid",
+      "tagline": "Uit het Volgende Nest",
+      "stats": [
+        {
+          "label": "<!--pdg:next_litter_label-->Verwacht<!--/pdg-->",
+          "value": "<!--pdg:next_litter-->eind 2026<!--/pdg-->"
+        },
+        {
+          "label": "Ras",
+          "value": "Belgische Malinois"
+        },
+        {
+          "label": "Lijn",
+          "value": "Werklijn"
+        }
+      ],
+      "paragraph": "Het programma blijft bewust klein. Als je een toekomstige hond wilt, raad ik je aan vroeg met mij in gesprek te gaan — wanneer een geschikte hond het programma haalt en de match goed is, kan de reservering al tijdens de ontwikkeling beginnen, in plaats van te wachten tot de uiteindelijke overdracht. Zo krijg je de kans om de hond te volgen, een band op te bouwen met het proces, en de betalingen te spreiden over de ontwikkelingsperiode.",
+      "cta": {
+        "label": "Bespreek een Toekomstige Hond",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "boboStory": {
+    "ariaLabelledby": "bobo-story-title",
+    "close": {
+      "label": "&times;",
+      "ariaLabel": "Sluiten"
+    },
+    "media": {
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, Belgische Malinois beschermhond in ontwikkeling"
+      },
+      "video": {
+        "ariaLabel": "Bobo, Belgische Malinois beschermhond in ontwikkeling",
+        "poster": "/images/bobo-training-15888-poster.webp",
+        "src": "/images/bobo-training-15888.mp4"
+      }
+    },
+    "title": "Maak Kennis met Bobo",
+    "dotCount": 4,
+    "slides": [
+      {
+        "slide": "0",
+        "image": "/images/bobo-beach-15840.avif",
+        "video": null,
+        "h4": "Van Nature Zelfverzekerd en Gedreven",
+        "p": "Bobo heeft nooit overtuigd hoeven worden om zelfverzekerd te zijn — zo kwam hij simpelweg ter wereld. Zijn drift is hetzelfde: sterk en natuurlijk, niets aangeleerd of geforceerd. Hij bijt hard door, en wat het werk op een bepaalde dag ook is, hij is bereid het te doen."
+      },
+      {
+        "slide": "1",
+        "image": "/images/bobo-training-15893-poster.webp",
+        "video": "/images/bobo-training-15893.mp4",
+        "h4": "Sociaal met Kinderen en Dieren",
+        "p": "Als hij niet aan het werk is, is Bobo echt goed gezelschap — op zijn gemak en sociaal met kinderen en andere dieren, en niet alleen maar tolerant. Een hond die echt beschermingswerk aankan, moet de rest van de tijd nog steeds gewoon een hond kunnen zijn, en dat kan hij."
+      },
+      {
+        "slide": "2",
+        "image": "/images/bobo-training-15888-poster.webp",
+        "video": "/images/bobo-training-15888.mp4",
+        "h4": "Met de Hand Grootgebracht, Stap voor Stap",
+        "p": "Ik heb Bobo zelf gefokt en hem vanaf dag één met de hand grootgebracht, zoals elke hond die hier doorheen gaat. Donker van vacht, met een echt mooi kopje, en geleidelijk opgebouwd in plaats van doorgeduwd. Hij houdt ook van de zee — zwemmen is een van zijn favoriete dingen ter wereld."
+      },
+      {
+        "slide": "3",
+        "image": "/images/bobo-beach-15842.avif",
+        "video": null,
+        "h4": "Gebouwd voor Iemand die een Echte Beschermer Nodig Heeft",
+        "p": "Bobo ontwikkelt zich tot een sterke, serieuze hond — geen hobbymaatje, maar een hond bedoeld voor iemand die daadwerkelijk echte bescherming nodig heeft. Elk aspect van zijn opvoeding heeft in dienst gestaan van dat doel."
+      }
+    ],
+    "nav": {
+      "prev": "&larr; Terug",
+      "next": "Volgende &rarr;",
+      "jsClose": "Sluiten",
+      "jsNext": "Volgende →"
+    }
+  },
+  "watchDevelop": {
+    "eyebrow": "Reservering",
+    "h2": "Een Hond die je Ziet Ontwikkelen",
+    "paragraphs": [
+      "Voor veel klanten begint de relatie al voordat de hond klaar is. Wanneer een geschikte hond tijdens de ontwikkeling wordt gereserveerd, houd ik de toekomstige eigenaar dicht bij het proces — actuele foto's, korte video's en eerlijke trainingsupdates, zodat ze de hond kunnen zien opgroeien en de voortgang richting overdracht kunnen volgen.",
+      "De updates zijn bewust echt in plaats van geproduceerd als reclame. Veel van de dagelijkse training wordt simpelweg gefilmd zoals die gebeurt, op dezelfde manier als ik het voor mijn eigen evaluatie zou filmen. Het doel is niet om content te creëren — het is om de toekomstige eigenaar hun hond eerlijk te laten zien, na verloop van tijd."
+    ]
+  },
+  "training": {
+    "h2": "Hoe Ik Elke Hond Ontwikkel",
+    "intro": "Een ontwikkelingssysteem in vijf fasen, gebouwd rond een eenvoudig principe: drift en zelfbeheersing worden apart ontwikkeld en vervolgens doelbewust samengebracht.",
+    "timeline": {
+      "ariaLabel": "Fasenavigatie",
+      "items": [
+        {
+          "phase": "1",
+          "number": "1",
+          "label": "Vroege Ontwikkeling",
+          "period": "0-3 Weken"
+        },
+        {
+          "phase": "2",
+          "number": "2",
+          "label": "Socialisatie",
+          "period": "3-12 Weken"
+        },
+        {
+          "phase": "3",
+          "number": "3",
+          "label": "Fundament",
+          "period": "3-6 Maanden"
+        },
+        {
+          "phase": "4",
+          "number": "4",
+          "label": "Beschermingsontwikkeling",
+          "period": "6-12 Maanden"
+        },
+        {
+          "phase": "5",
+          "number": "5",
+          "label": "Beproeving &amp; Overdracht",
+          "period": "12-18 Maanden"
+        }
+      ]
+    },
+    "phaseNav": {
+      "ariaLabel": "Fasenavigatie",
+      "prevAriaLabel": "Vorige fase",
+      "nextAriaLabel": "Volgende fase",
+      "status": "<span data-phase-current>1</span> / 5"
+    },
+    "phases": [
+      {
+        "id": "phase-1",
+        "number": "01",
+        "badge": "Fase 1",
+        "title": "Vroege Ontwikkeling",
+        "timing": "0-3 Weken",
+        "intro": "De ontwikkeling begint in de eerste levensdagen. Vroege handling en gecontroleerde stimulatie worden gebruikt om een sterker fundament te leggen voor later omgevingsvertrouwen en stressbestendigheid.",
+        "features": [
+          {
+            "icon": "fas fa-brain",
+            "h4": "Vroege Handling (3-16 dagen)",
+            "p": "Gestructureerde vroege handling- en stimulatie-oefeningen die een fundament leggen voor stressbestendigheid later in het leven"
+          },
+          {
+            "icon": "fas fa-cubes",
+            "h4": "Omgevingsverrijking",
+            "p": "Gecontroleerde blootstelling aan texturen, ondergronden en zintuiglijke ervaringen"
+          },
+          {
+            "icon": "fas fa-clipboard-check",
+            "h4": "Temperamentbeoordeling",
+            "p": "Continue beoordeling van genetische expressie en aanlegindicatoren"
+          }
+        ],
+        "media": null
+      },
+      {
+        "id": "phase-2",
+        "number": "02",
+        "badge": "Fase 2",
+        "title": "Socialisatie",
+        "timing": "3-12 Weken",
+        "intro": "Tijdens deze cruciale socialisatieperiode volg ik gestructureerd blootstellingswerk om zelfverzekerde, stabiele honden te ontwikkelen die kunnen functioneren in uiteenlopende omgevingen.",
+        "features": [
+          {
+            "icon": "fas fa-users",
+            "h4": "Geavanceerde Socialisatie",
+            "p": "Gecontroleerde blootstelling aan verschillende mensen, dieren en omgevingen"
+          },
+          {
+            "icon": "fas fa-city",
+            "h4": "Omgevingsvertrouwen",
+            "p": "Systematische blootstelling aan uiteenlopende ondergronden, geluiden en scenario's"
+          },
+          {
+            "icon": "fas fa-paw",
+            "h4": "Vroege Introductie van Geurwerk",
+            "p": "Fundamenteel werk voor gespecialiseerde speurcapaciteiten"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Malinois beschermhond socialisatietraining",
+          "poster": "/images/bobo-training-15891-poster.webp",
+          "src": "/images/bobo-training-15891.mp4"
+        }
+      },
+      {
+        "id": "phase-3",
+        "number": "03",
+        "badge": "Fase 3",
+        "title": "Fundament",
+        "timing": "3-6 Maanden",
+        "intro": "Deze fase legt de basisgehoorzaamheid vast en introduceert fundamentele beschermingsconcepten, wat het kader creëert voor geavanceerde vaardigheden.",
+        "features": [
+          {
+            "icon": "fas fa-check-circle",
+            "h4": "Basisgehoorzaamheid",
+            "p": "Het vastleggen van betrouwbare commandorespons in alle omgevingen"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "h4": "Driftontwikkeling",
+            "p": "Het kanaliseren van genetische drift naar gerichte werkcapaciteit"
+          },
+          {
+            "icon": "fas fa-compass",
+            "h4": "Beschermingsfundamenten",
+            "p": "Introductie van gecontroleerde defensieve respons en heldere besluitvorming"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Malinois beschermhond fundamentele gehoorzaamheidstraining",
+          "poster": "/images/bobo-training-15890-poster.webp",
+          "src": "/images/bobo-training-15890.mp4"
+        }
+      },
+      {
+        "id": "phase-4",
+        "number": "04",
+        "badge": "Fase 4",
+        "title": "Beschermingsontwikkeling",
+        "timing": "6-12 Maanden",
+        "intro": "Het beschermingswerk wordt geleidelijk veeleisender door wisselende personen, locaties, ondergronden, afleidingen en druk. Het doel is te testen of de hond kan blijven nadenken naarmate het werk moeilijker wordt.",
+        "features": [
+          {
+            "icon": "fas fa-theater-masks",
+            "h4": "Scenariotraining",
+            "p": "Realistische beschermingssituaties met wisselende figuranten en locaties"
+          },
+          {
+            "icon": "fas fa-balance-scale",
+            "h4": "Gecontroleerd Beoordelingsvermogen",
+            "p": "Het ontwikkelen van heldere besluitvorming onder druk — weten wanneer in te grijpen en wanneer terughoudend te zijn"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Integratie met de Geleider",
+            "p": "Het opbouwen van de cruciale beveiligingsrelatie tussen geleider en hond"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Geavanceerde Malinois beschermhond scenariotraining",
+          "src": "/images/elite-protection-dog-training.avif"
+        }
+      },
+      {
+        "id": "phase-5",
+        "number": "05",
+        "badge": "Fase 5",
+        "title": "Beproeving &amp; Overdracht",
+        "timing": "12-18 Maanden",
+        "intro": "De laatste fase draait om het consistent beproeven van de hond, het identificeren van eventuele resterende zwakke punten, en het aanleren aan de toekomstige geleider hoe het werk correct te onderhouden.",
+        "features": [
+          {
+            "icon": "fas fa-clipboard-list",
+            "h4": "Consistentietesten",
+            "p": "Rigoureuze beoordeling over alle beschermings- en gehoorzaamheidsparameters"
+          },
+          {
+            "icon": "fas fa-sync-alt",
+            "h4": "Omgevingsbeproeving",
+            "p": "Laatste bevestiging van prestaties in uiteenlopende realistische omgevingen"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Overdracht aan Klant",
+            "p": "Uitgebreide geleiderstraining en ondersteuning bij integratie"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Getrainde Malinois beschermhond integratie met geleider",
+          "src": "/images/nikky1.avif"
+        }
+      }
+    ]
+  },
+  "testing": {
+    "eyebrow": "Evaluatie",
+    "h2": "Hoe Ik Test en Evalueer",
+    "paragraphs": [
+      "Intensiteit alleen vertelt me heel weinig.",
+      "Ik wil zien wat er gebeurt wanneer druk gelaagd, onbekend en onvoorspelbaar wordt. De hond moet betrokken blijven zonder helderheid te verliezen, en moet in staat zijn terug te keren naar een gecontroleerde staat wanneer de situatie verandert.",
+      "Herstel is voor mij bijzonder belangrijk. Ik let op hoe snel een hond stress kan verwerken, zich weer kan inzetten en kan terugkeren naar productief werk. Dat vertelt me aanzienlijk meer dan intensiteit in een vertrouwde trainingsopstelling.",
+      "Ik film trainingssessies zodat ik zowel de prestaties van de hond als mijn eigen handling kan beoordelen. Het doel is eenvoudig: eerlijk evalueren, zwakke punten vroeg signaleren en betere beslissingen nemen naarmate de hond zich ontwikkelt."
+    ]
+  },
+  "breeding": {
+    "eyebrow": "Ontwikkeling",
+    "h2": "Fokkerij",
+    "cards": [
+      {
+        "h3": "Hoe Ik Fokcombinaties Kies",
+        "paragraphs": [
+          "Fokbeslissingen binnen mijn programma gaan verder dan een gezondheidskeuring en een mooie stamboom op papier. Ik zoek naar een oprecht complementair driftkarakter tussen vader- en moederdier — lijnen die elkaars hiaten opvullen in plaats van dezelfde sterke punten én dezelfde risico's te stapelen. Ik werk ook nauwgezet met de rekenkunde erachter: inteeltcoëfficiëntberekeningen over de volledige stamboom, niet alleen de eerste twee of drie generaties, zodat ik precies begrijp wat ik concentreer en wat ik verdun voordat een fokbeslissing wordt genomen.",
+          "Ik heb ook bewust externe lijnen binnengehaald — waaronder honden uit zeldzame, gesloten Belgische werklijnen die worden gebruikt door speciale eenheden en politieprogramma's — specifiek om de genetische diepgang te versterken in plaats van simpelweg een naam op papier na te jagen. Het is een langzamere manier van fokken en ontwikkelen, maar het geeft me meer controle over wat ik voortbreng en waarom elke fokcombinatie wordt gemaakt."
+        ]
+      },
+      {
+        "h3": "Mijn Fokstandaarden",
+        "paragraphs": [
+          "Elke hond die ik grootbreng, doorloopt hetzelfde trainingssysteem, verfijnd door praktijkervaring en continue evaluatie. Het systeem is consistent, maar de trainer moet nog steeds de individuele hond kunnen lezen en op het juiste moment de juiste beslissingen nemen.",
+          "<strong class=\"text-warning\">Fundament komt vóór druk.</strong> Voordat een jonge hond ooit echte drukapparatuur ziet, bouw ik frustratietolerantie op de juiste manier op — via gestructureerd achtervolg-en-loslaatwerk dat een hond leert hoe hij iets intens kan willen en toch kan blijven nadenken. Sla je deze stap over, dan krijg je een hond die explosief is maar niet meer tot rust te brengen is. Ik sla hem niet over.",
+          "<strong class=\"text-warning\">Rust is het anker, niet de uitzondering.</strong> Ik train elke hond om terug te keren naar een rustige, beheerste kalmte als standaardtoestand — zelfs middenin een greep, zelfs onder stress. De taak van een beschermhond is niet om opgefokt te blijven; het is precies weten wanneer van toestand te wisselen, en net zo snel weer terug te schakelen."
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "Dagelijks Leven",
+    "h2": "Gezinsomgeving",
+    "paragraphs": [
+      "De honden worden niet ontwikkeld in een geïsoleerde commerciële omgeving. Ze maken deel uit van mijn dagelijks leven terwijl ze opgroeien en trainen.",
+      "Mijn gezin is van nature bij delen van dat proces aanwezig, wat mij extra gelegenheid geeft om te observeren hoe een hond zich settelt, reageert op normale huishoudelijke activiteit, en zich gedraagt buiten de formele training."
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "Geschiktheid",
+    "h2": "Voor Wie Deze Honden Zijn",
+    "blocks": [
+      {
+        "tag": "p",
+        "html": "Deze honden worden zorgvuldig gematcht, onder meer met:"
+      },
+      {
+        "tag": "ul",
+        "items": [
+          "Mensen die een gezin of woning beschermen",
+          "Bedrijfs- of vastgoedeigenaren met oprechte veiligheidszorgen",
+          "Mensen die met een specifieke dreiging of veiligheidsprobleem te maken hebben",
+          "Ervaren geleiders die op zoek zijn naar een serieuze werkhond"
+        ]
+      },
+      {
+        "tag": "p",
+        "html": "De juiste plaatsing hangt af van zowel de hond als de geleider. Een beschermhond koop je niet zomaar; hij moet worden gematcht met iemand die de verantwoordelijkheid begrijpt van het bezitten en onderhouden van een serieuze werkhond."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Plaatsing",
+    "h2": "Prijzen &amp; Reservering",
+    "cards": [
+      {
+        "h3": "Volledig Ontwikkelde Beschermhond",
+        "features": [
+          "Geavanceerde Commandotraining",
+          "Praktijkgehoorzaamheid Onder Druk",
+          "Discipline in Openbare Ruimtes",
+          "Getraind voor Voertuig & Reizen",
+          "Werklijngenetica"
+        ],
+        "note": "Standaardprijs vanaf het volgende nest. Beschikbaarheid hangt af van de huidige trainingscapaciteit en de honden die eraan komen.",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_future-->70.000<!--/pdg-->"
+        },
+        "smallPrint": "Eén standaard. Geen trainingsniveaus. In overleg kan een gefaseerd maandelijks betalingsplan worden afgesproken over de resterende ontwikkelingsperiode, in plaats van één betaling bij overdracht."
+      },
+      {
+        "h3": "Inbegrepen bij Plaatsing",
+        "features": [
+          "Voortgezette ontwikkeling tot de programmastandaard",
+          "Laatste integratie en training met de geleider",
+          "Beproeving in omgeving en openbare ruimtes",
+          "Voorbereiding op voertuig en reizen",
+          "Individuele voorbereiding op jouw omstandigheden",
+          "Doorlopende ondersteuning na plaatsing"
+        ],
+        "note": null,
+        "price": null,
+        "smallPrint": null
+      }
+    ],
+    "closing": {
+      "paragraphs": [
+        "Een klant hoeft niet per se te wachten tot een hond klaar is en de volledige plaatsingsprijs in één keer te betalen. Wanneer ik een hond heb die het programma heeft gehaald en ik denk dat er een geschikte match is, kan de klant reserveren tijdens de ontwikkeling — ik weet voor wie ik de hond voorbereid, en zij kunnen die ontwikkeling zien plaatsvinden. De relatie begint vóór de overdracht, niet op de leveringsdag.",
+        "Zodra een hond is gematcht met een toekomstige geleider, kan het latere werk ook worden afgestemd op de omgeving en wensen van die persoon, zonder de standaard te verlagen."
+      ],
+      "cta": {
+        "label": "Bespreek Beschikbaarheid &amp; Reservering",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Vragen",
+    "h2": "Veelgestelde vragen",
+    "items": [
+      {
+        "id": "faq-q1",
+        "answerId": "faq-a1",
+        "question": "Wat maakt jullie fokprogramma anders?",
+        "answer": "Ik houd het fokprogramma klein en selectief. Werkvermogen, zenuwgestel, gezondheid, stamboomdiepte en complementaire eigenschappen tussen vader- en moederdier zijn allemaal van belang. Het doel is niet om meer nesten te produceren; het doel is om het trainingsprogramma beter uitgangsmateriaal te geven om mee te werken."
+      },
+      {
+        "id": "faq-q2",
+        "answerId": "faq-a2",
+        "question": "Hoe test je het werkvermogen van je honden?",
+        "answer": "Elke hond wordt getest onder echte, gelaagde druk - geen enkel gecontroleerd scenario, maar samengestelde, onvoorspelbare stress die weergeeft hoe een echte veiligheidssituatie er daadwerkelijk uitziet. Waar ik naar kijk is helderheid onder druk, inzet, hoe snel de hond herstelt en zich weer inzet, en of hij terugkeert naar controle wanneer de situatie verandert. Dit zijn geen standaard beschermhonden - het zijn werkhonden ontwikkeld voor echte veiligheidsbehoeften."
+      },
+      {
+        "id": "faq-q3",
+        "answerId": "faq-a3",
+        "question": "Welk niveau van ervaring is vereist van de geleider?",
+        "answer": "Deze honden vereisen ervaren handling. Het zijn echte werk-Malinois met sterke drift - geen standaard huisdieren. Geleiders moeten toegewijd zijn aan het onderhouden van de training en het managen van een werkhond met hoge drift. Ik bied geleiderstraining en doorlopende ondersteuning om een succesvolle integratie te ondersteunen."
+      },
+      {
+        "id": "faq-q4",
+        "answerId": "faq-a4",
+        "question": "Welke training krijgen jullie honden?",
+        "answer": "De ontwikkeling begint met vroege handling en omgevingswerk, gevolgd door socialisatie, gehoorzaamheid, driftontwikkeling, beschermingsfundamenten, progressief scenariowerk, eindevaluatie en integratie met de geleider. Elke hond volgt dezelfde kernstandaard; later werk kan worden afgestemd op de toekomstige geleider en omgeving."
+      },
+      {
+        "id": "faq-q5",
+        "answerId": "faq-a5",
+        "question": "Welke gezondheidstesten voeren jullie uit?",
+        "answer": "Elke fokkandidaat ondergaat uitgebreide gezondheidstesten, waaronder heup- en elleboogcertificering, uitgebreide DNA-screening en volledig veterinair onderzoek. Ik fok alleen met honden die voldoen aan mijn strenge gezondheids- en werkeisen om de standaard van het programma te behouden."
+      },
+      {
+        "id": "faq-q6",
+        "answerId": "faq-a6",
+        "question": "Hoe verloopt jullie klantselectieproces?",
+        "answer": "Ik beoordeel elke potentiële klant zorgvuldig om er zeker van te zijn dat ze de vereiste inzet voor een echte werkhond begrijpen. Dit omvat het beoordelen van ervaring met honden, beveiligingsbehoeften en het vermogen om de training te onderhouden. Deze honden zijn voor serieuze beschermingsbehoeften en vereisen ervaren handling."
+      },
+      {
+        "id": "faq-q7",
+        "answerId": "faq-a7",
+        "question": "Hoe lang is de wachttijd?",
+        "answer": "Er is geen vaste wachttijd, omdat de beschikbaarheid afhangt van de honden die momenteel in ontwikkeling zijn en hoeveel ik er tegelijk goed kan trainen. Neem contact met me op om de honden die momenteel in ontwikkeling zijn en de aankomende beschikbaarheid te bespreken."
+      }
+    ],
+    "schema": [
+      {
+        "name": "Wat maakt jullie fokprogramma anders?",
+        "text": "Ik houd het fokprogramma klein en selectief. Werkvermogen, zenuwgestel, gezondheid, stamboomdiepte en complementaire eigenschappen tussen vader- en moederdier zijn allemaal van belang. Het doel is niet om meer nesten te produceren; het doel is om het trainingsprogramma beter uitgangsmateriaal te geven om mee te werken."
+      },
+      {
+        "name": "Hoe test je het werkvermogen van je honden?",
+        "text": "Elke hond wordt getest onder echte, gelaagde druk - geen enkel gecontroleerd scenario, maar samengestelde, onvoorspelbare stress die weergeeft hoe een echte veiligheidssituatie er daadwerkelijk uitziet. Waar ik naar kijk is helderheid onder druk, inzet, hoe snel de hond herstelt en zich weer inzet, en of hij terugkeert naar controle wanneer de situatie verandert. Dit zijn geen standaard beschermhonden - het zijn werkhonden ontwikkeld voor echte veiligheidsbehoeften."
+      },
+      {
+        "name": "Welk niveau van ervaring is vereist van de geleider?",
+        "text": "Deze honden vereisen ervaren handling. Het zijn echte werk-Malinois met sterke drift - geen standaard huisdieren. Geleiders moeten toegewijd zijn aan het onderhouden van de training en het managen van een werkhond met hoge drift. Ik bied geleiderstraining en doorlopende ondersteuning om een succesvolle integratie te ondersteunen."
+      },
+      {
+        "name": "Welke training krijgen jullie honden?",
+        "text": "De ontwikkeling begint met vroege handling en omgevingswerk, gevolgd door socialisatie, gehoorzaamheid, driftontwikkeling, beschermingsfundamenten, progressief scenariowerk, eindevaluatie en integratie met de geleider. Elke hond volgt dezelfde kernstandaard; later werk kan worden afgestemd op de toekomstige geleider en omgeving."
+      },
+      {
+        "name": "Welke gezondheidstesten voeren jullie uit?",
+        "text": "Elke fokkandidaat ondergaat uitgebreide gezondheidstesten, waaronder heup- en elleboogcertificering, uitgebreide DNA-screening en volledig veterinair onderzoek. Ik fok alleen met honden die voldoen aan mijn strenge gezondheids- en werkeisen om de standaard van het programma te behouden."
+      },
+      {
+        "name": "Hoe verloopt jullie klantselectieproces?",
+        "text": "Ik beoordeel elke potentiële klant zorgvuldig om er zeker van te zijn dat ze de vereiste inzet voor een echte werkhond begrijpen. Dit omvat het beoordelen van ervaring met honden, beveiligingsbehoeften en het vermogen om de training te onderhouden. Deze honden zijn voor serieuze beschermingsbehoeften en vereisen ervaren handling."
+      },
+      {
+        "name": "Hoe lang is de wachttijd?",
+        "text": "Er is geen vaste wachttijd, omdat de beschikbaarheid afhangt van de honden die momenteel in ontwikkeling zijn en hoeveel ik er tegelijk goed kan trainen. Neem contact met me op om de honden die momenteel in ontwikkeling zijn en de aankomende beschikbaarheid te bespreken."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Recensies",
+    "h2": "Wat Klanten Zeggen",
+    "consent": {
+      "text": "Klantbeoordelingen worden getoond via Testimonial.to, een dienst van een derde partij die eigen cookies kan plaatsen. Ze worden pas geladen nadat u cookies accepteert of op de knop drukt.",
+      "button": "Beoordelingen laden"
+    },
+    "embeds": {
+      "iframeTitle": "Carrousel met klantbeoordelingen",
+      "jsIframeTitle": "Client testimonials"
+    }
+  },
+  "partner": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #testimonial-widgets (line 1240)",
+    "logo": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "SafariMedic-logo"
+    },
+    "text": "Medische ondersteuningsoplossingen relevant voor werkhonden- en beschermingsomgevingen",
+    "links": [
+      {
+        "label": "Bezoek de SafariMedic Website",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "icon": "fas fa-external-link-alt ms-2"
+      },
+      {
+        "label": "Ons Partnerschapsverhaal",
+        "href": "/safarimedic-partnership.html",
+        "target": null,
+        "icon": "fas fa-book-open ms-2"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Persoonlijke Aanvraag",
+    "h2": "Contact",
+    "intro": "Elke plaatsing begint met een gesprek. Omdat ik met een klein aantal honden werk, wil ik de persoon en de omgeving begrijpen voordat ik beslis welke hond — als die er al is — geschikt is.",
+    "journey": {
+      "title": "Hoe het verder gaat:",
+      "steps": [
+        "Aanvraag",
+        "Persoonlijk gesprek",
+        "Geschiktheid en match",
+        "Reservering wanneer passend",
+        "Ontwikkeling",
+        "Inwerken van de geleider en overdracht",
+        "Doorlopende ondersteuning"
+      ]
+    },
+    "tellMe": {
+      "title": "Vertel me over:",
+      "items": [
+        "Jouw locatie",
+        "Huishoudelijke en gezinssituatie",
+        "Andere dieren",
+        "Eerdere ervaring met honden / werkhonden",
+        "Woning en dagelijkse omgeving",
+        "Reizen",
+        "Beoogde rol voor de hond",
+        "Gewenste timing",
+        "Of je interesse hebt in vroege reservering"
+      ]
+    },
+    "form": {
+      "action": "https://formspree.io/f/mwpvylyn",
+      "method": "POST",
+      "fields": {
+        "name": {
+          "label": "Volledige Naam*",
+          "placeholder": "Vul je volledige naam in",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "email": {
+          "label": "E-mailadres*",
+          "placeholder": "Vul je e-mailadres in",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "phone": {
+          "label": "Telefoon / WhatsApp",
+          "placeholder": "Vul je telefoonnummer in",
+          "ariaLabel": null,
+          "title": null,
+          "required": false
+        },
+        "country": {
+          "label": "Land",
+          "options": [
+            {
+              "value": "",
+              "label": "Selecteer je land",
+              "placeholder": true
+            },
+            {
+              "value": "Afghanistan",
+              "label": "Afghanistan"
+            },
+            {
+              "value": "Albania",
+              "label": "Albania"
+            },
+            {
+              "value": "Algeria",
+              "label": "Algeria"
+            },
+            {
+              "value": "Andorra",
+              "label": "Andorra"
+            },
+            {
+              "value": "Angola",
+              "label": "Angola"
+            },
+            {
+              "value": "Antigua and Barbuda",
+              "label": "Antigua and Barbuda"
+            },
+            {
+              "value": "Argentina",
+              "label": "Argentina"
+            },
+            {
+              "value": "Armenia",
+              "label": "Armenia"
+            },
+            {
+              "value": "Australia",
+              "label": "Australia"
+            },
+            {
+              "value": "Austria",
+              "label": "Austria"
+            },
+            {
+              "value": "Azerbaijan",
+              "label": "Azerbaijan"
+            },
+            {
+              "value": "Bahamas",
+              "label": "Bahamas"
+            },
+            {
+              "value": "Bahrain",
+              "label": "Bahrain"
+            },
+            {
+              "value": "Bangladesh",
+              "label": "Bangladesh"
+            },
+            {
+              "value": "Barbados",
+              "label": "Barbados"
+            },
+            {
+              "value": "Belarus",
+              "label": "Belarus"
+            },
+            {
+              "value": "Belgium",
+              "label": "Belgium"
+            },
+            {
+              "value": "Belize",
+              "label": "Belize"
+            },
+            {
+              "value": "Benin",
+              "label": "Benin"
+            },
+            {
+              "value": "Bhutan",
+              "label": "Bhutan"
+            },
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Bosnia and Herzegovina",
+              "label": "Bosnia and Herzegovina"
+            },
+            {
+              "value": "Botswana",
+              "label": "Botswana"
+            },
+            {
+              "value": "Brazil",
+              "label": "Brazil"
+            },
+            {
+              "value": "Brunei",
+              "label": "Brunei"
+            },
+            {
+              "value": "Bulgaria",
+              "label": "Bulgaria"
+            },
+            {
+              "value": "Burkina Faso",
+              "label": "Burkina Faso"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Cabo Verde",
+              "label": "Cabo Verde"
+            },
+            {
+              "value": "Cambodia",
+              "label": "Cambodia"
+            },
+            {
+              "value": "Cameroon",
+              "label": "Cameroon"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Central African Republic",
+              "label": "Central African Republic"
+            },
+            {
+              "value": "Chad",
+              "label": "Chad"
+            },
+            {
+              "value": "Chile",
+              "label": "Chile"
+            },
+            {
+              "value": "China",
+              "label": "China"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Comoros",
+              "label": "Comoros"
+            },
+            {
+              "value": "Congo (Congo-Brazzaville)",
+              "label": "Congo (Congo-Brazzaville)"
+            },
+            {
+              "value": "Costa Rica",
+              "label": "Costa Rica"
+            },
+            {
+              "value": "Croatia",
+              "label": "Croatia"
+            },
+            {
+              "value": "Cuba",
+              "label": "Cuba"
+            },
+            {
+              "value": "Cyprus",
+              "label": "Cyprus"
+            },
+            {
+              "value": "Czechia",
+              "label": "Czechia"
+            },
+            {
+              "value": "Denmark",
+              "label": "Denmark"
+            },
+            {
+              "value": "Djibouti",
+              "label": "Djibouti"
+            },
+            {
+              "value": "Dominica",
+              "label": "Dominica"
+            },
+            {
+              "value": "Dominican Republic",
+              "label": "Dominican Republic"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "Egypt",
+              "label": "Egypt"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Equatorial Guinea",
+              "label": "Equatorial Guinea"
+            },
+            {
+              "value": "Eritrea",
+              "label": "Eritrea"
+            },
+            {
+              "value": "Estonia",
+              "label": "Estonia"
+            },
+            {
+              "value": "Eswatini",
+              "label": "Eswatini"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Fiji",
+              "label": "Fiji"
+            },
+            {
+              "value": "Finland",
+              "label": "Finland"
+            },
+            {
+              "value": "France",
+              "label": "France"
+            },
+            {
+              "value": "Gabon",
+              "label": "Gabon"
+            },
+            {
+              "value": "Gambia",
+              "label": "Gambia"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Germany",
+              "label": "Germany"
+            },
+            {
+              "value": "Ghana",
+              "label": "Ghana"
+            },
+            {
+              "value": "Greece",
+              "label": "Greece"
+            },
+            {
+              "value": "Grenada",
+              "label": "Grenada"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Guinea",
+              "label": "Guinea"
+            },
+            {
+              "value": "Guinea-Bissau",
+              "label": "Guinea-Bissau"
+            },
+            {
+              "value": "Guyana",
+              "label": "Guyana"
+            },
+            {
+              "value": "Haiti",
+              "label": "Haiti"
+            },
+            {
+              "value": "Holy See",
+              "label": "Holy See"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Hungary",
+              "label": "Hungary"
+            },
+            {
+              "value": "Iceland",
+              "label": "Iceland"
+            },
+            {
+              "value": "India",
+              "label": "India"
+            },
+            {
+              "value": "Indonesia",
+              "label": "Indonesia"
+            },
+            {
+              "value": "Iran",
+              "label": "Iran"
+            },
+            {
+              "value": "Iraq",
+              "label": "Iraq"
+            },
+            {
+              "value": "Ireland",
+              "label": "Ireland"
+            },
+            {
+              "value": "Israel",
+              "label": "Israel"
+            },
+            {
+              "value": "Italy",
+              "label": "Italy"
+            },
+            {
+              "value": "Jamaica",
+              "label": "Jamaica"
+            },
+            {
+              "value": "Japan",
+              "label": "Japan"
+            },
+            {
+              "value": "Jordan",
+              "label": "Jordan"
+            },
+            {
+              "value": "Kazakhstan",
+              "label": "Kazakhstan"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Kiribati",
+              "label": "Kiribati"
+            },
+            {
+              "value": "Kuwait",
+              "label": "Kuwait"
+            },
+            {
+              "value": "Kyrgyzstan",
+              "label": "Kyrgyzstan"
+            },
+            {
+              "value": "Laos",
+              "label": "Laos"
+            },
+            {
+              "value": "Latvia",
+              "label": "Latvia"
+            },
+            {
+              "value": "Lebanon",
+              "label": "Lebanon"
+            },
+            {
+              "value": "Lesotho",
+              "label": "Lesotho"
+            },
+            {
+              "value": "Liberia",
+              "label": "Liberia"
+            },
+            {
+              "value": "Libya",
+              "label": "Libya"
+            },
+            {
+              "value": "Liechtenstein",
+              "label": "Liechtenstein"
+            },
+            {
+              "value": "Lithuania",
+              "label": "Lithuania"
+            },
+            {
+              "value": "Luxembourg",
+              "label": "Luxembourg"
+            },
+            {
+              "value": "Madagascar",
+              "label": "Madagascar"
+            },
+            {
+              "value": "Malawi",
+              "label": "Malawi"
+            },
+            {
+              "value": "Malaysia",
+              "label": "Malaysia"
+            },
+            {
+              "value": "Maldives",
+              "label": "Maldives"
+            },
+            {
+              "value": "Mali",
+              "label": "Mali"
+            },
+            {
+              "value": "Malta",
+              "label": "Malta"
+            },
+            {
+              "value": "Marshall Islands",
+              "label": "Marshall Islands"
+            },
+            {
+              "value": "Mauritania",
+              "label": "Mauritania"
+            },
+            {
+              "value": "Mauritius",
+              "label": "Mauritius"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Micronesia",
+              "label": "Micronesia"
+            },
+            {
+              "value": "Moldova",
+              "label": "Moldova"
+            },
+            {
+              "value": "Monaco",
+              "label": "Monaco"
+            },
+            {
+              "value": "Mongolia",
+              "label": "Mongolia"
+            },
+            {
+              "value": "Montenegro",
+              "label": "Montenegro"
+            },
+            {
+              "value": "Morocco",
+              "label": "Morocco"
+            },
+            {
+              "value": "Mozambique",
+              "label": "Mozambique"
+            },
+            {
+              "value": "Myanmar",
+              "label": "Myanmar"
+            },
+            {
+              "value": "Namibia",
+              "label": "Namibia"
+            },
+            {
+              "value": "Nauru",
+              "label": "Nauru"
+            },
+            {
+              "value": "Nepal",
+              "label": "Nepal"
+            },
+            {
+              "value": "Netherlands",
+              "label": "Netherlands"
+            },
+            {
+              "value": "New Zealand",
+              "label": "New Zealand"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Niger",
+              "label": "Niger"
+            },
+            {
+              "value": "Nigeria",
+              "label": "Nigeria"
+            },
+            {
+              "value": "North Korea",
+              "label": "North Korea"
+            },
+            {
+              "value": "North Macedonia",
+              "label": "North Macedonia"
+            },
+            {
+              "value": "Norway",
+              "label": "Norway"
+            },
+            {
+              "value": "Oman",
+              "label": "Oman"
+            },
+            {
+              "value": "Pakistan",
+              "label": "Pakistan"
+            },
+            {
+              "value": "Palau",
+              "label": "Palau"
+            },
+            {
+              "value": "Palestine State",
+              "label": "Palestine State"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Paraguay",
+              "label": "Paraguay"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Philippines",
+              "label": "Philippines"
+            },
+            {
+              "value": "Poland",
+              "label": "Poland"
+            },
+            {
+              "value": "Portugal",
+              "label": "Portugal"
+            },
+            {
+              "value": "Qatar",
+              "label": "Qatar"
+            },
+            {
+              "value": "Romania",
+              "label": "Romania"
+            },
+            {
+              "value": "Russia",
+              "label": "Russia"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Saint Kitts and Nevis",
+              "label": "Saint Kitts and Nevis"
+            },
+            {
+              "value": "Saint Lucia",
+              "label": "Saint Lucia"
+            },
+            {
+              "value": "Saint Vincent and the Grenadines",
+              "label": "Saint Vincent and the Grenadines"
+            },
+            {
+              "value": "Samoa",
+              "label": "Samoa"
+            },
+            {
+              "value": "San Marino",
+              "label": "San Marino"
+            },
+            {
+              "value": "Sao Tome and Principe",
+              "label": "Sao Tome and Principe"
+            },
+            {
+              "value": "Saudi Arabia",
+              "label": "Saudi Arabia"
+            },
+            {
+              "value": "Senegal",
+              "label": "Senegal"
+            },
+            {
+              "value": "Serbia",
+              "label": "Serbia"
+            },
+            {
+              "value": "Seychelles",
+              "label": "Seychelles"
+            },
+            {
+              "value": "Sierra Leone",
+              "label": "Sierra Leone"
+            },
+            {
+              "value": "Singapore",
+              "label": "Singapore"
+            },
+            {
+              "value": "Slovakia",
+              "label": "Slovakia"
+            },
+            {
+              "value": "Slovenia",
+              "label": "Slovenia"
+            },
+            {
+              "value": "Solomon Islands",
+              "label": "Solomon Islands"
+            },
+            {
+              "value": "Somalia",
+              "label": "Somalia"
+            },
+            {
+              "value": "South Africa",
+              "label": "South Africa"
+            },
+            {
+              "value": "South Korea",
+              "label": "South Korea"
+            },
+            {
+              "value": "South Sudan",
+              "label": "South Sudan"
+            },
+            {
+              "value": "Spain",
+              "label": "Spain"
+            },
+            {
+              "value": "Sri Lanka",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "Sudan",
+              "label": "Sudan"
+            },
+            {
+              "value": "Suriname",
+              "label": "Suriname"
+            },
+            {
+              "value": "Sweden",
+              "label": "Sweden"
+            },
+            {
+              "value": "Switzerland",
+              "label": "Switzerland"
+            },
+            {
+              "value": "Syria",
+              "label": "Syria"
+            },
+            {
+              "value": "Tajikistan",
+              "label": "Tajikistan"
+            },
+            {
+              "value": "Tanzania",
+              "label": "Tanzania"
+            },
+            {
+              "value": "Thailand",
+              "label": "Thailand"
+            },
+            {
+              "value": "Timor-Leste",
+              "label": "Timor-Leste"
+            },
+            {
+              "value": "Togo",
+              "label": "Togo"
+            },
+            {
+              "value": "Tonga",
+              "label": "Tonga"
+            },
+            {
+              "value": "Trinidad and Tobago",
+              "label": "Trinidad and Tobago"
+            },
+            {
+              "value": "Tunisia",
+              "label": "Tunisia"
+            },
+            {
+              "value": "Turkey",
+              "label": "Turkey"
+            },
+            {
+              "value": "Turkmenistan",
+              "label": "Turkmenistan"
+            },
+            {
+              "value": "Tuvalu",
+              "label": "Tuvalu"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Ukraine",
+              "label": "Ukraine"
+            },
+            {
+              "value": "United Arab Emirates",
+              "label": "United Arab Emirates"
+            },
+            {
+              "value": "United Kingdom",
+              "label": "United Kingdom"
+            },
+            {
+              "value": "United States of America",
+              "label": "United States of America"
+            },
+            {
+              "value": "Uruguay",
+              "label": "Uruguay"
+            },
+            {
+              "value": "Uzbekistan",
+              "label": "Uzbekistan"
+            },
+            {
+              "value": "Vanuatu",
+              "label": "Vanuatu"
+            },
+            {
+              "value": "Venezuela",
+              "label": "Venezuela"
+            },
+            {
+              "value": "Vietnam",
+              "label": "Vietnam"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            },
+            {
+              "value": "Zambia",
+              "label": "Zambia"
+            },
+            {
+              "value": "Zimbabwe",
+              "label": "Zimbabwe"
+            }
+          ]
+        },
+        "interest": {
+          "label": "Interesse",
+          "options": [
+            {
+              "value": "",
+              "label": "Selecteer je interesse",
+              "placeholder": true
+            },
+            {
+              "value": "Bobo - Early Reservation",
+              "label": "Bobo — Vroege Reservering"
+            },
+            {
+              "value": "Future Litter",
+              "label": "Toekomstig Nest / Algemene Beschikbaarheid"
+            },
+            {
+              "value": "General Enquiry",
+              "label": "Algemene Vraag"
+            },
+            {
+              "value": "Other",
+              "label": "Anders"
+            }
+          ]
+        },
+        "message": {
+          "label": "Je Bericht*",
+          "placeholder": "Geef aanvullende details over je beveiligingsbehoeften, specifieke vragen, of andere informatie die me helpt jouw wensen te begrijpen...",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "privacyConsent": {
+          "label": "Ik ga akkoord met het <a href=\"/privacy-policy-nl.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacybeleid</a> en geef toestemming voor gegevensverwerking*",
+          "required": true
+        }
+      },
+      "submit": "Verstuur Aanvraag"
+    },
+    "messages": {
+      "nameRequired": "Vul je volledige naam in",
+      "emailInvalid": "Vul een geldig e-mailadres in",
+      "messageRequired": "Vul een bericht in",
+      "privacyRequired": "Je moet akkoord gaan met het privacybeleid",
+      "sending": "Bezig met verzenden... <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+      "submitRestore": "Verstuur Aanvraag",
+      "success": "Bericht succesvol verzonden!",
+      "submitError": "Oeps! Er is een probleem opgetreden bij het verzenden van je formulier",
+      "networkError": "Netwerkfout. Probeer het opnieuw.",
+      "notificationClose": "Close"
+    },
+    "preselect": [
+      {
+        "interest": "Bobo - Early Reservation",
+        "section": "dogs",
+        "line": 529
+      },
+      {
+        "interest": "Future Litter",
+        "section": "dogs",
+        "line": 565
+      },
+      {
+        "interest": "Future Litter",
+        "section": "pricing",
+        "line": 1074
+      }
+    ],
+    "footnotes": [
+      {
+        "icon": "fas fa-lock me-2",
+        "text": "Jouw gegevens worden vertrouwelijk behandeld en alleen gebruikt om op je aanvraag te reageren."
+      },
+      {
+        "icon": "fas fa-clock me-2",
+        "text": "Ik reageer doorgaans binnen 24 uur op alle aanvragen."
+      }
+    ]
+  },
+  "privacyBlurb": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #contact (line 1627)",
+    "h2": "Privacy en Vertrouwelijkheid",
+    "cards": [
+      {
+        "icon": "fas fa-user-lock fa-3x text-warning mb-3",
+        "h3": "Privacy Serieus Genomen",
+        "p": "Ik begrijp dat klanten vaak privacy nodig hebben — rond hun identiteit, locatie en beveiligingsmaatregelen. Ik teken graag een wederzijdse geheimhoudingsovereenkomst vóór een uitgebreid gesprek."
+      },
+      {
+        "icon": "fas fa-lock fa-3x text-warning mb-3",
+        "h3": "Vertrouwelijkheid Wanneer Nodig",
+        "p": "Sommige klanten bevinden zich in gevoelige persoonlijke, professionele of veiligheidsomstandigheden. Waar nodig kunnen vertrouwelijkheidsafspraken worden gemaakt voordat gedetailleerde informatie wordt gedeeld."
+      },
+      {
+        "icon": "fas fa-user-secret fa-3x text-warning mb-3",
+        "h3": "Vertrouwelijk van Begin tot Eind",
+        "p": "Ik houd alle klantinformatie vertrouwelijk vanaf het eerste contact tot aan de levering — jouw identiteit, locatie en beveiligingsmaatregelen blijven tussen ons."
+      }
+    ],
+    "closing": {
+      "text": "Jouw privacy is belangrijk. Van het eerste gesprek tot de uiteindelijke levering neem ik discretie serieus.",
+      "cta": {
+        "label": "Neem Vertrouwelijk Contact Op",
+        "href": "#contact",
+        "data": {}
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "Een klein, door de trainer zelf geleid werkhondenprogramma dat beschermings-Mechelse herders ontwikkelt uit bewezen werklijnen."
+    },
+    "quickLinks": {
+      "h3": "Snelkoppelingen",
+      "ariaLabel": "Voettekstnavigatie",
+      "links": [
+        {
+          "label": "Honden",
+          "href": "#dogs"
+        },
+        {
+          "label": "Proces",
+          "href": "#training"
+        },
+        {
+          "label": "Fokkerij",
+          "href": "#breeding"
+        },
+        {
+          "label": "Plaatsing",
+          "href": "#pricing"
+        },
+        {
+          "label": "Over",
+          "href": "#about"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/privacy-policy-nl.html"
+        }
+      ]
+    },
+    "language": {
+      "h3": "Taal",
+      "links": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": true
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "connect": {
+      "h3": "Volg Mij",
+      "links": [
+        {
+          "ariaLabel": "Bezoek mijn Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "Neem contact op via WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "Stuur me een e-mail",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Alle rechten voorbehouden."
+  },
+  "ui": {}
+}

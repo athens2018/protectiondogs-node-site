@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "プライバシーポリシー | Protection Dogs GR",
+    "description": "Protection Dogs GR が、お問い合わせ時や本ウェブサイトのご利用時に個人情報をどのように収集・利用・保護するかについて説明します。",
+    "ogTitle": "プライバシーポリシー | Protection Dogs GR",
+    "ogDescription": "Protection Dogs GR が、お問い合わせ時や本ウェブサイトのご利用時に個人情報をどのように収集・利用・保護するかについて説明します。",
+    "ogLocale": "ja_JP",
+    "ogUrl": "https://www.protectiondogs.gr/privacy-policy-ja.html",
+    "twitterTitle": null,
+    "twitterDescription": null,
+    "canonical": "https://www.protectiondogs.gr/privacy-policy-ja.html",
+    "lang": "ja",
+    "dir": null,
+    "jsonld": {}
+  },
+  "skipLink": {
+    "label": "メインコンテンツへスキップ",
+    "href": "#main-content"
+  },
+  "nav": {
+    "ariaLabel": "メインナビゲーション",
+    "brand": {
+      "href": "/ja/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "メニューを開く",
+    "items": [
+      {
+        "label": "犬",
+        "href": "/ja/#dogs"
+      },
+      {
+        "label": "プロセス",
+        "href": "/ja/#training"
+      },
+      {
+        "label": "繁殖",
+        "href": "/ja/#breeding"
+      },
+      {
+        "label": "引き渡し",
+        "href": "/ja/#pricing"
+      },
+      {
+        "label": "概要",
+        "href": "/ja/#about"
+      },
+      {
+        "label": "お問い合わせ",
+        "href": "/ja/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "ホーム",
+        "href": "/ja/"
+      },
+      {
+        "label": "プライバシーポリシー",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "法的事項",
+    "h1": "プライバシーポリシー",
+    "lastUpdated": "最終更新：2026年9月",
+    "disclaimer": "この翻訳は参考のために提供しています。正式な文書は<a href=\"/privacy-policy.html\" class=\"text-warning\" hreflang=\"en\" lang=\"en\">英語版</a>であり、相違がある場合は英語版が優先されます。",
+    "intro": [
+      {
+        "tag": "p",
+        "html": "このページでは、本ウェブサイトがどのような個人情報を、なぜ収集するのか、そしてそれに対してあなたが何をできるかを説明します。一般的なひな形ではなく、このサイトが実際に行っていることをそのまま記載しています。"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "運営者",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Protection Dogs GR は、ギリシャを拠点として protectiondogs.gr で本ウェブサイトを運営しています。プライバシーに関するご質問やご要望は <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a> までご連絡ください。"
+          }
+        ]
+      },
+      {
+        "heading": "収集する情報",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">お問い合わせフォームをご利用の場合：</strong> お名前、メールアドレス、電話番号（ご記入の場合）、およびメッセージ欄にご記入いただいた内容。これらの情報は第三者のフォーム処理サービスである Formspree に送信・処理され、私のメール受信箱に届けられます。送信中のデータの取り扱いについては、Formspree 独自の<a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">プライバシーポリシー</a>が適用されます。"
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">同意された場合のみ — Google アナリティクスを通じて：</strong> 本サイトは、訪問者がどのようにサイトを利用しているか（閲覧したページ、国・地域レベルのおおよその所在地、デバイスの種類、サイトへの到達経路）を把握するために Google アナリティクス（Google の gtag.js）を使用することがあります。これには Cookie や類似のトラッキング技術が使われます。 <strong class=\"text-warning\">Cookie バナーに同意しない限り、アナリティクス関連のものは一切読み込まれません：</strong> 「必須のみ」を選択した場合、またはバナーを単に無視した場合、Google アナリティクスのスクリプトは読み込まれず、アナリティクスデータは一切収集されません。同意された場合の Google によるデータの処理については、Google の<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">プライバシーポリシー</a>をご覧ください。"
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">ブラウザのローカルストレージに保存されるいくつかの小さなフラグ：</strong> Cookie バナーでの選択（再度尋ねられないようにするため）、言語切替を使用した場合の言語設定、およびサイトのお知らせバナーや「アプリをインストール」の案内を閉じた場合の はい/いいえ のフラグ（再表示されないようにするため）。これらには個人情報は含まれず、本サイトのみが読み取り、お使いのデバイスから外部に送信されることはありません。 同じストレージには、サイトのオフライン対応が正しくインストールされたかどうかを示す短いメモも保存され、問題の診断に役立てられます。"
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">第三者の埋め込みコンテンツ：</strong> 本サイトのホームページには、お客様の声を表示するウィジェット（testimonial.to）が埋め込まれています。Cookie に同意するか、該当セクションの「レビューを読み込む」ボタンを押すまで、この提供元からは何も読み込まれません。読み込み後は、提供元が独自のプライバシーポリシーに従って Cookie を設定したりデータを収集したりする場合があります。"
+          }
+        ]
+      },
+      {
+        "heading": "情報を収集する目的",
+        "blocks": [
+          {
+            "tag": "ul",
+            "items": [
+              "犬やトレーニング、その他お問い合わせいただいた内容にお答えするため",
+              "サイトのどの部分が実際に役立っているかを把握し、改善するため",
+              "サイトを安全に運営し、問題を診断するため"
+            ]
+          },
+          {
+            "tag": "p",
+            "html": "お客様の情報を第三者に販売することはありません。ここに記載した以外の目的で使用することもありません。"
+          }
+        ]
+      },
+      {
+        "heading": "保存期間",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "お問い合わせフォームの送信内容は、お問い合わせへの対応およびそこから生じる関係の処理に必要な期間保存し、不要になった時点で削除します。アナリティクスデータは Google アナリティクスの標準的な保存設定に従って保持されます。"
+          }
+        ]
+      },
+      {
+        "heading": "あなたの権利",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "EU・EEA または英国にお住まいの場合、GDPR に基づき、私が保有するあなたの個人データの内容を確認し、その写しを請求し、訂正や削除を求め、利用に異議を申し立てる権利があります。これらの権利を行使するには <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a> までメールでご連絡ください。"
+          }
+        ]
+      },
+      {
+        "heading": "Cookie について",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "本サイト自身が設定する Cookie は Google アナリティクスによるもののみで、それも初回訪問時に表示される Cookie バナーで同意された場合に限られます。「必須のみ」を選択するとアナリティクスのスクリプトは読み込まれないため、これらの Cookie が設定されることはありません。また、ブラウザの設定からいつでも Cookie を管理・削除できます。いずれの場合も、サイトの閲覧やお問い合わせはまったく同じようにご利用いただけます。"
+          }
+        ]
+      },
+      {
+        "heading": "本ポリシーの変更",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "本サイトが収集する情報やその利用方法に重要な変更があった場合は、このページを更新し、上部の「最終更新」日を新しくします。"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "お問い合わせ",
+      "href": "/ja/#contact",
+      "data": {}
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "実績あるワーキングラインから護衛用マリノアを育成する、トレーナー自らが率いる小規模なワーキングドッグプログラム。"
+    },
+    "quickLinks": {
+      "h3": "クイックリンク",
+      "ariaLabel": "フッターナビゲーション",
+      "links": [
+        {
+          "label": "犬",
+          "href": "/ja/#dogs"
+        },
+        {
+          "label": "プロセス",
+          "href": "/ja/#training"
+        },
+        {
+          "label": "繁殖",
+          "href": "/ja/#breeding"
+        },
+        {
+          "label": "引き渡し",
+          "href": "/ja/#pricing"
+        },
+        {
+          "label": "概要",
+          "href": "/ja/#about"
+        },
+        {
+          "label": "お問い合わせ",
+          "href": "/ja/#contact"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "連絡先",
+      "links": [
+        {
+          "ariaLabel": "Instagram を見る",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "WhatsApp で連絡する",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "メールを送る",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. 無断転載を禁じます。"
+  }
+}

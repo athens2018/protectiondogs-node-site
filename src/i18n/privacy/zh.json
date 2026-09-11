@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "隐私政策 | Protection Dogs GR",
+    "description": "了解 Protection Dogs GR 在您联系我们或使用本网站时，如何收集、使用和保护您的个人信息。",
+    "ogTitle": "隐私政策 | Protection Dogs GR",
+    "ogDescription": "了解 Protection Dogs GR 在您联系我们或使用本网站时，如何收集、使用和保护您的个人信息。",
+    "ogLocale": "zh_CN",
+    "ogUrl": "https://www.protectiondogs.gr/privacy-policy-zh.html",
+    "twitterTitle": null,
+    "twitterDescription": null,
+    "canonical": "https://www.protectiondogs.gr/privacy-policy-zh.html",
+    "lang": "zh-Hans",
+    "dir": null,
+    "jsonld": {}
+  },
+  "skipLink": {
+    "label": "跳到主要内容",
+    "href": "#main-content"
+  },
+  "nav": {
+    "ariaLabel": "主导航",
+    "brand": {
+      "href": "/zh/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "展开菜单",
+    "items": [
+      {
+        "label": "犬只",
+        "href": "/zh/#dogs"
+      },
+      {
+        "label": "训练",
+        "href": "/zh/#training"
+      },
+      {
+        "label": "繁育",
+        "href": "/zh/#breeding"
+      },
+      {
+        "label": "交付",
+        "href": "/zh/#pricing"
+      },
+      {
+        "label": "关于",
+        "href": "/zh/#about"
+      },
+      {
+        "label": "联系",
+        "href": "/zh/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "首页",
+        "href": "/zh/"
+      },
+      {
+        "label": "隐私政策",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "法律信息",
+    "h1": "隐私政策",
+    "lastUpdated": "最后更新：2026 年 9 月",
+    "disclaimer": "本译文仅为方便阅读而提供。<a href=\"/privacy-policy.html\" class=\"text-warning\" hreflang=\"en\">英文版本</a>为具有约束力的正式版本；如有出入，以英文文本为准。",
+    "intro": [
+      {
+        "tag": "p",
+        "html": "本页面说明本网站收集哪些个人信息、出于什么目的，以及您可以如何处理。内容依据本网站的实际做法撰写，并非通用模板。"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "网站运营者",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Protection Dogs GR，位于希腊，运营本网站 protectiondogs.gr。如有任何与隐私相关的问题或请求，请发送邮件至 <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>。"
+          }
+        ]
+      },
+      {
+        "heading": "收集哪些信息",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">当您使用联系表单时：</strong>您的姓名、电子邮箱、电话号码（如填写）以及您在留言栏中填写的内容。这些信息会发送至第三方表单处理服务 Formspree 进行处理，并投递到我的电子邮箱。Formspree 有其自己的<a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">隐私政策</a>，说明其在传输过程中如何处理这些数据。"
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">仅在您同意的情况下——通过 Google Analytics：</strong>本网站可能使用 Google Analytics（Google 的 gtag.js）来了解访问者如何使用网站：浏览了哪些页面、大致所在地区（国家/地区级别）、设备类型以及您从何处进入本站。这会用到 Cookie 及类似的跟踪技术。<strong class=\"text-warning\">在您于 Cookie 提示中点击同意之前，不会加载任何与统计相关的内容：</strong>如果您选择“仅必要项”，或直接忽略该提示，Google Analytics 脚本就不会加载，也不会收集任何统计数据。如果您选择同意，Google 的<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">隐私政策</a>说明了其如何处理这些数据。"
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">浏览器本地存储中的几个小标记：</strong>您在 Cookie 提示中的选择（这样就不会再次询问您）、您使用语言切换器时选择的语言，以及您关闭网站通知条或“安装应用”提示后的是/否标记（这样它们不会再次出现）。这些标记不含任何个人信息，只会被本网站读取，也绝不会离开您的设备。 同一存储中还会保存一条简短记录，说明网站的离线支持是否已正确安装，以便排查问题。"
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">嵌入的第三方内容：</strong> 首页嵌入了一个客户评价组件（testimonial.to）。在您接受 Cookie 或点击该版块中的「加载评价」按钮之前，不会从该服务商加载任何内容；加载后，该服务商可能会按照其自身的隐私政策设置 Cookie 或收集数据。"
+          }
+        ]
+      },
+      {
+        "heading": "为什么收集这些信息",
+        "blocks": [
+          {
+            "tag": "ul",
+            "items": [
+              "回复您关于犬只、训练或其他任何事项的咨询",
+              "了解网站的哪些部分真正有用，以便加以改进",
+              "保障网站安全运行并排查问题"
+            ]
+          },
+          {
+            "tag": "p",
+            "html": "我不会向任何人出售您的信息，也不会将其用于本页面所述之外的任何用途。"
+          }
+        ]
+      },
+      {
+        "heading": "保存多长时间",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "联系表单的提交内容会在处理您的咨询以及由此产生的合作关系所需的期间内保留，之后在不再需要时删除。统计数据按照 Google Analytics 的标准保留设置保存。"
+          }
+        ]
+      },
+      {
+        "heading": "您的权利",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "如果您身处欧盟/欧洲经济区或英国，根据《通用数据保护条例》（GDPR），您有权了解我持有您的哪些个人数据、索取副本、要求更正或删除，以及反对相关的使用方式。如需行使上述任何权利，请发送邮件至 <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>。"
+          }
+        ]
+      },
+      {
+        "heading": "Cookie",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "本网站自身设置的 Cookie 仅来自 Google Analytics，且仅在您首次访问时于 Cookie 提示中同意后才会设置。选择“仅必要项”意味着统计脚本永远不会加载，这些 Cookie 也就不会被设置。您也可以随时通过浏览器设置管理或清除 Cookie。无论如何选择，浏览本网站和联系我的功能都完全一样。"
+          }
+        ]
+      },
+      {
+        "heading": "本政策的变更",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "如果本网站收集的内容或使用方式发生实质性变化，本页面将更新，并在上方标注新的“最后更新”日期。"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "联系我",
+      "href": "/zh/#contact",
+      "data": {}
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "一家由训犬师亲自主理的小型工作犬犬舍，专注培养出自成熟工作血系的马犬护卫犬。"
+    },
+    "quickLinks": {
+      "h3": "快速导航",
+      "ariaLabel": "页脚导航",
+      "links": [
+        {
+          "label": "犬只",
+          "href": "/zh/#dogs"
+        },
+        {
+          "label": "训练",
+          "href": "/zh/#training"
+        },
+        {
+          "label": "繁育",
+          "href": "/zh/#breeding"
+        },
+        {
+          "label": "交付",
+          "href": "/zh/#pricing"
+        },
+        {
+          "label": "关于",
+          "href": "/zh/#about"
+        },
+        {
+          "label": "联系",
+          "href": "/zh/#contact"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "关注我",
+      "links": [
+        {
+          "ariaLabel": "访问我的 Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "通过 WhatsApp 联系",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "给我发邮件",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. 版权所有。"
+  }
+}

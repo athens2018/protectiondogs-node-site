@@ -1,0 +1,2168 @@
+{
+  "meta": {
+    "title": "Cães Malinois de Proteção | Protection Dogs GR",
+    "description": "Cães Malinois de proteção de linha de trabalho. Um programa pequeno, conduzido diretamente pelo treinador na Grécia, com atenção real a cada cão.",
+    "ogTitle": "Cães Malinois de Proteção | Protection Dogs GR",
+    "ogDescription": "Cães Malinois de proteção treinados em um programa pequeno e conduzido pelo treinador para pessoas e famílias com necessidades reais de proteção.",
+    "ogLocale": "pt_PT",
+    "ogUrl": "https://www.protectiondogs.gr/pt/",
+    "twitterTitle": "Cães Malinois de Proteção",
+    "twitterDescription": "Cães Malinois de proteção treinados em um programa pequeno e conduzido pelo treinador para pessoas e famílias com necessidades reais de proteção.",
+    "canonical": "https://www.protectiondogs.gr/pt/",
+    "lang": "pt",
+    "dir": null,
+    "jsonld": {
+      "organization": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Protection Dogs GR",
+        "description": "Um pequeno programa de cães de proteção Malinois belga sediado na Grécia e conduzido diretamente pelo treinador, que desenvolve um número limitado de cães de linha de trabalho de cada vez para particulares e famílias com necessidades reais de proteção.",
+        "url": "https://www.protectiondogs.gr/",
+        "logo": "https://www.protectiondogs.gr/images/logo.png",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Kostas",
+            "jobTitle": "Founder and Lead Trainer"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+306931736026",
+            "email": "contact@protectiondogs.gr",
+            "contactType": "Customer Service",
+            "availableLanguage": [
+              "en",
+              "el",
+              "it",
+              "pt"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/protectiondogsgr",
+          "https://wa.me/306931736026"
+        ]
+      },
+      "faqpage": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que faz o seu programa ser diferente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mantenho o programa pequeno e muito seletivo. São importantes a capacidade de trabalho, a estabilidade nervosa, a saúde, a profundidade da linha e a complementaridade dos progenitores. O objetivo não é simplesmente produzir mais cães, mas oferecer um material melhor para o treino."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como avalia a capacidade de trabalho dos cães?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cada cão é testado em condições reais e em vários níveis: não num único cenário controlado, mas sob pressão composta e imprevisível, semelhante a uma situação real de segurança. Procuro clareza sob pressão, empenho, rapidez com que o cão se recupera e reativa, e se regressa ao controlo quando a situação muda. Estes não são cães de proteção comuns: são cães de trabalho desenvolvidos para necessidades reais de segurança."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanta experiência é necessária?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Estes cães exigem uma mão experiente. Os verdadeiros Malinois de trabalho não são cães de família comuns. O proprietário tem de estar disposto a continuar o treino e a gerir um cão de trabalho muito motivado na vida quotidiana. Eu próprio treino o dono e permaneço ao lado dele mesmo após a entrega."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que treino os seus cães fazem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O processo começa com a manipulação precoce e o trabalho em ambiente; depois vem a socialização, a obediência, o desenvolvimento da motivação para o trabalho, as bases da proteção, cenários cada vez mais difíceis, a avaliação final e a adaptação ao futuro dono. Cada cão segue o mesmo padrão básico; as fases finais são adaptadas ao futuro dono e ao contexto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que testes de saúde fazem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cada cão candidato a reprodução passa por um controlo sanitário completo: avaliação oficial para displasia do quadril e cotovelo, teste de ADN completo e consulta veterinária completa. Só faço acasalamentos com cães que cumprem os meus padrões sanitários e de trabalho."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como selecionam os clientes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Avalio cada candidatura com atenção: quero ter a certeza de que a responsabilidade de um verdadeiro cão de trabalho é compreendida. Isso inclui experiência, necessidade real de segurança e capacidade de manter o treino ao longo do tempo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto dura a espera?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não há uma duração fixa: tudo depende dos cães que estão atualmente em treino e de quantos consigo acompanhar ao mesmo tempo, dando a cada um a atenção devida. Escreva-me e falemos do que está disponível e da fila de espera."
+            }
+          }
+        ],
+        "inLanguage": "pt"
+      },
+      "product": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bobo - Cão Malinois de Proteção",
+        "description": "O Bobo concluiu a fase de seleção e foi aceite no meu programa de cães de proteção. Está agora em desenvolvimento ativo e disponível para reserva antecipada, enquanto continuo o seu treino até à entrega final.",
+        "image": "https://www.protectiondogs.gr/images/bobo-beach-15840.avif",
+        "brand": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/pt/"
+        },
+        "category": "Cães de proteção",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "50000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/pt/#dogs",
+          "description": "O Bobo é o último cão a este preço. A partir da próxima ninhada, o preço passa para €70.000."
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Raça",
+            "value": "Belgian Malinois"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Data de nascimento",
+            "value": "2026-03-11"
+          }
+        ],
+        "disambiguatingDescription": "Cão de proteção de linha de trabalho, desenvolvido para necessidades reais de segurança e cuidadosamente compatibilizado com o condutor certo"
+      },
+      "service": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Cão de proteção com treino concluído",
+        "description": "Um Malinois de linhagem de trabalho desenvolvido segundo um padrão único através de treino avançado de comandos, disciplina em espaços públicos e preparação para deslocações e viagens. A reserva antecipada durante o treino está disponível com um plano de pagamento faseado.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/pt/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "70000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/pt/#pricing",
+          "description": "Preço padrão válido a partir da próxima ninhada."
+        }
+      }
+    }
+  },
+  "nav": {
+    "ariaLabel": "Menu principal",
+    "brand": {
+      "href": "/pt/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Abrir menu",
+    "items": [
+      {
+        "label": "Cães",
+        "href": "#dogs"
+      },
+      {
+        "label": "Treinamento",
+        "href": "#training"
+      },
+      {
+        "label": "Criação",
+        "href": "#breeding"
+      },
+      {
+        "label": "Entrega",
+        "href": "#pricing"
+      },
+      {
+        "label": "Sobre",
+        "href": "#about"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contact"
+      }
+    ],
+    "langTrigger": {
+      "current": "PT",
+      "ariaControls": "langDrawer"
+    },
+    "mobileLangTrigger": {
+      "current": "PT",
+      "ariaControls": "langDrawer"
+    },
+    "langDrawer": {
+      "ariaLabel": "Escolher idioma",
+      "title": "Escolher idioma",
+      "close": {
+        "label": "&times;",
+        "ariaLabel": "Fechar"
+      },
+      "options": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": true
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "langSuggest": null
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Ir para o conteúdo principal",
+      "href": "#main-content"
+    },
+    "backToTopAriaLabel": "Voltar ao topo",
+    "scrollProgressAriaLabel": null,
+    "heroAriaLabel": "Seção de entrada",
+    "sectionDots": {
+      "ariaLabel": "Seções da página",
+      "items": [
+        {
+          "href": "#main-content",
+          "section": "main-content",
+          "ariaLabel": "Início",
+          "tooltip": "Início"
+        },
+        {
+          "href": "#about",
+          "section": "about",
+          "ariaLabel": "Sobre",
+          "tooltip": "Sobre"
+        },
+        {
+          "href": "#dogs",
+          "section": "dogs",
+          "ariaLabel": "Cães",
+          "tooltip": "Cães"
+        },
+        {
+          "href": "#training",
+          "section": "training",
+          "ariaLabel": "Treinamento",
+          "tooltip": "Treinamento"
+        },
+        {
+          "href": "#breeding",
+          "section": "breeding",
+          "ariaLabel": "Criação",
+          "tooltip": "Criação"
+        },
+        {
+          "href": "#pricing",
+          "section": "pricing",
+          "ariaLabel": "Entrega",
+          "tooltip": "Entrega"
+        },
+        {
+          "href": "#faq",
+          "section": "faq",
+          "ariaLabel": "FAQ",
+          "tooltip": "FAQ"
+        },
+        {
+          "href": "#contact",
+          "section": "contact",
+          "ariaLabel": "Contacto",
+          "tooltip": "Contacto"
+        }
+      ]
+    },
+    "contactIcons": {
+      "ariaLabel": "Contacto rápido",
+      "items": [
+        {
+          "ariaLabel": "Enviar e-mail",
+          "href": "mailto:contact@protectiondogs.gr",
+          "label": "E-mail",
+          "icon": "fas fa-envelope"
+        },
+        {
+          "ariaLabel": "Escreva-me no WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "label": "WhatsApp",
+          "icon": "fab fa-whatsapp"
+        },
+        {
+          "ariaLabel": "Perfil do Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "label": "Instagram",
+          "icon": null
+        }
+      ]
+    }
+  },
+  "cookie": {
+    "ariaLabel": "Consentimento de cookies",
+    "text": "Este site utiliza cookies para estatísticas essenciais. Nenhum dado é recolhido sem a sua autorização.",
+    "reject": "Apenas essenciais",
+    "accept": "Aceitar"
+  },
+  "hero": {
+    "eyebrow": "Belgian Malinois &middot; Grécia",
+    "h1": "<span>Um</span> <span>cão</span> <span>de</span> <span>cada</span> <span>vez.</span>",
+    "lead": "Para proteção real de pessoas e bens, criamos e treinamos um número reduzido de Belgian Malinois de linha de trabalho. Como o programa mantém um tamanho pequeno, eu trato pessoalmente de cada cão e também da pessoa que futuramente o vai acolher.",
+    "ctas": [
+      {
+        "label": "Cães disponíveis",
+        "href": "#dogs",
+        "data": {}
+      },
+      {
+        "label": "Fale comigo",
+        "href": "#contact",
+        "data": {}
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/hero1.jpg",
+        "alt": "Cão Malinois em treino"
+      },
+      {
+        "src": "/images/hero2.jpg",
+        "alt": "Malinois em alerta"
+      },
+      {
+        "src": "/images/hero3.jpg",
+        "alt": "Malinois treinado em família"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Programa",
+    "h2": "Sobre a Protection Dogs GR",
+    "intro": {
+      "h3": "Um programa pequeno centrado no cão",
+      "paragraphs": [
+        "A Protection Dogs GR é um programa de criação e treino de Malinois dedicado à verdadeira proteção pessoal e patrimonial. Partimos de uma linha de trabalho comprovada e avalio cada cão durante o crescimento e o treino para ver como reage na realidade.",
+        "O objetivo não é produzir um cão bonito para mostrar, mas sim um cão capaz de trabalhar com plena intensidade, manter a clareza sob pressão e voltar ao controlo imediatamente quando a situação muda."
+      ]
+    },
+    "pullQuote": "A linha de sangue dá <span class=\"text-warning\">potencial</span>. É o treinador quem decide <span class=\"text-warning\">o que sai dali</span>.",
+    "cards": [
+      {
+        "h3": "Programa",
+        "paragraphs": [
+          "A Protection Dogs GR é um programa pequeno, conduzido diretamente pelo treinador. Crio apenas um número limitado de Malinois para poder acompanhar cada cão desde os primeiros dias até à entrega final."
+        ]
+      },
+      {
+        "h3": "Padrão",
+        "paragraphs": [
+          "Quero um cão que saiba dar tudo sem perder a calma, que seja equilibrado fora do trabalho e que retorne ao controlo rapidamente após a pressão. Nem todos os cães servem para proteção: não entrego nenhum apenas porque parece impressionante."
+        ]
+      },
+      {
+        "h3": "Relação",
+        "paragraphs": [
+          "Como o programa é pequeno, terá contacto direto comigo do início ao fim. Quando um cão é reservado durante o treino, o futuro tutor pode acompanhar o desenvolvimento, colocar perguntas e receber fotos e vídeos antes da entrega."
+        ]
+      }
+    ],
+    "cta": {
+      "h3": "Por que há tão poucos cães",
+      "paragraphs": [
+        "Trabalho com poucos cães ao mesmo tempo porque os treino e avalio eu próprio. O número de cães disponíveis depende portanto da minha capacidade de trabalho e não de uma escassez artificial.",
+        "Se quiser um cão disponível agora ou um que venha a nascer numa próxima ninhada, escreva-me diretamente:"
+      ],
+      "links": [
+        {
+          "label": "contact@protectiondogs.gr",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope me-2"
+        },
+        {
+          "label": "@protectiondogsgr",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram me-2"
+        },
+        {
+          "label": "+30 693 173 6026",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp me-2"
+        }
+      ]
+    }
+  },
+  "dogs": {
+    "eyebrow": "Disponível para reserva",
+    "h2": "Cães de proteção disponíveis",
+    "availability": "Disponíveis para reserva: <!--pdg:fact_available_for_reservation-->1<!--/pdg-->",
+    "intro": "Os cães em treino aparecem aqui à medida que progridem. Cada cão segue o mesmo padrão básico de treino e é avaliado continuamente até à entrega.",
+    "bobo": {
+      "storyOpen": "bobo-story-modal",
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, Malinois de proteção em treino"
+      },
+      "name": "Bobo",
+      "tagline": "<!--pdg:stage_display-->Cão de proteção &middot; em treino<!--/pdg-->",
+      "stats": [
+        {
+          "label": "Nascimento",
+          "value": "<!--pdg:dob_display-->11 de março de 2026<!--/pdg-->"
+        },
+        {
+          "label": "Linha",
+          "value": "Linha de trabalho"
+        },
+        {
+          "label": "Estado",
+          "value": "<!--pdg:status_display-->Reserva aberta<!--/pdg-->"
+        }
+      ],
+      "meetButton": {
+        "label": "Conheça o Bobo",
+        "icon": "fas fa-paw me-2",
+        "data": {
+          "data-story-open": "bobo-story-modal"
+        }
+      },
+      "paragraphs": [
+        "O Bobo passou a fase de seleção e foi aceite no meu programa de cães de proteção. Está atualmente em treino ativo e pode ser reservado desde já; eu próprio continuarei o seu treino até à entrega.",
+        "Reservar o Bobo durante o seu percurso de treino permite ao futuro dono acompanhar o desenvolvimento passo a passo e receber atualizações regulares. Também me dá a oportunidade de adaptar as últimas fases do treino à casa, à rotina e às necessidades de quem o espera."
+      ],
+      "aboutHeading": "Sobre o Bobo",
+      "features": [
+        "Genética de trabalho comprovada, forte motivação para trabalhar",
+        "Muito confiante em todos os ambientes desde pequeno",
+        "Alta concentração e consciência da situação",
+        "Atualmente em treino de proteção, a caminho da entrega",
+        "Socialização ampla em ambientes reais do dia a dia",
+        "Em desenvolvimento como verdadeiro protetor de pessoas e bens"
+      ],
+      "reservation": {
+        "eyebrow": "Reserva antecipada",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_current-->50.000<!--/pdg-->"
+        },
+        "notes": [
+          "O Bobo é o último cão a este preço. A partir da próxima ninhada, o preço passa para €<!--pdg:price_future-->70.000<!--/pdg-->.",
+          "Pode ser acordado um plano de pagamentos mensais, de modo a distribuir o valor no tempo restante de treino em vez de o pagar de uma só vez."
+        ],
+        "cta": {
+          "label": "Falemos do Bobo e da reserva",
+          "href": "#contact",
+          "data": {
+            "data-interest": "Bobo - Early Reservation",
+            "data-stop-propagation": ""
+          }
+        }
+      }
+    },
+    "future": {
+      "name": "Próximos cães",
+      "tagline": "Da próxima ninhada",
+      "stats": [
+        {
+          "label": "<!--pdg:next_litter_label-->Previsto<!--/pdg-->",
+          "value": "<!--pdg:next_litter-->fim de 2026<!--/pdg-->"
+        },
+        {
+          "label": "Raça",
+          "value": "Belgian Malinois"
+        },
+        {
+          "label": "Linha",
+          "value": "Linha de trabalho"
+        }
+      ],
+      "paragraph": "O programa continua deliberadamente pequeno. Se quiser um cão que nascerá numa próxima ninhada, sugiro que fale comigo cedo. Quando um cão adequado é admitido no programa e o acasalamento é correto, a reserva pode ser feita durante o treino, antes da entrega. Assim pode acompanhar o cão desde o início, habituar-se ao processo e espalhar o pagamento ao longo do período de treino.",
+      "cta": {
+        "label": "Falemos de um próximo cão",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "boboStory": {
+    "ariaLabelledby": "bobo-story-title",
+    "close": {
+      "label": "&times;",
+      "ariaLabel": "Fechar"
+    },
+    "media": {
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, Malinois de proteção em treino"
+      },
+      "video": {
+        "ariaLabel": "Bobo, Malinois de proteção em treino",
+        "poster": "/images/bobo-training-15888-poster.webp",
+        "src": "/images/bobo-training-15888.mp4"
+      }
+    },
+    "title": "Conheça o Bobo",
+    "dotCount": 4,
+    "slides": [
+      {
+        "slide": "0",
+        "image": "/images/bobo-beach-15840.avif",
+        "video": null,
+        "h4": "Naturalmente confiante e motivado",
+        "p": "O Bobo nunca precisou de ganhar confiança: nasceu assim. A sua motivação para trabalhar também é natural e forte: nenhuma parte dele foi “colada” depois. A sua mordida é firme e decidida; seja qual for o trabalho do dia, está pronto para o fazer."
+      },
+      {
+        "slide": "1",
+        "image": "/images/bobo-training-15893-poster.webp",
+        "video": "/images/bobo-training-15893.mp4",
+        "h4": "Compatível com crianças e animais",
+        "p": "Fora do trabalho, o Bobo é realmente um ótimo companheiro: sente-se confortável com crianças e outros animais, e não se limita a tolerá-los. Um verdadeiro cão de proteção também precisa de saber ser um cão normal no resto do dia. Ele sabe."
+      },
+      {
+        "slide": "2",
+        "image": "/images/bobo-training-15888-poster.webp",
+        "video": "/images/bobo-training-15888.mp4",
+        "h4": "Crescido a mão, passo a passo",
+        "p": "Eu próprio criei o Bobo desde o primeiro dia, como acontece com todos os cães que passam por mim. Pelagem escura, uma cabeça realmente bonita, e foi desenvolvido gradualmente, sem forçar nada. Também gosta muito do mar: nadar é uma das suas coisas preferidas."
+      },
+      {
+        "slide": "3",
+        "image": "/images/bobo-beach-15842.avif",
+        "video": null,
+        "h4": "Para quem realmente precisa de proteção",
+        "p": "O Bobo está a tornar-se num cão forte e sério: não é um companheiro de hobby, mas um cão criado para alguém que realmente precisa de proteção. Cada detalhe da sua criação foi orientado para isso."
+      }
+    ],
+    "nav": {
+      "prev": "&larr; Voltar",
+      "next": "Avançar &rarr;",
+      "jsClose": "Fechar",
+      "jsNext": "Avançar →"
+    }
+  },
+  "watchDevelop": {
+    "eyebrow": "Reserva",
+    "h2": "Um cão cujo desenvolvimento acompanha",
+    "paragraphs": [
+      "Para muitos clientes, a relação começa muito antes de o cão estar pronto. Quando um cão adequado é reservado durante o percurso de treino, mantenho o futuro dono dentro do processo: fotografias atualizadas, vídeos curtos e notas honestas sobre o treino. Assim pode ver o crescimento do cão e seguir o caminho até à entrega passo a passo.",
+      "Estas partilhas são deliberadamente cruas: não são montadas como publicidade. São gravadas como grande parte do trabalho diário, tal como faço para a minha própria avaliação. O objetivo não é produzir conteúdo, mas deixar o futuro dono ver o cão tal como ele evolui ao longo do tempo."
+    ]
+  },
+  "training": {
+    "h2": "Como treino cada cão",
+    "intro": "Um sistema em cinco fases baseado num princípio simples: a motivação para o trabalho e o autocontrolo são desenvolvidos separadamente e depois unidos de forma consciente.",
+    "timeline": {
+      "ariaLabel": "Navegação de etapas",
+      "items": [
+        {
+          "phase": "1",
+          "number": "1",
+          "label": "Primeiras semanas",
+          "period": "0–3 semanas"
+        },
+        {
+          "phase": "2",
+          "number": "2",
+          "label": "Socialização",
+          "period": "3–12 semanas"
+        },
+        {
+          "phase": "3",
+          "number": "3",
+          "label": "Fundamentos",
+          "period": "3–6 meses"
+        },
+        {
+          "phase": "4",
+          "number": "4",
+          "label": "Treino de proteção",
+          "period": "6–12 meses"
+        },
+        {
+          "phase": "5",
+          "number": "5",
+          "label": "Consolidação e entrega",
+          "period": "12–18 meses"
+        }
+      ]
+    },
+    "phaseNav": {
+      "ariaLabel": "Navegação de etapas",
+      "prevAriaLabel": "Etapa anterior",
+      "nextAriaLabel": "Etapa seguinte",
+      "status": "<span data-phase-current>1</span> / 5"
+    },
+    "phases": [
+      {
+        "id": "phase-1",
+        "number": "01",
+        "badge": "1. Etapa",
+        "title": "Primeiras semanas",
+        "timing": "0–3 semanas",
+        "intro": "O desenvolvimento começa nos primeiros dias de vida. A manipulação precoce e a estimulação medida criam uma base mais sólida para a segurança ambiental e a resistência ao stress no futuro.",
+        "features": [
+          {
+            "icon": "fas fa-brain",
+            "h4": "Manipulação precoce (dias 3–16)",
+            "p": "Trabalhos planeados de manipulação e estimulação que criam as bases para a resistência ao stress futuro"
+          },
+          {
+            "icon": "fas fa-cubes",
+            "h4": "Enriquecimento ambiental",
+            "p": "Conhecimento medido de texturas, superfícies e experiências sensoriais diferentes"
+          },
+          {
+            "icon": "fas fa-clipboard-check",
+            "h4": "Avaliação do temperamento",
+            "p": "Monitorização contínua das influências genéticas e da predisposição ao trabalho"
+          }
+        ],
+        "media": null
+      },
+      {
+        "id": "phase-2",
+        "number": "02",
+        "badge": "2. Etapa",
+        "title": "Socialização",
+        "timing": "3–12 semanas",
+        "intro": "Neste período crítico realizo um trabalho de exercício planeado: o objetivo é criar cães seguros, equilibrados e capazes de trabalhar em ambientes diferentes.",
+        "features": [
+          {
+            "icon": "fas fa-users",
+            "h4": "Socialização avançada",
+            "p": "Conhecimento controlado de pessoas, animais e ambientes diferentes"
+          },
+          {
+            "icon": "fas fa-city",
+            "h4": "Segurança ambiental",
+            "p": "Exercitação sistemática em diferentes superfícies, sons e situações"
+          },
+          {
+            "icon": "fas fa-paw",
+            "h4": "Primeiros trabalhos de cheiro",
+            "p": "Base para futuras pesquisas e atividades de deteção"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Trabalho de socialização de um cão Malinois de proteção",
+          "poster": "/images/bobo-training-15891-poster.webp",
+          "src": "/images/bobo-training-15891.mp4"
+        }
+      },
+      {
+        "id": "phase-3",
+        "number": "03",
+        "badge": "3. Etapa",
+        "title": "Fundamentos",
+        "timing": "3–6 meses",
+        "intro": "Nesta fase consolida-se a obediência de base e introduzem-se os primeiros conceitos do trabalho de proteção. É aqui que se constrói o enquadramento de tudo o que vem depois.",
+        "features": [
+          {
+            "icon": "fas fa-check-circle",
+            "h4": "Obediência de base",
+            "p": "Resposta fiável aos comandos em qualquer ambiente"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "h4": "Desenvolvimento da motivação para o trabalho",
+            "p": "Direcionar o instinto natural para uma capacidade de trabalho focada"
+          },
+          {
+            "icon": "fas fa-compass",
+            "h4": "Fundamentos da proteção",
+            "p": "Conhecimento da resposta defensiva controlada e da decisão clara"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Trabalho de obediência de base com um cão Malinois de proteção",
+          "poster": "/images/bobo-training-15890-poster.webp",
+          "src": "/images/bobo-training-15890.mp4"
+        }
+      },
+      {
+        "id": "phase-4",
+        "number": "04",
+        "badge": "4. Etapa",
+        "title": "Treino de proteção",
+        "timing": "6–12 meses",
+        "intro": "O trabalho de proteção torna-se progressivamente mais difícil: pessoas, espaços, superfícies, distrações e pressão mudam constantemente. O objetivo é perceber se o cão continua a pensar quando o trabalho se torna mais exigente.",
+        "features": [
+          {
+            "icon": "fas fa-theater-masks",
+            "h4": "Trabalho por cenários",
+            "p": "Situações realistas de proteção com figuras e espaços diferentes"
+          },
+          {
+            "icon": "fas fa-balance-scale",
+            "h4": "Raciocínio controlado",
+            "p": "Tomar decisões claras sob pressão: saber quando entrar e quando recuar"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Ajuste com o dono",
+            "p": "Construção do vínculo crítico entre o cão e quem o treina"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Trabalho por cenários com um cão Malinois de proteção",
+          "src": "/images/elite-protection-dog-training.avif"
+        }
+      },
+      {
+        "id": "phase-5",
+        "number": "05",
+        "badge": "5. Etapa",
+        "title": "Consolidação e entrega",
+        "timing": "12–18 meses",
+        "intro": "A etapa final serve para verificar a estabilidade do cão, identificar os pontos fracos que restam e ensinar ao futuro dono a manter corretamente este trabalho.",
+        "features": [
+          {
+            "icon": "fas fa-clipboard-list",
+            "h4": "Teste de estabilidade",
+            "p": "Avaliação meticulosa de todos os aspetos da proteção e da obediência"
+          },
+          {
+            "icon": "fas fa-sync-alt",
+            "h4": "Consolidação no terreno",
+            "p": "Confirmação final em ambientes reais e diferentes"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Entrega ao cliente",
+            "p": "Formação completa do proprietário e suporte após a entrega"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Trabalho de compatibilidade entre um Malinois treinado e o proprietário",
+          "src": "/images/nikky1.avif"
+        }
+      }
+    ]
+  },
+  "testing": {
+    "eyebrow": "Avaliação",
+    "h2": "Como avalio e classifico os cães",
+    "paragraphs": [
+      "Só a força não me diz muito.",
+      "Quero ver o que acontece quando a pressão se acumula e a situação se torna imprevisível. Um cão não deve perder a clareza no trabalho, mas deve manter o controlo e voltar a um comportamento estável quando a situação muda.",
+      "A recuperação também é muito importante. Observo quão rapidamente o cão assimila o stress e regressa a trabalhar de forma eficaz. Isso diz muito mais do que a simples “força” demonstrada num cenário familiar.",
+      "Registo os trabalhos para observar tanto o desempenho do cão como a minha própria orientação. O objetivo é simples: avaliar com honestidade, identificar cedo os pontos fracos e tomar decisões mais corretas à medida que o cão cresce."
+    ]
+  },
+  "breeding": {
+    "eyebrow": "Seleção",
+    "h2": "Criação",
+    "cards": [
+      {
+        "h3": "Como escolho as combinações",
+        "paragraphs": [
+          "As minhas decisões de criação não se limitam aos relatórios de saúde e a um pedigree que parece bom na papelada. Procuro uma complementaridade real entre pai e mãe em termos de carácter e motivação para o trabalho: linhas que não empilham os mesmos pontos fortes e os mesmos riscos, mas que se compensam mutuamente. Também trato da matemática: calculo o coeficiente de consanguinidade não apenas nas primeiras duas ou três gerações, mas em todo o pedigree. Assim sei exatamente o que estou a intensificar e o que estou a diluir antes de tomar a decisão.",
+          "Também introduzi conscientemente linhas externas; entre elas estão cães de linhas de trabalho belgas raras e fechadas, usadas em unidades especiais e forças de segurança. O objetivo não era seguir um nome no papel, mas reforçar a profundidade genética. É um caminho mais lento, mas dá-me muito mais controlo sobre o que produzo e por que motivo faço cada combinação."
+        ]
+      },
+      {
+        "h3": "Os meus critérios de criação",
+        "paragraphs": [
+          "Cada cão que criamos segue o mesmo sistema de treino, construído com trabalho prático e avaliação contínua. O sistema permanece fixo, mas o treinador ainda precisa de ler cada cão individualmente e tomar a decisão certa no momento certo.",
+          "<strong class=\"text-warning\">A base vem antes da pressão.</strong> Antes que um filhote veja equipamento real de pressão, construo corretamente a sua capacidade de tolerar a frustração: trabalho planeado de perseguição e libertação que ensina a querer algo fortemente e a pensar mesmo assim. Se ignorar este passo, cria um cão explosivo e impossível de reverter. Eu não o ignoro.",
+          "<strong class=\"text-warning\">A calma não é exceção, é a base.</strong> Ensino a cada cão uma calma estabelecida e confiante como estado natural; mesmo no meio do ataque e sob pressão. O trabalho de um cão de proteção não é manter-se constantemente tenso, mas saber mudar de modo e regressar ao controlo com a mesma rapidez."
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "Vida quotidiana",
+    "h2": "Ambiente familiar",
+    "paragraphs": [
+      "Os cães não crescem num recinto comercial isolado. Durante todo o período de crescimento e treino fazem parte da minha vida quotidiana.",
+      "A minha família está presente de forma natural neste processo. Isso dá-me uma oportunidade extra para ver como um cão se acalma, como reage à rotina normal da casa e como se comporta fora do treino."
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "Adequação",
+    "h2": "Para quem são estes cães",
+    "blocks": [
+      {
+        "tag": "p",
+        "html": "Estes cães são emparelhados com cuidado. Entre os candidatos adequados estão:"
+      },
+      {
+        "tag": "ul",
+        "items": [
+          "Pessoas que querem proteger a sua família ou casa",
+          "Proprietários de empresas e imóveis com necessidades reais de segurança",
+          "Pessoas que se confrontam com uma ameaça concreta ou um problema de segurança",
+          "Pessoas experientes que procuram um verdadeiro cão de trabalho"
+        ]
+      },
+      {
+        "tag": "p",
+        "html": "A entrega correta depende não só do cão, mas também da pessoa. Um cão de proteção não é simplesmente comprado: deve ser entregue a quem compreende a responsabilidade de ter e manter um verdadeiro cão de trabalho."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Entrega",
+    "h2": "Preços e reservas",
+    "cards": [
+      {
+        "h3": "Cão de proteção com treino concluído",
+        "features": [
+          "Treino de obediência avançada",
+          "Obediência em condições de pressão e em ambientes reais",
+          "Comportamento impecável na sociedade",
+          "Acostumado a veículos e viagens",
+          "Genética de linha de trabalho"
+        ],
+        "note": "Preço padrão válido a partir da próxima ninhada. A disponibilidade depende da minha capacidade de treino e dos cães em crescimento.",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_future-->70.000<!--/pdg-->"
+        },
+        "smallPrint": "Um só padrão, sem níveis de treino. Pode ser acordado um plano de pagamentos mensais ao longo do período de treino restante, em vez de um único pagamento na entrega."
+      },
+      {
+        "h3": "Incluído na entrega",
+        "features": [
+          "Continuação do treino até ao standard do programa",
+          "Trabalho final de adaptação com o dono",
+          "Consolidação em ambiente social e no terreno",
+          "Preparação para veículos e viagens",
+          "Preparação personalizada de acordo com as suas condições",
+          "Suporte contínuo após a entrega"
+        ],
+        "note": null,
+        "price": null,
+        "smallPrint": null
+      }
+    ],
+    "closing": {
+      "paragraphs": [
+        "Não é necessário esperar que o cão esteja totalmente pronto e pagar tudo de uma só vez. Quando um cão foi aceite no programa e considero que o emparelhamento é correto, a reserva pode ser feita durante o treino. Assim sei para quem estou a preparar o cão e o cliente pode acompanhar o desenvolvimento desde o início. A relação começa antes da entrega, não no dia da entrega.",
+        "Depois do emparelhamento com o futuro dono, os trabalhos seguintes podem ser adaptados ao ambiente e às necessidades dessa pessoa sem nunca comprometer o standard."
+      ],
+      "cta": {
+        "label": "Falemos de disponibilidade e reserva",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Perguntas",
+    "h2": "Perguntas frequentes",
+    "items": [
+      {
+        "id": "faq-q1",
+        "answerId": "faq-a1",
+        "question": "O que faz o seu programa ser diferente?",
+        "answer": "Mantenho o programa pequeno e muito seletivo. São importantes a capacidade de trabalho, a estabilidade nervosa, a saúde, a profundidade da linha e a complementaridade dos progenitores. O objetivo não é simplesmente produzir mais cães, mas oferecer um material melhor para o treino."
+      },
+      {
+        "id": "faq-q2",
+        "answerId": "faq-a2",
+        "question": "Como avalia a capacidade de trabalho dos cães?",
+        "answer": "Cada cão é testado em condições reais e em vários níveis: não num único cenário controlado, mas sob pressão composta e imprevisível, semelhante a uma situação real de segurança. Procuro clareza sob pressão, empenho, rapidez com que o cão se recupera e reativa, e se regressa ao controlo quando a situação muda. Estes não são cães de proteção comuns: são cães de trabalho desenvolvidos para necessidades reais de segurança."
+      },
+      {
+        "id": "faq-q3",
+        "answerId": "faq-a3",
+        "question": "Quanta experiência é necessária?",
+        "answer": "Estes cães exigem uma mão experiente. Os verdadeiros Malinois de trabalho não são cães de família comuns. O proprietário tem de estar disposto a continuar o treino e a gerir um cão de trabalho muito motivado na vida quotidiana. Eu próprio treino o dono e permaneço ao lado dele mesmo após a entrega."
+      },
+      {
+        "id": "faq-q4",
+        "answerId": "faq-a4",
+        "question": "Que treino os seus cães fazem?",
+        "answer": "O processo começa com a manipulação precoce e o trabalho em ambiente; depois vem a socialização, a obediência, o desenvolvimento da motivação para o trabalho, as bases da proteção, cenários cada vez mais difíceis, a avaliação final e a adaptação ao futuro dono. Cada cão segue o mesmo padrão básico; as fases finais são adaptadas ao futuro dono e ao contexto."
+      },
+      {
+        "id": "faq-q5",
+        "answerId": "faq-a5",
+        "question": "Que testes de saúde fazem?",
+        "answer": "Cada cão candidato a reprodução passa por um controlo sanitário completo: avaliação oficial para displasia do quadril e cotovelo, teste de ADN completo e consulta veterinária completa. Só faço acasalamentos com cães que cumprem os meus padrões sanitários e de trabalho."
+      },
+      {
+        "id": "faq-q6",
+        "answerId": "faq-a6",
+        "question": "Como selecionam os clientes?",
+        "answer": "Avalio cada candidatura com atenção: quero ter a certeza de que a responsabilidade de um verdadeiro cão de trabalho é compreendida. Isso inclui experiência, necessidade real de segurança e capacidade de manter o treino ao longo do tempo."
+      },
+      {
+        "id": "faq-q7",
+        "answerId": "faq-a7",
+        "question": "Quanto dura a espera?",
+        "answer": "Não há uma duração fixa: tudo depende dos cães que estão atualmente em treino e de quantos consigo acompanhar ao mesmo tempo, dando a cada um a atenção devida. Escreva-me e falemos do que está disponível e da fila de espera."
+      }
+    ],
+    "schema": [
+      {
+        "name": "O que faz o seu programa ser diferente?",
+        "text": "Mantenho o programa pequeno e muito seletivo. São importantes a capacidade de trabalho, a estabilidade nervosa, a saúde, a profundidade da linha e a complementaridade dos progenitores. O objetivo não é simplesmente produzir mais cães, mas oferecer um material melhor para o treino."
+      },
+      {
+        "name": "Como avalia a capacidade de trabalho dos cães?",
+        "text": "Cada cão é testado em condições reais e em vários níveis: não num único cenário controlado, mas sob pressão composta e imprevisível, semelhante a uma situação real de segurança. Procuro clareza sob pressão, empenho, rapidez com que o cão se recupera e reativa, e se regressa ao controlo quando a situação muda. Estes não são cães de proteção comuns: são cães de trabalho desenvolvidos para necessidades reais de segurança."
+      },
+      {
+        "name": "Quanta experiência é necessária?",
+        "text": "Estes cães exigem uma mão experiente. Os verdadeiros Malinois de trabalho não são cães de família comuns. O proprietário tem de estar disposto a continuar o treino e a gerir um cão de trabalho muito motivado na vida quotidiana. Eu próprio treino o dono e permaneço ao lado dele mesmo após a entrega."
+      },
+      {
+        "name": "Que treino os seus cães fazem?",
+        "text": "O processo começa com a manipulação precoce e o trabalho em ambiente; depois vem a socialização, a obediência, o desenvolvimento da motivação para o trabalho, as bases da proteção, cenários cada vez mais difíceis, a avaliação final e a adaptação ao futuro dono. Cada cão segue o mesmo padrão básico; as fases finais são adaptadas ao futuro dono e ao contexto."
+      },
+      {
+        "name": "Que testes de saúde fazem?",
+        "text": "Cada cão candidato a reprodução passa por um controlo sanitário completo: avaliação oficial para displasia do quadril e cotovelo, teste de ADN completo e consulta veterinária completa. Só faço acasalamentos com cães que cumprem os meus padrões sanitários e de trabalho."
+      },
+      {
+        "name": "Como selecionam os clientes?",
+        "text": "Avalio cada candidatura com atenção: quero ter a certeza de que a responsabilidade de um verdadeiro cão de trabalho é compreendida. Isso inclui experiência, necessidade real de segurança e capacidade de manter o treino ao longo do tempo."
+      },
+      {
+        "name": "Quanto dura a espera?",
+        "text": "Não há uma duração fixa: tudo depende dos cães que estão atualmente em treino e de quantos consigo acompanhar ao mesmo tempo, dando a cada um a atenção devida. Escreva-me e falemos do que está disponível e da fila de espera."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Comentários",
+    "h2": "O que dizem os clientes",
+    "consent": {
+      "text": "As opiniões de clientes são apresentadas através do Testimonial.to, um serviço de terceiros que pode definir os seus próprios cookies. Só são carregadas depois de aceitar os cookies ou premir o botão.",
+      "button": "Carregar opiniões"
+    },
+    "embeds": {
+      "iframeTitle": "Carrossel de testemunhos de clientes",
+      "jsIframeTitle": "Client testimonials"
+    }
+  },
+  "partner": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #testimonial-widgets (line 1237)",
+    "logo": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "Logótipo SafariMedic"
+    },
+    "text": "Soluções de apoio médico para ambientes ligados a cães de trabalho e de proteção",
+    "links": [
+      {
+        "label": "Visite o site da SafariMedic",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "icon": "fas fa-external-link-alt ms-2"
+      },
+      {
+        "label": "A nossa parceria",
+        "href": "/safarimedic-partnership.html",
+        "target": null,
+        "icon": "fas fa-book-open ms-2"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Consulta privada",
+    "h2": "Contactos",
+    "intro": "Cada entrega começa com uma conversa. Como trabalho com um número reduzido de cães, prefiro conhecer primeiro a pessoa e o ambiente antes de decidir se um cão é de facto adequado, ou não.",
+    "journey": {
+      "title": "O que acontece a seguir:",
+      "steps": [
+        "Contacto",
+        "Conversa direta",
+        "Adequação e escolha do cão",
+        "Reserva quando apropriado",
+        "Desenvolvimento",
+        "Integração do condutor e entrega",
+        "Apoio contínuo"
+      ]
+    },
+    "tellMe": {
+      "title": "Fale-me sobre:",
+      "items": [
+        "A sua zona de residência",
+        "A sua casa e situação familiar",
+        "Outros animais em casa",
+        "A sua experiência com cães e cães de trabalho",
+        "A sua propriedade e rotina diária",
+        "A sua rotina de viagens",
+        "A tarefa que espera do cão",
+        "A sua preferência de calendário",
+        "Se está interessado numa reserva antecipada"
+      ]
+    },
+    "form": {
+      "action": "https://formspree.io/f/mwpvylyn",
+      "method": "POST",
+      "fields": {
+        "name": {
+          "label": "Nome e apelido*",
+          "placeholder": "O seu nome e apelido",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "email": {
+          "label": "E-mail*",
+          "placeholder": "O seu e-mail",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "phone": {
+          "label": "Telefone / WhatsApp",
+          "placeholder": "O seu número de telefone",
+          "ariaLabel": null,
+          "title": null,
+          "required": false
+        },
+        "country": {
+          "label": "País",
+          "options": [
+            {
+              "value": "",
+              "label": "Selecione o seu país",
+              "placeholder": true
+            },
+            {
+              "value": "Afghanistan",
+              "label": "Afghanistan"
+            },
+            {
+              "value": "Albania",
+              "label": "Albania"
+            },
+            {
+              "value": "Algeria",
+              "label": "Algeria"
+            },
+            {
+              "value": "Andorra",
+              "label": "Andorra"
+            },
+            {
+              "value": "Angola",
+              "label": "Angola"
+            },
+            {
+              "value": "Antigua and Barbuda",
+              "label": "Antigua and Barbuda"
+            },
+            {
+              "value": "Argentina",
+              "label": "Argentina"
+            },
+            {
+              "value": "Armenia",
+              "label": "Armenia"
+            },
+            {
+              "value": "Australia",
+              "label": "Australia"
+            },
+            {
+              "value": "Austria",
+              "label": "Austria"
+            },
+            {
+              "value": "Azerbaijan",
+              "label": "Azerbaijan"
+            },
+            {
+              "value": "Bahamas",
+              "label": "Bahamas"
+            },
+            {
+              "value": "Bahrain",
+              "label": "Bahrain"
+            },
+            {
+              "value": "Bangladesh",
+              "label": "Bangladesh"
+            },
+            {
+              "value": "Barbados",
+              "label": "Barbados"
+            },
+            {
+              "value": "Belarus",
+              "label": "Belarus"
+            },
+            {
+              "value": "Belgium",
+              "label": "Belgium"
+            },
+            {
+              "value": "Belize",
+              "label": "Belize"
+            },
+            {
+              "value": "Benin",
+              "label": "Benin"
+            },
+            {
+              "value": "Bhutan",
+              "label": "Bhutan"
+            },
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Bosnia and Herzegovina",
+              "label": "Bosnia and Herzegovina"
+            },
+            {
+              "value": "Botswana",
+              "label": "Botswana"
+            },
+            {
+              "value": "Brazil",
+              "label": "Brazil"
+            },
+            {
+              "value": "Brunei",
+              "label": "Brunei"
+            },
+            {
+              "value": "Bulgaria",
+              "label": "Bulgaria"
+            },
+            {
+              "value": "Burkina Faso",
+              "label": "Burkina Faso"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Cabo Verde",
+              "label": "Cabo Verde"
+            },
+            {
+              "value": "Cambodia",
+              "label": "Cambodia"
+            },
+            {
+              "value": "Cameroon",
+              "label": "Cameroon"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Central African Republic",
+              "label": "Central African Republic"
+            },
+            {
+              "value": "Chad",
+              "label": "Chad"
+            },
+            {
+              "value": "Chile",
+              "label": "Chile"
+            },
+            {
+              "value": "China",
+              "label": "China"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Comoros",
+              "label": "Comoros"
+            },
+            {
+              "value": "Congo (Congo-Brazzaville)",
+              "label": "Congo (Congo-Brazzaville)"
+            },
+            {
+              "value": "Costa Rica",
+              "label": "Costa Rica"
+            },
+            {
+              "value": "Croatia",
+              "label": "Croatia"
+            },
+            {
+              "value": "Cuba",
+              "label": "Cuba"
+            },
+            {
+              "value": "Cyprus",
+              "label": "Cyprus"
+            },
+            {
+              "value": "Czechia",
+              "label": "Czechia"
+            },
+            {
+              "value": "Denmark",
+              "label": "Denmark"
+            },
+            {
+              "value": "Djibouti",
+              "label": "Djibouti"
+            },
+            {
+              "value": "Dominica",
+              "label": "Dominica"
+            },
+            {
+              "value": "Dominican Republic",
+              "label": "Dominican Republic"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "Egypt",
+              "label": "Egypt"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Equatorial Guinea",
+              "label": "Equatorial Guinea"
+            },
+            {
+              "value": "Eritrea",
+              "label": "Eritrea"
+            },
+            {
+              "value": "Estonia",
+              "label": "Estonia"
+            },
+            {
+              "value": "Eswatini",
+              "label": "Eswatini"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Fiji",
+              "label": "Fiji"
+            },
+            {
+              "value": "Finland",
+              "label": "Finland"
+            },
+            {
+              "value": "France",
+              "label": "France"
+            },
+            {
+              "value": "Gabon",
+              "label": "Gabon"
+            },
+            {
+              "value": "Gambia",
+              "label": "Gambia"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Germany",
+              "label": "Germany"
+            },
+            {
+              "value": "Ghana",
+              "label": "Ghana"
+            },
+            {
+              "value": "Greece",
+              "label": "Greece"
+            },
+            {
+              "value": "Grenada",
+              "label": "Grenada"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Guinea",
+              "label": "Guinea"
+            },
+            {
+              "value": "Guinea-Bissau",
+              "label": "Guinea-Bissau"
+            },
+            {
+              "value": "Guyana",
+              "label": "Guyana"
+            },
+            {
+              "value": "Haiti",
+              "label": "Haiti"
+            },
+            {
+              "value": "Holy See",
+              "label": "Holy See"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Hungary",
+              "label": "Hungary"
+            },
+            {
+              "value": "Iceland",
+              "label": "Iceland"
+            },
+            {
+              "value": "India",
+              "label": "India"
+            },
+            {
+              "value": "Indonesia",
+              "label": "Indonesia"
+            },
+            {
+              "value": "Iran",
+              "label": "Iran"
+            },
+            {
+              "value": "Iraq",
+              "label": "Iraq"
+            },
+            {
+              "value": "Ireland",
+              "label": "Ireland"
+            },
+            {
+              "value": "Israel",
+              "label": "Israel"
+            },
+            {
+              "value": "Italy",
+              "label": "Italy"
+            },
+            {
+              "value": "Jamaica",
+              "label": "Jamaica"
+            },
+            {
+              "value": "Japan",
+              "label": "Japan"
+            },
+            {
+              "value": "Jordan",
+              "label": "Jordan"
+            },
+            {
+              "value": "Kazakhstan",
+              "label": "Kazakhstan"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Kiribati",
+              "label": "Kiribati"
+            },
+            {
+              "value": "Kuwait",
+              "label": "Kuwait"
+            },
+            {
+              "value": "Kyrgyzstan",
+              "label": "Kyrgyzstan"
+            },
+            {
+              "value": "Laos",
+              "label": "Laos"
+            },
+            {
+              "value": "Latvia",
+              "label": "Latvia"
+            },
+            {
+              "value": "Lebanon",
+              "label": "Lebanon"
+            },
+            {
+              "value": "Lesotho",
+              "label": "Lesotho"
+            },
+            {
+              "value": "Liberia",
+              "label": "Liberia"
+            },
+            {
+              "value": "Libya",
+              "label": "Libya"
+            },
+            {
+              "value": "Liechtenstein",
+              "label": "Liechtenstein"
+            },
+            {
+              "value": "Lithuania",
+              "label": "Lithuania"
+            },
+            {
+              "value": "Luxembourg",
+              "label": "Luxembourg"
+            },
+            {
+              "value": "Madagascar",
+              "label": "Madagascar"
+            },
+            {
+              "value": "Malawi",
+              "label": "Malawi"
+            },
+            {
+              "value": "Malaysia",
+              "label": "Malaysia"
+            },
+            {
+              "value": "Maldives",
+              "label": "Maldives"
+            },
+            {
+              "value": "Mali",
+              "label": "Mali"
+            },
+            {
+              "value": "Malta",
+              "label": "Malta"
+            },
+            {
+              "value": "Marshall Islands",
+              "label": "Marshall Islands"
+            },
+            {
+              "value": "Mauritania",
+              "label": "Mauritania"
+            },
+            {
+              "value": "Mauritius",
+              "label": "Mauritius"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Micronesia",
+              "label": "Micronesia"
+            },
+            {
+              "value": "Moldova",
+              "label": "Moldova"
+            },
+            {
+              "value": "Monaco",
+              "label": "Monaco"
+            },
+            {
+              "value": "Mongolia",
+              "label": "Mongolia"
+            },
+            {
+              "value": "Montenegro",
+              "label": "Montenegro"
+            },
+            {
+              "value": "Morocco",
+              "label": "Morocco"
+            },
+            {
+              "value": "Mozambique",
+              "label": "Mozambique"
+            },
+            {
+              "value": "Myanmar",
+              "label": "Myanmar"
+            },
+            {
+              "value": "Namibia",
+              "label": "Namibia"
+            },
+            {
+              "value": "Nauru",
+              "label": "Nauru"
+            },
+            {
+              "value": "Nepal",
+              "label": "Nepal"
+            },
+            {
+              "value": "Netherlands",
+              "label": "Netherlands"
+            },
+            {
+              "value": "New Zealand",
+              "label": "New Zealand"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Niger",
+              "label": "Niger"
+            },
+            {
+              "value": "Nigeria",
+              "label": "Nigeria"
+            },
+            {
+              "value": "North Korea",
+              "label": "North Korea"
+            },
+            {
+              "value": "North Macedonia",
+              "label": "North Macedonia"
+            },
+            {
+              "value": "Norway",
+              "label": "Norway"
+            },
+            {
+              "value": "Oman",
+              "label": "Oman"
+            },
+            {
+              "value": "Pakistan",
+              "label": "Pakistan"
+            },
+            {
+              "value": "Palau",
+              "label": "Palau"
+            },
+            {
+              "value": "Palestine State",
+              "label": "Palestine State"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Paraguay",
+              "label": "Paraguay"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Philippines",
+              "label": "Philippines"
+            },
+            {
+              "value": "Poland",
+              "label": "Poland"
+            },
+            {
+              "value": "Portugal",
+              "label": "Portugal"
+            },
+            {
+              "value": "Qatar",
+              "label": "Qatar"
+            },
+            {
+              "value": "Romania",
+              "label": "Romania"
+            },
+            {
+              "value": "Russia",
+              "label": "Russia"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Saint Kitts and Nevis",
+              "label": "Saint Kitts and Nevis"
+            },
+            {
+              "value": "Saint Lucia",
+              "label": "Saint Lucia"
+            },
+            {
+              "value": "Saint Vincent and the Grenadines",
+              "label": "Saint Vincent and the Grenadines"
+            },
+            {
+              "value": "Samoa",
+              "label": "Samoa"
+            },
+            {
+              "value": "San Marino",
+              "label": "San Marino"
+            },
+            {
+              "value": "Sao Tome and Principe",
+              "label": "Sao Tome and Principe"
+            },
+            {
+              "value": "Saudi Arabia",
+              "label": "Saudi Arabia"
+            },
+            {
+              "value": "Senegal",
+              "label": "Senegal"
+            },
+            {
+              "value": "Serbia",
+              "label": "Serbia"
+            },
+            {
+              "value": "Seychelles",
+              "label": "Seychelles"
+            },
+            {
+              "value": "Sierra Leone",
+              "label": "Sierra Leone"
+            },
+            {
+              "value": "Singapore",
+              "label": "Singapore"
+            },
+            {
+              "value": "Slovakia",
+              "label": "Slovakia"
+            },
+            {
+              "value": "Slovenia",
+              "label": "Slovenia"
+            },
+            {
+              "value": "Solomon Islands",
+              "label": "Solomon Islands"
+            },
+            {
+              "value": "Somalia",
+              "label": "Somalia"
+            },
+            {
+              "value": "South Africa",
+              "label": "South Africa"
+            },
+            {
+              "value": "South Korea",
+              "label": "South Korea"
+            },
+            {
+              "value": "South Sudan",
+              "label": "South Sudan"
+            },
+            {
+              "value": "Spain",
+              "label": "Spain"
+            },
+            {
+              "value": "Sri Lanka",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "Sudan",
+              "label": "Sudan"
+            },
+            {
+              "value": "Suriname",
+              "label": "Suriname"
+            },
+            {
+              "value": "Sweden",
+              "label": "Sweden"
+            },
+            {
+              "value": "Switzerland",
+              "label": "Switzerland"
+            },
+            {
+              "value": "Syria",
+              "label": "Syria"
+            },
+            {
+              "value": "Tajikistan",
+              "label": "Tajikistan"
+            },
+            {
+              "value": "Tanzania",
+              "label": "Tanzania"
+            },
+            {
+              "value": "Thailand",
+              "label": "Thailand"
+            },
+            {
+              "value": "Timor-Leste",
+              "label": "Timor-Leste"
+            },
+            {
+              "value": "Togo",
+              "label": "Togo"
+            },
+            {
+              "value": "Tonga",
+              "label": "Tonga"
+            },
+            {
+              "value": "Trinidad and Tobago",
+              "label": "Trinidad and Tobago"
+            },
+            {
+              "value": "Tunisia",
+              "label": "Tunisia"
+            },
+            {
+              "value": "Turkey",
+              "label": "Turkey"
+            },
+            {
+              "value": "Turkmenistan",
+              "label": "Turkmenistan"
+            },
+            {
+              "value": "Tuvalu",
+              "label": "Tuvalu"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Ukraine",
+              "label": "Ukraine"
+            },
+            {
+              "value": "United Arab Emirates",
+              "label": "United Arab Emirates"
+            },
+            {
+              "value": "United Kingdom",
+              "label": "United Kingdom"
+            },
+            {
+              "value": "United States of America",
+              "label": "United States of America"
+            },
+            {
+              "value": "Uruguay",
+              "label": "Uruguay"
+            },
+            {
+              "value": "Uzbekistan",
+              "label": "Uzbekistan"
+            },
+            {
+              "value": "Vanuatu",
+              "label": "Vanuatu"
+            },
+            {
+              "value": "Venezuela",
+              "label": "Venezuela"
+            },
+            {
+              "value": "Vietnam",
+              "label": "Vietnam"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            },
+            {
+              "value": "Zambia",
+              "label": "Zambia"
+            },
+            {
+              "value": "Zimbabwe",
+              "label": "Zimbabwe"
+            }
+          ]
+        },
+        "interest": {
+          "label": "Interesse",
+          "options": [
+            {
+              "value": "",
+              "label": "Selecione o seu interesse",
+              "placeholder": true
+            },
+            {
+              "value": "Bobo - Early Reservation",
+              "label": "Bobo — Reserva antecipada"
+            },
+            {
+              "value": "Future Litter",
+              "label": "Próxima ninhada / Disponibilidade geral"
+            },
+            {
+              "value": "General Enquiry",
+              "label": "Pedido geral"
+            },
+            {
+              "value": "Other",
+              "label": "Outro"
+            }
+          ]
+        },
+        "message": {
+          "label": "Mensagem*",
+          "placeholder": "Escreva detalhes que me ajudem a perceber a sua necessidade, as suas dúvidas ou a sua situação...",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "privacyConsent": {
+          "label": "Aceito a <a href=\"/privacy-policy-pt.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">política de privacidade</a> e consinto no tratamento dos meus dados*",
+          "required": true
+        }
+      },
+      "submit": "Enviar pedido"
+    },
+    "messages": {
+      "nameRequired": "Escreva o seu nome completo",
+      "emailInvalid": "Introduza um endereço de e-mail válido",
+      "messageRequired": "Escreva uma mensagem",
+      "privacyRequired": "Tem de aceitar a política de privacidade",
+      "sending": "A enviar... <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+      "submitRestore": "Enviar pedido",
+      "success": "Mensagem enviada com sucesso!",
+      "submitError": "Ocorreu um problema ao enviar o formulário",
+      "networkError": "Erro de rede. Tente novamente.",
+      "notificationClose": "Fechar"
+    },
+    "preselect": [
+      {
+        "interest": "Bobo - Early Reservation",
+        "section": "dogs",
+        "line": 529
+      },
+      {
+        "interest": "Future Litter",
+        "section": "dogs",
+        "line": 564
+      },
+      {
+        "interest": "Future Litter",
+        "section": "pricing",
+        "line": 1071
+      }
+    ],
+    "footnotes": [
+      {
+        "icon": "fas fa-lock me-2",
+        "text": "Os seus dados são mantidos em sigilo e usados apenas para responder ao seu pedido."
+      },
+      {
+        "icon": "fas fa-clock me-2",
+        "text": "Normalmente respondo dentro de 24 horas."
+      }
+    ]
+  },
+  "privacyBlurb": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #contact (line 1624)",
+    "h2": "Privacidade e confidencialidade",
+    "cards": [
+      {
+        "icon": "fas fa-user-lock fa-3x text-warning mb-3",
+        "h3": "Privacidade real",
+        "p": "Sabemos que muitos clientes precisam de discrição em relação à sua identidade, endereço e organização de segurança. Antes de uma conversa detalhada, fico satisfeito em assinar um acordo mútuo de confidencialidade."
+      },
+      {
+        "icon": "fas fa-lock fa-3x text-warning mb-3",
+        "h3": "Privacidade quando necessário",
+        "p": "Alguns clientes têm circunstâncias pessoais, profissionais ou de segurança particularmente sensíveis. Se necessário, podemos acordar um nível de confidencialidade antes de partilhar detalhes mais aprofundados."
+      },
+      {
+        "icon": "fas fa-user-secret fa-3x text-warning mb-3",
+        "h3": "Totalmente confidencial",
+        "p": "Toda a informação do cliente continua confidencial do primeiro contacto até à entrega; a sua identidade, endereço e rotina de segurança permanecem entre nós."
+      }
+    ],
+    "closing": {
+      "text": "A sua privacidade é importante. Trato este assunto com seriedade desde o primeiro contacto até à entrega.",
+      "cta": {
+        "label": "Contacte-nos em total privacidade",
+        "href": "#contact",
+        "data": {}
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "Um programa de pequena escala, conduzido diretamente pelo treinador, que cria Malinois de proteção a partir de linhas de trabalho comprovadas."
+    },
+    "quickLinks": {
+      "h3": "Links rápidos",
+      "ariaLabel": "Menu do rodapé",
+      "links": [
+        {
+          "label": "Cães",
+          "href": "#dogs"
+        },
+        {
+          "label": "Treino",
+          "href": "#training"
+        },
+        {
+          "label": "Criação",
+          "href": "#breeding"
+        },
+        {
+          "label": "Entrega",
+          "href": "#pricing"
+        },
+        {
+          "label": "Quem sou",
+          "href": "#about"
+        },
+        {
+          "label": "Contactos",
+          "href": "#contact"
+        },
+        {
+          "label": "Privacidade",
+          "href": "/privacy-policy-pt.html"
+        }
+      ]
+    },
+    "language": {
+      "h3": "Idioma",
+      "links": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": true
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "connect": {
+      "h3": "Siga-me",
+      "links": [
+        {
+          "ariaLabel": "O meu Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "Escreva-me no WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "Enviar e-mail",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Todos os direitos reservados."
+  },
+  "ui": {}
+}

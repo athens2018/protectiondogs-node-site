@@ -1,0 +1,2165 @@
+{
+  "meta": {
+    "title": "ベルジアン・マリノア護衛犬 | Protection Dogs GR",
+    "description": "実際の警護ニーズに応えるため、実践的なシステムで育成された訓練済みのベルジアン・マリノア護衛犬。一度に少数のみを育成しています。",
+    "ogTitle": "ベルジアン・マリノア護衛犬 | Protection Dogs GR",
+    "ogDescription": "実際に警護を必要とする個人やご家族のために、トレーナー自らが率いる小規模なプログラムで育成された、訓練済みのベルジアン・マリノア護衛犬・警備犬。",
+    "ogLocale": "ja_JP",
+    "ogUrl": "https://www.protectiondogs.gr/ja/",
+    "twitterTitle": "ベルジアン・マリノア護衛犬・警備犬",
+    "twitterDescription": "実際に警護を必要とする個人やご家族のために、トレーナー自らが率いる小規模なプログラムで育成された、訓練済みのベルジアン・マリノア護衛犬・警備犬。",
+    "canonical": "https://www.protectiondogs.gr/ja/",
+    "lang": "ja",
+    "dir": null,
+    "jsonld": {
+      "organization": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Protection Dogs GR",
+        "description": "ギリシャを拠点とする、トレーナー自らが率いる小規模なベルジアン・マリノア護衛犬プログラムです。実際に警護を必要とする個人やご家族のために、ワーキングラインの犬を一度に限られた頭数のみ育成しています。",
+        "url": "https://www.protectiondogs.gr/",
+        "logo": "https://www.protectiondogs.gr/images/logo.png",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Kostas",
+            "jobTitle": "Founder and Lead Trainer"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+306931736026",
+            "email": "contact@protectiondogs.gr",
+            "contactType": "Customer Service",
+            "availableLanguage": [
+              "en",
+              "el"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/protectiondogsgr",
+          "https://wa.me/306931736026"
+        ]
+      },
+      "faqpage": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "繁殖プログラムの違いは何ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "繁殖プログラムは小規模かつ厳選して行っています。重視するのは、作業能力、神経の強さ、健康状態、血統の深み、そして父犬と母犬の相性です。目的は産仔数を増やすことではなく、トレーニングプログラムにより優れた素材を提供することにあります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "犬の作業能力はどのようにテストしていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "すべての犬を、単一の管理されたシナリオではなく、実際の警護状況を反映した複合的で予測不可能なストレス下でテストします。重視するのは、プレッシャー下での判断力、積極性、回復して再び取り組むまでの速さ、そして状況が変化した際に制御を取り戻せるかどうかです。これらは一般的な護衛犬ではなく、実際の警護ニーズのために育成されたワーキングドッグです。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どの程度のハンドリング経験が必要ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "これらの犬には経験豊富なハンドリングが必要です。一般的な家庭犬ではなく、強い衝動を持つ本物のワーキング・マリノアだからです。ハンドラーには、トレーニングを継続し、衝動の強いワーキングドッグを管理する意欲が求められます。円滑な受け入れのため、ハンドラー向けトレーニングと継続的なサポートを提供しています。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どのようなトレーニングを行っていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "育成は早期のハンドリングと環境慣らしから始まり、社会化、服従訓練、衝動の発達、護衛の基礎、段階的なシナリオトレーニング、最終評価、そしてハンドラーとの統合へと進みます。すべての犬が同じ基本基準に従いますが、その後の内容は将来のハンドラーや環境に合わせて調整できます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どのような健康検査を行っていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "繁殖候補となるすべての犬に対し、股関節・肘関節の認定検査、包括的なDNAスクリーニング、そして詳細な獣医学的検査を含む徹底した健康検査を実施しています。プログラムの水準を維持するため、厳格な健康基準と作業基準を満たす犬のみを繁殖に用いています。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "顧客選定のプロセスを教えてください。",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "本物のワーキングドッグを迎えるために必要な覚悟をご理解いただけているか、お客様一人ひとりを慎重に見極めています。具体的には、ハンドリング経験、警護のニーズ、トレーニングを継続する能力などを確認します。これらの犬は本格的な警護ニーズのためのものであり、経験豊富なハンドリングを必要とします。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どのくらいの待機期間がありますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "空き状況は、現在育成中の犬の数と、一度に適切に訓練できる頭数によって変わるため、待機期間は固定されていません。現在育成中の犬や今後の空き状況については、お気軽にお問い合わせください。"
+            }
+          }
+        ]
+      },
+      "product": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bobo - マリノア護衛犬",
+        "description": "Boboは選抜段階を終え、護衛犬プログラムへの参加が認められました。現在も育成を継続しており、最終的な引き渡しに向けてトレーニングを続けながら、早期のご予約も受け付けています。",
+        "image": "https://www.protectiondogs.gr/images/bobo-beach-15840.avif",
+        "brand": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/ja/"
+        },
+        "category": "護衛犬",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "50000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/ja/#dogs",
+          "description": "この価格帯でご案内できる最後の1頭です。次の産仔からは価格が€70,000になります。"
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "犬種",
+            "value": "Belgian Malinois"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "生年月日",
+            "value": "2026-03-11"
+          }
+        ],
+        "disambiguatingDescription": "実際の警護ニーズのために育成されたワーキングライン護衛犬。最適なハンドラーとの相性を慎重に見極めてマッチングします。"
+      },
+      "service": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "完全に育成された護衛犬",
+        "description": "ワーキングライン出身のマリノアを、高度なコマンドトレーニング、公共の場での規律、車両・移動への対応を含む単一の基準に基づいて育成します。育成期間中の早期のご予約も可能で、分割の月払いプランをご用意しています。",
+        "provider": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/ja/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "70000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/ja/#pricing",
+          "description": "次の産仔以降の標準価格です。"
+        }
+      }
+    }
+  },
+  "nav": {
+    "ariaLabel": "メインナビゲーション",
+    "brand": {
+      "href": "/ja/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "メニューを開く",
+    "items": [
+      {
+        "label": "犬",
+        "href": "#dogs"
+      },
+      {
+        "label": "プロセス",
+        "href": "#training"
+      },
+      {
+        "label": "繁殖",
+        "href": "#breeding"
+      },
+      {
+        "label": "引き渡し",
+        "href": "#pricing"
+      },
+      {
+        "label": "概要",
+        "href": "#about"
+      },
+      {
+        "label": "お問い合わせ",
+        "href": "#contact"
+      }
+    ],
+    "langTrigger": {
+      "current": "JA",
+      "ariaControls": "langDrawer"
+    },
+    "mobileLangTrigger": {
+      "current": "JA",
+      "ariaControls": "langDrawer"
+    },
+    "langDrawer": {
+      "ariaLabel": "言語を選択",
+      "title": "言語を選択",
+      "close": {
+        "label": "&times;",
+        "ariaLabel": "閉じる"
+      },
+      "options": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": true
+        }
+      ]
+    },
+    "langSuggest": null
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "メインコンテンツへスキップ",
+      "href": "#main-content"
+    },
+    "backToTopAriaLabel": "トップへ戻る",
+    "scrollProgressAriaLabel": null,
+    "heroAriaLabel": "メインセクション",
+    "sectionDots": {
+      "ariaLabel": "ページセクション",
+      "items": [
+        {
+          "href": "#main-content",
+          "section": "main-content",
+          "ariaLabel": "ホーム",
+          "tooltip": "ホーム"
+        },
+        {
+          "href": "#about",
+          "section": "about",
+          "ariaLabel": "概要",
+          "tooltip": "概要"
+        },
+        {
+          "href": "#dogs",
+          "section": "dogs",
+          "ariaLabel": "犬",
+          "tooltip": "犬"
+        },
+        {
+          "href": "#training",
+          "section": "training",
+          "ariaLabel": "プロセス",
+          "tooltip": "プロセス"
+        },
+        {
+          "href": "#breeding",
+          "section": "breeding",
+          "ariaLabel": "繁殖",
+          "tooltip": "繁殖"
+        },
+        {
+          "href": "#pricing",
+          "section": "pricing",
+          "ariaLabel": "引き渡し",
+          "tooltip": "引き渡し"
+        },
+        {
+          "href": "#faq",
+          "section": "faq",
+          "ariaLabel": "よくある質問",
+          "tooltip": "よくある質問"
+        },
+        {
+          "href": "#contact",
+          "section": "contact",
+          "ariaLabel": "お問い合わせ",
+          "tooltip": "お問い合わせ"
+        }
+      ]
+    },
+    "contactIcons": {
+      "ariaLabel": "クイック連絡",
+      "items": [
+        {
+          "ariaLabel": "メールを送る",
+          "href": "mailto:contact@protectiondogs.gr",
+          "label": "Email",
+          "icon": "fas fa-envelope"
+        },
+        {
+          "ariaLabel": "WhatsApp で連絡する",
+          "href": "https://wa.me/306931736026",
+          "label": "WhatsApp",
+          "icon": "fab fa-whatsapp"
+        },
+        {
+          "ariaLabel": "Instagram を見る",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "label": "Instagram",
+          "icon": "fab fa-instagram"
+        }
+      ]
+    }
+  },
+  "cookie": {
+    "ariaLabel": "Cookieの同意",
+    "text": "当サイトでは、利用状況を把握するための簡易的なアクセス解析にCookieを使用しています。同意いただくまでデータは収集されません。",
+    "reject": "必須のみ",
+    "accept": "同意する"
+  },
+  "hero": {
+    "eyebrow": "ベルジアン・マリノア &middot; ギリシャ",
+    "h1": "<span>一頭ずつ、</span><span>育てあげる。</span>",
+    "lead": "本格的な個人・資産の警護のために、ワーキングライン出身のベルジアン・マリノアを少数厳選して繁殖・育成・訓練しています。プログラムを小規模に保つことで、すべての犬に、そして最終的にその犬と暮らすことになるお客様一人ひとりに、直接関わり続けることができます。",
+    "ctas": [
+      {
+        "label": "利用可能な犬を見る",
+        "href": "#dogs",
+        "data": {}
+      },
+      {
+        "label": "引き渡しについて相談する",
+        "href": "#contact",
+        "data": {}
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/hero1.jpg",
+        "alt": "訓練中のベルジアン・マリノア護衛犬"
+      },
+      {
+        "src": "/images/hero2.jpg",
+        "alt": "警戒態勢を見せるベルジアン・マリノア警備犬"
+      },
+      {
+        "src": "/images/hero3.jpg",
+        "alt": "家族と過ごす訓練済みベルジアン・マリノア護衛犬"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "プログラム",
+    "h2": "Protection Dogs GRについて",
+    "intro": {
+      "h3": "犬を中心に据えた小さなプログラム",
+      "paragraphs": [
+        "Protection Dogs GRは、実際の警護活動のために有能で安定したマリノアを育成することに特化した、小規模なワーキングドッグプログラムです。実績のあるワーキングライン血統から始め、育成とトレーニングを通じて各犬が実際に何を示すかを見極めていきます。",
+        "目標はデモンストレーションで犬を印象的に見せることではありません。目標は、強い集中力を持って作業し、プレッシャーの下でも冷静さを保ち、状況が変化した際には制御を取り戻せる犬を育成することです。"
+      ]
+    },
+    "pullQuote": "血統が与えるのは<span class=\"text-warning\">可能性</span>にすぎない。それをどう形にするかを決めるのは<span class=\"text-warning\">トレーナー</span>です。",
+    "cards": [
+      {
+        "h3": "プログラム",
+        "paragraphs": [
+          "Protection Dogs GRは、トレーナー自らが率いる小規模なワーキングドッグプログラムです。早期の育成から最終的な引き渡しまで、各犬に直接関わり続けられるよう、限られた頭数のマリノアのみを繁殖・育成しています。"
+        ]
+      },
+      {
+        "h3": "基準",
+        "paragraphs": [
+          "求めるのは、判断力を失わない積極性、作業以外の場面での安定性、そしてプレッシャーが去った後に回復して制御を取り戻せる能力です。すべての犬が護衛の仕事に向いているわけではなく、デモンストレーションができるという理由だけで犬を引き渡すことはありません。"
+        ]
+      },
+      {
+        "h3": "関係性",
+        "paragraphs": [
+          "プログラムが小規模であるため、お客様はプロセスを通じて私と直接やりとりします。育成期間中に犬が予約された場合、将来の飼い主はその成長を見守り、質問をし、最新の写真や動画を受け取りながら、引き渡し前から少しずつ犬の準備に関わっていくことができます。"
+        ]
+      }
+    ],
+    "cta": {
+      "h3": "空きが限られている理由",
+      "paragraphs": [
+        "一頭一頭を自ら訓練・評価しているため、同時に扱う犬の数はごく少数に限られています。したがって空き状況はトレーニングの可能容量によって決まるものであり、意図的に希少性を演出しているわけではありません。",
+        "現在または将来の犬についてご相談されたい場合は、直接ご連絡ください："
+      ],
+      "links": [
+        {
+          "label": "contact@protectiondogs.gr",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope me-2"
+        },
+        {
+          "label": "@protectiondogsgr",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram me-2"
+        },
+        {
+          "label": "+30 693 173 6026",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp me-2"
+        }
+      ]
+    }
+  },
+  "dogs": {
+    "eyebrow": "予約受付中",
+    "h2": "ご案内できる護衛犬",
+    "availability": "現在予約受付中：<!--pdg:fact_available_for_reservation-->1<!--/pdg-->頭",
+    "intro": "現在育成中の犬は、その成長に合わせてこちらでご紹介しています。すべての犬が同じ基本トレーニング基準に従い、最終的な引き渡しまで継続的に評価されます。",
+    "bobo": {
+      "storyOpen": "bobo-story-modal",
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "育成中のベルジアン・マリノア護衛犬 Bobo"
+      },
+      "name": "Bobo",
+      "tagline": "<!--pdg:stage_display-->護衛犬 &middot; 育成中<!--/pdg-->",
+      "stats": [
+        {
+          "label": "生年月日",
+          "value": "<!--pdg:dob_display-->2026年3月11日<!--/pdg-->"
+        },
+        {
+          "label": "系統",
+          "value": "ワーキングライン"
+        },
+        {
+          "label": "ステータス",
+          "value": "<!--pdg:status_display-->予約受付中<!--/pdg-->"
+        }
+      ],
+      "meetButton": {
+        "label": "Boboに会う",
+        "icon": "fas fa-paw me-2",
+        "data": {
+          "data-story-open": "bobo-story-modal"
+        }
+      },
+      "paragraphs": [
+        "Boboは選抜段階を終え、護衛犬プログラムへの参加が認められました。現在も育成を継続しており、最終的な引き渡しに向けてトレーニングを続けながら、早期のご予約も受け付けています。",
+        "育成中にBoboを予約することで、将来の飼い主は彼の成長を見守り、最新の情報を受け取ることができます。また私にとっても、将来の住環境や生活リズム、要望に合わせて訓練の後半を調整する時間の余裕が生まれます。"
+      ],
+      "aboutHeading": "Boboについて",
+      "features": [
+        "強いドライブを持つ実証済みワーキングライン血統",
+        "高い環境適応力と充実した早期育成",
+        "高い集中力と状況判断力",
+        "現在護衛育成中で、引き渡しに向けて訓練中",
+        "実際の日常環境で十分に社会化済み",
+        "本格的な個人・資産の護衛者として育成中"
+      ],
+      "reservation": {
+        "eyebrow": "早期予約",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_current-->50,000<!--/pdg-->"
+        },
+        "notes": [
+          "この価格帯でご案内できる最後の1頭です。次の産仔からは価格が€<!--pdg:price_future-->70,000<!--/pdg-->になります。",
+          "一括でのお支払いではなく、残りの育成期間に分けて支払う分割の月次支払いプランもご相談の上ご用意できます。"
+        ],
+        "cta": {
+          "label": "Boboと予約について相談する",
+          "href": "#contact",
+          "data": {
+            "data-interest": "Bobo - Early Reservation",
+            "data-stop-propagation": ""
+          }
+        }
+      }
+    },
+    "future": {
+      "name": "今後の空き",
+      "tagline": "次の産仔から",
+      "stats": [
+        {
+          "label": "<!--pdg:next_litter_label-->予定<!--/pdg-->",
+          "value": "<!--pdg:next_litter-->2026年末<!--/pdg-->"
+        },
+        {
+          "label": "犬種",
+          "value": "ベルジアン・マリノア"
+        },
+        {
+          "label": "系統",
+          "value": "ワーキングライン"
+        }
+      ],
+      "paragraph": "このプログラムは意図的に小規模に保たれています。将来の犬をお考えの場合は、早めにご相談いただくことをお勧めします。適性のある犬がプログラムに入り、相性が良ければ、最終的な引き渡しを待たずに育成中から予約を開始できます。それにより、犬の成長を見守り、プロセスとの関係を築きながら、育成期間中に支払いを分散させることができます。",
+      "cta": {
+        "label": "今後の犬について相談する",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "boboStory": {
+    "ariaLabelledby": "bobo-story-title",
+    "close": {
+      "label": "&times;",
+      "ariaLabel": "閉じる"
+    },
+    "media": {
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "育成中のベルジアン・マリノア護衛犬 Bobo"
+      },
+      "video": {
+        "ariaLabel": "育成中のベルジアン・マリノア護衛犬 Bobo",
+        "poster": "/images/bobo-training-15888-poster.webp",
+        "src": "/images/bobo-training-15888.mp4"
+      }
+    },
+    "title": "Boboに会う",
+    "dotCount": 4,
+    "slides": [
+      {
+        "slide": "0",
+        "image": "/images/bobo-beach-15840.avif",
+        "video": null,
+        "h4": "生まれつきの自信とドライブ",
+        "p": "Boboは自信を持つよう説得される必要があったことが一度もありません。生まれながらにそうだったのです。ドライブも同様で、強くて自然——作りものでは一切ありません。噛む力も強く、その日どんな作業であろうと、彼はやり抜く意欲を見せます。"
+      },
+      {
+        "slide": "1",
+        "image": "/images/bobo-training-15893-poster.webp",
+        "video": "/images/bobo-training-15893.mp4",
+        "h4": "子供や他の動物とも仲良く",
+        "p": "仕事がない時のBoboは、単に我慢しているだけではなく、子供や他の動物のそばでも自然体で社交的にふるまえる、本当の意味で良い仲間です。本格的な護衛作業ができる犬であっても、それ以外の時間はちゃんと「犬らしく」いられることが大切ですが、Boboはまさにそれを体現しています。"
+      },
+      {
+        "slide": "2",
+        "image": "/images/bobo-training-15888-poster.webp",
+        "video": "/images/bobo-training-15888.mp4",
+        "h4": "一歩一歩、手で育てた",
+        "p": "Boboは私自身が繁殖し、ここを通ったすべての犬と同じように、初日から手で育ててきました。毛色は濃い色合いで、顔つきも本当に良く、無理に仕上げるのではなく少しずつ段階を踏んで育ててきました。海も大好きで、泳ぎは彼の世界で一番の楽しみのひとつです。"
+      },
+      {
+        "slide": "3",
+        "image": "/images/bobo-beach-15842.avif",
+        "video": null,
+        "h4": "本当の護衛を必要とする人のために",
+        "p": "Boboは強くて本格的な犬になりつつあります——趣味の仲間ではなく、本当に護衛を必要とする人のための犬です。これまでの育て方のすべてが、その目的のために尽くされてきました。"
+      }
+    ],
+    "nav": {
+      "prev": "&larr; 戻る",
+      "next": "次へ &rarr;",
+      "jsClose": "閉じる",
+      "jsNext": "次へ →"
+    }
+  },
+  "watchDevelop": {
+    "eyebrow": "予約",
+    "h2": "成長を見守れる犬",
+    "paragraphs": [
+      "多くのお客様にとって、関係は犬が完成する前から始まります。育成中に適性のある犬が予約された場合、将来の飼い主にはプロセスを間近で見ていただきます。最新の写真、短い動画、そして率直なトレーニング報告をお届けし、犬の成長と引き渡しまでの道のりを追っていただけます。",
+      "お届けする内容は、広告のように作り込むのではなく、あえてありのままです。日々のトレーニングの多くは、私自身が見返すために撮るのと同じように、そのまま撮影しています。目的はコンテンツを作ることではなく、将来の飼い主に自分の犬を時間をかけてありのままに見ていただくことです。"
+    ]
+  },
+  "training": {
+    "h2": "一頭一頭の育成方法",
+    "intro": "ドライブと自制心を別々に育て、その上で意図的に統合する——というシンプルな原則に基づく、5段階の育成システムです。",
+    "timeline": {
+      "ariaLabel": "段階ナビゲーション",
+      "items": [
+        {
+          "phase": "1",
+          "number": "1",
+          "label": "初期育成",
+          "period": "生後0～3週"
+        },
+        {
+          "phase": "2",
+          "number": "2",
+          "label": "社会化",
+          "period": "生後3～12週"
+        },
+        {
+          "phase": "3",
+          "number": "3",
+          "label": "基礎訓練",
+          "period": "生後3～6ヶ月"
+        },
+        {
+          "phase": "4",
+          "number": "4",
+          "label": "護衛育成",
+          "period": "生後6～12ヶ月"
+        },
+        {
+          "phase": "5",
+          "number": "5",
+          "label": "仕上げと引き渡し",
+          "period": "生後12～18ヶ月"
+        }
+      ]
+    },
+    "phaseNav": {
+      "ariaLabel": "段階ナビゲーション",
+      "prevAriaLabel": "前の段階",
+      "nextAriaLabel": "次の段階",
+      "status": "<span data-phase-current>1</span> / 5"
+    },
+    "phases": [
+      {
+        "id": "phase-1",
+        "number": "01",
+        "badge": "第1段階",
+        "title": "初期育成",
+        "timing": "生後0～3週",
+        "intro": "育成は生後数日から始まります。早期のハンドリングと管理された刺激を通じて、後の環境適応力とストレス耐性の土台をより強固に築きます。",
+        "features": [
+          {
+            "icon": "fas fa-brain",
+            "h4": "早期ハンドリング（生後3～16日）",
+            "p": "将来のストレス耐性の土台となる、体系的な早期ハンドリングと刺激エクササイズ"
+          },
+          {
+            "icon": "fas fa-cubes",
+            "h4": "環境エンリッチメント",
+            "p": "さまざまな質感・足場・感覚体験への管理された暴露"
+          },
+          {
+            "icon": "fas fa-clipboard-check",
+            "h4": "気質評価",
+            "p": "遺伝的な資質の現れ方と適性指標の継続的な評価"
+          }
+        ],
+        "media": null
+      },
+      {
+        "id": "phase-2",
+        "number": "02",
+        "badge": "第2段階",
+        "title": "社会化",
+        "timing": "生後3～12週",
+        "intro": "この重要な社会化期には、体系的な暴露トレーニングを行い、さまざまな環境で機能できる自信と安定性を備えた犬を育てます。",
+        "features": [
+          {
+            "icon": "fas fa-users",
+            "h4": "発展的な社会化",
+            "p": "さまざまな人・動物・環境への管理された暴露"
+          },
+          {
+            "icon": "fas fa-city",
+            "h4": "環境への自信",
+            "p": "多様な足場・音・状況への体系的な暴露"
+          },
+          {
+            "icon": "fas fa-paw",
+            "h4": "早期の嗅覚導入",
+            "p": "専門的な探知能力のための基礎トレーニング"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "マリノア護衛犬の社会化トレーニング",
+          "poster": "/images/bobo-training-15891-poster.webp",
+          "src": "/images/bobo-training-15891.mp4"
+        }
+      },
+      {
+        "id": "phase-3",
+        "number": "03",
+        "badge": "第3段階",
+        "title": "基礎訓練",
+        "timing": "生後3～6ヶ月",
+        "intro": "この段階では中核となる服従訓練を確立し、護衛の基本概念を導入して、高度な能力へとつながる土台をつくります。",
+        "features": [
+          {
+            "icon": "fas fa-check-circle",
+            "h4": "中核の服従訓練",
+            "p": "あらゆる環境で確実にコマンドに応えられる状態を確立"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "h4": "ドライブの育成",
+            "p": "持ち前のドライブを、集中された作業能力へと導く"
+          },
+          {
+            "icon": "fas fa-compass",
+            "h4": "護衛の基礎",
+            "p": "管理された防御反応と明確な判断の導入"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "マリノア護衛犬の基礎服従訓練",
+          "poster": "/images/bobo-training-15890-poster.webp",
+          "src": "/images/bobo-training-15890.mp4"
+        }
+      },
+      {
+        "id": "phase-4",
+        "number": "04",
+        "badge": "第4段階",
+        "title": "護衛育成",
+        "timing": "生後6～12ヶ月",
+        "intro": "護衛作業は、相手や場所、足場、妨害要因、プレッシャーを変えながら段階的に難度を上げていきます。目的は、作業が厳しくなっても犬が考え続けられるかを見極めることです。",
+        "features": [
+          {
+            "icon": "fas fa-theater-masks",
+            "h4": "シナリオトレーニング",
+            "p": "検証役や場所を変えながら行う、実際の護衛場面の想定訓練"
+          },
+          {
+            "icon": "fas fa-balance-scale",
+            "h4": "管理された判断力",
+            "p": "プレッシャー下での明確な判断を育てる——いつ動くべきか、いつ控えるべきかを見極める力"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "ハンドラーとの統合",
+            "p": "護衛の要となる、ハンドラーと犬の信頼関係の構築"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "マリノア護衛犬の高度なシナリオトレーニング",
+          "src": "/images/elite-protection-dog-training.avif"
+        }
+      },
+      {
+        "id": "phase-5",
+        "number": "05",
+        "badge": "第5段階",
+        "title": "仕上げと引き渡し",
+        "timing": "生後12～18ヶ月",
+        "intro": "最終段階では、犬の安定性を繰り返し検証し、残った弱点を見つけ出し、将来のハンドラーに作業を正しく維持する方法をお伝えします。",
+        "features": [
+          {
+            "icon": "fas fa-clipboard-list",
+            "h4": "安定性の検証",
+            "p": "護衛と服従のあらゆる項目にわたる厳密な評価"
+          },
+          {
+            "icon": "fas fa-sync-alt",
+            "h4": "実環境での仕上げ",
+            "p": "多様な実地の場面における最終的なパフォーマンス確認"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "お客様への引き渡し",
+            "p": "包括的なハンドラートレーニングと定着までのサポート"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "訓練済みマリノア護衛犬とハンドラーの統合",
+          "src": "/images/nikky1.avif"
+        }
+      }
+    ]
+  },
+  "testing": {
+    "eyebrow": "評価",
+    "h2": "テストと評価の方法",
+    "paragraphs": [
+      "激しさだけを見ても、分かることはほとんどありません。",
+      "私が見たいのは、プレッシャーが幾重にも重なり、慣れない、予測できないものになったときに何が起こるかです。犬は判断力を失うことなく取り組み続け、状況が変われば制御された状態に戻れなければなりません。",
+      "とりわけ重視しているのが回復力です。犬がどれだけ速くストレスを処理し、再び集中して、生産的な作業に戻れるかを見ています。慣れた訓練環境での激しさよりも、そちらのほうがはるかに多くを語ってくれます。",
+      "トレーニングは撮影し、犬のパフォーマンスと自分自身のハンドリングの両方を後から見返しています。目的はシンプルです。正直に評価し、弱点を早い段階で見つけ、育成が進むなかでより良い判断を下すためです。"
+    ]
+  },
+  "breeding": {
+    "eyebrow": "育成",
+    "h2": "繁殖",
+    "cards": [
+      {
+        "h3": "組み合わせの選び方",
+        "paragraphs": [
+          "私のプログラムにおける繁殖の判断は、健康診断の結果と紙の上の良い血統だけでは決まりません。父犬と母犬のあいだに、本当の意味で補い合うドライブの性質があるか——同じ長所と同じリスクを重ねるのではなく、互いの欠けている部分を埋め合う血統かどうかを見ます。その裏側にある数字とも丁寧に向き合います。最初の二、三世代だけでなく血統全体にわたる近交係数を計算し、何を濃縮し何を薄めようとしているのかを正確に理解したうえで繁殖を決めています。",
+          "また、外部の血統も意図的に導入してきました。特殊部隊や法執行機関のプログラムで用いられる、希少で閉鎖的なベルギーのワーキングラインの犬もそのひとつです。紙の上の名前を追い求めるためではなく、遺伝的な厚みを増すためです。時間のかかる繁殖・育成の方法ですが、自分が何を生み出しているのか、なぜその組み合わせを選んだのかを、より確かに把握できます。"
+        ]
+      },
+      {
+        "h3": "私の繁殖基準",
+        "paragraphs": [
+          "私が育てるすべての犬は、実地の作業と継続的な評価を通じて磨いてきた、同じトレーニングシステムを通ります。システムは一貫していますが、それでもトレーナーは一頭一頭を読み取り、適切なタイミングで適切な判断を下さなければなりません。",
+          "<strong class=\"text-warning\">基礎はプレッシャーより先。</strong> 若い犬が本物の負荷器具を目にする前に、正しいやり方で欲求不満耐性を育てます。追って離す、という構造化された作業を通じて、強く欲しがりながらも考え続けることを教えるのです。この段階を飛ばすと、爆発的だが鎮められない犬になります。私は飛ばしません。",
+          "<strong class=\"text-warning\">落ち着きは例外ではなく、軸。</strong> すべての犬に、噛んでいる最中でも、ストレス下でも、落ち着いた集中状態を「初期状態」として取り戻すよう訓練します。護衛犬の仕事は昂ぶり続けることではありません。いつ状態を切り替えるべきかを正確に知り、同じ速さで戻れることです。"
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "日常のなかで",
+    "h2": "家庭環境",
+    "paragraphs": [
+      "犬たちは隔離された商業的な環境で育てられるわけではありません。成長し訓練を受けるあいだ、私の日常生活の一部として過ごします。",
+      "その過程には自然と家族も関わるため、犬がどのように落ち着くのか、普段の家庭の動きにどう反応するのか、正式な訓練の外でどう振る舞うのかを観察する機会がさらに増えます。"
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "適性",
+    "h2": "どのような方に向いているか",
+    "blocks": [
+      {
+        "tag": "p",
+        "html": "これらの犬は、たとえば次のような方々と慎重にマッチングしています。"
+      },
+      {
+        "tag": "ul",
+        "items": [
+          "ご家族や住まいを守りたい方",
+          "現実的な安全上の懸念を抱える事業主・不動産所有者の方",
+          "特定の脅威や安全上の問題に直面している方",
+          "本格的なワーキングドッグを求める経験豊富なハンドラーの方"
+        ]
+      },
+      {
+        "tag": "p",
+        "html": "適切な引き渡しは、犬とハンドラーの双方によって決まります。護衛犬は単に購入するものではなく、本格的なワーキングドッグを所有し維持する責任を理解している方とマッチングされる必要があります。"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "引き渡し",
+    "h2": "価格とご予約",
+    "cards": [
+      {
+        "h3": "完全に育成された護衛犬",
+        "features": [
+          "高度なコマンドトレーニング",
+          "プレッシャー下での実地の服従",
+          "公共の場での規律",
+          "車両・移動への対応訓練済み",
+          "ワーキングライン血統"
+        ],
+        "note": "次の産仔以降の標準価格です。空き状況は現在のトレーニング可能容量と、これから育つ犬たちによって決まります。",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_future-->70,000<!--/pdg-->"
+        },
+        "smallPrint": "基準はひとつだけ。トレーニングのグレード分けはありません。引き渡し時に一括でお支払いいただくのではなく、残りの育成期間に分けた月々のお支払いプランをご相談のうえご用意できます。"
+      },
+      {
+        "h3": "引き渡しに含まれるもの",
+        "features": [
+          "プログラム基準に達するまでの継続的な育成",
+          "ハンドラーとの最終的な統合とトレーニング",
+          "環境および公共の場での仕上げ",
+          "車両・移動への対応準備",
+          "お客様の状況に合わせた個別の準備",
+          "引き渡し後の継続的なサポート"
+        ],
+        "note": null,
+        "price": null,
+        "smallPrint": null
+      }
+    ],
+    "closing": {
+      "paragraphs": [
+        "犬が仕上がるまで待って、引き渡し価格の全額を一度にお支払いいただく必要は必ずしもありません。プログラムを通過した犬がいて、相性が良いと私が判断した場合、お客様は育成中にご予約いただけます。私は誰のためにその犬を準備しているのかを分かったうえで育てられますし、お客様はその成長を追っていけます。関係は引き渡し当日ではなく、その前から始まるのです。",
+        "将来のハンドラーとのマッチングが決まれば、その後の作業も、基準を下げることなくその方の環境や要望に合わせて調整できます。"
+      ],
+      "cta": {
+        "label": "空き状況とご予約について相談する",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "質問",
+    "h2": "よくある質問",
+    "items": [
+      {
+        "id": "faq-q1",
+        "answerId": "faq-a1",
+        "question": "繁殖プログラムの違いは何ですか？",
+        "answer": "繁殖プログラムは小規模かつ厳選して行っています。重視するのは、作業能力、神経の強さ、健康状態、血統の深み、そして父犬と母犬の相性です。目的は産仔数を増やすことではなく、トレーニングプログラムにより優れた素材を提供することにあります。"
+      },
+      {
+        "id": "faq-q2",
+        "answerId": "faq-a2",
+        "question": "犬の作業能力はどのようにテストしていますか？",
+        "answer": "すべての犬を、単一の管理されたシナリオではなく、実際の警護状況を反映した複合的で予測不可能なストレス下でテストします。重視するのは、プレッシャー下での判断力、積極性、回復して再び取り組むまでの速さ、そして状況が変化した際に制御を取り戻せるかどうかです。これらは一般的な護衛犬ではなく、実際の警護ニーズのために育成されたワーキングドッグです。"
+      },
+      {
+        "id": "faq-q3",
+        "answerId": "faq-a3",
+        "question": "どの程度のハンドリング経験が必要ですか？",
+        "answer": "これらの犬には経験豊富なハンドリングが必要です。一般的な家庭犬ではなく、強い衝動を持つ本物のワーキング・マリノアだからです。ハンドラーには、トレーニングを継続し、衝動の強いワーキングドッグを管理する意欲が求められます。円滑な受け入れのため、ハンドラー向けトレーニングと継続的なサポートを提供しています。"
+      },
+      {
+        "id": "faq-q4",
+        "answerId": "faq-a4",
+        "question": "どのようなトレーニングを行っていますか？",
+        "answer": "育成は早期のハンドリングと環境慣らしから始まり、社会化、服従訓練、衝動の発達、護衛の基礎、段階的なシナリオトレーニング、最終評価、そしてハンドラーとの統合へと進みます。すべての犬が同じ基本基準に従いますが、その後の内容は将来のハンドラーや環境に合わせて調整できます。"
+      },
+      {
+        "id": "faq-q5",
+        "answerId": "faq-a5",
+        "question": "どのような健康検査を行っていますか？",
+        "answer": "繁殖候補となるすべての犬に対し、股関節・肘関節の認定検査、包括的なDNAスクリーニング、そして詳細な獣医学的検査を含む徹底した健康検査を実施しています。プログラムの水準を維持するため、厳格な健康基準と作業基準を満たす犬のみを繁殖に用いています。"
+      },
+      {
+        "id": "faq-q6",
+        "answerId": "faq-a6",
+        "question": "顧客選定のプロセスを教えてください。",
+        "answer": "本物のワーキングドッグを迎えるために必要な覚悟をご理解いただけているか、お客様一人ひとりを慎重に見極めています。具体的には、ハンドリング経験、警護のニーズ、トレーニングを継続する能力などを確認します。これらの犬は本格的な警護ニーズのためのものであり、経験豊富なハンドリングを必要とします。"
+      },
+      {
+        "id": "faq-q7",
+        "answerId": "faq-a7",
+        "question": "どのくらいの待機期間がありますか？",
+        "answer": "空き状況は、現在育成中の犬の数と、一度に適切に訓練できる頭数によって変わるため、待機期間は固定されていません。現在育成中の犬や今後の空き状況については、お気軽にお問い合わせください。"
+      }
+    ],
+    "schema": [
+      {
+        "name": "繁殖プログラムの違いは何ですか？",
+        "text": "繁殖プログラムは小規模かつ厳選して行っています。重視するのは、作業能力、神経の強さ、健康状態、血統の深み、そして父犬と母犬の相性です。目的は産仔数を増やすことではなく、トレーニングプログラムにより優れた素材を提供することにあります。"
+      },
+      {
+        "name": "犬の作業能力はどのようにテストしていますか？",
+        "text": "すべての犬を、単一の管理されたシナリオではなく、実際の警護状況を反映した複合的で予測不可能なストレス下でテストします。重視するのは、プレッシャー下での判断力、積極性、回復して再び取り組むまでの速さ、そして状況が変化した際に制御を取り戻せるかどうかです。これらは一般的な護衛犬ではなく、実際の警護ニーズのために育成されたワーキングドッグです。"
+      },
+      {
+        "name": "どの程度のハンドリング経験が必要ですか？",
+        "text": "これらの犬には経験豊富なハンドリングが必要です。一般的な家庭犬ではなく、強い衝動を持つ本物のワーキング・マリノアだからです。ハンドラーには、トレーニングを継続し、衝動の強いワーキングドッグを管理する意欲が求められます。円滑な受け入れのため、ハンドラー向けトレーニングと継続的なサポートを提供しています。"
+      },
+      {
+        "name": "どのようなトレーニングを行っていますか？",
+        "text": "育成は早期のハンドリングと環境慣らしから始まり、社会化、服従訓練、衝動の発達、護衛の基礎、段階的なシナリオトレーニング、最終評価、そしてハンドラーとの統合へと進みます。すべての犬が同じ基本基準に従いますが、その後の内容は将来のハンドラーや環境に合わせて調整できます。"
+      },
+      {
+        "name": "どのような健康検査を行っていますか？",
+        "text": "繁殖候補となるすべての犬に対し、股関節・肘関節の認定検査、包括的なDNAスクリーニング、そして詳細な獣医学的検査を含む徹底した健康検査を実施しています。プログラムの水準を維持するため、厳格な健康基準と作業基準を満たす犬のみを繁殖に用いています。"
+      },
+      {
+        "name": "顧客選定のプロセスを教えてください。",
+        "text": "本物のワーキングドッグを迎えるために必要な覚悟をご理解いただけているか、お客様一人ひとりを慎重に見極めています。具体的には、ハンドリング経験、警護のニーズ、トレーニングを継続する能力などを確認します。これらの犬は本格的な警護ニーズのためのものであり、経験豊富なハンドリングを必要とします。"
+      },
+      {
+        "name": "どのくらいの待機期間がありますか？",
+        "text": "空き状況は、現在育成中の犬の数と、一度に適切に訓練できる頭数によって変わるため、待機期間は固定されていません。現在育成中の犬や今後の空き状況については、お気軽にお問い合わせください。"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "お客様の声",
+    "h2": "お客様からの評価",
+    "consent": {
+      "text": "お客様の声は、独自の Cookie を設定する場合がある第三者サービス Testimonial.to を通じて表示されます。Cookie に同意するか、ボタンを押した後にのみ読み込まれます。",
+      "button": "レビューを読み込む"
+    },
+    "embeds": {
+      "iframeTitle": "お客様の声カルーセル",
+      "jsIframeTitle": "お客様の声"
+    }
+  },
+  "partner": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #testimonial-widgets (line 1271)",
+    "logo": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "SafariMedic ロゴ"
+    },
+    "text": "ワーキングドッグおよび警護の現場に関わる医療サポートソリューション",
+    "links": [
+      {
+        "label": "SafariMedic のウェブサイトを見る",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "icon": "fas fa-external-link-alt ms-2"
+      },
+      {
+        "label": "パートナーシップの経緯",
+        "href": "/safarimedic-partnership.html",
+        "target": null,
+        "icon": "fas fa-book-open ms-2"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "個別のお問い合わせ",
+    "h2": "お問い合わせ",
+    "intro": "すべての引き渡しは、まず対話から始まります。扱う頭数が限られているからこそ、どの犬が——あるいはそもそも今回ご紹介できる犬がいるのかを判断する前に、お客様ご自身と環境を理解したいと考えています。",
+    "journey": {
+      "title": "お問い合わせ後の流れ：",
+      "steps": [
+        "お問い合わせ",
+        "直接の対話",
+        "適性の確認とマッチング",
+        "適切な時点での予約",
+        "育成",
+        "ハンドラーへの引き継ぎと引き渡し",
+        "継続的なサポート"
+      ]
+    },
+    "tellMe": {
+      "title": "次の点をお聞かせください：",
+      "items": [
+        "お住まいの地域",
+        "ご家庭・ご家族の状況",
+        "他に飼われている動物",
+        "これまでの犬／ワーキングドッグの経験",
+        "ご自宅の環境と日常の様子",
+        "移動・旅行の有無",
+        "犬に求める役割",
+        "ご希望の時期",
+        "早期予約にご関心があるかどうか"
+      ]
+    },
+    "form": {
+      "action": "https://formspree.io/f/mwpvylyn",
+      "method": "POST",
+      "fields": {
+        "name": {
+          "label": "お名前*",
+          "placeholder": "お名前をご記入ください",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "email": {
+          "label": "メールアドレス*",
+          "placeholder": "メールアドレスをご記入ください",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "phone": {
+          "label": "電話 / WhatsApp",
+          "placeholder": "電話番号をご記入ください",
+          "ariaLabel": null,
+          "title": null,
+          "required": false
+        },
+        "country": {
+          "label": "国",
+          "options": [
+            {
+              "value": "",
+              "label": "国を選択してください",
+              "placeholder": true
+            },
+            {
+              "value": "Afghanistan",
+              "label": "Afghanistan"
+            },
+            {
+              "value": "Albania",
+              "label": "Albania"
+            },
+            {
+              "value": "Algeria",
+              "label": "Algeria"
+            },
+            {
+              "value": "Andorra",
+              "label": "Andorra"
+            },
+            {
+              "value": "Angola",
+              "label": "Angola"
+            },
+            {
+              "value": "Antigua and Barbuda",
+              "label": "Antigua and Barbuda"
+            },
+            {
+              "value": "Argentina",
+              "label": "Argentina"
+            },
+            {
+              "value": "Armenia",
+              "label": "Armenia"
+            },
+            {
+              "value": "Australia",
+              "label": "Australia"
+            },
+            {
+              "value": "Austria",
+              "label": "Austria"
+            },
+            {
+              "value": "Azerbaijan",
+              "label": "Azerbaijan"
+            },
+            {
+              "value": "Bahamas",
+              "label": "Bahamas"
+            },
+            {
+              "value": "Bahrain",
+              "label": "Bahrain"
+            },
+            {
+              "value": "Bangladesh",
+              "label": "Bangladesh"
+            },
+            {
+              "value": "Barbados",
+              "label": "Barbados"
+            },
+            {
+              "value": "Belarus",
+              "label": "Belarus"
+            },
+            {
+              "value": "Belgium",
+              "label": "Belgium"
+            },
+            {
+              "value": "Belize",
+              "label": "Belize"
+            },
+            {
+              "value": "Benin",
+              "label": "Benin"
+            },
+            {
+              "value": "Bhutan",
+              "label": "Bhutan"
+            },
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Bosnia and Herzegovina",
+              "label": "Bosnia and Herzegovina"
+            },
+            {
+              "value": "Botswana",
+              "label": "Botswana"
+            },
+            {
+              "value": "Brazil",
+              "label": "Brazil"
+            },
+            {
+              "value": "Brunei",
+              "label": "Brunei"
+            },
+            {
+              "value": "Bulgaria",
+              "label": "Bulgaria"
+            },
+            {
+              "value": "Burkina Faso",
+              "label": "Burkina Faso"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Cabo Verde",
+              "label": "Cabo Verde"
+            },
+            {
+              "value": "Cambodia",
+              "label": "Cambodia"
+            },
+            {
+              "value": "Cameroon",
+              "label": "Cameroon"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Central African Republic",
+              "label": "Central African Republic"
+            },
+            {
+              "value": "Chad",
+              "label": "Chad"
+            },
+            {
+              "value": "Chile",
+              "label": "Chile"
+            },
+            {
+              "value": "China",
+              "label": "China"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Comoros",
+              "label": "Comoros"
+            },
+            {
+              "value": "Congo (Congo-Brazzaville)",
+              "label": "Congo (Congo-Brazzaville)"
+            },
+            {
+              "value": "Costa Rica",
+              "label": "Costa Rica"
+            },
+            {
+              "value": "Croatia",
+              "label": "Croatia"
+            },
+            {
+              "value": "Cuba",
+              "label": "Cuba"
+            },
+            {
+              "value": "Cyprus",
+              "label": "Cyprus"
+            },
+            {
+              "value": "Czechia",
+              "label": "Czechia"
+            },
+            {
+              "value": "Denmark",
+              "label": "Denmark"
+            },
+            {
+              "value": "Djibouti",
+              "label": "Djibouti"
+            },
+            {
+              "value": "Dominica",
+              "label": "Dominica"
+            },
+            {
+              "value": "Dominican Republic",
+              "label": "Dominican Republic"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "Egypt",
+              "label": "Egypt"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Equatorial Guinea",
+              "label": "Equatorial Guinea"
+            },
+            {
+              "value": "Eritrea",
+              "label": "Eritrea"
+            },
+            {
+              "value": "Estonia",
+              "label": "Estonia"
+            },
+            {
+              "value": "Eswatini",
+              "label": "Eswatini"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Fiji",
+              "label": "Fiji"
+            },
+            {
+              "value": "Finland",
+              "label": "Finland"
+            },
+            {
+              "value": "France",
+              "label": "France"
+            },
+            {
+              "value": "Gabon",
+              "label": "Gabon"
+            },
+            {
+              "value": "Gambia",
+              "label": "Gambia"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Germany",
+              "label": "Germany"
+            },
+            {
+              "value": "Ghana",
+              "label": "Ghana"
+            },
+            {
+              "value": "Greece",
+              "label": "Greece"
+            },
+            {
+              "value": "Grenada",
+              "label": "Grenada"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Guinea",
+              "label": "Guinea"
+            },
+            {
+              "value": "Guinea-Bissau",
+              "label": "Guinea-Bissau"
+            },
+            {
+              "value": "Guyana",
+              "label": "Guyana"
+            },
+            {
+              "value": "Haiti",
+              "label": "Haiti"
+            },
+            {
+              "value": "Holy See",
+              "label": "Holy See"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Hungary",
+              "label": "Hungary"
+            },
+            {
+              "value": "Iceland",
+              "label": "Iceland"
+            },
+            {
+              "value": "India",
+              "label": "India"
+            },
+            {
+              "value": "Indonesia",
+              "label": "Indonesia"
+            },
+            {
+              "value": "Iran",
+              "label": "Iran"
+            },
+            {
+              "value": "Iraq",
+              "label": "Iraq"
+            },
+            {
+              "value": "Ireland",
+              "label": "Ireland"
+            },
+            {
+              "value": "Israel",
+              "label": "Israel"
+            },
+            {
+              "value": "Italy",
+              "label": "Italy"
+            },
+            {
+              "value": "Jamaica",
+              "label": "Jamaica"
+            },
+            {
+              "value": "Japan",
+              "label": "Japan"
+            },
+            {
+              "value": "Jordan",
+              "label": "Jordan"
+            },
+            {
+              "value": "Kazakhstan",
+              "label": "Kazakhstan"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Kiribati",
+              "label": "Kiribati"
+            },
+            {
+              "value": "Kuwait",
+              "label": "Kuwait"
+            },
+            {
+              "value": "Kyrgyzstan",
+              "label": "Kyrgyzstan"
+            },
+            {
+              "value": "Laos",
+              "label": "Laos"
+            },
+            {
+              "value": "Latvia",
+              "label": "Latvia"
+            },
+            {
+              "value": "Lebanon",
+              "label": "Lebanon"
+            },
+            {
+              "value": "Lesotho",
+              "label": "Lesotho"
+            },
+            {
+              "value": "Liberia",
+              "label": "Liberia"
+            },
+            {
+              "value": "Libya",
+              "label": "Libya"
+            },
+            {
+              "value": "Liechtenstein",
+              "label": "Liechtenstein"
+            },
+            {
+              "value": "Lithuania",
+              "label": "Lithuania"
+            },
+            {
+              "value": "Luxembourg",
+              "label": "Luxembourg"
+            },
+            {
+              "value": "Madagascar",
+              "label": "Madagascar"
+            },
+            {
+              "value": "Malawi",
+              "label": "Malawi"
+            },
+            {
+              "value": "Malaysia",
+              "label": "Malaysia"
+            },
+            {
+              "value": "Maldives",
+              "label": "Maldives"
+            },
+            {
+              "value": "Mali",
+              "label": "Mali"
+            },
+            {
+              "value": "Malta",
+              "label": "Malta"
+            },
+            {
+              "value": "Marshall Islands",
+              "label": "Marshall Islands"
+            },
+            {
+              "value": "Mauritania",
+              "label": "Mauritania"
+            },
+            {
+              "value": "Mauritius",
+              "label": "Mauritius"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Micronesia",
+              "label": "Micronesia"
+            },
+            {
+              "value": "Moldova",
+              "label": "Moldova"
+            },
+            {
+              "value": "Monaco",
+              "label": "Monaco"
+            },
+            {
+              "value": "Mongolia",
+              "label": "Mongolia"
+            },
+            {
+              "value": "Montenegro",
+              "label": "Montenegro"
+            },
+            {
+              "value": "Morocco",
+              "label": "Morocco"
+            },
+            {
+              "value": "Mozambique",
+              "label": "Mozambique"
+            },
+            {
+              "value": "Myanmar",
+              "label": "Myanmar"
+            },
+            {
+              "value": "Namibia",
+              "label": "Namibia"
+            },
+            {
+              "value": "Nauru",
+              "label": "Nauru"
+            },
+            {
+              "value": "Nepal",
+              "label": "Nepal"
+            },
+            {
+              "value": "Netherlands",
+              "label": "Netherlands"
+            },
+            {
+              "value": "New Zealand",
+              "label": "New Zealand"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Niger",
+              "label": "Niger"
+            },
+            {
+              "value": "Nigeria",
+              "label": "Nigeria"
+            },
+            {
+              "value": "North Korea",
+              "label": "North Korea"
+            },
+            {
+              "value": "North Macedonia",
+              "label": "North Macedonia"
+            },
+            {
+              "value": "Norway",
+              "label": "Norway"
+            },
+            {
+              "value": "Oman",
+              "label": "Oman"
+            },
+            {
+              "value": "Pakistan",
+              "label": "Pakistan"
+            },
+            {
+              "value": "Palau",
+              "label": "Palau"
+            },
+            {
+              "value": "Palestine State",
+              "label": "Palestine State"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Paraguay",
+              "label": "Paraguay"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Philippines",
+              "label": "Philippines"
+            },
+            {
+              "value": "Poland",
+              "label": "Poland"
+            },
+            {
+              "value": "Portugal",
+              "label": "Portugal"
+            },
+            {
+              "value": "Qatar",
+              "label": "Qatar"
+            },
+            {
+              "value": "Romania",
+              "label": "Romania"
+            },
+            {
+              "value": "Russia",
+              "label": "Russia"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Saint Kitts and Nevis",
+              "label": "Saint Kitts and Nevis"
+            },
+            {
+              "value": "Saint Lucia",
+              "label": "Saint Lucia"
+            },
+            {
+              "value": "Saint Vincent and the Grenadines",
+              "label": "Saint Vincent and the Grenadines"
+            },
+            {
+              "value": "Samoa",
+              "label": "Samoa"
+            },
+            {
+              "value": "San Marino",
+              "label": "San Marino"
+            },
+            {
+              "value": "Sao Tome and Principe",
+              "label": "Sao Tome and Principe"
+            },
+            {
+              "value": "Saudi Arabia",
+              "label": "Saudi Arabia"
+            },
+            {
+              "value": "Senegal",
+              "label": "Senegal"
+            },
+            {
+              "value": "Serbia",
+              "label": "Serbia"
+            },
+            {
+              "value": "Seychelles",
+              "label": "Seychelles"
+            },
+            {
+              "value": "Sierra Leone",
+              "label": "Sierra Leone"
+            },
+            {
+              "value": "Singapore",
+              "label": "Singapore"
+            },
+            {
+              "value": "Slovakia",
+              "label": "Slovakia"
+            },
+            {
+              "value": "Slovenia",
+              "label": "Slovenia"
+            },
+            {
+              "value": "Solomon Islands",
+              "label": "Solomon Islands"
+            },
+            {
+              "value": "Somalia",
+              "label": "Somalia"
+            },
+            {
+              "value": "South Africa",
+              "label": "South Africa"
+            },
+            {
+              "value": "South Korea",
+              "label": "South Korea"
+            },
+            {
+              "value": "South Sudan",
+              "label": "South Sudan"
+            },
+            {
+              "value": "Spain",
+              "label": "Spain"
+            },
+            {
+              "value": "Sri Lanka",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "Sudan",
+              "label": "Sudan"
+            },
+            {
+              "value": "Suriname",
+              "label": "Suriname"
+            },
+            {
+              "value": "Sweden",
+              "label": "Sweden"
+            },
+            {
+              "value": "Switzerland",
+              "label": "Switzerland"
+            },
+            {
+              "value": "Syria",
+              "label": "Syria"
+            },
+            {
+              "value": "Tajikistan",
+              "label": "Tajikistan"
+            },
+            {
+              "value": "Tanzania",
+              "label": "Tanzania"
+            },
+            {
+              "value": "Thailand",
+              "label": "Thailand"
+            },
+            {
+              "value": "Timor-Leste",
+              "label": "Timor-Leste"
+            },
+            {
+              "value": "Togo",
+              "label": "Togo"
+            },
+            {
+              "value": "Tonga",
+              "label": "Tonga"
+            },
+            {
+              "value": "Trinidad and Tobago",
+              "label": "Trinidad and Tobago"
+            },
+            {
+              "value": "Tunisia",
+              "label": "Tunisia"
+            },
+            {
+              "value": "Turkey",
+              "label": "Turkey"
+            },
+            {
+              "value": "Turkmenistan",
+              "label": "Turkmenistan"
+            },
+            {
+              "value": "Tuvalu",
+              "label": "Tuvalu"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Ukraine",
+              "label": "Ukraine"
+            },
+            {
+              "value": "United Arab Emirates",
+              "label": "United Arab Emirates"
+            },
+            {
+              "value": "United Kingdom",
+              "label": "United Kingdom"
+            },
+            {
+              "value": "United States of America",
+              "label": "United States of America"
+            },
+            {
+              "value": "Uruguay",
+              "label": "Uruguay"
+            },
+            {
+              "value": "Uzbekistan",
+              "label": "Uzbekistan"
+            },
+            {
+              "value": "Vanuatu",
+              "label": "Vanuatu"
+            },
+            {
+              "value": "Venezuela",
+              "label": "Venezuela"
+            },
+            {
+              "value": "Vietnam",
+              "label": "Vietnam"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            },
+            {
+              "value": "Zambia",
+              "label": "Zambia"
+            },
+            {
+              "value": "Zimbabwe",
+              "label": "Zimbabwe"
+            }
+          ]
+        },
+        "interest": {
+          "label": "ご関心の内容",
+          "options": [
+            {
+              "value": "",
+              "label": "ご関心の内容を選択してください",
+              "placeholder": true
+            },
+            {
+              "value": "Bobo - Early Reservation",
+              "label": "Bobo — 早期予約"
+            },
+            {
+              "value": "Future Litter",
+              "label": "今後の産仔／一般的な空き状況"
+            },
+            {
+              "value": "General Enquiry",
+              "label": "一般的なお問い合わせ"
+            },
+            {
+              "value": "Other",
+              "label": "その他"
+            }
+          ]
+        },
+        "message": {
+          "label": "メッセージ*",
+          "placeholder": "警護のご要望の詳細、具体的なご質問、その他ご要望を理解するうえで参考になる情報などをご記入ください...",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "privacyConsent": {
+          "label": "<a href=\"/privacy-policy-ja.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">プライバシーポリシー</a>に同意し、個人情報の取り扱いを承諾します*",
+          "required": true
+        }
+      },
+      "submit": "お問い合わせを送信"
+    },
+    "messages": {
+      "nameRequired": "お名前をご記入ください",
+      "emailInvalid": "有効なメールアドレスをご記入ください",
+      "messageRequired": "メッセージをご記入ください",
+      "privacyRequired": "プライバシーポリシーへの同意が必要です",
+      "sending": "送信中... <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+      "submitRestore": "お問い合わせを送信",
+      "success": "メッセージを送信しました。",
+      "submitError": "申し訳ありません。フォームの送信中に問題が発生しました",
+      "networkError": "ネットワークエラーが発生しました。もう一度お試しください。",
+      "notificationClose": "Close"
+    },
+    "preselect": [
+      {
+        "interest": "Bobo - Early Reservation",
+        "section": "dogs",
+        "line": 560
+      },
+      {
+        "interest": "Future Litter",
+        "section": "dogs",
+        "line": 596
+      },
+      {
+        "interest": "Future Litter",
+        "section": "pricing",
+        "line": 1105
+      }
+    ],
+    "footnotes": [
+      {
+        "icon": "fas fa-lock me-2",
+        "text": "いただいた情報は非公開に取り扱い、お問い合わせへの回答のみに使用します。"
+      },
+      {
+        "icon": "fas fa-clock me-2",
+        "text": "お問い合わせには通常24時間以内にご返信しています。"
+      }
+    ]
+  },
+  "privacyBlurb": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #contact (line 1658)",
+    "h2": "プライバシーと守秘",
+    "cards": [
+      {
+        "icon": "fas fa-user-lock fa-3x text-warning mb-3",
+        "h3": "プライバシーを真剣に",
+        "p": "お客様がご自身の身元、所在地、警備体制についてプライバシーを必要とされることは理解しています。詳しいご相談の前に、相互の秘密保持契約（NDA）を締結することも可能です。"
+      },
+      {
+        "icon": "fas fa-lock fa-3x text-warning mb-3",
+        "h3": "必要に応じた守秘",
+        "p": "個人的・職業的、あるいは安全上の事情がデリケートなお客様もいらっしゃいます。必要な場合には、詳細な情報を共有する前に守秘に関する取り決めを結ぶことができます。"
+      },
+      {
+        "icon": "fas fa-user-secret fa-3x text-warning mb-3",
+        "h3": "最初から最後まで非公開",
+        "p": "最初のご連絡から引き渡しに至るまで、お客様の情報はすべて非公開に扱います。お客様の身元、所在地、警備体制が外部に出ることはありません。"
+      }
+    ],
+    "closing": {
+      "text": "お客様のプライバシーは大切です。最初のご相談から最終的な引き渡しまで、慎重な対応を徹底しています。",
+      "cta": {
+        "label": "非公開でご連絡いただく",
+        "href": "#contact",
+        "data": {}
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "実績あるワーキングラインから護衛用マリノアを育成する、トレーナー自らが率いる小規模なワーキングドッグプログラム。"
+    },
+    "quickLinks": {
+      "h3": "クイックリンク",
+      "ariaLabel": "フッターナビゲーション",
+      "links": [
+        {
+          "label": "犬",
+          "href": "#dogs"
+        },
+        {
+          "label": "プロセス",
+          "href": "#training"
+        },
+        {
+          "label": "繁殖",
+          "href": "#breeding"
+        },
+        {
+          "label": "引き渡し",
+          "href": "#pricing"
+        },
+        {
+          "label": "概要",
+          "href": "#about"
+        },
+        {
+          "label": "お問い合わせ",
+          "href": "#contact"
+        },
+        {
+          "label": "プライバシーポリシー",
+          "href": "/privacy-policy-ja.html"
+        }
+      ]
+    },
+    "language": {
+      "h3": "言語",
+      "links": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": true
+        }
+      ]
+    },
+    "connect": {
+      "h3": "フォローする",
+      "links": [
+        {
+          "ariaLabel": "Instagram を見る",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "WhatsApp で連絡する",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "メールを送る",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. 無断転載を禁じます。"
+  },
+  "ui": {}
+}

@@ -1,0 +1,2167 @@
+{
+  "meta": {
+    "title": "Malinois Koruma Köpekleri | Protection Dogs GR",
+    "description": "Çalışma hattından gelen Belçika Malinois koruma köpekleri. Yunanistan'da, eğitmenin her köpekle bizzat ilgilendiği küçük ölçekli bir program.",
+    "ogTitle": "Malinois Koruma Köpekleri | Protection Dogs GR",
+    "ogDescription": "Gerçek koruma ihtiyacı olan bireyler ve aileler için küçük, eğitmen odaklı bir programda yetiştirilen eğitilmiş Belçika Malinois koruma ve güvenlik köpekleri.",
+    "ogLocale": "tr_TR",
+    "ogUrl": "https://www.protectiondogs.gr/tr/",
+    "twitterTitle": "Belçika Malinois Koruma Köpekleri",
+    "twitterDescription": "Gerçek koruma ihtiyacı olan bireyler ve aileler için küçük, eğitmen odaklı bir programda yetiştirilen eğitilmiş Belçika Malinois koruma ve güvenlik köpekleri.",
+    "canonical": "https://www.protectiondogs.gr/tr/",
+    "lang": "tr",
+    "dir": null,
+    "jsonld": {
+      "organization": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Protection Dogs GR",
+        "description": "Yunanistan merkezli, eğitmenin bizzat yönettiği küçük bir Belçika Malinois koruma köpeği programı; gerçek koruma ihtiyacı olan bireyler ve aileler için aynı anda yalnızca sınırlı sayıda çalışma hattı köpeği yetiştirir.",
+        "url": "https://www.protectiondogs.gr/",
+        "logo": "https://www.protectiondogs.gr/images/logo.png",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Kostas",
+            "jobTitle": "Founder and Lead Trainer"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+306931736026",
+            "email": "contact@protectiondogs.gr",
+            "contactType": "Customer Service",
+            "availableLanguage": [
+              "en",
+              "el",
+              "tr"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/protectiondogsgr",
+          "https://wa.me/306931736026"
+        ]
+      },
+      "faqpage": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Yetiştirmenizi farklı kılan ne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yetiştirmeyi küçük tutuyor ve çok seçici davranıyorum. Çalışma kabiliyeti, sinir sağlamlığı, sağlık, soy ağacının derinliği ve anne ile babanın birbirini tamamlaması; hepsi önemli. Amaç daha çok bat almak değil, eğitime daha iyi bir hammadde sunmak."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Köpeklerin çalışma kabiliyetini nasıl sınıyorsunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Her köpek gerçek, katmanlı baskı altında sınanır: tek bir kontrollü senaryoda değil, gerçek bir güvenlik durumunun aslında nasıl göründüğünü yansıtan bileşik ve öngörülemez stres altında. Aradığım şey baskı altında netlik, kararlılık, köpeğin ne kadar hızlı toparlanıp yeniden devreye girdiği ve durum değiştiğinde kontrole geri dönüp dönmediğidir. Bunlar standart koruma köpekleri değil; gerçek güvenlik ihtiyaçları için geliştirilmiş çalışma köpekleridir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ne kadar deneyim gerekiyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bu köpekler deneyimli bir el ister. Gerçek çalışma Malinois'ları, sıradan aile köpeği değiller. Sahibinin eğitimi sürdürmeye ve yüksek istekli bir çalışma köpeğini günlük hayatta yönetmeye istekli olması gerekir. Sahibini ben eğitiyorum ve teslimden sonra da yanında oluyorum."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Köpekleriniz hangi eğitimden geçiyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Süreç erken elleme ve ortam çalışmasıyla başlar; ardından sosyalleşme, itaat, çalışma isteğinin geliştirilmesi, koruma temelleri, giderek zorlaşan senaryolar, son değerlendirme ve sahiple uyum gelir. Her köpek aynı temel standardı izler; son aşamalar müstakbel sahibe ve ortamına göre uyarlanabilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hangi sağlık testlerini yapıyorsunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yetiştirmeye aday her köpek kapsamlı bir sağlık taramasından geçer: kalça ve dirsek displazisi için resmî değerlendirme, geniş kapsamlı DNA taraması ve tam veteriner muayenesi. Yalnızca sağlık ve çalışma şartlarımı karşılayan köpeklerle eşleştirme yapıyorum."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Müşterileri nasıl seçiyorsunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Her başvuruyu dikkatle değerlendiriyorum; gerçek bir çalışma köpeğinin gerektirdiği sorumluluğun anlaşıldığından emin olmak istiyorum. Deneyim, gerçek güvenlik ihtiyacı ve eğitimi uzun vadede sürdürebilme becerisi bunun parçası."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bekleme süresi ne kadar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sabit bir süre yok; her şey o an eğitimde olan köpeklere ve aynı anda hakkını vererek kaç köpekle çalışabildiğime bağlı. Bana yazın, şu an neyin mevcut olduğunu ve sırada ne olduğunu konuşalım."
+            }
+          }
+        ],
+        "inLanguage": "tr"
+      },
+      "product": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bobo - Malinois Koruma Köpeği",
+        "description": "Bobo seçme aşamasını geçti ve koruma köpeği programıma kabul edildi. Şu anda aktif eğitimde ve şimdiden rezerve edilebilir; ben de teslim gününe kadar eğitimini sürdüreceğim.",
+        "image": "https://www.protectiondogs.gr/images/bobo-beach-15840.avif",
+        "brand": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/tr/"
+        },
+        "category": "Koruma köpekleri",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "50000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/tr/#dogs",
+          "description": "Bobo bu fiyattan çıkan son köpek. Bir sonraki batından itibaren fiyat 70.000 € olacak."
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Irk",
+            "value": "Belgian Malinois"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Doğum tarihi",
+            "value": "2026-03-11"
+          }
+        ],
+        "disambiguatingDescription": "Gerçek güvenlik ihtiyaçları için geliştirilmiş, doğru kullanıcıyla özenle eşleştirilen çalışma hattı koruma köpeği"
+      },
+      "service": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Eğitimi tamamlanmış koruma köpeği",
+        "description": "Çalışma hattından bir Malinois, ileri komut eğitimi, kamusal alan disiplini ile araç ve seyahat hazırlığı yoluyla tek bir standarda göre geliştirilir. Eğitim sürecinde erken rezervasyon, kademeli ödeme planıyla mümkündür.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/tr/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "70000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/tr/#pricing",
+          "description": "Bir sonraki battan itibaren geçerli standart fiyat."
+        }
+      }
+    }
+  },
+  "nav": {
+    "ariaLabel": "Ana menü",
+    "brand": {
+      "href": "/tr/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Menüyü aç",
+    "items": [
+      {
+        "label": "Köpekler",
+        "href": "#dogs"
+      },
+      {
+        "label": "Eğitim",
+        "href": "#training"
+      },
+      {
+        "label": "Yetiştirme",
+        "href": "#breeding"
+      },
+      {
+        "label": "Teslim",
+        "href": "#pricing"
+      },
+      {
+        "label": "Hakkımda",
+        "href": "#about"
+      },
+      {
+        "label": "İletişim",
+        "href": "#contact"
+      }
+    ],
+    "langTrigger": {
+      "current": "TR",
+      "ariaControls": "langDrawer"
+    },
+    "mobileLangTrigger": {
+      "current": "TR",
+      "ariaControls": "langDrawer"
+    },
+    "langDrawer": {
+      "ariaLabel": "Dil seçin",
+      "title": "Dil seçin",
+      "close": {
+        "label": "&times;",
+        "ariaLabel": "Kapat"
+      },
+      "options": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": true
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "langSuggest": null
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Ana içeriğe geç",
+      "href": "#main-content"
+    },
+    "backToTopAriaLabel": "Yukarı dön",
+    "scrollProgressAriaLabel": null,
+    "heroAriaLabel": "Giriş bölümü",
+    "sectionDots": {
+      "ariaLabel": "Sayfa bölümleri",
+      "items": [
+        {
+          "href": "#main-content",
+          "section": "main-content",
+          "ariaLabel": "Ana sayfa",
+          "tooltip": "Ana sayfa"
+        },
+        {
+          "href": "#about",
+          "section": "about",
+          "ariaLabel": "Hakkımda",
+          "tooltip": "Hakkımda"
+        },
+        {
+          "href": "#dogs",
+          "section": "dogs",
+          "ariaLabel": "Köpekler",
+          "tooltip": "Köpekler"
+        },
+        {
+          "href": "#training",
+          "section": "training",
+          "ariaLabel": "Eğitim",
+          "tooltip": "Eğitim"
+        },
+        {
+          "href": "#breeding",
+          "section": "breeding",
+          "ariaLabel": "Yetiştirme",
+          "tooltip": "Yetiştirme"
+        },
+        {
+          "href": "#pricing",
+          "section": "pricing",
+          "ariaLabel": "Teslim",
+          "tooltip": "Teslim"
+        },
+        {
+          "href": "#faq",
+          "section": "faq",
+          "ariaLabel": "SSS",
+          "tooltip": "SSS"
+        },
+        {
+          "href": "#contact",
+          "section": "contact",
+          "ariaLabel": "İletişim",
+          "tooltip": "İletişim"
+        }
+      ]
+    },
+    "contactIcons": {
+      "ariaLabel": "Hızlı iletişim",
+      "items": [
+        {
+          "ariaLabel": "E-posta gönderin",
+          "href": "mailto:contact@protectiondogs.gr",
+          "label": "E-posta",
+          "icon": "fas fa-envelope"
+        },
+        {
+          "ariaLabel": "WhatsApp üzerinden yazın",
+          "href": "https://wa.me/306931736026",
+          "label": "WhatsApp",
+          "icon": "fab fa-whatsapp"
+        },
+        {
+          "ariaLabel": "Instagram hesabı",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "label": "Instagram",
+          "icon": null
+        }
+      ]
+    }
+  },
+  "cookie": {
+    "ariaLabel": "Çerez onayı",
+    "text": "Bu site, temel ziyaret istatistikleri için çerez kullanır. Siz onaylamadan hiçbir veri toplanmaz.",
+    "reject": "Yalnızca gerekli",
+    "accept": "Kabul et"
+  },
+  "hero": {
+    "eyebrow": "Belçika Malinois &middot; Yunanistan",
+    "h1": "<span>Her</span> <span>seferinde</span> <span>tek</span> <span>köpek.</span>",
+    "lead": "Gerçek anlamda kişi ve mülk koruması için, çalışma hattından gelen az sayıda Belçika Malinois yetiştiriyor ve eğitiyorum. Program küçük kaldığı için her köpekle bizzat ben ilgileniyorum; ileride onunla yaşayacak kişiyle de öyle.",
+    "ctas": [
+      {
+        "label": "Mevcut köpekler",
+        "href": "#dogs",
+        "data": {}
+      },
+      {
+        "label": "Benimle görüşün",
+        "href": "#contact",
+        "data": {}
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/hero1.jpg",
+        "alt": "Eğitimdeki Belçika Malinois koruma köpeği"
+      },
+      {
+        "src": "/images/hero2.jpg",
+        "alt": "Tetikte duran Belçika Malinois"
+      },
+      {
+        "src": "/images/hero3.jpg",
+        "alt": "Eğitimli Malinois koruma köpeği aileyle birlikte"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Program",
+    "h2": "Protection Dogs GR hakkında",
+    "intro": {
+      "h3": "Merkezinde köpeğin olduğu küçük bir program",
+      "paragraphs": [
+        "Protection Dogs GR, gerçek koruma işi için yetkin ve dengeli Malinois yetiştirmeye odaklanmış küçük bir çalışma köpeği programıdır. Kanıtlanmış çalışma genetiğinden yola çıkıyor, sonra her köpeğin büyürken ve eğitim sırasında gerçekte ne gösterdiğine bakıyorum.",
+        "Amaç, köpeğin bir gösteride etkileyici görünmesi değil. Amaç; tam güçle çalışabilen, baskı altında aklı başında kalan ve durum değiştiğinde hemen kontrole dönebilen bir köpek yetiştirmek."
+      ]
+    },
+    "pullQuote": "Kan hattı size <span class=\"text-warning\">potansiyel</span> verir. Ondan ne çıkacağına ise <span class=\"text-warning\">eğitmen</span> karar verir.",
+    "cards": [
+      {
+        "h3": "Program",
+        "paragraphs": [
+          "Protection Dogs GR, doğrudan eğitmenin yürüttüğü küçük bir çalışma köpeği programıdır. Sınırlı sayıda Malinois yetiştiriyorum; böylece her köpeği ilk haftalarından teslim gününe kadar bizzat takip edebiliyorum."
+        ]
+      },
+      {
+        "h3": "Ölçüt",
+        "paragraphs": [
+          "Aklını kaybetmeden kendini işe verebilen, iş dışında dengeli olan ve baskı bittiğinde toparlanıp kontrole dönebilen bir köpek istiyorum. Her köpeğin yeri koruma işi değildir; sırf gösteri yapabiliyor diye hiçbir köpeği teslim etmem."
+        ]
+      },
+      {
+        "h3": "İlişki",
+        "paragraphs": [
+          "Program küçük olduğu için baştan sona doğrudan benimle muhatap olursunuz. Bir köpek eğitim sürecindeyken rezerve edildiğinde, müstakbel sahibi gelişimini takip edebilir, soru sorabilir, güncel fotoğraf ve video alabilir ve teslimden çok önce köpeğin hazırlığının bir parçası hâline gelebilir."
+        ]
+      }
+    ],
+    "cta": {
+      "h3": "Neden çok az köpek var",
+      "paragraphs": [
+        "Aynı anda yalnızca birkaç köpekle çalışıyorum, çünkü eğitimlerini ve değerlendirmelerini kendim yapıyorum. Yani mevcut köpek sayısını belirleyen şey eğitim kapasitem; yapay bir kıtlık değil.",
+        "Mevcut ya da ileride doğacak bir köpek için doğrudan bana yazın:"
+      ],
+      "links": [
+        {
+          "label": "contact@protectiondogs.gr",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope me-2"
+        },
+        {
+          "label": "@protectiondogsgr",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram me-2"
+        },
+        {
+          "label": "+30 693 173 6026",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp me-2"
+        }
+      ]
+    }
+  },
+  "dogs": {
+    "eyebrow": "Rezervasyona açık",
+    "h2": "Mevcut koruma köpekleri",
+    "availability": "Şu anda rezervasyona açık: <!--pdg:fact_available_for_reservation-->1<!--/pdg-->",
+    "intro": "Eğitimi süren köpekler ilerledikçe burada yer alıyor. Her köpek aynı temel eğitim standardından geçer ve teslime kadar sürekli değerlendirilir.",
+    "bobo": {
+      "storyOpen": "bobo-story-modal",
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, koruma eğitimindeki Belçika Malinois"
+      },
+      "name": "Bobo",
+      "tagline": "<!--pdg:stage_display-->Koruma köpeği &middot; Eğitimde<!--/pdg-->",
+      "stats": [
+        {
+          "label": "Doğum",
+          "value": "<!--pdg:dob_display-->11 Mart 2026<!--/pdg-->"
+        },
+        {
+          "label": "Hat",
+          "value": "Çalışma hattı"
+        },
+        {
+          "label": "Durum",
+          "value": "<!--pdg:status_display-->Rezervasyona açık<!--/pdg-->"
+        }
+      ],
+      "meetButton": {
+        "label": "Bobo ile tanışın",
+        "icon": "fas fa-paw me-2",
+        "data": {
+          "data-story-open": "bobo-story-modal"
+        }
+      },
+      "paragraphs": [
+        "Bobo seçme aşamasını geçti ve koruma köpeği programıma kabul edildi. Şu anda aktif eğitimde ve şimdiden rezerve edilebilir; ben de teslim gününe kadar eğitimini sürdüreceğim.",
+        "Bobo'yu eğitim sürecinde rezerve etmek, müstakbel sahibinin gelişimini adım adım izlemesini ve düzenli haber almasını sağlar. Bana da eğitimin son aşamalarını onu bekleyen eve, günlük düzene ve ihtiyaçlara göre şekillendirme imkânı verir."
+      ],
+      "aboutHeading": "Bobo hakkında",
+      "features": [
+        "Kanıtlanmış çalışma genetiği, yüksek çalışma isteği",
+        "Küçüklüğünden beri her ortamda kendinden emin",
+        "Yüksek odaklanma ve durum farkındalığı",
+        "Şu anda koruma eğitiminde, teslime doğru ilerliyor",
+        "Gerçek günlük ortamlarda kapsamlı şekilde sosyalleştirildi",
+        "Ciddi bir kişi ve mülk koruyucusu olarak yetiştiriliyor"
+      ],
+      "reservation": {
+        "eyebrow": "Erken rezervasyon",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_current-->50.000<!--/pdg-->"
+        },
+        "notes": [
+          "Bobo bu fiyattan çıkan son köpek. Bir sonraki batından itibaren fiyat <!--pdg:price_future-->70.000<!--/pdg--> € olacak.",
+          "Üzerinde anlaşılan aylık bir ödeme planı yapılabilir; böylece tutar tek seferde değil, kalan eğitim süresine yayılır."
+        ],
+        "cta": {
+          "label": "Bobo ve rezervasyonu görüşün",
+          "href": "#contact",
+          "data": {
+            "data-interest": "Bobo - Early Reservation",
+            "data-stop-propagation": ""
+          }
+        }
+      }
+    },
+    "future": {
+      "name": "İleriki köpekler",
+      "tagline": "Bir sonraki battan",
+      "stats": [
+        {
+          "label": "<!--pdg:next_litter_label-->Beklenen<!--/pdg-->",
+          "value": "<!--pdg:next_litter-->2026 sonu<!--/pdg-->"
+        },
+        {
+          "label": "Irk",
+          "value": "Belgian Malinois"
+        },
+        {
+          "label": "Hat",
+          "value": "Çalışma hattı"
+        }
+      ],
+      "paragraph": "Program bilinçli olarak küçük kalıyor. İleride doğacak bir köpek istiyorsanız benimle erken konuşmanızı öneririm. Uygun bir köpek programa kabul edildiğinde ve eşleşme doğru olduğunda, teslimi beklemeden eğitim sürecinde rezervasyon yapılabilir. Böylece köpeği baştan takip eder, sürece alışır ve ödemeyi eğitim dönemine yayarsınız.",
+      "cta": {
+        "label": "İleriki bir köpeği görüşün",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "boboStory": {
+    "ariaLabelledby": "bobo-story-title",
+    "close": {
+      "label": "&times;",
+      "ariaLabel": "Kapat"
+    },
+    "media": {
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, koruma eğitimindeki Belçika Malinois"
+      },
+      "video": {
+        "ariaLabel": "Bobo, koruma eğitimindeki Belçika Malinois",
+        "poster": "/images/bobo-training-15888-poster.webp",
+        "src": "/images/bobo-training-15888.mp4"
+      }
+    },
+    "title": "Bobo ile tanışın",
+    "dotCount": 4,
+    "slides": [
+      {
+        "slide": "0",
+        "image": "/images/bobo-beach-15840.avif",
+        "video": null,
+        "h4": "Doğuştan kendinden emin ve istekli",
+        "p": "Bobo'ya özgüven aşılamak hiç gerekmedi; o zaten böyle doğdu. Çalışma isteği de aynı: güçlü ve doğal, hiçbir yanı sonradan yapıştırılmış değil. Isırığı sert ve kararlı; o gün ne iş varsa girmeye hazır."
+      },
+      {
+        "slide": "1",
+        "image": "/images/bobo-training-15893-poster.webp",
+        "video": "/images/bobo-training-15893.mp4",
+        "h4": "Çocuklarla ve hayvanlarla uyumlu",
+        "p": "Görev dışında Bobo gerçekten iyi bir arkadaş: çocukların ve diğer hayvanların yanında rahat ve uyumlu, sadece katlanan bir köpek değil. Gerçek koruma işi yapabilen bir köpeğin, günün geri kalanında sıradan bir köpek olmayı da bilmesi gerekir. O biliyor."
+      },
+      {
+        "slide": "2",
+        "image": "/images/bobo-training-15888-poster.webp",
+        "video": "/images/bobo-training-15888.mp4",
+        "h4": "Elde büyütüldü, adım adım",
+        "p": "Bobo'yu kendim ürettim ve ilk gününden itibaren elimde büyüttüm; buradan geçen her köpek gibi. Koyu tüylü, gerçekten güzel bir kafası var ve zorlanarak değil, adım adım geliştirildi. Ayrıca denizi çok sever; yüzmek en sevdiği şeylerden biri."
+      },
+      {
+        "slide": "3",
+        "image": "/images/bobo-beach-15842.avif",
+        "video": null,
+        "h4": "Gerçekten korunmaya ihtiyacı olanlar için",
+        "p": "Bobo güçlü ve ciddi bir köpek olma yolunda: hobi için bir arkadaş değil, gerçekten korunmaya ihtiyacı olan biri için yetiştirilen bir köpek. Yetiştirilme biçiminin her ayrıntısı buna hizmet etti."
+      }
+    ],
+    "nav": {
+      "prev": "&larr; Geri",
+      "next": "İleri &rarr;",
+      "jsClose": "Kapat",
+      "jsNext": "İleri →"
+    }
+  },
+  "watchDevelop": {
+    "eyebrow": "Rezervasyon",
+    "h2": "Gelişimini izlediğiniz bir köpek",
+    "paragraphs": [
+      "Birçok müşteri için ilişki, köpek hazır olmadan çok önce başlar. Uygun bir köpek eğitim sürecinde rezerve edildiğinde, müstakbel sahibini sürecin içinde tutarım: güncel fotoğraflar, kısa videolar ve dürüst eğitim notları. Böylece köpeğin büyümesini izler ve teslime giden yolu adım adım takip eder.",
+      "Bu paylaşımlar bilinçli olarak ham; reklam gibi kurgulanmıyor. Günlük çalışmanın çoğu olduğu gibi çekiliyor, tıpkı kendi değerlendirmem için çektiğim gibi. Amaç içerik üretmek değil; müstakbel sahibin köpeğini zaman içinde olduğu gibi görmesi."
+    ]
+  },
+  "training": {
+    "h2": "Her köpeği nasıl yetiştiriyorum",
+    "intro": "Basit bir ilkeye dayanan beş aşamalı bir sistem: çalışma isteği ile öz denetim önce ayrı ayrı geliştirilir, sonra bilinçli biçimde bir araya getirilir.",
+    "timeline": {
+      "ariaLabel": "Aşama gezinmesi",
+      "items": [
+        {
+          "phase": "1",
+          "number": "1",
+          "label": "İlk haftalar",
+          "period": "0–3 hafta"
+        },
+        {
+          "phase": "2",
+          "number": "2",
+          "label": "Sosyalleşme",
+          "period": "3–12 hafta"
+        },
+        {
+          "phase": "3",
+          "number": "3",
+          "label": "Temel",
+          "period": "3–6 ay"
+        },
+        {
+          "phase": "4",
+          "number": "4",
+          "label": "Koruma eğitimi",
+          "period": "6–12 ay"
+        },
+        {
+          "phase": "5",
+          "number": "5",
+          "label": "Pekiştirme ve teslim",
+          "period": "12–18 ay"
+        }
+      ]
+    },
+    "phaseNav": {
+      "ariaLabel": "Aşama gezinmesi",
+      "prevAriaLabel": "Önceki aşama",
+      "nextAriaLabel": "Sonraki aşama",
+      "status": "<span data-phase-current>1</span> / 5"
+    },
+    "phases": [
+      {
+        "id": "phase-1",
+        "number": "01",
+        "badge": "1. Aşama",
+        "title": "İlk haftalar",
+        "timing": "0–3 hafta",
+        "intro": "Gelişim hayatın ilk günlerinde başlar. Erken elleme ve ölçülü uyarım, ilerideki ortam güveni ile strese dayanıklılık için daha sağlam bir zemin kurar.",
+        "features": [
+          {
+            "icon": "fas fa-brain",
+            "h4": "Erken elleme (3–16. gün)",
+            "p": "İleride strese dayanıklılığın temelini kuran, planlı elleme ve uyarım çalışmaları"
+          },
+          {
+            "icon": "fas fa-cubes",
+            "h4": "Ortam zenginleştirme",
+            "p": "Farklı dokular, zeminler ve duyusal deneyimlerle ölçülü tanışma"
+          },
+          {
+            "icon": "fas fa-clipboard-check",
+            "h4": "Mizaç değerlendirmesi",
+            "p": "Genetik yansımaların ve çalışma yatkınlığının sürekli gözlenmesi"
+          }
+        ],
+        "media": null
+      },
+      {
+        "id": "phase-2",
+        "number": "02",
+        "badge": "2. Aşama",
+        "title": "Sosyalleşme",
+        "timing": "3–12 hafta",
+        "intro": "Bu kritik dönemde planlı bir alıştırma çalışması yürütüyorum; amacım farklı ortamlarda iş görebilen, kendinden emin ve dengeli köpekler.",
+        "features": [
+          {
+            "icon": "fas fa-users",
+            "h4": "İleri sosyalleşme",
+            "p": "Farklı insanlar, hayvanlar ve ortamlarla kontrollü tanışma"
+          },
+          {
+            "icon": "fas fa-city",
+            "h4": "Ortam güveni",
+            "p": "Farklı zeminlere, seslere ve durumlara sistemli alıştırma"
+          },
+          {
+            "icon": "fas fa-paw",
+            "h4": "İlk koku çalışması",
+            "p": "İleriki arama ve tespit çalışmalarının temeli"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Malinois koruma köpeğinin sosyalleşme çalışması",
+          "poster": "/images/bobo-training-15891-poster.webp",
+          "src": "/images/bobo-training-15891.mp4"
+        }
+      },
+      {
+        "id": "phase-3",
+        "number": "03",
+        "badge": "3. Aşama",
+        "title": "Temel",
+        "timing": "3–6 ay",
+        "intro": "Bu aşamada temel itaat oturur ve koruma çalışmasının ilk kavramları tanıtılır. Sonrasında gelen her şeyin çerçevesi burada kurulur.",
+        "features": [
+          {
+            "icon": "fas fa-check-circle",
+            "h4": "Temel itaat",
+            "p": "Her ortamda komutlara güvenilir yanıt"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "h4": "Çalışma isteğinin geliştirilmesi",
+            "p": "Doğuştan gelen dürtüleri odaklı bir çalışma kapasitesine yönlendirmek"
+          },
+          {
+            "icon": "fas fa-compass",
+            "h4": "Koruma temelleri",
+            "p": "Kontrollü savunma tepkisi ve net karar verme ile tanışma"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Malinois koruma köpeğiyle temel itaat çalışması",
+          "poster": "/images/bobo-training-15890-poster.webp",
+          "src": "/images/bobo-training-15890.mp4"
+        }
+      },
+      {
+        "id": "phase-4",
+        "number": "04",
+        "badge": "4. Aşama",
+        "title": "Koruma eğitimi",
+        "timing": "6–12 ay",
+        "intro": "Koruma çalışması kademeli olarak zorlaşır: kişiler, mekânlar, zeminler, dikkat dağıtıcılar ve baskı sürekli değişir. Amaç, iş zorlaştıkça köpeğin düşünmeye devam edip etmediğini görmek.",
+        "features": [
+          {
+            "icon": "fas fa-theater-masks",
+            "h4": "Senaryo çalışması",
+            "p": "Farklı figüranlar ve mekânlarla gerçeğe yakın koruma durumları"
+          },
+          {
+            "icon": "fas fa-balance-scale",
+            "h4": "Kontrollü muhakeme",
+            "p": "Baskı altında net karar: ne zaman girip ne zaman geri duracağını bilmek"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Sahibiyle uyum",
+            "p": "Köpek ile onu çalıştıran kişi arasındaki kritik bağın kurulması"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Malinois koruma köpeğiyle senaryo çalışması",
+          "src": "/images/elite-protection-dog-training.avif"
+        }
+      },
+      {
+        "id": "phase-5",
+        "number": "05",
+        "badge": "5. Aşama",
+        "title": "Pekiştirme ve teslim",
+        "timing": "12–18 ay",
+        "intro": "Son aşama; köpeğin istikrarını doğrulamak, kalan zayıf noktaları bulmak ve müstakbel sahibine bu çalışmayı doğru şekilde nasıl koruyacağını öğretmekle ilgilidir.",
+        "features": [
+          {
+            "icon": "fas fa-clipboard-list",
+            "h4": "İstikrar sınaması",
+            "p": "Koruma ve itaatin tüm başlıklarında titiz değerlendirme"
+          },
+          {
+            "icon": "fas fa-sync-alt",
+            "h4": "Sahada pekiştirme",
+            "p": "Farklı gerçek ortamlarda son doğrulama"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Müşteriye teslim",
+            "p": "Kapsamlı sahip eğitimi ve teslim sonrası destek"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Eğitimli Malinois ile sahibinin uyum çalışması",
+          "src": "/images/nikky1.avif"
+        }
+      }
+    ]
+  },
+  "testing": {
+    "eyebrow": "Değerlendirme",
+    "h2": "Nasıl sınıyor ve değerlendiriyorum",
+    "paragraphs": [
+      "Tek başına sertlik bana pek bir şey anlatmaz.",
+      "Baskı katmanlandığında, tanıdık olmaktan çıkıp öngörülemez hâle geldiğinde ne olduğunu görmek isterim. Köpek aklını kaybetmeden işin içinde kalmalı ve durum değiştiğinde kontrollü hâline dönebilmeli.",
+      "Toparlanma benim için ayrıca önemli. Köpeğin stresi ne kadar çabuk sindirdiğine, yeniden işe girip verimli çalışmaya döndüğüne bakarım. Bu, tanıdık bir kurguda gösterilen sertlikten çok daha fazlasını anlatır.",
+      "Çalışmaları kaydediyorum; hem köpeğin performansını hem de kendi yönlendirmemi sonradan izliyorum. Amaç basit: dürüst değerlendirmek, zayıf noktaları erken görmek ve köpek geliştikçe daha isabetli karar vermek."
+    ]
+  },
+  "breeding": {
+    "eyebrow": "Seçim",
+    "h2": "Yetiştirme",
+    "cards": [
+      {
+        "h3": "Eşleştirmeleri nasıl seçiyorum",
+        "paragraphs": [
+          "Yetiştirme kararlarım sağlık raporları ve kâğıt üzerinde iyi görünen bir soy ağacıyla sınırlı değil. Baba ile anne arasında karakter ve çalışma isteği bakımından gerçek bir tamamlayıcılık ararım; aynı güçlü yanları ve aynı riskleri üst üste yığan değil, birbirinin boşluğunu kapatan hatlar. İşin matematiğiyle de uğraşırım: akrabalık katsayısını yalnızca ilk iki üç kuşak için değil, soy ağacının tamamı üzerinden hesaplarım. Böylece karar öncesinde neyi yoğunlaştırdığımı, neyi seyrelttiğimi tam olarak bilirim.",
+          "Bilinçli olarak dış hatlar da getirdim; bunların arasında özel birliklerde ve emniyet birimlerinde kullanılan, nadir ve kapalı Belçika çalışma hatlarından köpekler de var. Amaç kâğıttaki bir ismin peşinden koşmak değil, genetik derinliği güçlendirmekti. Bu daha yavaş bir yol, ama ne ürettiğim ve her eşleştirmeyi neden yaptığım konusunda bana çok daha fazla hâkimiyet veriyor."
+        ]
+      },
+      {
+        "h3": "Yetiştirme ölçütlerim",
+        "paragraphs": [
+          "Yetiştirdiğim her köpek aynı eğitim sisteminden geçer; bu sistem sahadaki çalışma ve sürekli değerlendirmeyle şekillendi. Sistem sabittir, ama eğitmenin yine de her köpeği ayrı ayrı okuyup doğru zamanda doğru kararı vermesi gerekir.",
+          "<strong class=\"text-warning\">Temel, baskıdan önce gelir.</strong> Genç bir köpek gerçek baskı ekipmanını görmeden çok önce, hayal kırıklığına tahammülünü doğru yoldan kurarım: bir şeyi şiddetle istemeyi ve buna rağmen düşünmeyi öğreten, planlı kovalama ve bırakma çalışmasıyla. Bu adımı atlarsanız patlayıcı ama bir daha aşağı indiremediğiniz bir köpek elde edersiniz. Ben atlamıyorum.",
+          "<strong class=\"text-warning\">Sakinlik istisna değil, esastır.</strong> Her köpeğe, oturmuş ve kendinden emin bir sakinliği varsayılan hâli olarak öğretirim; ısırığın ortasında bile, baskı altında bile. Bir koruma köpeğinin işi sürekli gergin durmak değil, ne zaman mod değiştireceğini bilmek ve aynı hızla geri dönebilmektir."
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "Günlük hayat",
+    "h2": "Aile ortamı",
+    "paragraphs": [
+      "Köpekler izole bir ticari tesiste yetişmiyor. Büyüdükleri ve eğitildikleri süre boyunca günlük hayatımın bir parçasılar.",
+      "Ailem bu sürecin çevresinde doğal olarak bulunuyor. Bu da bana bir köpeğin nasıl sakinleştiğini, evin olağan hareketliliğine nasıl tepki verdiğini ve eğitim dışında nasıl davrandığını görmek için fazladan fırsat veriyor."
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "Uygunluk",
+    "h2": "Bu köpekler kimler için",
+    "blocks": [
+      {
+        "tag": "p",
+        "html": "Bu köpekler dikkatle eşleştirilir. Uygun olabilecekler arasında:"
+      },
+      {
+        "tag": "ul",
+        "items": [
+          "Ailesini ya da evini korumak isteyenler",
+          "Gerçek güvenlik kaygısı olan iş yeri ve mülk sahipleri",
+          "Somut bir tehdit ya da güvenlik sorunuyla karşı karşıya olanlar",
+          "Ciddi bir çalışma köpeği arayan deneyimli kişiler"
+        ]
+      },
+      {
+        "tag": "p",
+        "html": "Doğru teslim, köpeğe olduğu kadar kişiye de bağlıdır. Koruma köpeği öylece satın alınmaz; ciddi bir çalışma köpeğine sahip olmanın ve onu sürdürmenin sorumluluğunu bilen birine verilmesi gerekir."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Teslim",
+    "h2": "Fiyat ve rezervasyon",
+    "cards": [
+      {
+        "h3": "Eğitimi tamamlanmış koruma köpeği",
+        "features": [
+          "İleri düzey itaat eğitimi",
+          "Baskı altında, gerçek ortamda itaat",
+          "Toplum içinde kusursuz davranış",
+          "Araca ve seyahate alışkın",
+          "Çalışma hattı genetiği"
+        ],
+        "note": "Bir sonraki battan itibaren geçerli standart fiyat. Müsaitlik, eğitim kapasiteme ve yetişmekte olan köpeklere bağlıdır.",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_future-->70.000<!--/pdg-->"
+        },
+        "smallPrint": "Tek bir standart, paket kademeleri yok. Teslimde tek ödeme yerine, kalan eğitim süresine yayılan aylık bir ödeme planı üzerinde anlaşılabilir."
+      },
+      {
+        "h3": "Teslime dâhil olanlar",
+        "features": [
+          "Program standardına kadar eğitimin sürdürülmesi",
+          "Sahibiyle son uyum çalışması ve eğitimi",
+          "Sahada ve toplum içinde pekiştirme",
+          "Araç ve seyahate hazırlık",
+          "Kendi koşullarınıza göre özel hazırlık",
+          "Teslim sonrası sürekli destek"
+        ],
+        "note": null,
+        "price": null,
+        "smallPrint": null
+      }
+    ],
+    "closing": {
+      "paragraphs": [
+        "Köpeğin tamamen hazır olmasını bekleyip tüm tutarı tek seferde ödemek şart değil. Programa kabul edilmiş bir köpek olduğunda ve eşleşmenin doğru olduğunu düşündüğümde, rezervasyon eğitim sürecinde yapılabilir. Böylece köpeği kimin için hazırladığımı bilirim, siz de bu gelişimi baştan izlersiniz. İlişki teslim gününde değil, ondan önce başlar.",
+        "Bir köpek müstakbel sahibiyle eşleştirildikten sonra, sonraki çalışmalar da standarttan ödün vermeden o kişinin ortamına ve ihtiyaçlarına göre uyarlanabilir."
+      ],
+      "cta": {
+        "label": "Müsaitlik ve rezervasyonu görüşün",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Sorular",
+    "h2": "Sıkça Sorulan Sorular",
+    "items": [
+      {
+        "id": "faq-q1",
+        "answerId": "faq-a1",
+        "question": "Yetiştirmenizi farklı kılan ne?",
+        "answer": "Yetiştirmeyi küçük tutuyor ve çok seçici davranıyorum. Çalışma kabiliyeti, sinir sağlamlığı, sağlık, soy ağacının derinliği ve anne ile babanın birbirini tamamlaması; hepsi önemli. Amaç daha çok bat almak değil, eğitime daha iyi bir hammadde sunmak."
+      },
+      {
+        "id": "faq-q2",
+        "answerId": "faq-a2",
+        "question": "Köpeklerin çalışma kabiliyetini nasıl sınıyorsunuz?",
+        "answer": "Her köpek gerçek, katmanlı baskı altında sınanır: tek bir kontrollü senaryoda değil, gerçek bir güvenlik durumunun aslında nasıl göründüğünü yansıtan bileşik ve öngörülemez stres altında. Aradığım şey baskı altında netlik, kararlılık, köpeğin ne kadar hızlı toparlanıp yeniden devreye girdiği ve durum değiştiğinde kontrole geri dönüp dönmediğidir. Bunlar standart koruma köpekleri değil; gerçek güvenlik ihtiyaçları için geliştirilmiş çalışma köpekleridir."
+      },
+      {
+        "id": "faq-q3",
+        "answerId": "faq-a3",
+        "question": "Ne kadar deneyim gerekiyor?",
+        "answer": "Bu köpekler deneyimli bir el ister. Gerçek çalışma Malinois'ları, sıradan aile köpeği değiller. Sahibinin eğitimi sürdürmeye ve yüksek istekli bir çalışma köpeğini günlük hayatta yönetmeye istekli olması gerekir. Sahibini ben eğitiyorum ve teslimden sonra da yanında oluyorum."
+      },
+      {
+        "id": "faq-q4",
+        "answerId": "faq-a4",
+        "question": "Köpekleriniz hangi eğitimden geçiyor?",
+        "answer": "Süreç erken elleme ve ortam çalışmasıyla başlar; ardından sosyalleşme, itaat, çalışma isteğinin geliştirilmesi, koruma temelleri, giderek zorlaşan senaryolar, son değerlendirme ve sahiple uyum gelir. Her köpek aynı temel standardı izler; son aşamalar müstakbel sahibe ve ortamına göre uyarlanabilir."
+      },
+      {
+        "id": "faq-q5",
+        "answerId": "faq-a5",
+        "question": "Hangi sağlık testlerini yapıyorsunuz?",
+        "answer": "Yetiştirmeye aday her köpek kapsamlı bir sağlık taramasından geçer: kalça ve dirsek displazisi için resmî değerlendirme, geniş kapsamlı DNA taraması ve tam veteriner muayenesi. Yalnızca sağlık ve çalışma şartlarımı karşılayan köpeklerle eşleştirme yapıyorum."
+      },
+      {
+        "id": "faq-q6",
+        "answerId": "faq-a6",
+        "question": "Müşterileri nasıl seçiyorsunuz?",
+        "answer": "Her başvuruyu dikkatle değerlendiriyorum; gerçek bir çalışma köpeğinin gerektirdiği sorumluluğun anlaşıldığından emin olmak istiyorum. Deneyim, gerçek güvenlik ihtiyacı ve eğitimi uzun vadede sürdürebilme becerisi bunun parçası."
+      },
+      {
+        "id": "faq-q7",
+        "answerId": "faq-a7",
+        "question": "Bekleme süresi ne kadar?",
+        "answer": "Sabit bir süre yok; her şey o an eğitimde olan köpeklere ve aynı anda hakkını vererek kaç köpekle çalışabildiğime bağlı. Bana yazın, şu an neyin mevcut olduğunu ve sırada ne olduğunu konuşalım."
+      }
+    ],
+    "schema": [
+      {
+        "name": "Yetiştirmenizi farklı kılan ne?",
+        "text": "Yetiştirmeyi küçük tutuyor ve çok seçici davranıyorum. Çalışma kabiliyeti, sinir sağlamlığı, sağlık, soy ağacının derinliği ve anne ile babanın birbirini tamamlaması; hepsi önemli. Amaç daha çok bat almak değil, eğitime daha iyi bir hammadde sunmak."
+      },
+      {
+        "name": "Köpeklerin çalışma kabiliyetini nasıl sınıyorsunuz?",
+        "text": "Her köpek gerçek, katmanlı baskı altında sınanır: tek bir kontrollü senaryoda değil, gerçek bir güvenlik durumunun aslında nasıl göründüğünü yansıtan bileşik ve öngörülemez stres altında. Aradığım şey baskı altında netlik, kararlılık, köpeğin ne kadar hızlı toparlanıp yeniden devreye girdiği ve durum değiştiğinde kontrole geri dönüp dönmediğidir. Bunlar standart koruma köpekleri değil; gerçek güvenlik ihtiyaçları için geliştirilmiş çalışma köpekleridir."
+      },
+      {
+        "name": "Ne kadar deneyim gerekiyor?",
+        "text": "Bu köpekler deneyimli bir el ister. Gerçek çalışma Malinois'ları, sıradan aile köpeği değiller. Sahibinin eğitimi sürdürmeye ve yüksek istekli bir çalışma köpeğini günlük hayatta yönetmeye istekli olması gerekir. Sahibini ben eğitiyorum ve teslimden sonra da yanında oluyorum."
+      },
+      {
+        "name": "Köpekleriniz hangi eğitimden geçiyor?",
+        "text": "Süreç erken elleme ve ortam çalışmasıyla başlar; ardından sosyalleşme, itaat, çalışma isteğinin geliştirilmesi, koruma temelleri, giderek zorlaşan senaryolar, son değerlendirme ve sahiple uyum gelir. Her köpek aynı temel standardı izler; son aşamalar müstakbel sahibe ve ortamına göre uyarlanabilir."
+      },
+      {
+        "name": "Hangi sağlık testlerini yapıyorsunuz?",
+        "text": "Yetiştirmeye aday her köpek kapsamlı bir sağlık taramasından geçer: kalça ve dirsek displazisi için resmî değerlendirme, geniş kapsamlı DNA taraması ve tam veteriner muayenesi. Yalnızca sağlık ve çalışma şartlarımı karşılayan köpeklerle eşleştirme yapıyorum."
+      },
+      {
+        "name": "Müşterileri nasıl seçiyorsunuz?",
+        "text": "Her başvuruyu dikkatle değerlendiriyorum; gerçek bir çalışma köpeğinin gerektirdiği sorumluluğun anlaşıldığından emin olmak istiyorum. Deneyim, gerçek güvenlik ihtiyacı ve eğitimi uzun vadede sürdürebilme becerisi bunun parçası."
+      },
+      {
+        "name": "Bekleme süresi ne kadar?",
+        "text": "Sabit bir süre yok; her şey o an eğitimde olan köpeklere ve aynı anda hakkını vererek kaç köpekle çalışabildiğime bağlı. Bana yazın, şu an neyin mevcut olduğunu ve sırada ne olduğunu konuşalım."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Yorumlar",
+    "h2": "Müşteriler ne diyor",
+    "consent": {
+      "text": "Müşteri yorumları, kendi çerezlerini bırakabilen üçüncü taraf bir hizmet olan Testimonial.to üzerinden gösterilir. Yalnızca çerezleri kabul ettiğinizde veya düğmeye bastığınızda yüklenir.",
+      "button": "Yorumları yükle"
+    },
+    "embeds": {
+      "iframeTitle": "Müşteri yorumları karuseli",
+      "jsIframeTitle": "Client testimonials"
+    }
+  },
+  "partner": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #testimonial-widgets (line 1243)",
+    "logo": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "SafariMedic logosu"
+    },
+    "text": "Çalışma ve koruma köpekleriyle ilgili ortamlar için tıbbi destek çözümleri",
+    "links": [
+      {
+        "label": "SafariMedic sitesine git",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "icon": "fas fa-external-link-alt ms-2"
+      },
+      {
+        "label": "İş birliğimiz",
+        "href": "/safarimedic-partnership.html",
+        "target": null,
+        "icon": "fas fa-book-open ms-2"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Özel görüşme",
+    "h2": "İletişim",
+    "intro": "Her teslim bir sohbetle başlar. Az sayıda köpekle çalıştığım için, hangi köpeğin uygun olduğuna, hatta uygun bir köpek olup olmadığına karar vermeden önce kişiyi ve ortamını tanımak isterim.",
+    "journey": {
+      "title": "Sonraki adımlar:",
+      "steps": [
+        "Başvuru",
+        "Doğrudan görüşme",
+        "Uygunluk ve eşleştirme",
+        "Uygun olduğunda rezervasyon",
+        "Eğitim",
+        "Sahibin entegrasyonu ve teslim",
+        "Sürekli destek"
+      ]
+    },
+    "tellMe": {
+      "title": "Bana şunlardan bahsedin:",
+      "items": [
+        "Yaşadığınız yer",
+        "Ev ve aile durumunuz",
+        "Evdeki diğer hayvanlar",
+        "Köpek ve çalışma köpeği deneyiminiz",
+        "Mülkünüz ve günlük yaşam ortamınız",
+        "Seyahat durumunuz",
+        "Köpekten beklediğiniz görev",
+        "Tercih ettiğiniz zamanlama",
+        "Erken rezervasyona ilgi duyup duymadığınız"
+      ]
+    },
+    "form": {
+      "action": "https://formspree.io/f/mwpvylyn",
+      "method": "POST",
+      "fields": {
+        "name": {
+          "label": "Ad ve soyad*",
+          "placeholder": "Ad ve soyadınız",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "email": {
+          "label": "E-posta*",
+          "placeholder": "E-posta adresiniz",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "phone": {
+          "label": "Telefon / WhatsApp",
+          "placeholder": "Telefon numaranız",
+          "ariaLabel": null,
+          "title": null,
+          "required": false
+        },
+        "country": {
+          "label": "Ülke",
+          "options": [
+            {
+              "value": "",
+              "label": "Ülkenizi seçin",
+              "placeholder": true
+            },
+            {
+              "value": "Afghanistan",
+              "label": "Afghanistan"
+            },
+            {
+              "value": "Albania",
+              "label": "Albania"
+            },
+            {
+              "value": "Algeria",
+              "label": "Algeria"
+            },
+            {
+              "value": "Andorra",
+              "label": "Andorra"
+            },
+            {
+              "value": "Angola",
+              "label": "Angola"
+            },
+            {
+              "value": "Antigua and Barbuda",
+              "label": "Antigua and Barbuda"
+            },
+            {
+              "value": "Argentina",
+              "label": "Argentina"
+            },
+            {
+              "value": "Armenia",
+              "label": "Armenia"
+            },
+            {
+              "value": "Australia",
+              "label": "Australia"
+            },
+            {
+              "value": "Austria",
+              "label": "Austria"
+            },
+            {
+              "value": "Azerbaijan",
+              "label": "Azerbaijan"
+            },
+            {
+              "value": "Bahamas",
+              "label": "Bahamas"
+            },
+            {
+              "value": "Bahrain",
+              "label": "Bahrain"
+            },
+            {
+              "value": "Bangladesh",
+              "label": "Bangladesh"
+            },
+            {
+              "value": "Barbados",
+              "label": "Barbados"
+            },
+            {
+              "value": "Belarus",
+              "label": "Belarus"
+            },
+            {
+              "value": "Belgium",
+              "label": "Belgium"
+            },
+            {
+              "value": "Belize",
+              "label": "Belize"
+            },
+            {
+              "value": "Benin",
+              "label": "Benin"
+            },
+            {
+              "value": "Bhutan",
+              "label": "Bhutan"
+            },
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Bosnia and Herzegovina",
+              "label": "Bosnia and Herzegovina"
+            },
+            {
+              "value": "Botswana",
+              "label": "Botswana"
+            },
+            {
+              "value": "Brazil",
+              "label": "Brazil"
+            },
+            {
+              "value": "Brunei",
+              "label": "Brunei"
+            },
+            {
+              "value": "Bulgaria",
+              "label": "Bulgaria"
+            },
+            {
+              "value": "Burkina Faso",
+              "label": "Burkina Faso"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Cabo Verde",
+              "label": "Cabo Verde"
+            },
+            {
+              "value": "Cambodia",
+              "label": "Cambodia"
+            },
+            {
+              "value": "Cameroon",
+              "label": "Cameroon"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Central African Republic",
+              "label": "Central African Republic"
+            },
+            {
+              "value": "Chad",
+              "label": "Chad"
+            },
+            {
+              "value": "Chile",
+              "label": "Chile"
+            },
+            {
+              "value": "China",
+              "label": "China"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Comoros",
+              "label": "Comoros"
+            },
+            {
+              "value": "Congo (Congo-Brazzaville)",
+              "label": "Congo (Congo-Brazzaville)"
+            },
+            {
+              "value": "Costa Rica",
+              "label": "Costa Rica"
+            },
+            {
+              "value": "Croatia",
+              "label": "Croatia"
+            },
+            {
+              "value": "Cuba",
+              "label": "Cuba"
+            },
+            {
+              "value": "Cyprus",
+              "label": "Cyprus"
+            },
+            {
+              "value": "Czechia",
+              "label": "Czechia"
+            },
+            {
+              "value": "Denmark",
+              "label": "Denmark"
+            },
+            {
+              "value": "Djibouti",
+              "label": "Djibouti"
+            },
+            {
+              "value": "Dominica",
+              "label": "Dominica"
+            },
+            {
+              "value": "Dominican Republic",
+              "label": "Dominican Republic"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "Egypt",
+              "label": "Egypt"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Equatorial Guinea",
+              "label": "Equatorial Guinea"
+            },
+            {
+              "value": "Eritrea",
+              "label": "Eritrea"
+            },
+            {
+              "value": "Estonia",
+              "label": "Estonia"
+            },
+            {
+              "value": "Eswatini",
+              "label": "Eswatini"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Fiji",
+              "label": "Fiji"
+            },
+            {
+              "value": "Finland",
+              "label": "Finland"
+            },
+            {
+              "value": "France",
+              "label": "France"
+            },
+            {
+              "value": "Gabon",
+              "label": "Gabon"
+            },
+            {
+              "value": "Gambia",
+              "label": "Gambia"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Germany",
+              "label": "Germany"
+            },
+            {
+              "value": "Ghana",
+              "label": "Ghana"
+            },
+            {
+              "value": "Greece",
+              "label": "Greece"
+            },
+            {
+              "value": "Grenada",
+              "label": "Grenada"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Guinea",
+              "label": "Guinea"
+            },
+            {
+              "value": "Guinea-Bissau",
+              "label": "Guinea-Bissau"
+            },
+            {
+              "value": "Guyana",
+              "label": "Guyana"
+            },
+            {
+              "value": "Haiti",
+              "label": "Haiti"
+            },
+            {
+              "value": "Holy See",
+              "label": "Holy See"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Hungary",
+              "label": "Hungary"
+            },
+            {
+              "value": "Iceland",
+              "label": "Iceland"
+            },
+            {
+              "value": "India",
+              "label": "India"
+            },
+            {
+              "value": "Indonesia",
+              "label": "Indonesia"
+            },
+            {
+              "value": "Iran",
+              "label": "Iran"
+            },
+            {
+              "value": "Iraq",
+              "label": "Iraq"
+            },
+            {
+              "value": "Ireland",
+              "label": "Ireland"
+            },
+            {
+              "value": "Israel",
+              "label": "Israel"
+            },
+            {
+              "value": "Italy",
+              "label": "Italy"
+            },
+            {
+              "value": "Jamaica",
+              "label": "Jamaica"
+            },
+            {
+              "value": "Japan",
+              "label": "Japan"
+            },
+            {
+              "value": "Jordan",
+              "label": "Jordan"
+            },
+            {
+              "value": "Kazakhstan",
+              "label": "Kazakhstan"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Kiribati",
+              "label": "Kiribati"
+            },
+            {
+              "value": "Kuwait",
+              "label": "Kuwait"
+            },
+            {
+              "value": "Kyrgyzstan",
+              "label": "Kyrgyzstan"
+            },
+            {
+              "value": "Laos",
+              "label": "Laos"
+            },
+            {
+              "value": "Latvia",
+              "label": "Latvia"
+            },
+            {
+              "value": "Lebanon",
+              "label": "Lebanon"
+            },
+            {
+              "value": "Lesotho",
+              "label": "Lesotho"
+            },
+            {
+              "value": "Liberia",
+              "label": "Liberia"
+            },
+            {
+              "value": "Libya",
+              "label": "Libya"
+            },
+            {
+              "value": "Liechtenstein",
+              "label": "Liechtenstein"
+            },
+            {
+              "value": "Lithuania",
+              "label": "Lithuania"
+            },
+            {
+              "value": "Luxembourg",
+              "label": "Luxembourg"
+            },
+            {
+              "value": "Madagascar",
+              "label": "Madagascar"
+            },
+            {
+              "value": "Malawi",
+              "label": "Malawi"
+            },
+            {
+              "value": "Malaysia",
+              "label": "Malaysia"
+            },
+            {
+              "value": "Maldives",
+              "label": "Maldives"
+            },
+            {
+              "value": "Mali",
+              "label": "Mali"
+            },
+            {
+              "value": "Malta",
+              "label": "Malta"
+            },
+            {
+              "value": "Marshall Islands",
+              "label": "Marshall Islands"
+            },
+            {
+              "value": "Mauritania",
+              "label": "Mauritania"
+            },
+            {
+              "value": "Mauritius",
+              "label": "Mauritius"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Micronesia",
+              "label": "Micronesia"
+            },
+            {
+              "value": "Moldova",
+              "label": "Moldova"
+            },
+            {
+              "value": "Monaco",
+              "label": "Monaco"
+            },
+            {
+              "value": "Mongolia",
+              "label": "Mongolia"
+            },
+            {
+              "value": "Montenegro",
+              "label": "Montenegro"
+            },
+            {
+              "value": "Morocco",
+              "label": "Morocco"
+            },
+            {
+              "value": "Mozambique",
+              "label": "Mozambique"
+            },
+            {
+              "value": "Myanmar",
+              "label": "Myanmar"
+            },
+            {
+              "value": "Namibia",
+              "label": "Namibia"
+            },
+            {
+              "value": "Nauru",
+              "label": "Nauru"
+            },
+            {
+              "value": "Nepal",
+              "label": "Nepal"
+            },
+            {
+              "value": "Netherlands",
+              "label": "Netherlands"
+            },
+            {
+              "value": "New Zealand",
+              "label": "New Zealand"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Niger",
+              "label": "Niger"
+            },
+            {
+              "value": "Nigeria",
+              "label": "Nigeria"
+            },
+            {
+              "value": "North Korea",
+              "label": "North Korea"
+            },
+            {
+              "value": "North Macedonia",
+              "label": "North Macedonia"
+            },
+            {
+              "value": "Norway",
+              "label": "Norway"
+            },
+            {
+              "value": "Oman",
+              "label": "Oman"
+            },
+            {
+              "value": "Pakistan",
+              "label": "Pakistan"
+            },
+            {
+              "value": "Palau",
+              "label": "Palau"
+            },
+            {
+              "value": "Palestine State",
+              "label": "Palestine State"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Paraguay",
+              "label": "Paraguay"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Philippines",
+              "label": "Philippines"
+            },
+            {
+              "value": "Poland",
+              "label": "Poland"
+            },
+            {
+              "value": "Portugal",
+              "label": "Portugal"
+            },
+            {
+              "value": "Qatar",
+              "label": "Qatar"
+            },
+            {
+              "value": "Romania",
+              "label": "Romania"
+            },
+            {
+              "value": "Russia",
+              "label": "Russia"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Saint Kitts and Nevis",
+              "label": "Saint Kitts and Nevis"
+            },
+            {
+              "value": "Saint Lucia",
+              "label": "Saint Lucia"
+            },
+            {
+              "value": "Saint Vincent and the Grenadines",
+              "label": "Saint Vincent and the Grenadines"
+            },
+            {
+              "value": "Samoa",
+              "label": "Samoa"
+            },
+            {
+              "value": "San Marino",
+              "label": "San Marino"
+            },
+            {
+              "value": "Sao Tome and Principe",
+              "label": "Sao Tome and Principe"
+            },
+            {
+              "value": "Saudi Arabia",
+              "label": "Saudi Arabia"
+            },
+            {
+              "value": "Senegal",
+              "label": "Senegal"
+            },
+            {
+              "value": "Serbia",
+              "label": "Serbia"
+            },
+            {
+              "value": "Seychelles",
+              "label": "Seychelles"
+            },
+            {
+              "value": "Sierra Leone",
+              "label": "Sierra Leone"
+            },
+            {
+              "value": "Singapore",
+              "label": "Singapore"
+            },
+            {
+              "value": "Slovakia",
+              "label": "Slovakia"
+            },
+            {
+              "value": "Slovenia",
+              "label": "Slovenia"
+            },
+            {
+              "value": "Solomon Islands",
+              "label": "Solomon Islands"
+            },
+            {
+              "value": "Somalia",
+              "label": "Somalia"
+            },
+            {
+              "value": "South Africa",
+              "label": "South Africa"
+            },
+            {
+              "value": "South Korea",
+              "label": "South Korea"
+            },
+            {
+              "value": "South Sudan",
+              "label": "South Sudan"
+            },
+            {
+              "value": "Spain",
+              "label": "Spain"
+            },
+            {
+              "value": "Sri Lanka",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "Sudan",
+              "label": "Sudan"
+            },
+            {
+              "value": "Suriname",
+              "label": "Suriname"
+            },
+            {
+              "value": "Sweden",
+              "label": "Sweden"
+            },
+            {
+              "value": "Switzerland",
+              "label": "Switzerland"
+            },
+            {
+              "value": "Syria",
+              "label": "Syria"
+            },
+            {
+              "value": "Tajikistan",
+              "label": "Tajikistan"
+            },
+            {
+              "value": "Tanzania",
+              "label": "Tanzania"
+            },
+            {
+              "value": "Thailand",
+              "label": "Thailand"
+            },
+            {
+              "value": "Timor-Leste",
+              "label": "Timor-Leste"
+            },
+            {
+              "value": "Togo",
+              "label": "Togo"
+            },
+            {
+              "value": "Tonga",
+              "label": "Tonga"
+            },
+            {
+              "value": "Trinidad and Tobago",
+              "label": "Trinidad and Tobago"
+            },
+            {
+              "value": "Tunisia",
+              "label": "Tunisia"
+            },
+            {
+              "value": "Turkey",
+              "label": "Turkey"
+            },
+            {
+              "value": "Turkmenistan",
+              "label": "Turkmenistan"
+            },
+            {
+              "value": "Tuvalu",
+              "label": "Tuvalu"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Ukraine",
+              "label": "Ukraine"
+            },
+            {
+              "value": "United Arab Emirates",
+              "label": "United Arab Emirates"
+            },
+            {
+              "value": "United Kingdom",
+              "label": "United Kingdom"
+            },
+            {
+              "value": "United States of America",
+              "label": "United States of America"
+            },
+            {
+              "value": "Uruguay",
+              "label": "Uruguay"
+            },
+            {
+              "value": "Uzbekistan",
+              "label": "Uzbekistan"
+            },
+            {
+              "value": "Vanuatu",
+              "label": "Vanuatu"
+            },
+            {
+              "value": "Venezuela",
+              "label": "Venezuela"
+            },
+            {
+              "value": "Vietnam",
+              "label": "Vietnam"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            },
+            {
+              "value": "Zambia",
+              "label": "Zambia"
+            },
+            {
+              "value": "Zimbabwe",
+              "label": "Zimbabwe"
+            }
+          ]
+        },
+        "interest": {
+          "label": "İlgi Alanı",
+          "options": [
+            {
+              "value": "",
+              "label": "İlgi alanınızı seçin",
+              "placeholder": true
+            },
+            {
+              "value": "Bobo - Early Reservation",
+              "label": "Bobo — Erken Rezervasyon"
+            },
+            {
+              "value": "Future Litter",
+              "label": "Sonraki Batın / Genel Müsaitlik"
+            },
+            {
+              "value": "General Enquiry",
+              "label": "Genel Soru"
+            },
+            {
+              "value": "Other",
+              "label": "Diğer"
+            }
+          ]
+        },
+        "message": {
+          "label": "Mesajınız*",
+          "placeholder": "Güvenlik ihtiyacınızı, sorularınızı ya da durumunuzu anlamama yardımcı olacak ayrıntıları yazın...",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "privacyConsent": {
+          "label": "<a href=\"/privacy-policy-tr.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">Gizlilik politikasını</a> kabul ediyor ve verilerimin işlenmesine onay veriyorum*",
+          "required": true
+        }
+      },
+      "submit": "Gönder"
+    },
+    "messages": {
+      "nameRequired": "Lütfen tam adınızı yazın",
+      "emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
+      "messageRequired": "Lütfen bir mesaj yazın",
+      "privacyRequired": "Gizlilik politikasını kabul etmelisiniz",
+      "sending": "Gönderiliyor... <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+      "submitRestore": "Gizli Mesaj Gönder",
+      "success": "Mesaj başarıyla gönderildi!",
+      "submitError": "Üzgünüm, form gönderilirken bir sorun oluştu",
+      "networkError": "Ağ hatası. Lütfen tekrar deneyin.",
+      "notificationClose": "Close"
+    },
+    "preselect": [
+      {
+        "interest": "Bobo - Early Reservation",
+        "section": "dogs",
+        "line": 532
+      },
+      {
+        "interest": "Future Litter",
+        "section": "dogs",
+        "line": 568
+      },
+      {
+        "interest": "Future Litter",
+        "section": "pricing",
+        "line": 1077
+      }
+    ],
+    "footnotes": [
+      {
+        "icon": "fas fa-lock me-2",
+        "text": "Bilgileriniz gizli tutulur ve yalnızca talebinize yanıt vermek için kullanılır."
+      },
+      {
+        "icon": "fas fa-clock me-2",
+        "text": "Genellikle 24 saat içinde yanıt veriyorum."
+      }
+    ]
+  },
+  "privacyBlurb": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #contact (line 1630)",
+    "h2": "Gizlilik ve mahremiyet",
+    "cards": [
+      {
+        "icon": "fas fa-user-lock fa-3x text-warning mb-3",
+        "h3": "Gerçek anlamda gizlilik",
+        "p": "Birçok müşterinin kimliği, adresi ve güvenlik düzeni konusunda gizliliğe ihtiyaç duyduğunu biliyorum. Ayrıntılı görüşmeden önce karşılıklı bir gizlilik sözleşmesi imzalamaktan memnuniyet duyarım."
+      },
+      {
+        "icon": "fas fa-lock fa-3x text-warning mb-3",
+        "h3": "Gerektiğinde gizlilik",
+        "p": "Bazı müşterilerin hassas kişisel, mesleki ya da güvenlikle ilgili koşulları oluyor. Gerektiğinde, ayrıntılı bilgi paylaşılmadan önce gizlilik konusunda anlaşabiliriz."
+      },
+      {
+        "icon": "fas fa-user-secret fa-3x text-warning mb-3",
+        "h3": "Baştan sona gizli",
+        "p": "Tüm müşteri bilgileri ilk temastan teslime kadar gizli kalır; kimliğiniz, adresiniz ve güvenlik düzeniniz aramızda kalır."
+      }
+    ],
+    "closing": {
+      "text": "Mahremiyetiniz önemli. İlk görüşmeden teslime kadar bu konuyu ciddiye alıyorum.",
+      "cta": {
+        "label": "Gizlilik içinde iletişime geçin",
+        "href": "#contact",
+        "data": {}
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "Kanıtlanmış çalışma hatlarından koruma Malinois'ları yetiştiren, doğrudan eğitmenin yürüttüğü küçük ölçekli bir program."
+    },
+    "quickLinks": {
+      "h3": "Hızlı bağlantılar",
+      "ariaLabel": "Alt menü",
+      "links": [
+        {
+          "label": "Köpekler",
+          "href": "#dogs"
+        },
+        {
+          "label": "Eğitim",
+          "href": "#training"
+        },
+        {
+          "label": "Yetiştirme",
+          "href": "#breeding"
+        },
+        {
+          "label": "Teslim",
+          "href": "#pricing"
+        },
+        {
+          "label": "Hakkımda",
+          "href": "#about"
+        },
+        {
+          "label": "İletişim",
+          "href": "#contact"
+        },
+        {
+          "label": "Gizlilik",
+          "href": "/privacy-policy-tr.html"
+        }
+      ]
+    },
+    "language": {
+      "h3": "Dil",
+      "links": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": true
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "connect": {
+      "h3": "Beni takip edin",
+      "links": [
+        {
+          "ariaLabel": "Instagram hesabım",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "WhatsApp'tan yazın",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "E-posta gönderin",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Tüm hakları saklıdır."
+  },
+  "ui": {}
+}

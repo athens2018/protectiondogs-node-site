@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Política de privacidade | Protection Dogs GR",
+    "description": "Como a Protection Dogs GR recolhe, utiliza e protege os seus dados pessoais quando nos contacta ou utiliza este website.",
+    "ogTitle": "Política de privacidade | Protection Dogs GR",
+    "ogDescription": "Como a Protection Dogs GR recolhe, utiliza e protege os seus dados pessoais quando nos contacta ou utiliza este website.",
+    "ogLocale": "pt_PT",
+    "ogUrl": "https://www.protectiondogs.gr/privacy-policy-pt.html",
+    "twitterTitle": null,
+    "twitterDescription": null,
+    "canonical": "https://www.protectiondogs.gr/privacy-policy-pt.html",
+    "lang": "pt",
+    "dir": null,
+    "jsonld": {}
+  },
+  "skipLink": {
+    "label": "Ir para o conteúdo principal",
+    "href": "#main-content"
+  },
+  "nav": {
+    "ariaLabel": "Menu principal",
+    "brand": {
+      "href": "/pt/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Abrir menu",
+    "items": [
+      {
+        "label": "Cães",
+        "href": "/pt/#dogs"
+      },
+      {
+        "label": "Treinamento",
+        "href": "/pt/#training"
+      },
+      {
+        "label": "Criação",
+        "href": "/pt/#breeding"
+      },
+      {
+        "label": "Entrega",
+        "href": "/pt/#pricing"
+      },
+      {
+        "label": "Sobre",
+        "href": "/pt/#about"
+      },
+      {
+        "label": "Contacto",
+        "href": "/pt/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Início",
+        "href": "/pt/"
+      },
+      {
+        "label": "Política de privacidade",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Informação legal",
+    "h1": "Política de privacidade",
+    "lastUpdated": "Última atualização: setembro de 2026",
+    "disclaimer": "Esta tradução é disponibilizada a título informativo. A <a href=\"/privacy-policy.html\" class=\"text-warning\" hreflang=\"en\" lang=\"en\">versão inglesa</a> é a que faz fé; em caso de divergência, prevalece o texto em inglês.",
+    "intro": [
+      {
+        "tag": "p",
+        "html": "Esta página explica que dados pessoais este website recolhe, porquê, e o que pode fazer a esse respeito. Descreve o que este site faz realmente — não é um modelo genérico."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Quem somos",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Protection Dogs GR, que gere este website em protectiondogs.gr, com sede na Grécia. Para qualquer questão ou pedido relacionado com privacidade, contacte <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>."
+          }
+        ]
+      },
+      {
+        "heading": "Que dados são recolhidos",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Quando utiliza o formulário de contacto:</strong> o seu nome, endereço de e-mail, número de telefone (se indicado) e tudo o que escrever no campo de mensagem. Estes dados são enviados para a Formspree, um serviço de gestão de formulários de terceiros, que os processa e os entrega na minha caixa de e-mail. A Formspree tem a sua própria <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">política de privacidade</a>, que abrange a forma como trata esses dados em trânsito."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Apenas se aceitar — através do Google Analytics:</strong> este site pode utilizar o Google Analytics (gtag.js da Google) para perceber como os visitantes o utilizam — páginas visitadas, localização aproximada (ao nível do país ou região), tipo de dispositivo e como chegou aqui. Isto envolve cookies e tecnologias de rastreio semelhantes. <strong class=\"text-warning\">Nada relacionado com análise é carregado sem que aceite o aviso de cookies:</strong> se escolher «Apenas essenciais», ou simplesmente ignorar o aviso, o script do Google Analytics nunca é carregado e não são recolhidos quaisquer dados de análise. A <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">política de privacidade</a> da Google descreve como esta trata esses dados caso aceite."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Alguns pequenos marcadores no armazenamento local do seu navegador:</strong> a sua escolha no aviso de cookies (para não lhe voltar a ser perguntado), o idioma escolhido se utilizar o seletor de idioma, e marcadores sim/não se fechar um aviso do site ou o convite «Instalar a aplicação» (para que não voltem a aparecer). Não contêm dados pessoais, são lidos apenas por este site e nunca saem do seu dispositivo. No mesmo armazenamento fica também uma breve nota que indica se o suporte offline do site foi instalado corretamente, para que os problemas possam ser diagnosticados."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Conteúdos incorporados de terceiros:</strong> a página inicial incorpora um widget de testemunhos de clientes (testimonial.to). Nada é carregado desse fornecedor até que aceite os cookies ou prima o botão «Carregar opiniões» nessa secção; depois de carregado, o fornecedor pode definir os seus próprios cookies ou recolher dados de acordo com a sua própria política de privacidade."
+          }
+        ]
+      },
+      {
+        "heading": "Porque são recolhidos estes dados",
+        "blocks": [
+          {
+            "tag": "ul",
+            "items": [
+              "Para responder ao seu pedido de informação sobre um cão, sobre treino ou sobre qualquer outro assunto pelo qual me contacte",
+              "Para perceber que partes do site são realmente úteis, de modo a poder melhorá-lo",
+              "Para manter o site a funcionar em segurança e diagnosticar problemas"
+            ]
+          },
+          {
+            "tag": "p",
+            "html": "Não vendo os seus dados a ninguém e não os utilizo para nada além do que aqui está descrito."
+          }
+        ]
+      },
+      {
+        "heading": "Durante quanto tempo são conservados",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Os envios do formulário de contacto são conservados durante o tempo necessário para tratar o seu pedido e qualquer relação daí resultante, e depois eliminados quando deixam de ser relevantes. Os dados de análise são conservados de acordo com as definições de retenção padrão do Google Analytics."
+          }
+        ]
+      },
+      {
+        "heading": "Os seus direitos",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Se se encontra na UE/EEE ou no Reino Unido, tem o direito, ao abrigo do RGPD, de saber que dados pessoais guardo sobre si, de pedir uma cópia, de solicitar a sua correção ou eliminação e de se opor à forma como são utilizados. Para exercer qualquer um destes direitos, envie um e-mail para <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>."
+          }
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Os únicos cookies que este site define por si próprio provêm do Google Analytics, e apenas se os aceitar no aviso de cookies apresentado na sua primeira visita. Escolher «Apenas essenciais» significa que o script de análise nunca é carregado, pelo que esses cookies nunca são definidos. Pode também controlar ou apagar cookies a qualquer momento nas definições do seu navegador. Em qualquer dos casos, navegar no site e contactar-me funciona exatamente da mesma forma."
+          }
+        ]
+      },
+      {
+        "heading": "Alterações a esta política",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Se o que este site recolhe, ou a forma como os dados são utilizados, mudar de forma significativa, esta página será atualizada com uma nova data de «última atualização» acima."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Contacte-me",
+      "href": "/pt/#contact",
+      "data": {}
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "Um programa de pequena escala, conduzido diretamente pelo treinador, que cria Malinois de proteção a partir de linhas de trabalho comprovadas."
+    },
+    "quickLinks": {
+      "h3": "Links rápidos",
+      "ariaLabel": "Menu do rodapé",
+      "links": [
+        {
+          "label": "Cães",
+          "href": "/pt/#dogs"
+        },
+        {
+          "label": "Treino",
+          "href": "/pt/#training"
+        },
+        {
+          "label": "Criação",
+          "href": "/pt/#breeding"
+        },
+        {
+          "label": "Entrega",
+          "href": "/pt/#pricing"
+        },
+        {
+          "label": "Quem sou",
+          "href": "/pt/#about"
+        },
+        {
+          "label": "Contactos",
+          "href": "/pt/#contact"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Fale comigo",
+      "links": [
+        {
+          "ariaLabel": "O meu Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "Escreva-me no WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "Enviar e-mail",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Privacybeleid | Protection Dogs GR",
+    "description": "Hoe Protection Dogs GR uw persoonsgegevens verzamelt, gebruikt en beschermt wanneer u contact opneemt of deze website gebruikt.",
+    "ogTitle": "Privacybeleid | Protection Dogs GR",
+    "ogDescription": "Hoe Protection Dogs GR uw persoonsgegevens verzamelt, gebruikt en beschermt wanneer u contact opneemt of deze website gebruikt.",
+    "ogLocale": "nl_NL",
+    "ogUrl": "https://www.protectiondogs.gr/privacy-policy-nl.html",
+    "twitterTitle": null,
+    "twitterDescription": null,
+    "canonical": "https://www.protectiondogs.gr/privacy-policy-nl.html",
+    "lang": "nl",
+    "dir": null,
+    "jsonld": {}
+  },
+  "skipLink": {
+    "label": "Ga naar hoofdinhoud",
+    "href": "#main-content"
+  },
+  "nav": {
+    "ariaLabel": "Hoofdnavigatie",
+    "brand": {
+      "href": "/nl/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Menu openen",
+    "items": [
+      {
+        "label": "Honden",
+        "href": "/nl/#dogs"
+      },
+      {
+        "label": "Proces",
+        "href": "/nl/#training"
+      },
+      {
+        "label": "Fokkerij",
+        "href": "/nl/#breeding"
+      },
+      {
+        "label": "Plaatsing",
+        "href": "/nl/#pricing"
+      },
+      {
+        "label": "Over",
+        "href": "/nl/#about"
+      },
+      {
+        "label": "Contact",
+        "href": "/nl/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Home",
+        "href": "/nl/"
+      },
+      {
+        "label": "Privacybeleid",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Juridisch",
+    "h1": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: september 2026",
+    "disclaimer": "Deze vertaling is ter informatie. De <a href=\"/privacy-policy.html\" class=\"text-warning\" hreflang=\"en\" lang=\"en\">Engelse versie</a> is bindend; bij verschillen geldt de Engelse tekst.",
+    "intro": [
+      {
+        "tag": "p",
+        "html": "Deze pagina legt uit welke persoonsgegevens deze website verzamelt, waarom, en wat u daaraan kunt doen. Ze beschrijft wat deze site werkelijk doet — geen algemeen sjabloon."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Wie wij zijn",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Protection Dogs GR, beheerder van deze website op protectiondogs.gr, gevestigd in Griekenland. Voor elke vraag of elk verzoek over privacy kunt u contact opnemen via <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>."
+          }
+        ]
+      },
+      {
+        "heading": "Welke gegevens worden verzameld",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Wanneer u het contactformulier gebruikt:</strong> uw naam, e-mailadres, telefoonnummer (indien opgegeven) en alles wat u in het berichtveld schrijft. Dit wordt verzonden naar en verwerkt door Formspree, een formulierdienst van een derde partij, en afgeleverd in mijn e-mailinbox. Formspree heeft een eigen <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacybeleid</a> die beschrijft hoe zij die gegevens onderweg behandelen."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Alleen als u accepteert — via Google Analytics:</strong> deze site kan Google Analytics (gtag.js van Google) gebruiken om te begrijpen hoe bezoekers de site gebruiken — bekeken pagina's, globale locatie (op land- of regioniveau), apparaattype en hoe u hier terechtkwam. Hierbij worden cookies en vergelijkbare trackingtechnologie gebruikt. <strong class=\"text-warning\">Er wordt niets analytics-gerelateerds geladen tenzij u de cookiemelding accepteert:</strong> als u „Alleen Noodzakelijk” kiest, of de melding gewoon negeert, wordt het Google Analytics-script nooit geladen en worden er helemaal geen analysegegevens verzameld. Het eigen <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacybeleid</a> van Google beschrijft hoe zij deze gegevens verwerken als u wél accepteert."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Een paar kleine markeringen in de lokale opslag van uw browser:</strong> uw keuze in de cookiemelding (zodat u niet opnieuw wordt gevraagd), uw taalkeuze als u de taalwisselaar gebruikt, en ja/nee-markeringen als u een mededelingsbalk van de site of de uitnodiging „Installeer de app” wegklikt (zodat die niet terugkomen). Deze bevatten geen persoonsgegevens, worden uitsluitend door deze site gelezen en verlaten uw apparaat nooit. In dezelfde opslag staat ook een korte notitie of de offline-ondersteuning van de site correct is geïnstalleerd, zodat problemen kunnen worden opgespoord."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Ingesloten inhoud van derden:</strong> op de homepage is een widget met klantbeoordelingen (testimonial.to) ingesloten. Er wordt niets van die aanbieder geladen totdat u cookies accepteert of in dat gedeelte op de knop „Beoordelingen laden” drukt; eenmaal geladen kan de aanbieder eigen cookies plaatsen of gegevens verzamelen volgens zijn eigen privacybeleid."
+          }
+        ]
+      },
+      {
+        "heading": "Waarom deze gegevens worden verzameld",
+        "blocks": [
+          {
+            "tag": "ul",
+            "items": [
+              "Om te reageren op uw vraag over een hond, training of wat u mij ook anders voorlegt",
+              "Om te begrijpen welke onderdelen van de site echt nuttig zijn, zodat ik die kan verbeteren",
+              "Om de site veilig draaiende te houden en problemen op te sporen"
+            ]
+          },
+          {
+            "tag": "p",
+            "html": "Ik verkoop uw gegevens aan niemand en gebruik ze voor niets anders dan wat hier beschreven staat."
+          }
+        ]
+      },
+      {
+        "heading": "Hoe lang gegevens worden bewaard",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Inzendingen via het contactformulier worden bewaard zolang dat nodig is om uw vraag en een eventuele daaruit voortvloeiende samenwerking af te handelen, en daarna verwijderd zodra ze niet meer relevant zijn. Analysegegevens worden bewaard volgens de standaard bewaarinstellingen van Google Analytics."
+          }
+        ]
+      },
+      {
+        "heading": "Uw rechten",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Als u zich in de EU/EER of het Verenigd Koninkrijk bevindt, hebt u onder de AVG het recht om te vragen welke persoonsgegevens ik over u bewaar, daarvan een kopie op te vragen, correctie of verwijdering te vragen en bezwaar te maken tegen het gebruik ervan. Stuur daarvoor een e-mail naar <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a>."
+          }
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "De enige cookies die deze site zelf plaatst, komen van Google Analytics, en alleen als u ze accepteert in de cookiemelding bij uw eerste bezoek. Kiest u „Alleen Noodzakelijk”, dan wordt het analysescript nooit geladen en worden die cookies dus nooit geplaatst. U kunt cookies bovendien op elk moment beheren of wissen via de instellingen van uw browser. In beide gevallen werken het bekijken van de site en het contact opnemen precies hetzelfde."
+          }
+        ]
+      },
+      {
+        "heading": "Wijzigingen in dit beleid",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Als wat deze site verzamelt of hoe die gegevens worden gebruikt wezenlijk verandert, wordt deze pagina bijgewerkt met een nieuwe datum „laatst bijgewerkt” hierboven."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Neem contact op",
+      "href": "/nl/#contact",
+      "data": {}
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "Een klein, door de trainer zelf geleid werkhondenprogramma dat beschermings-Mechelse herders ontwikkelt uit bewezen werklijnen."
+    },
+    "quickLinks": {
+      "h3": "Snelkoppelingen",
+      "ariaLabel": "Voettekstnavigatie",
+      "links": [
+        {
+          "label": "Honden",
+          "href": "/nl/#dogs"
+        },
+        {
+          "label": "Proces",
+          "href": "/nl/#training"
+        },
+        {
+          "label": "Fokkerij",
+          "href": "/nl/#breeding"
+        },
+        {
+          "label": "Plaatsing",
+          "href": "/nl/#pricing"
+        },
+        {
+          "label": "Over",
+          "href": "/nl/#about"
+        },
+        {
+          "label": "Contact",
+          "href": "/nl/#contact"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Contact opnemen",
+      "links": [
+        {
+          "ariaLabel": "Bezoek mijn Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "Neem contact op via WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "Stuur me een e-mail",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Alle rechten voorbehouden."
+  }
+}

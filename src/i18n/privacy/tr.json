@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Gizlilik Politikası | Protection Dogs GR",
+    "description": "Bize ulaştığınızda veya bu web sitesini kullandığınızda Protection Dogs GR'nin kişisel verilerinizi nasıl topladığı, kullandığı ve koruduğu.",
+    "ogTitle": "Gizlilik Politikası | Protection Dogs GR",
+    "ogDescription": "Bize ulaştığınızda veya bu web sitesini kullandığınızda Protection Dogs GR'nin kişisel verilerinizi nasıl topladığı, kullandığı ve koruduğu.",
+    "ogLocale": "tr_TR",
+    "ogUrl": "https://www.protectiondogs.gr/privacy-policy-tr.html",
+    "twitterTitle": null,
+    "twitterDescription": null,
+    "canonical": "https://www.protectiondogs.gr/privacy-policy-tr.html",
+    "lang": "tr",
+    "dir": null,
+    "jsonld": {}
+  },
+  "skipLink": {
+    "label": "Ana içeriğe geç",
+    "href": "#main-content"
+  },
+  "nav": {
+    "ariaLabel": "Ana menü",
+    "brand": {
+      "href": "/tr/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Menüyü aç",
+    "items": [
+      {
+        "label": "Köpekler",
+        "href": "/tr/#dogs"
+      },
+      {
+        "label": "Eğitim",
+        "href": "/tr/#training"
+      },
+      {
+        "label": "Yetiştirme",
+        "href": "/tr/#breeding"
+      },
+      {
+        "label": "Teslim",
+        "href": "/tr/#pricing"
+      },
+      {
+        "label": "Hakkımda",
+        "href": "/tr/#about"
+      },
+      {
+        "label": "İletişim",
+        "href": "/tr/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Ana sayfa",
+        "href": "/tr/"
+      },
+      {
+        "label": "Gizlilik Politikası",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Yasal",
+    "h1": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: Eylül 2026",
+    "disclaimer": "Bu çeviri kolaylık sağlamak amacıyla sunulmuştur. Bağlayıcı olan <a href=\"/privacy-policy.html\" class=\"text-warning\" hreflang=\"en\" lang=\"en\">İngilizce sürümdür</a>; herhangi bir farklılık olması hâlinde İngilizce metin geçerlidir.",
+    "intro": [
+      {
+        "tag": "p",
+        "html": "Bu sayfa, bu web sitesinin hangi kişisel verileri topladığını, neden topladığını ve bu konuda neler yapabileceğinizi açıklar. Genel bir şablon değil; bu sitenin gerçekte ne yaptığını yansıtacak şekilde yazılmıştır."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Site işletmecisi",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Protection Dogs GR; protectiondogs.gr adresindeki bu web sitesini işleten, Yunanistan merkezli bir programdır. Gizlilikle ilgili her türlü soru ve talebiniz için <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a> adresine yazabilirsiniz."
+          }
+        ]
+      },
+      {
+        "heading": "Hangi bilgiler toplanır",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">İletişim formunu kullandığınızda:</strong> adınız, e-posta adresiniz, telefon numaranız (belirttiyseniz) ve mesaj alanına yazdığınız her şey. Bu bilgiler, üçüncü taraf bir form işleme hizmeti olan Formspree'ye gönderilir, orada işlenir ve e-posta gelen kutuma iletilir. Formspree'nin, bu verileri aktarım sırasında nasıl ele aldığını açıklayan kendi <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">gizlilik politikası</a> vardır."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Yalnızca onay verirseniz — Google Analytics aracılığıyla:</strong> bu site, ziyaretçilerin siteyi nasıl kullandığını anlamak için Google Analytics (Google'ın gtag.js kodu) kullanabilir: görüntülenen sayfalar, genel konum (ülke/bölge düzeyinde), cihaz türü ve siteye nasıl ulaştığınız. Bu, çerezler ve benzeri izleme teknolojileri gerektirir. <strong class=\"text-warning\">Çerez bildirimini onaylamadığınız sürece analizle ilgili hiçbir şey yüklenmez:</strong> “Yalnızca gerekli” seçeneğini seçerseniz ya da bildirimi görmezden gelirseniz Google Analytics kodu hiç yüklenmez ve hiçbir analiz verisi toplanmaz. Onay vermeniz hâlinde Google'ın bu verileri nasıl işlediği Google'ın kendi <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">gizlilik politikasında</a> açıklanmaktadır."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Tarayıcınızın yerel depolama alanındaki birkaç küçük işaret:</strong> çerez bildirimindeki tercihiniz (size tekrar sorulmaması için), dil değiştiriciyi kullandıysanız seçtiğiniz dil ve bir site bildirim çubuğunu ya da “uygulamayı yükle” önerisini kapattığınızda tutulan evet/hayır işaretleri (tekrar görünmemeleri için). Bunlar kişisel bilgi içermez, yalnızca bu site tarafından okunur ve cihazınızdan asla ayrılmaz. Aynı depolama alanında, sitenin çevrimdışı desteğinin doğru kurulup kurulmadığını belirten kısa bir not da tutulur; böylece sorunlar teşhis edilebilir."
+          },
+          {
+            "tag": "p",
+            "html": "<strong class=\"text-warning\">Gömülü üçüncü taraf içeriği:</strong> ana sayfada bir müşteri yorumları bileşeni (testimonial.to) yer alır. Çerezleri kabul edene veya o bölümdeki «Yorumları yükle» düğmesine basana kadar bu sağlayıcıdan hiçbir şey yüklenmez; yüklendikten sonra sağlayıcı kendi gizlilik politikası doğrultusunda kendi çerezlerini bırakabilir veya veri toplayabilir."
+          }
+        ]
+      },
+      {
+        "heading": "Bu bilgiler neden toplanır",
+        "blocks": [
+          {
+            "tag": "ul",
+            "items": [
+              "Bir köpek, eğitim ya da bana ulaşma nedeniniz her ne ise, talebinize yanıt vermek için",
+              "Sitenin hangi bölümlerinin gerçekten işe yaradığını anlamak ve siteyi geliştirmek için",
+              "Siteyi güvenli biçimde çalışır tutmak ve sorunları tespit etmek için"
+            ]
+          },
+          {
+            "tag": "p",
+            "html": "Bilgilerinizi kimseye satmıyorum ve burada açıklananların dışında hiçbir amaçla kullanmıyorum."
+          }
+        ]
+      },
+      {
+        "heading": "Veriler ne kadar süre saklanır",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "İletişim formu gönderileri, talebinizin ve bundan doğabilecek iş ilişkisinin gerektirdiği süre boyunca saklanır; artık gerekli olmadığında silinir. Analiz verileri, Google Analytics'in standart saklama ayarlarına göre tutulur."
+          }
+        ]
+      },
+      {
+        "heading": "Haklarınız",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "AB/AEA veya Birleşik Krallık'ta bulunuyorsanız GDPR kapsamında; hakkınızda hangi kişisel verileri tuttuğumu sormak, bir kopyasını istemek, düzeltilmesini veya silinmesini talep etmek ve kullanım şekline itiraz etmek hakkına sahipsiniz. Bu haklardan herhangi birini kullanmak için <a href=\"mailto:contact@protectiondogs.gr\" class=\"text-warning\">contact@protectiondogs.gr</a> adresine e-posta gönderin."
+          }
+        ]
+      },
+      {
+        "heading": "Çerezler",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Bu sitenin kendisinin bıraktığı tek çerezler Google Analytics'e aittir ve yalnızca ilk ziyaretinizde gösterilen çerez bildiriminde onay verirseniz bırakılır. “Yalnızca gerekli” seçeneğini seçtiğinizde analiz kodu hiç yüklenmez, dolayısıyla bu çerezler hiç oluşturulmaz. Çerezleri dilediğiniz zaman tarayıcı ayarlarınızdan da yönetebilir veya silebilirsiniz. Her iki durumda da sitede gezinmek ve benimle iletişime geçmek tamamen aynı şekilde çalışır."
+          }
+        ]
+      },
+      {
+        "heading": "Bu politikadaki değişiklikler",
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Bu sitenin topladığı veriler veya bunların kullanım şekli önemli ölçüde değişirse, bu sayfa yukarıda yeni bir “son güncelleme” tarihiyle güncellenir."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Bana ulaşın",
+      "href": "/tr/#contact",
+      "data": {}
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "Kanıtlanmış çalışma hatlarından koruma Malinois'ları yetiştiren, doğrudan eğitmenin yürüttüğü küçük ölçekli bir program."
+    },
+    "quickLinks": {
+      "h3": "Hızlı bağlantılar",
+      "ariaLabel": "Alt menü",
+      "links": [
+        {
+          "label": "Köpekler",
+          "href": "/tr/#dogs"
+        },
+        {
+          "label": "Eğitim",
+          "href": "/tr/#training"
+        },
+        {
+          "label": "Yetiştirme",
+          "href": "/tr/#breeding"
+        },
+        {
+          "label": "Teslim",
+          "href": "/tr/#pricing"
+        },
+        {
+          "label": "Hakkımda",
+          "href": "/tr/#about"
+        },
+        {
+          "label": "İletişim",
+          "href": "/tr/#contact"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Beni takip edin",
+      "links": [
+        {
+          "ariaLabel": "Instagram hesabım",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "WhatsApp'tan yazın",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "E-posta gönderin",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Tüm hakları saklıdır."
+  }
+}

@@ -1,0 +1,2166 @@
+{
+  "meta": {
+    "title": "比利时马犬护卫犬 | Protection Dogs GR",
+    "description": "出自工作血系的比利时马犬护卫犬。希腊的小规模训练犬舍，由训犬师亲自负责，每次只带少数几条犬。",
+    "ogTitle": "比利时马犬护卫犬 | Protection Dogs GR",
+    "ogDescription": "出自工作血系的比利时马犬护卫犬。希腊的小规模训练犬舍，由训犬师亲自负责，每次只带少数几条犬。",
+    "ogLocale": "zh_CN",
+    "ogUrl": "https://www.protectiondogs.gr/zh/",
+    "twitterTitle": "比利时马犬护卫犬",
+    "twitterDescription": "出自工作血系的比利时马犬护卫犬。希腊的小规模训练犬舍，由训犬师亲自负责，每次只带少数几条犬。",
+    "canonical": "https://www.protectiondogs.gr/zh/",
+    "lang": "zh-Hans",
+    "dir": null,
+    "jsonld": {
+      "organization": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Protection Dogs GR",
+        "description": "位于希腊、由训犬师亲自主理的小规模比利时马犬护卫犬项目，每次仅培养少量工作血系犬只，服务于有真实护卫需求的个人与家庭。",
+        "url": "https://www.protectiondogs.gr/",
+        "logo": "https://www.protectiondogs.gr/images/logo.png",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Kostas",
+            "jobTitle": "Founder and Lead Trainer"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+306931736026",
+            "email": "contact@protectiondogs.gr",
+            "contactType": "Customer Service",
+            "availableLanguage": [
+              "en",
+              "el"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/protectiondogsgr",
+          "https://wa.me/306931736026"
+        ]
+      },
+      "faqpage": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "您的繁育有什么不同？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "我把繁育控制在很小的规模，选择也很严。工作能力、神经稳定性、健康、血统的厚度，以及公母之间是否互补，这些都算数。目的不是多出几窝，而是给训练提供更好的底子。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "您如何测试犬的工作能力？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "每条犬都要在真实的、层层递进的压力下接受测试：不是单一的受控场景，而是复合且不可预测的压力，真实反映一次安全事件的实际情况。我关注的是压力下的清醒判断、投入程度、犬恢复并重新投入的速度，以及在局势变化时能否回到受控状态。这些不是普通的护卫犬，而是为真实安全需求培养的工作犬。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "对训导员的经验有什么要求？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "这些犬需要有经验的人来带。它们是真正的工作马犬，欲望很强，不是普通家庭宠物。训导员必须愿意持续维持训练，并有能力在日常中管理一条高欲望的工作犬。我会为训导员做培训，并在交付后继续提供支持。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "您的犬接受哪些训练？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "从早期抚触和环境适应开始，之后是社会化、服从、欲望培养、护卫基础、逐步加难的情景训练、最终评估，以及与训导员的磨合。每条犬都走同一套核心标准；后期训练可以按未来主人的环境做调整。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "您做哪些健康检测？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "每一条种犬候选都要做全面检测：髋关节和肘关节的正式评级、完整的基因筛查，以及全面的兽医检查。只有同时符合我健康与工作要求的犬，我才会用来繁育。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "您如何挑选客户？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "我会认真了解每一位有意向的客户，确认他清楚一条真正的工作犬意味着多大的投入：以往经验、真实的安全需求，以及能否长期维持训练。这些犬是为严肃的护卫需求准备的，需要有经验的人来带。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "需要等多久？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "没有固定的等待期，这取决于当前在训的犬只，以及我同时能带好多少条。可以直接联系我，聊聊现在有什么、后面又会有什么。"
+            }
+          }
+        ],
+        "inLanguage": "zh-Hans"
+      },
+      "product": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bobo - 马犬护卫犬",
+        "description": "Bobo 已通过筛选阶段，正式进入我的护卫犬培养计划。他目前处于训练阶段，现在即可预订，我会继续训练他直至最终交付。",
+        "image": "https://www.protectiondogs.gr/images/bobo-beach-15840.avif",
+        "brand": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/zh/"
+        },
+        "category": "护卫犬",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "50000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/zh/#dogs",
+          "description": "Bobo 是这一价位的最后一条犬。从下一窝开始，价格调整为 70,000 欧元。"
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "犬种",
+            "value": "Belgian Malinois"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "出生日期",
+            "value": "2026-03-11"
+          }
+        ],
+        "disambiguatingDescription": "为真实安全需求培养的工作血系护卫犬，并经过谨慎评估匹配合适的牵犬人"
+      },
+      "service": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "完成训练的护卫犬",
+        "description": "工作犬血统的马犬按照统一标准进行培养，包括进阶指令训练、公共场所纪律以及交通与旅行准备。训练期间可提前预订，并可采用分期付款方式。",
+        "provider": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/zh/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "70000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/zh/#pricing",
+          "description": "自下一窝起的标准价格。"
+        }
+      }
+    }
+  },
+  "nav": {
+    "ariaLabel": "主导航",
+    "brand": {
+      "href": "/zh/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "展开菜单",
+    "items": [
+      {
+        "label": "犬只",
+        "href": "#dogs"
+      },
+      {
+        "label": "训练",
+        "href": "#training"
+      },
+      {
+        "label": "繁育",
+        "href": "#breeding"
+      },
+      {
+        "label": "交付",
+        "href": "#pricing"
+      },
+      {
+        "label": "关于",
+        "href": "#about"
+      },
+      {
+        "label": "联系",
+        "href": "#contact"
+      }
+    ],
+    "langTrigger": {
+      "current": "中文",
+      "ariaControls": "langDrawer"
+    },
+    "mobileLangTrigger": {
+      "current": "中文",
+      "ariaControls": "langDrawer"
+    },
+    "langDrawer": {
+      "ariaLabel": "选择语言",
+      "title": "选择语言",
+      "close": {
+        "label": "&times;",
+        "ariaLabel": "关闭"
+      },
+      "options": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": true
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "langSuggest": null
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "跳到主要内容",
+      "href": "#main-content"
+    },
+    "backToTopAriaLabel": "回到顶部",
+    "scrollProgressAriaLabel": null,
+    "heroAriaLabel": "首屏区域",
+    "sectionDots": {
+      "ariaLabel": "页面章节",
+      "items": [
+        {
+          "href": "#main-content",
+          "section": "main-content",
+          "ariaLabel": "首页",
+          "tooltip": "首页"
+        },
+        {
+          "href": "#about",
+          "section": "about",
+          "ariaLabel": "关于",
+          "tooltip": "关于"
+        },
+        {
+          "href": "#dogs",
+          "section": "dogs",
+          "ariaLabel": "犬只",
+          "tooltip": "犬只"
+        },
+        {
+          "href": "#training",
+          "section": "training",
+          "ariaLabel": "训练",
+          "tooltip": "训练"
+        },
+        {
+          "href": "#breeding",
+          "section": "breeding",
+          "ariaLabel": "繁育",
+          "tooltip": "繁育"
+        },
+        {
+          "href": "#pricing",
+          "section": "pricing",
+          "ariaLabel": "交付",
+          "tooltip": "交付"
+        },
+        {
+          "href": "#faq",
+          "section": "faq",
+          "ariaLabel": "常见问题",
+          "tooltip": "常见问题"
+        },
+        {
+          "href": "#contact",
+          "section": "contact",
+          "ariaLabel": "联系",
+          "tooltip": "联系"
+        }
+      ]
+    },
+    "contactIcons": {
+      "ariaLabel": "快速联系",
+      "items": [
+        {
+          "ariaLabel": "给我发邮件",
+          "href": "mailto:contact@protectiondogs.gr",
+          "label": "Email",
+          "icon": "fas fa-envelope"
+        },
+        {
+          "ariaLabel": "通过 WhatsApp 联系",
+          "href": "https://wa.me/306931736026",
+          "label": "WhatsApp",
+          "icon": "fab fa-whatsapp"
+        },
+        {
+          "ariaLabel": "访问我的 Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "label": "Instagram",
+          "icon": "fab fa-instagram"
+        }
+      ]
+    }
+  },
+  "cookie": {
+    "ariaLabel": "Cookie 同意",
+    "text": "本站使用 Cookie 进行基本的访问统计。在您同意之前，不会收集任何数据。",
+    "reject": "仅必要项",
+    "accept": "同意"
+  },
+  "hero": {
+    "eyebrow": "比利时马犬 &middot; 希腊",
+    "h1": "<span>一次</span> <span>只成就</span> <span>一条犬。</span>",
+    "lead": "我繁育、饲养并训练少量出自工作血系的比利时马犬，用于真正意义上的人身与财产护卫。正因为规模小，每一条犬我都亲力亲为，也会亲自了解将来与它共同生活的人。",
+    "ctas": [
+      {
+        "label": "查看可选犬只",
+        "href": "#dogs",
+        "data": {}
+      },
+      {
+        "label": "与我联系",
+        "href": "#contact",
+        "data": {}
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/hero1.jpg",
+        "alt": "训练中的比利时马犬护卫犬"
+      },
+      {
+        "src": "/images/hero2.jpg",
+        "alt": "警戒状态下的比利时马犬"
+      },
+      {
+        "src": "/images/hero3.jpg",
+        "alt": "经过训练的马犬护卫犬与家人"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "关于犬舍",
+    "h2": "关于 Protection Dogs GR",
+    "intro": {
+      "h3": "以犬为核心的小规模犬舍",
+      "paragraphs": [
+        "Protection Dogs GR 是一家小规模的工作犬犬舍，专注于培养能力扎实、性格稳定的马犬，用于真正的护卫工作。我从经过验证的工作血系入手，再依据每条犬在成长与训练中的实际表现来判断它的走向。",
+        "我的目标不是让犬在表演中看起来威风，而是培养一条能全力投入工作、在压力下依然头脑清醒、并且在情势变化时立刻回到可控状态的犬。"
+      ]
+    },
+    "pullQuote": "血统给你的只是<span class=\"text-warning\">潜力</span>。最终成为什么样的犬，取决于<span class=\"text-warning\">训犬师</span>。",
+    "cards": [
+      {
+        "h3": "犬舍",
+        "paragraphs": [
+          "Protection Dogs GR 是一家由训犬师亲自主理的小型工作犬犬舍。我只繁育和培养数量有限的马犬，这样才能从幼犬阶段一直到最终交付，全程亲自参与每一条犬的成长。"
+        ]
+      },
+      {
+        "h3": "标准",
+        "paragraphs": [
+          "我要的是既全力以赴又不失判断，工作之外性情稳定，并且在压力结束后能够恢复、重新回到可控状态。并非每条犬都适合护卫工作，我也不会仅仅因为一条犬能完成表演就把它交出去。"
+        ]
+      },
+      {
+        "h3": "与客户的关系",
+        "paragraphs": [
+          "因为规模小，从头到尾都由我本人与客户直接沟通。若在训练期间预订了某条犬，未来的主人可以随时了解进展、提出问题、收到近期的照片和视频，并在交付之前逐步参与到这条犬的准备过程中来。"
+        ]
+      }
+    ],
+    "cta": {
+      "h3": "为何可选犬只有限",
+      "paragraphs": [
+        "我同时只带少数几条犬，因为训练和评估都由我亲自完成。可选犬只之所以有限，是受训练精力所限，而非人为制造稀缺。",
+        "若想了解现有或将来的犬只，请直接与我联系："
+      ],
+      "links": [
+        {
+          "label": "contact@protectiondogs.gr",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope me-2"
+        },
+        {
+          "label": "@protectiondogsgr",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram me-2"
+        },
+        {
+          "label": "+30 693 173 6026",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp me-2"
+        }
+      ]
+    }
+  },
+  "dogs": {
+    "eyebrow": "可预订犬只",
+    "h2": "可选护卫犬",
+    "availability": "目前可预订：<!--pdg:fact_available_for_reservation-->1<!--/pdg--> 条",
+    "intro": "正在训练中的犬只会在此陆续更新。每条犬都遵循同一套核心训练标准，并在交付前持续接受评估。",
+    "bobo": {
+      "storyOpen": "bobo-story-modal",
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo，训练中的比利时马犬护卫犬"
+      },
+      "name": "Bobo",
+      "tagline": "<!--pdg:stage_display-->护卫犬 &middot; 训练中<!--/pdg-->",
+      "stats": [
+        {
+          "label": "出生",
+          "value": "<!--pdg:dob_display-->2026年3月11日<!--/pdg-->"
+        },
+        {
+          "label": "血系",
+          "value": "工作血系"
+        },
+        {
+          "label": "状态",
+          "value": "<!--pdg:status_display-->可预订<!--/pdg-->"
+        }
+      ],
+      "meetButton": {
+        "label": "认识 Bobo",
+        "icon": "fas fa-paw me-2",
+        "data": {
+          "data-story-open": "bobo-story-modal"
+        }
+      },
+      "paragraphs": [
+        "Bobo 已通过筛选阶段，正式进入我的护卫犬培养计划。他目前处于训练阶段，现在即可预订，我会继续训练他直至最终交付。",
+        "在训练期间预订 Bobo，未来的主人可以全程了解他的进展并定期收到最新情况；同时也让我有时间，把后期训练针对性地调整到未来的家庭环境、日常作息和实际需求上。"
+      ],
+      "aboutHeading": "关于 Bobo",
+      "features": [
+        "经过验证的工作血系，兴奋度强",
+        "自幼环境适应能力强、自信度高",
+        "专注力强，对周围情况判断敏锐",
+        "目前正在护卫训练阶段，朝交付推进",
+        "在真实日常环境中充分社会化",
+        "按真正的人身与财产护卫犬标准培养"
+      ],
+      "reservation": {
+        "eyebrow": "提前预订",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_current-->50,000<!--/pdg-->"
+        },
+        "notes": [
+          "Bobo 是这一价位的最后一条犬。从下一窝开始，价格调整为 <!--pdg:price_future-->70,000<!--/pdg--> 欧元。",
+          "可以商定按月分期付款，把费用分摊在剩余的训练期内，无需一次付清。"
+        ],
+        "cta": {
+          "label": "咨询 Bobo 与预订事宜",
+          "href": "#contact",
+          "data": {
+            "data-interest": "Bobo - Early Reservation",
+            "data-stop-propagation": ""
+          }
+        }
+      }
+    },
+    "future": {
+      "name": "后续犬只",
+      "tagline": "来自下一窝",
+      "stats": [
+        {
+          "label": "<!--pdg:next_litter_label-->预计<!--/pdg-->",
+          "value": "<!--pdg:next_litter-->2026年底<!--/pdg-->"
+        },
+        {
+          "label": "犬种",
+          "value": "Belgian Malinois"
+        },
+        {
+          "label": "血系",
+          "value": "工作血系"
+        }
+      ],
+      "paragraph": "犬舍会刻意保持小规模。若您希望获得后续犬只，建议尽早与我沟通。当有合适的犬进入培养计划、并且与您匹配得当时，可以在训练期间就完成预订，无需等到最终交付。这样您可以全程关注这条犬、熟悉整个培养过程，费用也能分摊在训练周期内。",
+      "cta": {
+        "label": "咨询后续犬只",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "boboStory": {
+    "ariaLabelledby": "bobo-story-title",
+    "close": {
+      "label": "&times;",
+      "ariaLabel": "关闭"
+    },
+    "media": {
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo，训练中的比利时马犬护卫犬"
+      },
+      "video": {
+        "ariaLabel": "Bobo，训练中的比利时马犬护卫犬",
+        "poster": "/images/bobo-training-15888-poster.webp",
+        "src": "/images/bobo-training-15888.mp4"
+      }
+    },
+    "title": "认识 Bobo",
+    "dotCount": 4,
+    "slides": [
+      {
+        "slide": "0",
+        "image": "/images/bobo-beach-15840.avif",
+        "video": null,
+        "h4": "天生自信，欲望十足",
+        "p": "Bobo 的自信从来不需要靠训练去建立，他生来就是如此。他的工作欲望同样如此：强烈而自然，没有半分刻意造出来的成分。他咬合坚实有力，不管当天的训练内容是什么，他都愿意上。"
+      },
+      {
+        "slide": "1",
+        "image": "/images/bobo-training-15893-poster.webp",
+        "video": "/images/bobo-training-15893.mp4",
+        "h4": "与孩子和其他动物相处融洽",
+        "p": "不工作的时候，Bobo 是很好的伙伴：和孩子、和其他动物在一起都自在放松，而不只是勉强容忍。一条能做真正护卫工作的犬，其余时间也得懂得怎么做一条普通的狗——他做得到。"
+      },
+      {
+        "slide": "2",
+        "image": "/images/bobo-training-15888-poster.webp",
+        "video": "/images/bobo-training-15888.mp4",
+        "h4": "亲手带大，循序渐进",
+        "p": "Bobo 是我自己繁育的，从第一天起就由我亲手带大，这里的每条犬都是如此。毛色偏深，头型很正，训练上一步步稳扎稳打，从不硬推。他还特别喜欢海——游泳是他最喜欢的事情之一。"
+      },
+      {
+        "slide": "3",
+        "image": "/images/bobo-beach-15842.avif",
+        "video": null,
+        "h4": "为真正需要护卫的人而培养",
+        "p": "Bobo 正在成长为一条强壮而认真的犬——不是消遣用的伴侣犬，而是给真正需要护卫的人准备的。他的整个培养过程，都是围绕这一点展开的。"
+      }
+    ],
+    "nav": {
+      "prev": "&larr; 上一条",
+      "next": "下一条 &rarr;",
+      "jsClose": "关闭",
+      "jsNext": "下一条 →"
+    }
+  },
+  "watchDevelop": {
+    "eyebrow": "预订",
+    "h2": "看着它一天天长成",
+    "paragraphs": [
+      "对很多客户来说，这段关系在犬还没训练完成时就已经开始了。当一条合适的犬在训练期间被预订，我会让未来的主人紧跟整个过程：近期照片、简短视频，以及如实的训练进展，让他看着这条犬成长，一路跟到交付。",
+      "这些内容是刻意保持真实的，不做广告式的包装。日常训练大多就是随手拍下来的，和我自己复盘时录的没有区别。目的不是做内容，而是让未来的主人随着时间，真实地看到自己的犬。"
+    ]
+  },
+  "training": {
+    "h2": "我如何培养每一条犬",
+    "intro": "一套五个阶段的培养体系，核心原则很简单：先分别培养欲望与自控，再有计划地把两者合到一起。",
+    "timeline": {
+      "ariaLabel": "阶段导航",
+      "items": [
+        {
+          "phase": "1",
+          "number": "1",
+          "label": "早期发育",
+          "period": "0–3 周"
+        },
+        {
+          "phase": "2",
+          "number": "2",
+          "label": "社会化",
+          "period": "3–12 周"
+        },
+        {
+          "phase": "3",
+          "number": "3",
+          "label": "基础训练",
+          "period": "3–6 个月"
+        },
+        {
+          "phase": "4",
+          "number": "4",
+          "label": "护卫训练",
+          "period": "6–12 个月"
+        },
+        {
+          "phase": "5",
+          "number": "5",
+          "label": "巩固与交付",
+          "period": "12–18 个月"
+        }
+      ]
+    },
+    "phaseNav": {
+      "ariaLabel": "阶段导航",
+      "prevAriaLabel": "上一阶段",
+      "nextAriaLabel": "下一阶段",
+      "status": "<span data-phase-current>1</span> / 5"
+    },
+    "phases": [
+      {
+        "id": "phase-1",
+        "number": "01",
+        "badge": "第一阶段",
+        "title": "早期发育",
+        "timing": "0–3 周",
+        "intro": "培养从出生头几天就开始。早期的抚触和有控制的刺激，为日后的环境自信和抗压能力打下更扎实的基础。",
+        "features": [
+          {
+            "icon": "fas fa-brain",
+            "h4": "早期抚触（第 3–16 天）",
+            "p": "有章法的早期抚触与刺激练习，为成年后的抗压能力打底"
+          },
+          {
+            "icon": "fas fa-cubes",
+            "h4": "环境丰容",
+            "p": "有控制地接触各种材质、地面与感官刺激"
+          },
+          {
+            "icon": "fas fa-clipboard-check",
+            "h4": "性格评估",
+            "p": "持续观察遗传表现与工作潜质"
+          }
+        ],
+        "media": null
+      },
+      {
+        "id": "phase-2",
+        "number": "02",
+        "badge": "第二阶段",
+        "title": "社会化",
+        "timing": "3–12 周",
+        "intro": "在这一关键的社会化阶段，我按部就班地做接触训练，培养出自信、稳定、能在各种环境中正常工作的犬。",
+        "features": [
+          {
+            "icon": "fas fa-users",
+            "h4": "进阶社会化",
+            "p": "有控制地接触不同的人、动物与环境"
+          },
+          {
+            "icon": "fas fa-city",
+            "h4": "环境自信",
+            "p": "系统性适应各种地面、声响与场景"
+          },
+          {
+            "icon": "fas fa-paw",
+            "h4": "早期嗅觉引导",
+            "p": "为日后的搜索与鉴别能力打基础"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "马犬护卫犬的社会化训练",
+          "poster": "/images/bobo-training-15891-poster.webp",
+          "src": "/images/bobo-training-15891.mp4"
+        }
+      },
+      {
+        "id": "phase-3",
+        "number": "03",
+        "badge": "第三阶段",
+        "title": "基础训练",
+        "timing": "3–6 个月",
+        "intro": "这一阶段建立核心服从，并引入护卫工作的最初概念，为后续所有能力搭好框架。",
+        "features": [
+          {
+            "icon": "fas fa-check-circle",
+            "h4": "核心服从",
+            "p": "在任何环境下都能可靠地服从口令"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "h4": "欲望培养",
+            "p": "把先天欲望引导为专注的工作能力"
+          },
+          {
+            "icon": "fas fa-compass",
+            "h4": "护卫基础",
+            "p": "引入受控的防卫反应与清晰的判断"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "马犬护卫犬的基础服从训练",
+          "poster": "/images/bobo-training-15890-poster.webp",
+          "src": "/images/bobo-training-15890.mp4"
+        }
+      },
+      {
+        "id": "phase-4",
+        "number": "04",
+        "badge": "第四阶段",
+        "title": "护卫训练",
+        "timing": "6–12 个月",
+        "intro": "护卫训练逐步加码：人员、场地、地面、干扰和压力都在变化。目的是检验：当工作越来越难时，这条犬还能不能保持思考。",
+        "features": [
+          {
+            "icon": "fas fa-theater-masks",
+            "h4": "情景训练",
+            "p": "贴近实战的护卫情景，助训员与场地不断更换"
+          },
+          {
+            "icon": "fas fa-balance-scale",
+            "h4": "受控的判断力",
+            "p": "在压力下做出清晰判断：何时上，何时收"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "与训导员磨合",
+            "p": "建立训导员与犬之间最关键的默契"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "马犬护卫犬的进阶情景训练",
+          "src": "/images/elite-protection-dog-training.avif"
+        }
+      },
+      {
+        "id": "phase-5",
+        "number": "05",
+        "badge": "第五阶段",
+        "title": "巩固与交付",
+        "timing": "12–18 个月",
+        "intro": "最后一个阶段用来反复验证这条犬的稳定性，找出仍存在的薄弱环节，并教会未来的主人如何正确地维持训练成果。",
+        "features": [
+          {
+            "icon": "fas fa-clipboard-list",
+            "h4": "稳定性检验",
+            "p": "在护卫与服从各项指标上严格考核"
+          },
+          {
+            "icon": "fas fa-sync-alt",
+            "h4": "实地巩固",
+            "p": "在各类真实场景中做最终确认"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "交付客户",
+            "p": "完整的训导员培训与后续陪伴"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "训导员与马犬护卫犬的磨合",
+          "src": "/images/nikky1.avif"
+        }
+      }
+    ]
+  },
+  "testing": {
+    "eyebrow": "评估",
+    "h2": "我如何测试与评估",
+    "paragraphs": [
+      "光看强度，说明不了什么。",
+      "我要看的是：当压力层层叠加、陌生而且无法预判时，这条犬会怎么样。它必须既保持投入，又不失清醒；一旦情势改变，还能回到可控状态。",
+      "恢复能力我尤其看重。我会观察一条犬多快能消化压力、重新投入、回到有效的工作状态。这比它在熟悉科目里表现得多猛，更能说明问题。",
+      "我会把训练录下来，既复盘犬的表现，也复盘我自己的操作。目的很简单：如实评估，尽早发现短板，随着犬的成长做出更好的判断。"
+    ]
+  },
+  "breeding": {
+    "eyebrow": "选育",
+    "h2": "繁育",
+    "cards": [
+      {
+        "h3": "我如何选择配种",
+        "paragraphs": [
+          "我的配种决定，不止看健康检测和纸面上漂亮的血统书。我要的是公犬与母犬在气质和欲望上真正互补——两条血系彼此补上对方的短板，而不是把同样的优点和同样的隐患叠在一起。背后的计算我也认真做：近交系数要按完整血统计算，而不只算前两三代，这样在决定之前，我很清楚自己在集中什么、又在稀释什么。",
+          "我也有意引入了外部血系，其中包括来自稀有、封闭的比利时工作血系的犬只，这些血系被特种部队和执法机构所使用。这样做是为了加深遗传底子，而不是去追一个纸面上的名号。这种繁育方式更慢，但我能更清楚地掌控自己产出什么，以及每一次配种的理由。"
+        ]
+      },
+      {
+        "h3": "我的繁育标准",
+        "paragraphs": [
+          "我带的每一条犬都走同一套训练体系，这套体系是在实操和持续评估中一点点磨出来的。体系是固定的，但训犬师仍然要读懂每条犬，在对的时机做出对的决定。",
+          "<strong class=\"text-warning\">先有基础，再谈压力。</strong>在幼犬接触真正的施压器材之前，我会用正确的方式建立它的挫折耐受力——通过有章法的追咬与吐出练习，让犬学会强烈地想要一样东西，同时脑子还在。跳过这一步，得到的是一条爆发力十足却降不下来的犬。这一步我不跳。",
+          "<strong class=\"text-warning\">冷静是常态，不是例外。</strong>我训练每一条犬，把沉稳、笃定的冷静当作它的默认状态——哪怕在咬住的过程中，哪怕处于压力之下。护卫犬的本事不是一直绷着，而是知道什么时候切换，也能同样快地切回来。"
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "日常",
+    "h2": "家庭环境",
+    "paragraphs": [
+      "这些犬不是在与世隔绝的商业犬舍里长大的。在成长和训练的整个过程中，它们都是我日常生活的一部分。",
+      "我的家人自然而然地会出现在这个过程里，这让我有更多机会观察一条犬如何安定下来、如何面对家里的日常动静，以及在正式训练之外它是什么样子。"
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "适配",
+    "h2": "这些犬适合什么样的人",
+    "blocks": [
+      {
+        "tag": "p",
+        "html": "这些犬会经过审慎匹配，通常适合："
+      },
+      {
+        "tag": "ul",
+        "items": [
+          "需要保护家人或住所的人",
+          "有真实安全顾虑的企业主与业主",
+          "面临具体威胁或安全问题的人",
+          "寻找真正工作犬的有经验训导员"
+        ]
+      },
+      {
+        "tag": "p",
+        "html": "能否交付得当，取决于犬，也取决于人。护卫犬不是买来就完事的：它必须交给一个明白饲养并维持一条真正工作犬意味着什么责任的人。"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "交付",
+    "h2": "价格与预订",
+    "cards": [
+      {
+        "h3": "完成训练的护卫犬",
+        "features": [
+          "进阶服从训练",
+          "真实环境、压力下的服从",
+          "公共场合的克制与规矩",
+          "适应车辆与出行",
+          "工作血系遗传"
+        ],
+        "note": "自下一窝起的标准价格。可选犬只取决于当前的训练精力和后续成长中的幼犬。",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_future-->70,000<!--/pdg-->"
+        },
+        "smallPrint": "只有一个标准，不分训练等级。可以商定按月分期，把费用分摊在剩余的训练期内，而不必在交付时一次付清。"
+      },
+      {
+        "h3": "交付包含",
+        "features": [
+          "持续训练至犬舍标准",
+          "最终的训导员磨合与培训",
+          "实地与公共场合的巩固",
+          "车辆与出行适应",
+          "针对您具体情况的专门准备",
+          "交付后的持续支持"
+        ],
+        "note": null,
+        "price": null,
+        "smallPrint": null
+      }
+    ],
+    "closing": {
+      "paragraphs": [
+        "客户不一定要等到犬完全训练好，再一次性付清全款。当有一条犬进入了培养计划、我也认为匹配得当时，就可以在训练期间预订。这样我清楚自己是在为谁准备这条犬，客户也能全程看到它的成长。关系是在交付之前就开始的，而不是从交付那天才开始。",
+        "一旦确定了未来的训导员，后期训练也可以针对他的环境和需求做调整，但标准不会降低。"
+      ],
+      "cta": {
+        "label": "咨询可选犬只与预订",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "问题",
+    "h2": "常见问题",
+    "items": [
+      {
+        "id": "faq-q1",
+        "answerId": "faq-a1",
+        "question": "您的繁育有什么不同？",
+        "answer": "我把繁育控制在很小的规模，选择也很严。工作能力、神经稳定性、健康、血统的厚度，以及公母之间是否互补，这些都算数。目的不是多出几窝，而是给训练提供更好的底子。"
+      },
+      {
+        "id": "faq-q2",
+        "answerId": "faq-a2",
+        "question": "您如何测试犬的工作能力？",
+        "answer": "每条犬都要在真实的、层层递进的压力下接受测试：不是单一的受控场景，而是复合且不可预测的压力，真实反映一次安全事件的实际情况。我关注的是压力下的清醒判断、投入程度、犬恢复并重新投入的速度，以及在局势变化时能否回到受控状态。这些不是普通的护卫犬，而是为真实安全需求培养的工作犬。"
+      },
+      {
+        "id": "faq-q3",
+        "answerId": "faq-a3",
+        "question": "对训导员的经验有什么要求？",
+        "answer": "这些犬需要有经验的人来带。它们是真正的工作马犬，欲望很强，不是普通家庭宠物。训导员必须愿意持续维持训练，并有能力在日常中管理一条高欲望的工作犬。我会为训导员做培训，并在交付后继续提供支持。"
+      },
+      {
+        "id": "faq-q4",
+        "answerId": "faq-a4",
+        "question": "您的犬接受哪些训练？",
+        "answer": "从早期抚触和环境适应开始，之后是社会化、服从、欲望培养、护卫基础、逐步加难的情景训练、最终评估，以及与训导员的磨合。每条犬都走同一套核心标准；后期训练可以按未来主人的环境做调整。"
+      },
+      {
+        "id": "faq-q5",
+        "answerId": "faq-a5",
+        "question": "您做哪些健康检测？",
+        "answer": "每一条种犬候选都要做全面检测：髋关节和肘关节的正式评级、完整的基因筛查，以及全面的兽医检查。只有同时符合我健康与工作要求的犬，我才会用来繁育。"
+      },
+      {
+        "id": "faq-q6",
+        "answerId": "faq-a6",
+        "question": "您如何挑选客户？",
+        "answer": "我会认真了解每一位有意向的客户，确认他清楚一条真正的工作犬意味着多大的投入：以往经验、真实的安全需求，以及能否长期维持训练。这些犬是为严肃的护卫需求准备的，需要有经验的人来带。"
+      },
+      {
+        "id": "faq-q7",
+        "answerId": "faq-a7",
+        "question": "需要等多久？",
+        "answer": "没有固定的等待期，这取决于当前在训的犬只，以及我同时能带好多少条。可以直接联系我，聊聊现在有什么、后面又会有什么。"
+      }
+    ],
+    "schema": [
+      {
+        "name": "您的繁育有什么不同？",
+        "text": "我把繁育控制在很小的规模，选择也很严。工作能力、神经稳定性、健康、血统的厚度，以及公母之间是否互补，这些都算数。目的不是多出几窝，而是给训练提供更好的底子。"
+      },
+      {
+        "name": "您如何测试犬的工作能力？",
+        "text": "每条犬都要在真实的、层层递进的压力下接受测试：不是单一的受控场景，而是复合且不可预测的压力，真实反映一次安全事件的实际情况。我关注的是压力下的清醒判断、投入程度、犬恢复并重新投入的速度，以及在局势变化时能否回到受控状态。这些不是普通的护卫犬，而是为真实安全需求培养的工作犬。"
+      },
+      {
+        "name": "对训导员的经验有什么要求？",
+        "text": "这些犬需要有经验的人来带。它们是真正的工作马犬，欲望很强，不是普通家庭宠物。训导员必须愿意持续维持训练，并有能力在日常中管理一条高欲望的工作犬。我会为训导员做培训，并在交付后继续提供支持。"
+      },
+      {
+        "name": "您的犬接受哪些训练？",
+        "text": "从早期抚触和环境适应开始，之后是社会化、服从、欲望培养、护卫基础、逐步加难的情景训练、最终评估，以及与训导员的磨合。每条犬都走同一套核心标准；后期训练可以按未来主人的环境做调整。"
+      },
+      {
+        "name": "您做哪些健康检测？",
+        "text": "每一条种犬候选都要做全面检测：髋关节和肘关节的正式评级、完整的基因筛查，以及全面的兽医检查。只有同时符合我健康与工作要求的犬，我才会用来繁育。"
+      },
+      {
+        "name": "您如何挑选客户？",
+        "text": "我会认真了解每一位有意向的客户，确认他清楚一条真正的工作犬意味着多大的投入：以往经验、真实的安全需求，以及能否长期维持训练。这些犬是为严肃的护卫需求准备的，需要有经验的人来带。"
+      },
+      {
+        "name": "需要等多久？",
+        "text": "没有固定的等待期，这取决于当前在训的犬只，以及我同时能带好多少条。可以直接联系我，聊聊现在有什么、后面又会有什么。"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "客户评价",
+    "h2": "客户怎么说",
+    "consent": {
+      "text": "客户评价通过第三方服务 Testimonial.to 显示，该服务可能会设置自己的 Cookie。只有在您接受 Cookie 或点击按钮后才会加载。",
+      "button": "加载评价"
+    },
+    "embeds": {
+      "iframeTitle": "客户评价轮播",
+      "jsIframeTitle": "Client testimonials"
+    }
+  },
+  "partner": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #testimonial-widgets (line 1243)",
+    "logo": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "SafariMedic 标志"
+    },
+    "text": "适用于工作犬与护卫场景的医疗急救方案",
+    "links": [
+      {
+        "label": "访问 SafariMedic",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "icon": "fas fa-external-link-alt ms-2"
+      },
+      {
+        "label": "我们的合作",
+        "href": "/safarimedic-partnership.html",
+        "target": null,
+        "icon": "fas fa-book-open ms-2"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "私密咨询",
+    "h2": "联系",
+    "intro": "每一次交付都从一次交谈开始。因为我手上的犬不多，在决定哪条犬合适、甚至是否有合适的犬之前，我希望先了解这个人和他的环境。",
+    "journey": {
+      "title": "接下来的流程：",
+      "steps": [
+        "咨询",
+        "直接沟通",
+        "评估是否合适并匹配犬只",
+        "合适时进行预订",
+        "培养训练",
+        "训导员融入与交付",
+        "持续支持"
+      ]
+    },
+    "tellMe": {
+      "title": "请告诉我：",
+      "items": [
+        "您所在的城市",
+        "家庭成员与居住情况",
+        "家里的其他动物",
+        "养犬或带工作犬的经验",
+        "住所与日常环境",
+        "出行与旅行情况",
+        "希望这条犬承担的角色",
+        "期望的时间安排",
+        "是否考虑提前预订"
+      ]
+    },
+    "form": {
+      "action": "https://formspree.io/f/mwpvylyn",
+      "method": "POST",
+      "fields": {
+        "name": {
+          "label": "姓名*",
+          "placeholder": "请输入您的姓名",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "email": {
+          "label": "邮箱*",
+          "placeholder": "请输入您的邮箱",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "phone": {
+          "label": "电话 / WhatsApp",
+          "placeholder": "请输入您的电话",
+          "ariaLabel": null,
+          "title": null,
+          "required": false
+        },
+        "country": {
+          "label": "国家",
+          "options": [
+            {
+              "value": "",
+              "label": "请选择国家",
+              "placeholder": true
+            },
+            {
+              "value": "Afghanistan",
+              "label": "Afghanistan"
+            },
+            {
+              "value": "Albania",
+              "label": "Albania"
+            },
+            {
+              "value": "Algeria",
+              "label": "Algeria"
+            },
+            {
+              "value": "Andorra",
+              "label": "Andorra"
+            },
+            {
+              "value": "Angola",
+              "label": "Angola"
+            },
+            {
+              "value": "Antigua and Barbuda",
+              "label": "Antigua and Barbuda"
+            },
+            {
+              "value": "Argentina",
+              "label": "Argentina"
+            },
+            {
+              "value": "Armenia",
+              "label": "Armenia"
+            },
+            {
+              "value": "Australia",
+              "label": "Australia"
+            },
+            {
+              "value": "Austria",
+              "label": "Austria"
+            },
+            {
+              "value": "Azerbaijan",
+              "label": "Azerbaijan"
+            },
+            {
+              "value": "Bahamas",
+              "label": "Bahamas"
+            },
+            {
+              "value": "Bahrain",
+              "label": "Bahrain"
+            },
+            {
+              "value": "Bangladesh",
+              "label": "Bangladesh"
+            },
+            {
+              "value": "Barbados",
+              "label": "Barbados"
+            },
+            {
+              "value": "Belarus",
+              "label": "Belarus"
+            },
+            {
+              "value": "Belgium",
+              "label": "Belgium"
+            },
+            {
+              "value": "Belize",
+              "label": "Belize"
+            },
+            {
+              "value": "Benin",
+              "label": "Benin"
+            },
+            {
+              "value": "Bhutan",
+              "label": "Bhutan"
+            },
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Bosnia and Herzegovina",
+              "label": "Bosnia and Herzegovina"
+            },
+            {
+              "value": "Botswana",
+              "label": "Botswana"
+            },
+            {
+              "value": "Brazil",
+              "label": "Brazil"
+            },
+            {
+              "value": "Brunei",
+              "label": "Brunei"
+            },
+            {
+              "value": "Bulgaria",
+              "label": "Bulgaria"
+            },
+            {
+              "value": "Burkina Faso",
+              "label": "Burkina Faso"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Cabo Verde",
+              "label": "Cabo Verde"
+            },
+            {
+              "value": "Cambodia",
+              "label": "Cambodia"
+            },
+            {
+              "value": "Cameroon",
+              "label": "Cameroon"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Central African Republic",
+              "label": "Central African Republic"
+            },
+            {
+              "value": "Chad",
+              "label": "Chad"
+            },
+            {
+              "value": "Chile",
+              "label": "Chile"
+            },
+            {
+              "value": "China",
+              "label": "China"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Comoros",
+              "label": "Comoros"
+            },
+            {
+              "value": "Congo (Congo-Brazzaville)",
+              "label": "Congo (Congo-Brazzaville)"
+            },
+            {
+              "value": "Costa Rica",
+              "label": "Costa Rica"
+            },
+            {
+              "value": "Croatia",
+              "label": "Croatia"
+            },
+            {
+              "value": "Cuba",
+              "label": "Cuba"
+            },
+            {
+              "value": "Cyprus",
+              "label": "Cyprus"
+            },
+            {
+              "value": "Czechia",
+              "label": "Czechia"
+            },
+            {
+              "value": "Denmark",
+              "label": "Denmark"
+            },
+            {
+              "value": "Djibouti",
+              "label": "Djibouti"
+            },
+            {
+              "value": "Dominica",
+              "label": "Dominica"
+            },
+            {
+              "value": "Dominican Republic",
+              "label": "Dominican Republic"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "Egypt",
+              "label": "Egypt"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Equatorial Guinea",
+              "label": "Equatorial Guinea"
+            },
+            {
+              "value": "Eritrea",
+              "label": "Eritrea"
+            },
+            {
+              "value": "Estonia",
+              "label": "Estonia"
+            },
+            {
+              "value": "Eswatini",
+              "label": "Eswatini"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Fiji",
+              "label": "Fiji"
+            },
+            {
+              "value": "Finland",
+              "label": "Finland"
+            },
+            {
+              "value": "France",
+              "label": "France"
+            },
+            {
+              "value": "Gabon",
+              "label": "Gabon"
+            },
+            {
+              "value": "Gambia",
+              "label": "Gambia"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Germany",
+              "label": "Germany"
+            },
+            {
+              "value": "Ghana",
+              "label": "Ghana"
+            },
+            {
+              "value": "Greece",
+              "label": "Greece"
+            },
+            {
+              "value": "Grenada",
+              "label": "Grenada"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Guinea",
+              "label": "Guinea"
+            },
+            {
+              "value": "Guinea-Bissau",
+              "label": "Guinea-Bissau"
+            },
+            {
+              "value": "Guyana",
+              "label": "Guyana"
+            },
+            {
+              "value": "Haiti",
+              "label": "Haiti"
+            },
+            {
+              "value": "Holy See",
+              "label": "Holy See"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Hungary",
+              "label": "Hungary"
+            },
+            {
+              "value": "Iceland",
+              "label": "Iceland"
+            },
+            {
+              "value": "India",
+              "label": "India"
+            },
+            {
+              "value": "Indonesia",
+              "label": "Indonesia"
+            },
+            {
+              "value": "Iran",
+              "label": "Iran"
+            },
+            {
+              "value": "Iraq",
+              "label": "Iraq"
+            },
+            {
+              "value": "Ireland",
+              "label": "Ireland"
+            },
+            {
+              "value": "Israel",
+              "label": "Israel"
+            },
+            {
+              "value": "Italy",
+              "label": "Italy"
+            },
+            {
+              "value": "Jamaica",
+              "label": "Jamaica"
+            },
+            {
+              "value": "Japan",
+              "label": "Japan"
+            },
+            {
+              "value": "Jordan",
+              "label": "Jordan"
+            },
+            {
+              "value": "Kazakhstan",
+              "label": "Kazakhstan"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Kiribati",
+              "label": "Kiribati"
+            },
+            {
+              "value": "Kuwait",
+              "label": "Kuwait"
+            },
+            {
+              "value": "Kyrgyzstan",
+              "label": "Kyrgyzstan"
+            },
+            {
+              "value": "Laos",
+              "label": "Laos"
+            },
+            {
+              "value": "Latvia",
+              "label": "Latvia"
+            },
+            {
+              "value": "Lebanon",
+              "label": "Lebanon"
+            },
+            {
+              "value": "Lesotho",
+              "label": "Lesotho"
+            },
+            {
+              "value": "Liberia",
+              "label": "Liberia"
+            },
+            {
+              "value": "Libya",
+              "label": "Libya"
+            },
+            {
+              "value": "Liechtenstein",
+              "label": "Liechtenstein"
+            },
+            {
+              "value": "Lithuania",
+              "label": "Lithuania"
+            },
+            {
+              "value": "Luxembourg",
+              "label": "Luxembourg"
+            },
+            {
+              "value": "Madagascar",
+              "label": "Madagascar"
+            },
+            {
+              "value": "Malawi",
+              "label": "Malawi"
+            },
+            {
+              "value": "Malaysia",
+              "label": "Malaysia"
+            },
+            {
+              "value": "Maldives",
+              "label": "Maldives"
+            },
+            {
+              "value": "Mali",
+              "label": "Mali"
+            },
+            {
+              "value": "Malta",
+              "label": "Malta"
+            },
+            {
+              "value": "Marshall Islands",
+              "label": "Marshall Islands"
+            },
+            {
+              "value": "Mauritania",
+              "label": "Mauritania"
+            },
+            {
+              "value": "Mauritius",
+              "label": "Mauritius"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Micronesia",
+              "label": "Micronesia"
+            },
+            {
+              "value": "Moldova",
+              "label": "Moldova"
+            },
+            {
+              "value": "Monaco",
+              "label": "Monaco"
+            },
+            {
+              "value": "Mongolia",
+              "label": "Mongolia"
+            },
+            {
+              "value": "Montenegro",
+              "label": "Montenegro"
+            },
+            {
+              "value": "Morocco",
+              "label": "Morocco"
+            },
+            {
+              "value": "Mozambique",
+              "label": "Mozambique"
+            },
+            {
+              "value": "Myanmar",
+              "label": "Myanmar"
+            },
+            {
+              "value": "Namibia",
+              "label": "Namibia"
+            },
+            {
+              "value": "Nauru",
+              "label": "Nauru"
+            },
+            {
+              "value": "Nepal",
+              "label": "Nepal"
+            },
+            {
+              "value": "Netherlands",
+              "label": "Netherlands"
+            },
+            {
+              "value": "New Zealand",
+              "label": "New Zealand"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Niger",
+              "label": "Niger"
+            },
+            {
+              "value": "Nigeria",
+              "label": "Nigeria"
+            },
+            {
+              "value": "North Korea",
+              "label": "North Korea"
+            },
+            {
+              "value": "North Macedonia",
+              "label": "North Macedonia"
+            },
+            {
+              "value": "Norway",
+              "label": "Norway"
+            },
+            {
+              "value": "Oman",
+              "label": "Oman"
+            },
+            {
+              "value": "Pakistan",
+              "label": "Pakistan"
+            },
+            {
+              "value": "Palau",
+              "label": "Palau"
+            },
+            {
+              "value": "Palestine State",
+              "label": "Palestine State"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Paraguay",
+              "label": "Paraguay"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Philippines",
+              "label": "Philippines"
+            },
+            {
+              "value": "Poland",
+              "label": "Poland"
+            },
+            {
+              "value": "Portugal",
+              "label": "Portugal"
+            },
+            {
+              "value": "Qatar",
+              "label": "Qatar"
+            },
+            {
+              "value": "Romania",
+              "label": "Romania"
+            },
+            {
+              "value": "Russia",
+              "label": "Russia"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Saint Kitts and Nevis",
+              "label": "Saint Kitts and Nevis"
+            },
+            {
+              "value": "Saint Lucia",
+              "label": "Saint Lucia"
+            },
+            {
+              "value": "Saint Vincent and the Grenadines",
+              "label": "Saint Vincent and the Grenadines"
+            },
+            {
+              "value": "Samoa",
+              "label": "Samoa"
+            },
+            {
+              "value": "San Marino",
+              "label": "San Marino"
+            },
+            {
+              "value": "Sao Tome and Principe",
+              "label": "Sao Tome and Principe"
+            },
+            {
+              "value": "Saudi Arabia",
+              "label": "Saudi Arabia"
+            },
+            {
+              "value": "Senegal",
+              "label": "Senegal"
+            },
+            {
+              "value": "Serbia",
+              "label": "Serbia"
+            },
+            {
+              "value": "Seychelles",
+              "label": "Seychelles"
+            },
+            {
+              "value": "Sierra Leone",
+              "label": "Sierra Leone"
+            },
+            {
+              "value": "Singapore",
+              "label": "Singapore"
+            },
+            {
+              "value": "Slovakia",
+              "label": "Slovakia"
+            },
+            {
+              "value": "Slovenia",
+              "label": "Slovenia"
+            },
+            {
+              "value": "Solomon Islands",
+              "label": "Solomon Islands"
+            },
+            {
+              "value": "Somalia",
+              "label": "Somalia"
+            },
+            {
+              "value": "South Africa",
+              "label": "South Africa"
+            },
+            {
+              "value": "South Korea",
+              "label": "South Korea"
+            },
+            {
+              "value": "South Sudan",
+              "label": "South Sudan"
+            },
+            {
+              "value": "Spain",
+              "label": "Spain"
+            },
+            {
+              "value": "Sri Lanka",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "Sudan",
+              "label": "Sudan"
+            },
+            {
+              "value": "Suriname",
+              "label": "Suriname"
+            },
+            {
+              "value": "Sweden",
+              "label": "Sweden"
+            },
+            {
+              "value": "Switzerland",
+              "label": "Switzerland"
+            },
+            {
+              "value": "Syria",
+              "label": "Syria"
+            },
+            {
+              "value": "Tajikistan",
+              "label": "Tajikistan"
+            },
+            {
+              "value": "Tanzania",
+              "label": "Tanzania"
+            },
+            {
+              "value": "Thailand",
+              "label": "Thailand"
+            },
+            {
+              "value": "Timor-Leste",
+              "label": "Timor-Leste"
+            },
+            {
+              "value": "Togo",
+              "label": "Togo"
+            },
+            {
+              "value": "Tonga",
+              "label": "Tonga"
+            },
+            {
+              "value": "Trinidad and Tobago",
+              "label": "Trinidad and Tobago"
+            },
+            {
+              "value": "Tunisia",
+              "label": "Tunisia"
+            },
+            {
+              "value": "Turkey",
+              "label": "Turkey"
+            },
+            {
+              "value": "Turkmenistan",
+              "label": "Turkmenistan"
+            },
+            {
+              "value": "Tuvalu",
+              "label": "Tuvalu"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Ukraine",
+              "label": "Ukraine"
+            },
+            {
+              "value": "United Arab Emirates",
+              "label": "United Arab Emirates"
+            },
+            {
+              "value": "United Kingdom",
+              "label": "United Kingdom"
+            },
+            {
+              "value": "United States of America",
+              "label": "United States of America"
+            },
+            {
+              "value": "Uruguay",
+              "label": "Uruguay"
+            },
+            {
+              "value": "Uzbekistan",
+              "label": "Uzbekistan"
+            },
+            {
+              "value": "Vanuatu",
+              "label": "Vanuatu"
+            },
+            {
+              "value": "Venezuela",
+              "label": "Venezuela"
+            },
+            {
+              "value": "Vietnam",
+              "label": "Vietnam"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            },
+            {
+              "value": "Zambia",
+              "label": "Zambia"
+            },
+            {
+              "value": "Zimbabwe",
+              "label": "Zimbabwe"
+            }
+          ]
+        },
+        "interest": {
+          "label": "意向",
+          "options": [
+            {
+              "value": "",
+              "label": "请选择您的意向",
+              "placeholder": true
+            },
+            {
+              "value": "Bobo - Early Reservation",
+              "label": "Bobo — 提前预订"
+            },
+            {
+              "value": "Future Litter",
+              "label": "下一窝 / 一般可选情况"
+            },
+            {
+              "value": "General Enquiry",
+              "label": "一般咨询"
+            },
+            {
+              "value": "Other",
+              "label": "其他"
+            }
+          ]
+        },
+        "message": {
+          "label": "留言*",
+          "placeholder": "请说明您的安全需求、具体问题，或任何有助于我了解您情况的信息……",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "privacyConsent": {
+          "label": "我已阅读并同意<a href=\"/privacy-policy-zh.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">隐私政策</a>，并同意处理我的个人信息*",
+          "required": true
+        }
+      },
+      "submit": "提交咨询"
+    },
+    "messages": {
+      "nameRequired": "请填写您的姓名",
+      "emailInvalid": "请填写有效的电子邮箱地址",
+      "messageRequired": "请填写留言内容",
+      "privacyRequired": "您必须同意隐私政策",
+      "sending": "发送中... <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+      "submitRestore": "提交咨询",
+      "success": "消息已成功发送！",
+      "submitError": "提交表单时出现问题",
+      "networkError": "网络错误，请重试。",
+      "notificationClose": "关闭"
+    },
+    "preselect": [
+      {
+        "interest": "Bobo - Early Reservation",
+        "section": "dogs",
+        "line": 532
+      },
+      {
+        "interest": "Future Litter",
+        "section": "dogs",
+        "line": 568
+      },
+      {
+        "interest": "Future Litter",
+        "section": "pricing",
+        "line": 1077
+      }
+    ],
+    "footnotes": [
+      {
+        "icon": "fas fa-lock me-2",
+        "text": "您的信息会被保密处理，仅用于回复您的咨询。"
+      },
+      {
+        "icon": "fas fa-clock me-2",
+        "text": "我通常会在 24 小时内回复。"
+      }
+    ]
+  },
+  "privacyBlurb": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #contact (line 1630)",
+    "h2": "隐私与保密",
+    "cards": [
+      {
+        "icon": "fas fa-user-lock fa-3x text-warning mb-3",
+        "h3": "真正的保密",
+        "p": "我明白很多客户在身份、住址和安保安排上都需要保密。在深入沟通之前，我很乐意先签署一份双方保密协议。"
+      },
+      {
+        "icon": "fas fa-lock fa-3x text-warning mb-3",
+        "h3": "按需保密",
+        "p": "部分客户在个人、职业或安全方面有敏感情况。必要时，我们可以先约定保密条款，再交换具体信息。"
+      },
+      {
+        "icon": "fas fa-user-secret fa-3x text-warning mb-3",
+        "h3": "全程保密",
+        "p": "从第一次联系到交付，所有客户信息都严格保密——您的身份、住址和安保安排，只在你我之间。"
+      }
+    ],
+    "closing": {
+      "text": "我重视您的隐私。从第一次沟通到最终交付，保密始终是原则。",
+      "cta": {
+        "label": "私下与我联系",
+        "href": "#contact",
+        "data": {}
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "一家由训犬师亲自主理的小型工作犬犬舍，专注培养出自成熟工作血系的马犬护卫犬。"
+    },
+    "quickLinks": {
+      "h3": "快速导航",
+      "ariaLabel": "页脚导航",
+      "links": [
+        {
+          "label": "犬只",
+          "href": "#dogs"
+        },
+        {
+          "label": "训练",
+          "href": "#training"
+        },
+        {
+          "label": "繁育",
+          "href": "#breeding"
+        },
+        {
+          "label": "交付",
+          "href": "#pricing"
+        },
+        {
+          "label": "关于",
+          "href": "#about"
+        },
+        {
+          "label": "联系",
+          "href": "#contact"
+        },
+        {
+          "label": "隐私政策",
+          "href": "/privacy-policy-zh.html"
+        }
+      ]
+    },
+    "language": {
+      "h3": "语言",
+      "links": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": false
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": true
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "connect": {
+      "h3": "关注我",
+      "links": [
+        {
+          "ariaLabel": "访问我的 Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "通过 WhatsApp 联系",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "给我发邮件",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. 版权所有。"
+  },
+  "ui": {}
+}

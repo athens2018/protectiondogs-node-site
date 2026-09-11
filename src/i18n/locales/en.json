@@ -1,0 +1,2200 @@
+{
+  "meta": {
+    "title": "Belgian Malinois Protection Dogs | Protection Dogs GR",
+    "description": "Trained Belgian Malinois protection dogs, developed through a hands-on system for real protection needs. A small number raised at a time.",
+    "ogTitle": "Belgian Malinois Protection Dogs | Protection Dogs GR",
+    "ogDescription": "Trained Belgian Malinois protection dogs and security dogs, developed in a small, trainer-led program for individuals and families with genuine protection needs.",
+    "ogLocale": "en_US",
+    "ogUrl": "https://www.protectiondogs.gr/",
+    "twitterTitle": "Belgian Malinois Protection Dogs & Security Dogs",
+    "twitterDescription": "Trained Belgian Malinois protection dogs and security dogs, developed in a small, trainer-led program for individuals and families with genuine protection needs.",
+    "canonical": "https://www.protectiondogs.gr/",
+    "lang": "en",
+    "dir": null,
+    "jsonld": {
+      "organization": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Protection Dogs GR",
+        "description": "A small, trainer-led Belgian Malinois protection dog program based in Greece, developing a limited number of working-line dogs at a time for individuals and families with genuine protection needs.",
+        "url": "https://www.protectiondogs.gr/",
+        "logo": "https://www.protectiondogs.gr/images/logo.png",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Kostas",
+            "jobTitle": "Founder and Lead Trainer"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+306931736026",
+            "email": "contact@protectiondogs.gr",
+            "contactType": "Customer Service",
+            "availableLanguage": [
+              "en",
+              "el"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/protectiondogsgr",
+          "https://wa.me/306931736026"
+        ]
+      },
+      "faqpage": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What makes your breeding program different?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I keep the breeding program small and selective. Working ability, nerve, health, pedigree depth, and complementary traits between sire and dam all matter. The goal is not to produce more litters; it is to give the training program better raw material to work with."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you test your dogs' working ability?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every dog is tested under real, layered pressure - not a single controlled scenario, but compound, unpredictable stress that reflects what a genuine security situation actually looks like. What I look for is clarity under pressure, commitment, how quickly the dog recovers and re-engages, and whether it returns to control when the situation changes. These are not standard protection dogs - they are working dogs developed for genuine security needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What level of handler experience is required?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "These dogs require experienced handling. They are true working Malinois with strong drives - not standard family pets. Handlers must be committed to maintaining training and managing a high-drive working dog. I provide handler training and ongoing support to support a successful integration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What training do your dogs receive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Development starts with early handling and environmental work, followed by socialization, obedience, drive development, protection foundations, progressive scenario work, final evaluation, and handler integration. Every dog follows the same core standard; later work can be adapted to the future handler and environment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What health testing do you perform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every breeding prospect undergoes extensive health testing including hip and elbow certification, comprehensive DNA screening, and full veterinary examination. I only breed dogs that meet my strict health and working requirements to maintain the standard of the program."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is your client selection process?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I carefully evaluate each potential client to make sure they understand the commitment required for a true working dog. This includes assessing handler experience, security needs, and ability to maintain training. These dogs are for serious protection needs and require experienced handling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long is the waiting period?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no fixed waiting period because availability depends on the dogs currently in development and how many I can train properly at one time. Contact me to discuss the dogs currently in development and upcoming availability."
+            }
+          }
+        ]
+      },
+      "product": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bobo - Malinois Protection Dog",
+        "description": "Bobo has completed the selection phase and has been accepted into my protection-dog program. He is now in active development and is available for early reservation while I continue his training through to final handover.",
+        "image": "https://www.protectiondogs.gr/images/bobo-beach-15840.avif",
+        "brand": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/"
+        },
+        "category": "Protection Dogs",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "50000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/#dogs",
+          "description": "Last dog available at this price point. Pricing moves to €70,000 starting with the next litter."
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Breed",
+            "value": "Belgian Malinois"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Date of Birth",
+            "value": "2026-03-11"
+          }
+        ],
+        "disambiguatingDescription": "Working-line protection dog developed for real security needs and carefully matched to the right handler"
+      },
+      "service": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Fully Developed Protection Dog",
+        "description": "Bobo has completed the selection phase and has been accepted into my protection-dog program. He is now in active development and is available for early reservation while I continue his training through to final handover.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Protection Dogs GR",
+          "url": "https://www.protectiondogs.gr/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "70000",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://www.protectiondogs.gr/#pricing",
+          "description": "Standard price from the next litter forward."
+        }
+      }
+    }
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "brand": {
+      "href": "/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Toggle navigation",
+    "items": [
+      {
+        "label": "Dogs",
+        "href": "#dogs"
+      },
+      {
+        "label": "Process",
+        "href": "#training"
+      },
+      {
+        "label": "Breeding",
+        "href": "#breeding"
+      },
+      {
+        "label": "Placement",
+        "href": "#pricing"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Enquire",
+        "href": "#contact"
+      }
+    ],
+    "langTrigger": {
+      "current": "EN",
+      "ariaControls": "langDrawer"
+    },
+    "mobileLangTrigger": {
+      "current": "EN",
+      "ariaControls": "langDrawer"
+    },
+    "langDrawer": {
+      "ariaLabel": "Choose language",
+      "title": "Choose language",
+      "close": {
+        "label": "&times;",
+        "ariaLabel": "Close"
+      },
+      "options": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": true
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "langSuggest": {
+      "text": "It looks like you might prefer <strong id=\"langSuggestName\"></strong>.",
+      "switchLabel": "Switch",
+      "dismiss": {
+        "label": "&times;",
+        "ariaLabel": "Continue in English"
+      },
+      "names": {
+        "el": "Ελληνικά",
+        "de": "Deutsch",
+        "fr": "Français",
+        "ar": "العربية",
+        "es": "Español",
+        "zh": "中文",
+        "ru": "Русский",
+        "tr": "Türkçe",
+        "it": "Italiano",
+        "pt": "Português",
+        "nl": "Nederlands",
+        "ja": "日本語"
+      },
+      "urls": {
+        "el": "/el/",
+        "de": "/de/",
+        "fr": "/fr/",
+        "ar": "/ar/",
+        "es": "/es/",
+        "zh": "/zh/",
+        "ru": "/ru/",
+        "tr": "/tr/",
+        "it": "/it/",
+        "pt": "/pt/",
+        "nl": "/nl/",
+        "ja": "/ja/"
+      }
+    }
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Skip to main content",
+      "href": "#main-content"
+    },
+    "backToTopAriaLabel": "Back to top",
+    "scrollProgressAriaLabel": null,
+    "heroAriaLabel": "Hero section",
+    "sectionDots": {
+      "ariaLabel": "Page sections",
+      "items": [
+        {
+          "href": "#main-content",
+          "section": "main-content",
+          "ariaLabel": "Home",
+          "tooltip": "Home"
+        },
+        {
+          "href": "#about",
+          "section": "about",
+          "ariaLabel": "About",
+          "tooltip": "About"
+        },
+        {
+          "href": "#dogs",
+          "section": "dogs",
+          "ariaLabel": "Dogs",
+          "tooltip": "Dogs"
+        },
+        {
+          "href": "#training",
+          "section": "training",
+          "ariaLabel": "Process",
+          "tooltip": "Process"
+        },
+        {
+          "href": "#breeding",
+          "section": "breeding",
+          "ariaLabel": "Breeding",
+          "tooltip": "Breeding"
+        },
+        {
+          "href": "#pricing",
+          "section": "pricing",
+          "ariaLabel": "Placement",
+          "tooltip": "Placement"
+        },
+        {
+          "href": "#faq",
+          "section": "faq",
+          "ariaLabel": "FAQ",
+          "tooltip": "FAQ"
+        },
+        {
+          "href": "#contact",
+          "section": "contact",
+          "ariaLabel": "Enquire",
+          "tooltip": "Enquire"
+        }
+      ]
+    },
+    "contactIcons": {
+      "ariaLabel": "Quick contact",
+      "items": [
+        {
+          "ariaLabel": "Send me an email",
+          "href": "mailto:contact@protectiondogs.gr",
+          "label": "Email",
+          "icon": "fas fa-envelope"
+        },
+        {
+          "ariaLabel": "Contact me on WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "label": "WhatsApp",
+          "icon": "fab fa-whatsapp"
+        },
+        {
+          "ariaLabel": "Visit my Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "label": "Instagram",
+          "icon": "fab fa-instagram"
+        }
+      ]
+    }
+  },
+  "cookie": {
+    "ariaLabel": "Cookie consent",
+    "text": "This site uses cookies for basic analytics to understand how the site is used. No data is collected until you accept.",
+    "reject": "Necessary Only",
+    "accept": "Accept"
+  },
+  "hero": {
+    "eyebrow": "Belgian Malinois &middot; Greece",
+    "h1": "<span>Built</span> <span>one</span> <span>at</span> <span>a</span> <span>time.</span>",
+    "lead": "I breed, raise and train a small number of working-line Belgian Malinois for serious personal and property protection. Keeping the program small means I stay directly involved with every dog — and with the client who will eventually live with it.",
+    "ctas": [
+      {
+        "label": "View Available Dogs",
+        "href": "#dogs",
+        "data": {}
+      },
+      {
+        "label": "Discuss a Placement",
+        "href": "#contact",
+        "data": {}
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/hero1.jpg",
+        "alt": "Belgian Malinois protection dog in training"
+      },
+      {
+        "src": "/images/hero2.jpg",
+        "alt": "Belgian Malinois security dog showing alertness"
+      },
+      {
+        "src": "/images/hero3.jpg",
+        "alt": "Trained Belgian Malinois protection dog with family"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "The Program",
+    "h2": "About Protection Dogs GR",
+    "intro": {
+      "h3": "A Small Program Built Around the Dog",
+      "paragraphs": [
+        "Protection Dogs GR is a small working-dog program focused on developing capable, stable Malinois for real protection work. I start with proven working genetics, then evaluate what each dog actually shows through development and training.",
+        "The goal is not to make a dog look impressive in a demonstration. The goal is to develop a dog that can work with intensity, stay clear-headed under pressure, and return to control when the situation changes."
+      ]
+    },
+    "pullQuote": "A bloodline gives you <span class=\"text-warning\">potential</span>. The <span class=\"text-warning\">trainer</span> determines what becomes of it.",
+    "cards": [
+      {
+        "h3": "The Program",
+        "paragraphs": [
+          "Protection Dogs GR is a small, trainer-led working-dog program. I breed, raise and develop a limited number of Malinois so I can remain directly involved with each dog from early development through final placement."
+        ]
+      },
+      {
+        "h3": "The Standard",
+        "paragraphs": [
+          "I want commitment without loss of clarity, stability outside the work, and the ability to recover and return to control when pressure ends. Not every dog belongs in protection work, and I do not place one simply because it can perform a demonstration."
+        ]
+      },
+      {
+        "h3": "The Relationship",
+        "paragraphs": [
+          "Because the program is small, clients deal directly with me throughout the process. When a dog is reserved during development, the future owner can follow its progress, ask questions, receive current photos and videos, and gradually become part of the dog's preparation before handover."
+        ]
+      }
+    ],
+    "cta": {
+      "h3": "Why Availability Is Limited",
+      "paragraphs": [
+        "I only work with a small number of dogs at a time because I train and evaluate them directly. Availability is therefore limited by training capacity, not by artificial scarcity.",
+        "If you want to discuss a current or future dog, contact me directly:"
+      ],
+      "links": [
+        {
+          "label": "contact@protectiondogs.gr",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope me-2"
+        },
+        {
+          "label": "@protectiondogsgr",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram me-2"
+        },
+        {
+          "label": "+30 693 173 6026",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp me-2"
+        }
+      ]
+    }
+  },
+  "dogs": {
+    "eyebrow": "Available for Reservation",
+    "h2": "Available Protection Dogs",
+    "availability": "Currently available for reservation: <!--pdg:fact_available_for_reservation-->1<!--/pdg-->",
+    "intro": "Dogs currently in development are shown here as they progress. Every dog follows the same core training standard and is evaluated continuously before final handover.",
+    "bobo": {
+      "storyOpen": "bobo-story-modal",
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, Belgian Malinois protection dog in development"
+      },
+      "name": "Bobo",
+      "tagline": "<!--pdg:stage_display-->Protection Dog &middot; In Development<!--/pdg-->",
+      "stats": [
+        {
+          "label": "Born",
+          "value": "<!--pdg:dob_display-->Mar 11, 2026<!--/pdg-->"
+        },
+        {
+          "label": "Line",
+          "value": "Working Line"
+        },
+        {
+          "label": "Status",
+          "value": "<!--pdg:status_display-->Available for Reservation<!--/pdg-->"
+        }
+      ],
+      "meetButton": {
+        "label": "Meet Bobo",
+        "icon": "fas fa-paw me-2",
+        "data": {
+          "data-story-open": "bobo-story-modal"
+        }
+      },
+      "paragraphs": [
+        "Bobo has completed the selection phase and has been accepted into my protection-dog program. He is now in active development and is available for early reservation while I continue his training through to final handover.",
+        "Reserving Bobo during development allows the future owner to follow his progress, receive current updates, and give me time to shape the later stages of his training around the future household, routine, and requirements."
+      ],
+      "aboutHeading": "About Bobo",
+      "features": [
+        "Proven working-line genetics with strong drive",
+        "Strong environmental confidence and early development",
+        "Strong focus and situational awareness",
+        "In protection development now, training toward handover",
+        "Extensively socialized in real, everyday environments",
+        "Being raised into a serious personal and property protector"
+      ],
+      "reservation": {
+        "eyebrow": "Early Reservation",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_current-->50,000<!--/pdg-->"
+        },
+        "notes": [
+          "Bobo is the last dog at this price point. Pricing moves to €<!--pdg:price_future-->70,000<!--/pdg--> starting with the next litter.",
+          "An agreed staged monthly payment schedule can be arranged so the cost is spread across his remaining development, rather than paid all at once."
+        ],
+        "cta": {
+          "label": "Discuss Bobo &amp; Reservation",
+          "href": "#contact",
+          "data": {
+            "data-interest": "Bobo - Early Reservation",
+            "data-stop-propagation": ""
+          }
+        }
+      }
+    },
+    "future": {
+      "name": "Future Availability",
+      "tagline": "From the Next Litter",
+      "stats": [
+        {
+          "label": "<!--pdg:next_litter_label-->Expected<!--/pdg-->",
+          "value": "<!--pdg:next_litter-->Late 2026<!--/pdg-->"
+        },
+        {
+          "label": "Breed",
+          "value": "Belgian Malinois"
+        },
+        {
+          "label": "Line",
+          "value": "Working Line"
+        }
+      ],
+      "paragraph": "The program remains deliberately small. If you want a future dog, I'd encourage you to speak with me early — when a suitable dog makes the program and the match is right, reservation can begin during development rather than waiting until final handover. That gives you the opportunity to follow the dog, build a relationship with the process, and spread payments across the development period.",
+      "cta": {
+        "label": "Discuss a Future Dog",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "boboStory": {
+    "ariaLabelledby": "bobo-story-title",
+    "close": {
+      "label": "&times;",
+      "ariaLabel": "Close"
+    },
+    "media": {
+      "image": {
+        "src": "/images/bobo-beach-15840.avif",
+        "alt": "Bobo, Belgian Malinois protection dog in development"
+      },
+      "video": {
+        "ariaLabel": "Bobo, Belgian Malinois protection dog in development",
+        "poster": "/images/bobo-training-15888-poster.webp",
+        "src": "/images/bobo-training-15888.mp4"
+      }
+    },
+    "title": "Meet Bobo",
+    "dotCount": 4,
+    "slides": [
+      {
+        "slide": "0",
+        "image": "/images/bobo-beach-15840.avif",
+        "video": null,
+        "h4": "Confident and Driven, Naturally",
+        "p": "Bobo has never needed to be talked into confidence — it's simply how he came into the world. His drive is the same: strong and natural, nothing manufactured. He's a hard biter, and whatever the work is on a given day, he's willing to do it."
+      },
+      {
+        "slide": "1",
+        "image": "/images/bobo-training-15893-poster.webp",
+        "video": "/images/bobo-training-15893.mp4",
+        "h4": "Social With Kids and Animals",
+        "p": "Off duty, Bobo is genuinely good company — comfortable and social around children and other animals, not just tolerant of them. A dog capable of real protection work still has to know how to be a dog the rest of the time, and he does."
+      },
+      {
+        "slide": "2",
+        "image": "/images/bobo-training-15888-poster.webp",
+        "video": "/images/bobo-training-15888.mp4",
+        "h4": "Hand-Raised, Step by Step",
+        "p": "I bred Bobo myself and have hand-raised him from day one, the same as every dog that comes through here. Dark-coated, a genuinely nice head, and built up gradually rather than pushed. He also loves the sea — swimming is one of his favorite things in the world."
+      },
+      {
+        "slide": "3",
+        "image": "/images/bobo-beach-15842.avif",
+        "video": null,
+        "h4": "Built for Someone Who Needs a Real Protector",
+        "p": "Bobo is shaping up to be a strong, serious dog — not a hobby companion, but one meant for someone who actually needs real protection. Every part of how he's been raised has been in service of that."
+      }
+    ],
+    "nav": {
+      "prev": "&larr; Back",
+      "next": "Next &rarr;",
+      "jsClose": "Close",
+      "jsNext": "Next →"
+    }
+  },
+  "watchDevelop": {
+    "eyebrow": "Reservation",
+    "h2": "A Dog You Watch Develop",
+    "paragraphs": [
+      "For many clients, the relationship begins before the dog is finished. When a suitable dog is reserved during development, I keep the future owner close to the process — current photos, short videos, and honest training updates, so they can watch the dog grow and follow the progression toward handover.",
+      "The updates are intentionally real rather than produced like advertising. Much of the day-to-day training is simply filmed as it happens, the same way I'd film it for my own review. The point isn't to create content — it's to let the future owner see their dog honestly over time."
+    ]
+  },
+  "training": {
+    "h2": "How I Develop Each Dog",
+    "intro": "A five-phase development system built around a simple principle: drive and self-control are developed separately, then brought together deliberately.",
+    "timeline": {
+      "ariaLabel": "Phase navigation",
+      "items": [
+        {
+          "phase": "1",
+          "number": "1",
+          "label": "Early Development",
+          "period": "0-3 Weeks"
+        },
+        {
+          "phase": "2",
+          "number": "2",
+          "label": "Socialization",
+          "period": "3-12 Weeks"
+        },
+        {
+          "phase": "3",
+          "number": "3",
+          "label": "Foundation",
+          "period": "3-6 Months"
+        },
+        {
+          "phase": "4",
+          "number": "4",
+          "label": "Protection Development",
+          "period": "6-12 Months"
+        },
+        {
+          "phase": "5",
+          "number": "5",
+          "label": "Proofing &amp; Handover",
+          "period": "12-18 Months"
+        }
+      ]
+    },
+    "phaseNav": {
+      "ariaLabel": "Phase navigation",
+      "prevAriaLabel": "Previous phase",
+      "nextAriaLabel": "Next phase",
+      "status": "<span data-phase-current>1</span> / 5"
+    },
+    "phases": [
+      {
+        "id": "phase-1",
+        "number": "01",
+        "badge": "Phase 1",
+        "title": "Early Development",
+        "timing": "0-3 Weeks",
+        "intro": "Development begins in the first days of life. Early handling and controlled stimulation are used to build a stronger foundation for later environmental confidence and stress resilience.",
+        "features": [
+          {
+            "icon": "fas fa-brain",
+            "h4": "Early Handling (3-16 days)",
+            "p": "Structured early handling and stimulation exercises that build a foundation for stress resilience later in life"
+          },
+          {
+            "icon": "fas fa-cubes",
+            "h4": "Environmental Enrichment",
+            "p": "Controlled exposure to textures, surfaces, and sensory experiences"
+          },
+          {
+            "icon": "fas fa-clipboard-check",
+            "h4": "Temperament Assessment",
+            "p": "Continuous evaluation of genetic expression and aptitude indicators"
+          }
+        ],
+        "media": null
+      },
+      {
+        "id": "phase-2",
+        "number": "02",
+        "badge": "Phase 2",
+        "title": "Socialization",
+        "timing": "3-12 Weeks",
+        "intro": "During this critical socialization period, I follow structured exposure work to develop confident, stable dogs capable of functioning in diverse environments.",
+        "features": [
+          {
+            "icon": "fas fa-users",
+            "h4": "Advanced Socialization",
+            "p": "Controlled exposure to various people, animals, and environments"
+          },
+          {
+            "icon": "fas fa-city",
+            "h4": "Environmental Confidence",
+            "p": "Systematic exposure to diverse surfaces, sounds, and scenarios"
+          },
+          {
+            "icon": "fas fa-paw",
+            "h4": "Early Scent Introduction",
+            "p": "Foundation work for specialized detection capabilities"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Malinois protection dog socialization training",
+          "poster": "/images/bobo-training-15891-poster.webp",
+          "src": "/images/bobo-training-15891.mp4"
+        }
+      },
+      {
+        "id": "phase-3",
+        "number": "03",
+        "badge": "Phase 3",
+        "title": "Foundation",
+        "timing": "3-6 Months",
+        "intro": "This phase establishes core obedience and introduces foundational protection concepts, creating the framework for advanced capabilities.",
+        "features": [
+          {
+            "icon": "fas fa-check-circle",
+            "h4": "Core Obedience",
+            "p": "Establishing reliable command response in all environments"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "h4": "Drive Development",
+            "p": "Channeling genetic drives into focused working capability"
+          },
+          {
+            "icon": "fas fa-compass",
+            "h4": "Protection Foundations",
+            "p": "Introduction to controlled defensive response and clear decision-making"
+          }
+        ],
+        "media": {
+          "type": "video",
+          "ariaLabel": "Malinois protection dog foundation obedience training",
+          "poster": "/images/bobo-training-15890-poster.webp",
+          "src": "/images/bobo-training-15890.mp4"
+        }
+      },
+      {
+        "id": "phase-4",
+        "number": "04",
+        "badge": "Phase 4",
+        "title": "Protection Development",
+        "timing": "6-12 Months",
+        "intro": "Protection work becomes progressively more demanding through varied people, locations, surfaces, distractions, and pressure. The purpose is to test whether the dog can keep thinking as the work becomes harder.",
+        "features": [
+          {
+            "icon": "fas fa-theater-masks",
+            "h4": "Scenario Training",
+            "p": "Real-world protection situations with varied decoys and locations"
+          },
+          {
+            "icon": "fas fa-balance-scale",
+            "h4": "Controlled Judgment",
+            "p": "Developing clear decision-making under pressure — knowing when to engage and when to hold back"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Handler Integration",
+            "p": "Building the critical handler-dog security relationship"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Advanced Malinois protection dog scenario training",
+          "src": "/images/elite-protection-dog-training.avif"
+        }
+      },
+      {
+        "id": "phase-5",
+        "number": "05",
+        "badge": "Phase 5",
+        "title": "Proofing &amp; Handover",
+        "timing": "12-18 Months",
+        "intro": "The final phase is about proving the dog consistently, identifying any remaining weaknesses, and teaching the future handler how to maintain the work correctly.",
+        "features": [
+          {
+            "icon": "fas fa-clipboard-list",
+            "h4": "Consistency Testing",
+            "p": "Rigorous evaluation across all protection and obedience parameters"
+          },
+          {
+            "icon": "fas fa-sync-alt",
+            "h4": "Environmental Proofing",
+            "p": "Final confirmation of performance in diverse real-world settings"
+          },
+          {
+            "icon": "fas fa-handshake",
+            "h4": "Client Handover",
+            "p": "Comprehensive handler training and integration support"
+          }
+        ],
+        "media": {
+          "type": "image",
+          "alt": "Trained Malinois protection dog handler integration",
+          "src": "/images/nikky1.avif"
+        }
+      }
+    ]
+  },
+  "testing": {
+    "eyebrow": "Evaluation",
+    "h2": "How I Test and Evaluate",
+    "paragraphs": [
+      "Intensity alone tells me very little.",
+      "I want to see what happens when pressure becomes layered, unfamiliar and unpredictable. The dog must remain committed without losing clarity, and it must be capable of returning to a controlled state when the situation changes.",
+      "Recovery is particularly important to me. I watch how quickly a dog can process stress, re-engage and return to productive work. That tells me considerably more than intensity in a familiar training setup.",
+      "I film training sessions so I can review both the dog's performance and my own handling. The purpose is simple: evaluate honestly, identify weaknesses early and make better decisions as the dog develops."
+    ]
+  },
+  "breeding": {
+    "eyebrow": "Development",
+    "h2": "Breeding",
+    "cards": [
+      {
+        "h3": "How I Choose Breedings",
+        "paragraphs": [
+          "Breeding decisions in my program go beyond a health clearance and a good pedigree on paper. I look for genuine complementary drive character between sire and dam — lines that fill in each other's gaps rather than stacking the same strengths and the same risks. I work closely with the math behind it too: coefficient-of-inbreeding calculations across the full pedigree, not just the first two or three generations, so I understand exactly what I'm concentrating and what I'm diluting before a breeding decision is made.",
+          "I've also brought in outside lines deliberately — including dogs from rare, closed Belgian working bloodlines used by special forces and law enforcement programs — specifically to strengthen genetic depth rather than simply chase a name on paper. It is a slower way to breed and develop dogs, but it gives me more control over what I am producing and why each breeding is made."
+        ]
+      },
+      {
+        "h3": "My Breeding Standards",
+        "paragraphs": [
+          "Every dog I raise goes through the same training system, refined through hands-on work and continuous evaluation. The system is consistent, but the trainer still has to read the individual dog and make the right decisions at the right time.",
+          "<strong class=\"text-warning\">Foundation comes before pressure.</strong> Before a young dog ever sees real pressure equipment, I build frustration tolerance the right way — through structured chase-and-release work that teaches a dog how to want something intensely and still stay thinking. Skip this step, and you get a dog that's explosive but can't be brought back down. I don't skip it.",
+          "<strong class=\"text-warning\">Calm is the anchor, not the exception.</strong> I train every dog to return to a settled, possessive calm as its default state — even mid-grip, even under stress. A protection dog's job isn't to stay wound up; it's to know exactly when to switch states, and switch back just as fast."
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "Everyday Life",
+    "h2": "Family Environment",
+    "paragraphs": [
+      "The dogs are not developed in an isolated commercial environment. They are part of my day-to-day life while they grow and train.",
+      "My family is naturally around parts of that process, which gives me additional opportunities to observe how a dog settles, responds to normal household activity, and behaves outside formal training."
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "Fit",
+    "h2": "Who These Dogs Are For",
+    "blocks": [
+      {
+        "tag": "p",
+        "html": "These dogs are matched carefully, including with:"
+      },
+      {
+        "tag": "ul",
+        "items": [
+          "People protecting a family or home",
+          "Business or property owners with genuine security concerns",
+          "People facing a specific threat or security problem",
+          "Experienced handlers looking for a serious working dog"
+        ]
+      },
+      {
+        "tag": "p",
+        "html": "The right placement depends on both the dog and the handler. A protection dog is not simply purchased; it has to be matched to a person who understands the responsibility of owning and maintaining a serious working dog."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Placement",
+    "h2": "Pricing &amp; Reservation",
+    "cards": [
+      {
+        "h3": "Fully Developed Protection Dog",
+        "features": [
+          "Advanced Command Training",
+          "Real-World Obedience Under Pressure",
+          "Public Space Discipline",
+          "Vehicle & Travel Trained",
+          "Working-Line Genetics"
+        ],
+        "note": "Standard price from the next litter forward. Availability depends on current training capacity and the dogs coming up.",
+        "price": {
+          "currency": "EUR",
+          "amount": "<!--pdg:price_future-->70,000<!--/pdg-->"
+        },
+        "smallPrint": "One standard. No training tiers. An agreed staged monthly payment schedule can be arranged across the remaining development period, rather than one payment at handover."
+      },
+      {
+        "h3": "Included in Placement",
+        "features": [
+          "Continued development to the program standard",
+          "Final handler integration and training",
+          "Environmental and public-space proofing",
+          "Vehicle and travel preparation",
+          "Individual preparation for your circumstances",
+          "Ongoing support after placement"
+        ],
+        "note": null,
+        "price": null,
+        "smallPrint": null
+      }
+    ],
+    "closing": {
+      "paragraphs": [
+        "A client doesn't necessarily have to wait until a dog is finished and pay the full placement price in one transaction. When I have a dog that has made the program and I believe there's a suitable match, the client can reserve during development — I know who I'm preparing the dog for, and they can follow that development as it takes place. The relationship begins before handover, not on delivery day.",
+        "Once a dog is matched to a future handler, later work can also be adapted to that person's environment and requirements without lowering the standard."
+      ],
+      "cta": {
+        "label": "Discuss Availability &amp; Reservation",
+        "href": "#contact",
+        "data": {
+          "data-interest": "Future Litter"
+        }
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "h2": "Frequently Asked Questions",
+    "items": [
+      {
+        "id": "faq-q1",
+        "answerId": "faq-a1",
+        "question": "What makes your breeding program different?",
+        "answer": "I keep the breeding program small and selective. Working ability, nerve, health, pedigree depth, and complementary traits between sire and dam all matter. The goal is not to produce more litters; it is to give the training program better raw material to work with."
+      },
+      {
+        "id": "faq-q2",
+        "answerId": "faq-a2",
+        "question": "How do you test your dogs' working ability?",
+        "answer": "Every dog is tested under real, layered pressure - not a single controlled scenario, but compound, unpredictable stress that reflects what a genuine security situation actually looks like. What I look for is clarity under pressure, commitment, how quickly the dog recovers and re-engages, and whether it returns to control when the situation changes. These are not standard protection dogs - they are working dogs developed for genuine security needs."
+      },
+      {
+        "id": "faq-q3",
+        "answerId": "faq-a3",
+        "question": "What level of handler experience is required?",
+        "answer": "These dogs require experienced handling. They are true working Malinois with strong drives - not standard family pets. Handlers must be committed to maintaining training and managing a high-drive working dog. I provide handler training and ongoing support to support a successful integration."
+      },
+      {
+        "id": "faq-q4",
+        "answerId": "faq-a4",
+        "question": "What training do your dogs receive?",
+        "answer": "Development starts with early handling and environmental work, followed by socialization, obedience, drive development, protection foundations, progressive scenario work, final evaluation, and handler integration. Every dog follows the same core standard; later work can be adapted to the future handler and environment."
+      },
+      {
+        "id": "faq-q5",
+        "answerId": "faq-a5",
+        "question": "What health testing do you perform?",
+        "answer": "Every breeding prospect undergoes extensive health testing including hip and elbow certification, comprehensive DNA screening, and full veterinary examination. I only breed dogs that meet my strict health and working requirements to maintain the standard of the program."
+      },
+      {
+        "id": "faq-q6",
+        "answerId": "faq-a6",
+        "question": "What is your client selection process?",
+        "answer": "I carefully evaluate each potential client to make sure they understand the commitment required for a true working dog. This includes assessing handler experience, security needs, and ability to maintain training. These dogs are for serious protection needs and require experienced handling."
+      },
+      {
+        "id": "faq-q7",
+        "answerId": "faq-a7",
+        "question": "How long is the waiting period?",
+        "answer": "There is no fixed waiting period because availability depends on the dogs currently in development and how many I can train properly at one time. Contact me to discuss the dogs currently in development and upcoming availability."
+      }
+    ],
+    "schema": [
+      {
+        "name": "What makes your breeding program different?",
+        "text": "I keep the breeding program small and selective. Working ability, nerve, health, pedigree depth, and complementary traits between sire and dam all matter. The goal is not to produce more litters; it is to give the training program better raw material to work with."
+      },
+      {
+        "name": "How do you test your dogs' working ability?",
+        "text": "Every dog is tested under real, layered pressure - not a single controlled scenario, but compound, unpredictable stress that reflects what a genuine security situation actually looks like. What I look for is clarity under pressure, commitment, how quickly the dog recovers and re-engages, and whether it returns to control when the situation changes. These are not standard protection dogs - they are working dogs developed for genuine security needs."
+      },
+      {
+        "name": "What level of handler experience is required?",
+        "text": "These dogs require experienced handling. They are true working Malinois with strong drives - not standard family pets. Handlers must be committed to maintaining training and managing a high-drive working dog. I provide handler training and ongoing support to support a successful integration."
+      },
+      {
+        "name": "What training do your dogs receive?",
+        "text": "Development starts with early handling and environmental work, followed by socialization, obedience, drive development, protection foundations, progressive scenario work, final evaluation, and handler integration. Every dog follows the same core standard; later work can be adapted to the future handler and environment."
+      },
+      {
+        "name": "What health testing do you perform?",
+        "text": "Every breeding prospect undergoes extensive health testing including hip and elbow certification, comprehensive DNA screening, and full veterinary examination. I only breed dogs that meet my strict health and working requirements to maintain the standard of the program."
+      },
+      {
+        "name": "What is your client selection process?",
+        "text": "I carefully evaluate each potential client to make sure they understand the commitment required for a true working dog. This includes assessing handler experience, security needs, and ability to maintain training. These dogs are for serious protection needs and require experienced handling."
+      },
+      {
+        "name": "How long is the waiting period?",
+        "text": "There is no fixed waiting period because availability depends on the dogs currently in development and how many I can train properly at one time. Contact me to discuss the dogs currently in development and upcoming availability."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Reviews",
+    "h2": "What Clients Say",
+    "consent": {
+      "text": "Client reviews are shown through Testimonial.to, a third-party service that may set its own cookies. They load only after you accept cookies or press the button.",
+      "button": "Load reviews"
+    },
+    "embeds": {
+      "iframeTitle": "Client testimonials carousel",
+      "jsIframeTitle": "Client testimonials"
+    }
+  },
+  "partner": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #testimonial-widgets (line 1331)",
+    "logo": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "SafariMedic Logo"
+    },
+    "text": "Medical support solutions relevant to working-dog and protection environments",
+    "links": [
+      {
+        "label": "Visit SafariMedic Website",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "icon": "fas fa-external-link-alt ms-2"
+      },
+      {
+        "label": "Our Partnership Story",
+        "href": "/safarimedic-partnership.html",
+        "target": null,
+        "icon": "fas fa-book-open ms-2"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Private Enquiry",
+    "h2": "Contact",
+    "intro": "Every placement begins with a conversation. Because I work with a small number of dogs, I want to understand the person and environment before deciding which dog — if any — is appropriate.",
+    "journey": {
+      "title": "What happens next:",
+      "steps": [
+        "Enquiry",
+        "Direct conversation",
+        "Suitability and match",
+        "Reservation when appropriate",
+        "Development",
+        "Handler integration and handover",
+        "Ongoing support"
+      ]
+    },
+    "tellMe": {
+      "title": "Tell me about:",
+      "items": [
+        "Your location",
+        "Household and family situation",
+        "Other animals",
+        "Previous dog / working-dog experience",
+        "Property and daily environment",
+        "Travel",
+        "Intended role for the dog",
+        "Preferred timing",
+        "Whether you're interested in early reservation"
+      ]
+    },
+    "form": {
+      "action": "https://formspree.io/f/mwpvylyn",
+      "method": "POST",
+      "fields": {
+        "name": {
+          "label": "Full Name*",
+          "placeholder": "Enter your full name",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "email": {
+          "label": "Email Address*",
+          "placeholder": "Enter your email address",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "phone": {
+          "label": "Phone / WhatsApp",
+          "placeholder": "Enter your phone number",
+          "ariaLabel": null,
+          "title": null,
+          "required": false
+        },
+        "country": {
+          "label": "Country",
+          "options": [
+            {
+              "value": "",
+              "label": "Select your country",
+              "placeholder": true
+            },
+            {
+              "value": "Afghanistan",
+              "label": "Afghanistan"
+            },
+            {
+              "value": "Albania",
+              "label": "Albania"
+            },
+            {
+              "value": "Algeria",
+              "label": "Algeria"
+            },
+            {
+              "value": "Andorra",
+              "label": "Andorra"
+            },
+            {
+              "value": "Angola",
+              "label": "Angola"
+            },
+            {
+              "value": "Antigua and Barbuda",
+              "label": "Antigua and Barbuda"
+            },
+            {
+              "value": "Argentina",
+              "label": "Argentina"
+            },
+            {
+              "value": "Armenia",
+              "label": "Armenia"
+            },
+            {
+              "value": "Australia",
+              "label": "Australia"
+            },
+            {
+              "value": "Austria",
+              "label": "Austria"
+            },
+            {
+              "value": "Azerbaijan",
+              "label": "Azerbaijan"
+            },
+            {
+              "value": "Bahamas",
+              "label": "Bahamas"
+            },
+            {
+              "value": "Bahrain",
+              "label": "Bahrain"
+            },
+            {
+              "value": "Bangladesh",
+              "label": "Bangladesh"
+            },
+            {
+              "value": "Barbados",
+              "label": "Barbados"
+            },
+            {
+              "value": "Belarus",
+              "label": "Belarus"
+            },
+            {
+              "value": "Belgium",
+              "label": "Belgium"
+            },
+            {
+              "value": "Belize",
+              "label": "Belize"
+            },
+            {
+              "value": "Benin",
+              "label": "Benin"
+            },
+            {
+              "value": "Bhutan",
+              "label": "Bhutan"
+            },
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Bosnia and Herzegovina",
+              "label": "Bosnia and Herzegovina"
+            },
+            {
+              "value": "Botswana",
+              "label": "Botswana"
+            },
+            {
+              "value": "Brazil",
+              "label": "Brazil"
+            },
+            {
+              "value": "Brunei",
+              "label": "Brunei"
+            },
+            {
+              "value": "Bulgaria",
+              "label": "Bulgaria"
+            },
+            {
+              "value": "Burkina Faso",
+              "label": "Burkina Faso"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Cabo Verde",
+              "label": "Cabo Verde"
+            },
+            {
+              "value": "Cambodia",
+              "label": "Cambodia"
+            },
+            {
+              "value": "Cameroon",
+              "label": "Cameroon"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Central African Republic",
+              "label": "Central African Republic"
+            },
+            {
+              "value": "Chad",
+              "label": "Chad"
+            },
+            {
+              "value": "Chile",
+              "label": "Chile"
+            },
+            {
+              "value": "China",
+              "label": "China"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Comoros",
+              "label": "Comoros"
+            },
+            {
+              "value": "Congo (Congo-Brazzaville)",
+              "label": "Congo (Congo-Brazzaville)"
+            },
+            {
+              "value": "Costa Rica",
+              "label": "Costa Rica"
+            },
+            {
+              "value": "Croatia",
+              "label": "Croatia"
+            },
+            {
+              "value": "Cuba",
+              "label": "Cuba"
+            },
+            {
+              "value": "Cyprus",
+              "label": "Cyprus"
+            },
+            {
+              "value": "Czechia",
+              "label": "Czechia"
+            },
+            {
+              "value": "Denmark",
+              "label": "Denmark"
+            },
+            {
+              "value": "Djibouti",
+              "label": "Djibouti"
+            },
+            {
+              "value": "Dominica",
+              "label": "Dominica"
+            },
+            {
+              "value": "Dominican Republic",
+              "label": "Dominican Republic"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "Egypt",
+              "label": "Egypt"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Equatorial Guinea",
+              "label": "Equatorial Guinea"
+            },
+            {
+              "value": "Eritrea",
+              "label": "Eritrea"
+            },
+            {
+              "value": "Estonia",
+              "label": "Estonia"
+            },
+            {
+              "value": "Eswatini",
+              "label": "Eswatini"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Fiji",
+              "label": "Fiji"
+            },
+            {
+              "value": "Finland",
+              "label": "Finland"
+            },
+            {
+              "value": "France",
+              "label": "France"
+            },
+            {
+              "value": "Gabon",
+              "label": "Gabon"
+            },
+            {
+              "value": "Gambia",
+              "label": "Gambia"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Germany",
+              "label": "Germany"
+            },
+            {
+              "value": "Ghana",
+              "label": "Ghana"
+            },
+            {
+              "value": "Greece",
+              "label": "Greece"
+            },
+            {
+              "value": "Grenada",
+              "label": "Grenada"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Guinea",
+              "label": "Guinea"
+            },
+            {
+              "value": "Guinea-Bissau",
+              "label": "Guinea-Bissau"
+            },
+            {
+              "value": "Guyana",
+              "label": "Guyana"
+            },
+            {
+              "value": "Haiti",
+              "label": "Haiti"
+            },
+            {
+              "value": "Holy See",
+              "label": "Holy See"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Hungary",
+              "label": "Hungary"
+            },
+            {
+              "value": "Iceland",
+              "label": "Iceland"
+            },
+            {
+              "value": "India",
+              "label": "India"
+            },
+            {
+              "value": "Indonesia",
+              "label": "Indonesia"
+            },
+            {
+              "value": "Iran",
+              "label": "Iran"
+            },
+            {
+              "value": "Iraq",
+              "label": "Iraq"
+            },
+            {
+              "value": "Ireland",
+              "label": "Ireland"
+            },
+            {
+              "value": "Israel",
+              "label": "Israel"
+            },
+            {
+              "value": "Italy",
+              "label": "Italy"
+            },
+            {
+              "value": "Jamaica",
+              "label": "Jamaica"
+            },
+            {
+              "value": "Japan",
+              "label": "Japan"
+            },
+            {
+              "value": "Jordan",
+              "label": "Jordan"
+            },
+            {
+              "value": "Kazakhstan",
+              "label": "Kazakhstan"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Kiribati",
+              "label": "Kiribati"
+            },
+            {
+              "value": "Kuwait",
+              "label": "Kuwait"
+            },
+            {
+              "value": "Kyrgyzstan",
+              "label": "Kyrgyzstan"
+            },
+            {
+              "value": "Laos",
+              "label": "Laos"
+            },
+            {
+              "value": "Latvia",
+              "label": "Latvia"
+            },
+            {
+              "value": "Lebanon",
+              "label": "Lebanon"
+            },
+            {
+              "value": "Lesotho",
+              "label": "Lesotho"
+            },
+            {
+              "value": "Liberia",
+              "label": "Liberia"
+            },
+            {
+              "value": "Libya",
+              "label": "Libya"
+            },
+            {
+              "value": "Liechtenstein",
+              "label": "Liechtenstein"
+            },
+            {
+              "value": "Lithuania",
+              "label": "Lithuania"
+            },
+            {
+              "value": "Luxembourg",
+              "label": "Luxembourg"
+            },
+            {
+              "value": "Madagascar",
+              "label": "Madagascar"
+            },
+            {
+              "value": "Malawi",
+              "label": "Malawi"
+            },
+            {
+              "value": "Malaysia",
+              "label": "Malaysia"
+            },
+            {
+              "value": "Maldives",
+              "label": "Maldives"
+            },
+            {
+              "value": "Mali",
+              "label": "Mali"
+            },
+            {
+              "value": "Malta",
+              "label": "Malta"
+            },
+            {
+              "value": "Marshall Islands",
+              "label": "Marshall Islands"
+            },
+            {
+              "value": "Mauritania",
+              "label": "Mauritania"
+            },
+            {
+              "value": "Mauritius",
+              "label": "Mauritius"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Micronesia",
+              "label": "Micronesia"
+            },
+            {
+              "value": "Moldova",
+              "label": "Moldova"
+            },
+            {
+              "value": "Monaco",
+              "label": "Monaco"
+            },
+            {
+              "value": "Mongolia",
+              "label": "Mongolia"
+            },
+            {
+              "value": "Montenegro",
+              "label": "Montenegro"
+            },
+            {
+              "value": "Morocco",
+              "label": "Morocco"
+            },
+            {
+              "value": "Mozambique",
+              "label": "Mozambique"
+            },
+            {
+              "value": "Myanmar",
+              "label": "Myanmar"
+            },
+            {
+              "value": "Namibia",
+              "label": "Namibia"
+            },
+            {
+              "value": "Nauru",
+              "label": "Nauru"
+            },
+            {
+              "value": "Nepal",
+              "label": "Nepal"
+            },
+            {
+              "value": "Netherlands",
+              "label": "Netherlands"
+            },
+            {
+              "value": "New Zealand",
+              "label": "New Zealand"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Niger",
+              "label": "Niger"
+            },
+            {
+              "value": "Nigeria",
+              "label": "Nigeria"
+            },
+            {
+              "value": "North Korea",
+              "label": "North Korea"
+            },
+            {
+              "value": "North Macedonia",
+              "label": "North Macedonia"
+            },
+            {
+              "value": "Norway",
+              "label": "Norway"
+            },
+            {
+              "value": "Oman",
+              "label": "Oman"
+            },
+            {
+              "value": "Pakistan",
+              "label": "Pakistan"
+            },
+            {
+              "value": "Palau",
+              "label": "Palau"
+            },
+            {
+              "value": "Palestine State",
+              "label": "Palestine State"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Paraguay",
+              "label": "Paraguay"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Philippines",
+              "label": "Philippines"
+            },
+            {
+              "value": "Poland",
+              "label": "Poland"
+            },
+            {
+              "value": "Portugal",
+              "label": "Portugal"
+            },
+            {
+              "value": "Qatar",
+              "label": "Qatar"
+            },
+            {
+              "value": "Romania",
+              "label": "Romania"
+            },
+            {
+              "value": "Russia",
+              "label": "Russia"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Saint Kitts and Nevis",
+              "label": "Saint Kitts and Nevis"
+            },
+            {
+              "value": "Saint Lucia",
+              "label": "Saint Lucia"
+            },
+            {
+              "value": "Saint Vincent and the Grenadines",
+              "label": "Saint Vincent and the Grenadines"
+            },
+            {
+              "value": "Samoa",
+              "label": "Samoa"
+            },
+            {
+              "value": "San Marino",
+              "label": "San Marino"
+            },
+            {
+              "value": "Sao Tome and Principe",
+              "label": "Sao Tome and Principe"
+            },
+            {
+              "value": "Saudi Arabia",
+              "label": "Saudi Arabia"
+            },
+            {
+              "value": "Senegal",
+              "label": "Senegal"
+            },
+            {
+              "value": "Serbia",
+              "label": "Serbia"
+            },
+            {
+              "value": "Seychelles",
+              "label": "Seychelles"
+            },
+            {
+              "value": "Sierra Leone",
+              "label": "Sierra Leone"
+            },
+            {
+              "value": "Singapore",
+              "label": "Singapore"
+            },
+            {
+              "value": "Slovakia",
+              "label": "Slovakia"
+            },
+            {
+              "value": "Slovenia",
+              "label": "Slovenia"
+            },
+            {
+              "value": "Solomon Islands",
+              "label": "Solomon Islands"
+            },
+            {
+              "value": "Somalia",
+              "label": "Somalia"
+            },
+            {
+              "value": "South Africa",
+              "label": "South Africa"
+            },
+            {
+              "value": "South Korea",
+              "label": "South Korea"
+            },
+            {
+              "value": "South Sudan",
+              "label": "South Sudan"
+            },
+            {
+              "value": "Spain",
+              "label": "Spain"
+            },
+            {
+              "value": "Sri Lanka",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "Sudan",
+              "label": "Sudan"
+            },
+            {
+              "value": "Suriname",
+              "label": "Suriname"
+            },
+            {
+              "value": "Sweden",
+              "label": "Sweden"
+            },
+            {
+              "value": "Switzerland",
+              "label": "Switzerland"
+            },
+            {
+              "value": "Syria",
+              "label": "Syria"
+            },
+            {
+              "value": "Tajikistan",
+              "label": "Tajikistan"
+            },
+            {
+              "value": "Tanzania",
+              "label": "Tanzania"
+            },
+            {
+              "value": "Thailand",
+              "label": "Thailand"
+            },
+            {
+              "value": "Timor-Leste",
+              "label": "Timor-Leste"
+            },
+            {
+              "value": "Togo",
+              "label": "Togo"
+            },
+            {
+              "value": "Tonga",
+              "label": "Tonga"
+            },
+            {
+              "value": "Trinidad and Tobago",
+              "label": "Trinidad and Tobago"
+            },
+            {
+              "value": "Tunisia",
+              "label": "Tunisia"
+            },
+            {
+              "value": "Turkey",
+              "label": "Turkey"
+            },
+            {
+              "value": "Turkmenistan",
+              "label": "Turkmenistan"
+            },
+            {
+              "value": "Tuvalu",
+              "label": "Tuvalu"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Ukraine",
+              "label": "Ukraine"
+            },
+            {
+              "value": "United Arab Emirates",
+              "label": "United Arab Emirates"
+            },
+            {
+              "value": "United Kingdom",
+              "label": "United Kingdom"
+            },
+            {
+              "value": "United States of America",
+              "label": "United States of America"
+            },
+            {
+              "value": "Uruguay",
+              "label": "Uruguay"
+            },
+            {
+              "value": "Uzbekistan",
+              "label": "Uzbekistan"
+            },
+            {
+              "value": "Vanuatu",
+              "label": "Vanuatu"
+            },
+            {
+              "value": "Venezuela",
+              "label": "Venezuela"
+            },
+            {
+              "value": "Vietnam",
+              "label": "Vietnam"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            },
+            {
+              "value": "Zambia",
+              "label": "Zambia"
+            },
+            {
+              "value": "Zimbabwe",
+              "label": "Zimbabwe"
+            }
+          ]
+        },
+        "interest": {
+          "label": "Interest",
+          "options": [
+            {
+              "value": "",
+              "label": "Select your interest",
+              "placeholder": true
+            },
+            {
+              "value": "Bobo - Early Reservation",
+              "label": "Bobo — Early Reservation"
+            },
+            {
+              "value": "Future Litter",
+              "label": "Future Litter / General Availability"
+            },
+            {
+              "value": "General Enquiry",
+              "label": "General Enquiry"
+            },
+            {
+              "value": "Other",
+              "label": "Other"
+            }
+          ]
+        },
+        "message": {
+          "label": "Your Message*",
+          "placeholder": "Please provide additional details about your security needs, specific questions, or any other information that will help me understand your requirements...",
+          "ariaLabel": null,
+          "title": null,
+          "required": true
+        },
+        "privacyConsent": {
+          "label": "I agree to the <a href=\"/privacy-policy.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacy policy</a> and consent to data processing*",
+          "required": true
+        }
+      },
+      "submit": "Submit Enquiry"
+    },
+    "messages": {
+      "nameRequired": "Please enter your full name",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Please enter a message",
+      "privacyRequired": "You must agree to the privacy policy",
+      "sending": "Sending... <span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+      "submitRestore": "Submit Enquiry",
+      "success": "Message sent successfully!",
+      "submitError": "Oops! There was a problem submitting your form",
+      "networkError": "Network error. Please try again.",
+      "notificationClose": "Close"
+    },
+    "preselect": [
+      {
+        "interest": "Bobo - Early Reservation",
+        "section": "dogs",
+        "line": 620
+      },
+      {
+        "interest": "Future Litter",
+        "section": "dogs",
+        "line": 656
+      },
+      {
+        "interest": "Future Litter",
+        "section": "pricing",
+        "line": 1165
+      }
+    ],
+    "footnotes": [
+      {
+        "icon": "fas fa-lock me-2",
+        "text": "Your information is treated privately and used only to respond to your enquiry."
+      },
+      {
+        "icon": "fas fa-clock me-2",
+        "text": "I typically respond to all enquiries within 24 hours."
+      }
+    ]
+  },
+  "privacyBlurb": {
+    "_sourceSection": "un-id'd <section class=\"section section-dark\"> immediately after #contact (line 1718)",
+    "h2": "Privacy and Confidentiality",
+    "cards": [
+      {
+        "icon": "fas fa-user-lock fa-3x text-warning mb-3",
+        "h3": "Privacy Taken Seriously",
+        "p": "I understand clients often need privacy — around their identity, their location, and their security arrangements. I'm happy to sign a mutual NDA before any detailed consultation."
+      },
+      {
+        "icon": "fas fa-lock fa-3x text-warning mb-3",
+        "h3": "Confidentiality When Needed",
+        "p": "Some clients have sensitive personal, professional, or security circumstances. Where needed, confidentiality arrangements can be agreed before detailed information is shared."
+      },
+      {
+        "icon": "fas fa-user-secret fa-3x text-warning mb-3",
+        "h3": "Confidential Throughout",
+        "p": "I keep all client information confidential from first contact through delivery — your identity, location, and security arrangements stay between us."
+      }
+    ],
+    "closing": {
+      "text": "Your privacy matters. From initial consultation to final delivery, I take discretion seriously.",
+      "cta": {
+        "label": "Contact Me Privately",
+        "href": "#contact",
+        "data": {}
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "A small, trainer-led working-dog program developing protection Malinois from proven working lines."
+    },
+    "quickLinks": {
+      "h3": "Quick Links",
+      "ariaLabel": "Footer navigation",
+      "links": [
+        {
+          "label": "Dogs",
+          "href": "#dogs"
+        },
+        {
+          "label": "Process",
+          "href": "#training"
+        },
+        {
+          "label": "Breeding",
+          "href": "#breeding"
+        },
+        {
+          "label": "Placement",
+          "href": "#pricing"
+        },
+        {
+          "label": "About",
+          "href": "#about"
+        },
+        {
+          "label": "Enquire",
+          "href": "#contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy.html"
+        }
+      ]
+    },
+    "language": {
+      "h3": "Language",
+      "links": [
+        {
+          "label": "English",
+          "href": "/",
+          "hreflang": "en",
+          "lang": "en",
+          "active": true
+        },
+        {
+          "label": "Ελληνικά",
+          "href": "/el/",
+          "hreflang": "el",
+          "lang": "el",
+          "active": false
+        },
+        {
+          "label": "Deutsch",
+          "href": "/de/",
+          "hreflang": "de",
+          "lang": "de",
+          "active": false
+        },
+        {
+          "label": "Français",
+          "href": "/fr/",
+          "hreflang": "fr",
+          "lang": "fr",
+          "active": false
+        },
+        {
+          "label": "العربية",
+          "href": "/ar/",
+          "hreflang": "ar",
+          "lang": "ar",
+          "active": false
+        },
+        {
+          "label": "Español",
+          "href": "/es/",
+          "hreflang": "es",
+          "lang": "es",
+          "active": false
+        },
+        {
+          "label": "中文",
+          "href": "/zh/",
+          "hreflang": "zh-Hans",
+          "lang": "zh-Hans",
+          "active": false
+        },
+        {
+          "label": "Русский",
+          "href": "/ru/",
+          "hreflang": "ru",
+          "lang": "ru",
+          "active": false
+        },
+        {
+          "label": "Türkçe",
+          "href": "/tr/",
+          "hreflang": "tr",
+          "lang": "tr",
+          "active": false
+        },
+        {
+          "label": "Italiano",
+          "href": "/it/",
+          "hreflang": "it",
+          "lang": "it",
+          "active": false
+        },
+        {
+          "label": "Português",
+          "href": "/pt/",
+          "hreflang": "pt",
+          "lang": "pt",
+          "active": false
+        },
+        {
+          "label": "Nederlands",
+          "href": "/nl/",
+          "hreflang": "nl",
+          "lang": "nl",
+          "active": false
+        },
+        {
+          "label": "日本語",
+          "href": "/ja/",
+          "hreflang": "ja",
+          "lang": "ja",
+          "active": false
+        }
+      ]
+    },
+    "connect": {
+      "h3": "Connect",
+      "links": [
+        {
+          "ariaLabel": "Visit my Instagram",
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "ariaLabel": "Contact me on WhatsApp",
+          "href": "https://wa.me/306931736026",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "ariaLabel": "Send me an email",
+          "href": "mailto:contact@protectiondogs.gr",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
+  },
+  "ui": {}
+}
