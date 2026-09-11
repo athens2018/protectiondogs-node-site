@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/chrome/Header.astro';
+import Footer from '../components/chrome/Footer.astro';
+import Breadcrumb from '../components/chrome/Breadcrumb.astro';
+import CookieConsent from '../components/chrome/CookieConsent.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import Button from '../components/ui/Button.astro';
+import content from '../i18n/privacy/en.json';
+import homeContent from '../i18n/locales/en.json';
+import '../styles/prose.css';
+
+const locale = 'en';
+
+// The live source has zero <script type="application/ld+json"> blocks on
+// privacy-policy.html (verified: `grep -n "application/ld+json"
+// privacy-policy.html` — no matches), and content.meta.jsonld extracts as
+// `{}` for every locale. This renders nothing today but stays data-driven
+// in case a future extraction ever populates it.
+const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
+
+// footer.connect.links[].icon is extracted as a legacy Font Awesome class
+// ("fab fa-instagram fa-2x"), but Footer.astro's Social.icon expects one of
+// the Icon kit's semantic names — passed through as-is, Icon.astro would
+// throw "Unknown icon" at build time. Map class → name, same idea as
+// Contact.astro's footnote-icon mapping.
+function socialIcon(faClass: string): 'instagram' | 'whatsapp' | 'envelope' {
+  if (/instagram/.test(faClass)) return 'instagram';
+  if (/whatsapp/.test(faClass)) return 'whatsapp';
+  return 'envelope';
+}
+const socialLinks = content.footer.connect.links.map((s: { href: string; ariaLabel: string; icon: string }) => ({
+  href: s.href,
+  ariaLabel: s.ariaLabel,
+  icon: socialIcon(s.icon),
+}));
+---
+
+<Base
+  locale={locale}
+  title={content.meta.title}
+  description={content.meta.description}
+  ogTitle={content.meta.ogTitle ?? undefined}
+  ogDescription={content.meta.ogDescription ?? undefined}
+  twitterTitle={content.meta.twitterTitle ?? undefined}
+  twitterDescription={content.meta.twitterDescription ?? undefined}
+  subpath="privacy-policy"
+  alternates={true}
+  robots="index, follow"
+  skipLinkLabel={content.skipLink.label}
+>
+  {jsonldBlocks.length > 0 && (
+    <Fragment slot="head">
+      {jsonldBlocks.map((block) => <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />)}
+    </Fragment>
+  )}
+
+  <CookieConsent
+    ariaLabel={homeContent.cookie.ariaLabel}
+    text={homeContent.cookie.text}
+    rejectLabel={homeContent.cookie.reject}
+    acceptLabel={homeContent.cookie.accept}
+  />
+
+  <Header
+    locale={locale}
+    nav={content.nav.items}
+    navAriaLabel={content.nav.ariaLabel}
+    brandAlt={content.nav.brand.alt}
+    homeHref={content.nav.brand.href}
+    menuToggleLabel={content.nav.toggleAriaLabel}
+    langTriggerLabel={homeContent.nav.langDrawer.ariaLabel}
+    drawerTitle={homeContent.nav.langDrawer.title}
+    drawerCloseLabel={homeContent.nav.langDrawer.close.ariaLabel}
+    bannerText=""
+    bannerSwitchLabel=""
+    bannerDismissLabel=""
+    subpath="privacy-policy"
+    showLanguageSwitcher={false}
+  />
+
+  <Breadcrumb
+    homeLabel={content.breadcrumb.items[0].label}
+    homeHref={content.breadcrumb.items[0].href as string}
+    current={content.breadcrumb.items[1].label}
+    ariaLabel={content.breadcrumb.ariaLabel}
+  />
+
+  <main id="main-content">
+    <section class="section section--dark">
+      <div class="container container--narrow">
+        <SectionHeader eyebrow={content.page.eyebrow} heading={content.page.h1} level="h1" align="start" />
+
+        <div class="prose">
+          {content.page.lastUpdated && <p class="privacy-meta" set:html={content.page.lastUpdated} />}
+
+          {content.page.intro.map((block: { tag: string; html?: string; items?: string[] }) =>
+            block.tag === 'ul' ? (
+              <ul>{(block.items ?? []).map((item) => <li set:html={item} />)}</ul>
+            ) : (
+              <p set:html={block.html} />
+            ),
+          )}
+
+          {content.page.disclaimer && <p class="privacy-disclaimer" set:html={content.page.disclaimer} />}
+
+          {content.page.sections.map((section: { heading: string; blocks: { tag: string; html?: string; items?: string[] }[] }) => (
+            <Fragment>
+              <h2 set:html={section.heading} />
+              {section.blocks.map((block) =>
+                block.tag === 'ul' ? (
+                  <ul>{(block.items ?? []).map((item) => <li set:html={item} />)}</ul>
+                ) : (
+                  <p set:html={block.html} />
+                ),
+              )}
+            </Fragment>
+          ))}
+
+          {content.page.cta && (
+            <p class="privacy-cta">
+              <Button href={content.page.cta.href} variant="primary" size="lg" set:html={content.page.cta.label} />
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer
+    locale={locale}
+    brandTitle={content.footer.brand.h3}
+    brandBlurb={content.footer.brand.text}
+    quickLinksTitle={content.footer.quickLinks.h3}
+    quickLinksAriaLabel={content.footer.quickLinks.ariaLabel}
+    links={content.footer.quickLinks.links}
+    languageTitle=""
+    connectTitle={content.footer.connect.h3}
+    social={socialLinks}
+    copyright={content.footer.copyright}
+    subpath="privacy-policy"
+    showLanguage={false}
+  />
+</Base>
+
+<style>
+  .privacy-meta {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+  }
+
+  .privacy-disclaimer {
+    font-size: var(--text-sm);
+    opacity: 0.75;
+  }
+
+  .privacy-cta {
+    margin-top: var(--space-7) !important;
+    text-align: center;
+  }
+</style>

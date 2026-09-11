@@ -1,0 +1,394 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import Card from '../ui/Card.astro';
+import Field from '../ui/Field.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import { localePath } from '../../lib/i18n';
+
+interface Props {
+  /** content.contact from the locale JSON (src/i18n/locales/<code>.json) */
+  content: any;
+  locale: string;
+}
+
+const { content, locale } = Astro.props;
+const fields = content.form.fields;
+
+// The extracted consent label always links to *that locale's own* static
+// privacy file (e.g. "/privacy-policy-el.html" on the live site — verified
+// by reading src/i18n/locales/el.json / ar.json / ja.json directly, each
+// points at its own file). Re-point the single <a href="..."> it contains
+// at this rebuild's locale-correct route instead of trusting the extracted
+// host/extension, without touching anything else in the raw HTML.
+const privacyHref = localePath(locale, 'privacy-policy');
+const consentLabel = String(fields.privacyConsent.label).replace(/href="[^"]*"/, `href="${privacyHref}"`);
+
+// form.ts restores/sets the submit button's busy state via
+// `submitLabel.textContent = msg.msgSending` (textContent, not innerHTML —
+// see src/scripts/form.ts). The extracted value is
+// "Sending... <span class=\"spinner-border ...\"></span>", i.e. markup
+// meant for innerHTML. Passed verbatim as a data-attribute, form.ts would
+// display the literal "<span ...></span>" text to the visitor. Strip all
+// tags and keep only the plain-text portion, generically for any locale.
+const sendingText = String(content.messages.sending || '')
+  .replace(/<[^>]*>/g, '')
+  .trim();
+
+function toFieldOptions(options: any[]): { value: string; label: string; disabled?: boolean; selected?: boolean }[] {
+  return options.map((o: any) => ({
+    value: o.value,
+    label: o.label,
+    disabled: !!o.placeholder,
+    selected: !!o.placeholder,
+  }));
+}
+
+const countryOptions = toFieldOptions(fields.country.options);
+const interestOptions = toFieldOptions(fields.interest.options);
+
+// Footnote icons are extracted as legacy Font Awesome classes
+// ("fas fa-lock me-2", "fas fa-clock me-2"); map to this kit's hand-drawn
+// Icon names.
+const FOOTNOTE_ICONS: Record<string, string> = { lock: 'lock', clock: 'clock' };
+function footnoteIcon(faClass: string): string {
+  const match = /\bfa-([a-z-]+)/.exec(faClass || '');
+  const key = match ? match[1] : '';
+  return FOOTNOTE_ICONS[key] || 'lock';
+}
+---
+
+<section id="contact" class="section section--light">
+  <div class="container">
+    <SectionHeader eyebrow={content.eyebrow} heading={content.h2} intro={content.intro} />
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-journey reveal">
+          <h3 class="contact-block__title" set:html={content.journey.title} />
+          <ol class="contact-journey__list">
+            {content.journey.steps.map((step: string, i: number) => (
+              <li class="contact-journey__step">
+                <span class="contact-journey__badge" aria-hidden="true">{i + 1}</span>
+                <span class="contact-journey__text" set:html={step} />
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div class="contact-tellme reveal">
+          <h3 class="contact-block__title" set:html={content.tellMe.title} />
+          <ul class="contact-tellme__list">
+            {content.tellMe.items.map((item: string) => (
+              <li class="contact-tellme__item">
+                <Icon name="check" size="1em" class="contact-tellme__check" />
+                <span set:html={item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <Card as="div" tone="elevated" padding="lg" class="contact-form-card reveal">
+        <form
+          id="contact-form"
+          class="contact-form"
+          action={content.form.action}
+          method={content.form.method}
+          novalidate
+          data-msg-name={content.messages.nameRequired}
+          data-msg-email={content.messages.emailInvalid}
+          data-msg-message={content.messages.messageRequired}
+          data-msg-consent={content.messages.privacyRequired}
+          data-msg-sending={sendingText}
+          data-msg-success={content.messages.success}
+          data-msg-failure={content.messages.submitError}
+          data-msg-network={content.messages.networkError}
+        >
+          {/* Honeypot spam trap: invisible to real visitors; bots that
+              auto-fill every field fill this too, and Formspree silently
+              discards the submission when it's non-empty. */}
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="form-grid form-grid--2">
+            <Field
+              id="name"
+              name="name"
+              label={fields.name.label}
+              kind="text"
+              required={fields.name.required}
+              autocomplete="name"
+              placeholder={fields.name.placeholder}
+              aria-label={fields.name.ariaLabel}
+              title={fields.name.title}
+              validated
+            />
+            <Field
+              id="email"
+              name="email"
+              label={fields.email.label}
+              kind="email"
+              required={fields.email.required}
+              autocomplete="email"
+              inputmode="email"
+              placeholder={fields.email.placeholder}
+              aria-label={fields.email.ariaLabel}
+              title={fields.email.title}
+              validated
+            />
+          </div>
+
+          <div class="form-grid form-grid--2">
+            <Field
+              id="phone"
+              name="phone"
+              label={fields.phone.label}
+              kind="tel"
+              autocomplete="tel"
+              inputmode="tel"
+              placeholder={fields.phone.placeholder}
+              aria-label={fields.phone.ariaLabel}
+              title={fields.phone.title}
+            />
+            <Field
+              id="country"
+              name="country"
+              label={fields.country.label}
+              kind="select"
+              autocomplete="country-name"
+              options={countryOptions}
+            />
+          </div>
+
+          <Field id="interest" name="interest" label={fields.interest.label} kind="select" options={interestOptions} />
+
+          <Field
+            id="message"
+            name="message"
+            label={fields.message.label}
+            kind="textarea"
+            rows={5}
+            required={fields.message.required}
+            placeholder={fields.message.placeholder}
+            aria-label={fields.message.ariaLabel}
+            title={fields.message.title}
+            validated
+          />
+
+          <div class="form-check">
+            <input type="checkbox" id="privacy-consent" required />
+            <label for="privacy-consent" set:html={consentLabel} />
+          </div>
+
+          <Button type="submit" variant="primary" block set:html={content.form.submit} />
+        </form>
+      </Card>
+    </div>
+
+    <ul class="contact-footnotes">
+      {content.footnotes.map((note: { icon: string; text: string }) => (
+        <li class="contact-footnotes__item">
+          <Icon name={footnoteIcon(note.icon)} size="1.1em" />
+          <span set:html={note.text} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .contact-block__title {
+    margin-bottom: var(--space-5);
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: var(--gold);
+  }
+
+  /* ----- Journey: numbered steps on a connecting line ----- */
+  .contact-journey__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .contact-journey__step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .contact-journey__step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 1.125rem;
+    top: 2.5rem;
+    bottom: calc(-1 * var(--space-5));
+    width: 1px;
+    background: linear-gradient(var(--gold-40), var(--line));
+  }
+
+  .contact-journey__badge {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid var(--line-gold);
+    background: var(--gold-10);
+    color: var(--gold);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--text-sm);
+  }
+
+  .contact-journey__text {
+    padding-top: 0.5rem;
+    color: var(--text);
+    line-height: var(--leading-normal);
+  }
+
+  /* ----- Tell me about: two-column checklist ----- */
+  .contact-tellme__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: var(--space-6);
+  }
+
+  .contact-tellme__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6em;
+    break-inside: avoid;
+    padding-block: 0.4rem;
+    color: var(--text);
+  }
+
+  .contact-tellme__check {
+    flex-shrink: 0;
+    margin-top: 0.25em;
+    color: var(--gold);
+  }
+
+  @media (max-width: 480px) {
+    .contact-tellme__list {
+      columns: 1;
+    }
+  }
+
+  /* ----- Form card ----- */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .form-grid {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .form-grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75em;
+  }
+
+  .form-check input[type='checkbox'] {
+    flex-shrink: 0;
+    width: 1.15em;
+    height: 1.15em;
+    margin-top: 0.3em;
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
+
+  .form-check input[aria-invalid='true'] {
+    outline: 2px solid var(--error);
+    outline-offset: 2px;
+  }
+
+  .form-check label {
+    color: var(--text);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+  }
+
+  .form-check label :global(a) {
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-color: var(--gold-40);
+    text-underline-offset: 0.2em;
+    transition: color var(--dur-fast) var(--ease-out), text-decoration-color var(--dur-fast) var(--ease-out);
+  }
+
+  .form-check label :global(a:hover) {
+    color: var(--gold-hover);
+    text-decoration-color: currentColor;
+  }
+
+  /* ----- Footnotes ----- */
+  .contact-footnotes {
+    list-style: none;
+    margin: var(--space-8) auto 0;
+    padding: 0;
+    max-width: var(--container-narrow);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .contact-footnotes__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65em;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+  }
+
+  .contact-footnotes__item :global(svg) {
+    flex-shrink: 0;
+    margin-top: 0.2em;
+    color: var(--gold);
+  }
+
+  @media (max-width: 900px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .form-grid--2 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

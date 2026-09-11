@@ -1,0 +1,226 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/chrome/Header.astro';
+import Footer from '../../components/chrome/Footer.astro';
+import Breadcrumb from '../../components/chrome/Breadcrumb.astro';
+import CookieConsent from '../../components/chrome/CookieConsent.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Button from '../../components/ui/Button.astro';
+import { getLocale, nonDefaultLocaleParams } from '../../lib/i18n';
+
+// Static, explicit import map for the 12 non-default locales — this is a
+// static build (output: 'static'), so dynamic import() is not an option;
+// every file is imported by name up front and indexed by locale code below.
+import elPrivacy from '../../i18n/privacy/el.json';
+import dePrivacy from '../../i18n/privacy/de.json';
+import frPrivacy from '../../i18n/privacy/fr.json';
+import arPrivacy from '../../i18n/privacy/ar.json';
+import esPrivacy from '../../i18n/privacy/es.json';
+import zhPrivacy from '../../i18n/privacy/zh.json';
+import ruPrivacy from '../../i18n/privacy/ru.json';
+import trPrivacy from '../../i18n/privacy/tr.json';
+import itPrivacy from '../../i18n/privacy/it.json';
+import ptPrivacy from '../../i18n/privacy/pt.json';
+import nlPrivacy from '../../i18n/privacy/nl.json';
+import jaPrivacy from '../../i18n/privacy/ja.json';
+
+import elHome from '../../i18n/locales/el.json';
+import deHome from '../../i18n/locales/de.json';
+import frHome from '../../i18n/locales/fr.json';
+import arHome from '../../i18n/locales/ar.json';
+import esHome from '../../i18n/locales/es.json';
+import zhHome from '../../i18n/locales/zh.json';
+import ruHome from '../../i18n/locales/ru.json';
+import trHome from '../../i18n/locales/tr.json';
+import itHome from '../../i18n/locales/it.json';
+import ptHome from '../../i18n/locales/pt.json';
+import nlHome from '../../i18n/locales/nl.json';
+import jaHome from '../../i18n/locales/ja.json';
+
+import '../../styles/prose.css';
+
+const PRIVACY: Record<string, any> = {
+  el: elPrivacy,
+  de: dePrivacy,
+  fr: frPrivacy,
+  ar: arPrivacy,
+  es: esPrivacy,
+  zh: zhPrivacy,
+  ru: ruPrivacy,
+  tr: trPrivacy,
+  it: itPrivacy,
+  pt: ptPrivacy,
+  nl: nlPrivacy,
+  ja: jaPrivacy,
+};
+
+// Homepage locale JSON, needed only for its shared `.cookie` strings — the
+// live site uses one #cookieConsent banner with identical copy sitewide,
+// and the privacy JSON has no "cookie" key of its own.
+const HOME: Record<string, any> = {
+  el: elHome,
+  de: deHome,
+  fr: frHome,
+  ar: arHome,
+  es: esHome,
+  zh: zhHome,
+  ru: ruHome,
+  tr: trHome,
+  it: itHome,
+  pt: ptHome,
+  nl: nlHome,
+  ja: jaHome,
+};
+
+export function getStaticPaths() {
+  return nonDefaultLocaleParams();
+}
+
+const locale = getLocale(Astro.params.lang);
+const content = PRIVACY[locale.code];
+const homeContent = HOME[locale.code];
+
+const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
+
+// footer.connect.links[].icon is extracted as a legacy Font Awesome class
+// ("fab fa-instagram fa-2x"), but Footer.astro's Social.icon expects one of
+// the Icon kit's semantic names — passed through as-is, Icon.astro would
+// throw "Unknown icon" at build time. Map class → name, same idea as
+// Contact.astro's footnote-icon mapping. (content is typed `any` here via
+// the PRIVACY map, so astro check won't flag this on its own — verified and
+// fixed the same way as the English page regardless.)
+function socialIcon(faClass: string): 'instagram' | 'whatsapp' | 'envelope' {
+  if (/instagram/.test(faClass)) return 'instagram';
+  if (/whatsapp/.test(faClass)) return 'whatsapp';
+  return 'envelope';
+}
+const socialLinks = content.footer.connect.links.map((s: { href: string; ariaLabel: string; icon: string }) => ({
+  href: s.href,
+  ariaLabel: s.ariaLabel,
+  icon: socialIcon(s.icon),
+}));
+---
+
+<Base
+  locale={locale.code}
+  title={content.meta.title}
+  description={content.meta.description}
+  ogTitle={content.meta.ogTitle ?? undefined}
+  ogDescription={content.meta.ogDescription ?? undefined}
+  twitterTitle={content.meta.twitterTitle ?? undefined}
+  twitterDescription={content.meta.twitterDescription ?? undefined}
+  subpath="privacy-policy"
+  alternates={true}
+  robots="index, follow"
+  skipLinkLabel={content.skipLink.label}
+>
+  {jsonldBlocks.length > 0 && (
+    <Fragment slot="head">
+      {jsonldBlocks.map((block) => <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />)}
+    </Fragment>
+  )}
+
+  <CookieConsent
+    ariaLabel={homeContent.cookie.ariaLabel}
+    text={homeContent.cookie.text}
+    rejectLabel={homeContent.cookie.reject}
+    acceptLabel={homeContent.cookie.accept}
+  />
+
+  <Header
+    locale={locale.code}
+    nav={content.nav.items}
+    navAriaLabel={content.nav.ariaLabel}
+    brandAlt={content.nav.brand.alt}
+    homeHref={content.nav.brand.href}
+    menuToggleLabel={content.nav.toggleAriaLabel}
+    langTriggerLabel={homeContent.nav.langDrawer.ariaLabel}
+    drawerTitle={homeContent.nav.langDrawer.title}
+    drawerCloseLabel={homeContent.nav.langDrawer.close.ariaLabel}
+    bannerText=""
+    bannerSwitchLabel=""
+    bannerDismissLabel=""
+    subpath="privacy-policy"
+    showLanguageSwitcher={false}
+  />
+
+  <Breadcrumb
+    homeLabel={content.breadcrumb.items[0].label}
+    homeHref={content.breadcrumb.items[0].href as string}
+    current={content.breadcrumb.items[1].label}
+    ariaLabel={content.breadcrumb.ariaLabel}
+  />
+
+  <main id="main-content">
+    <section class="section section--dark">
+      <div class="container container--narrow">
+        <SectionHeader eyebrow={content.page.eyebrow} heading={content.page.h1} level="h1" align="start" />
+
+        <div class="prose">
+          {content.page.lastUpdated && <p class="privacy-meta" set:html={content.page.lastUpdated} />}
+
+          {content.page.intro.map((block: { tag: string; html?: string; items?: string[] }) =>
+            block.tag === 'ul' ? (
+              <ul>{(block.items ?? []).map((item) => <li set:html={item} />)}</ul>
+            ) : (
+              <p set:html={block.html} />
+            ),
+          )}
+
+          {content.page.disclaimer && <p class="privacy-disclaimer" set:html={content.page.disclaimer} />}
+
+          {content.page.sections.map((section: { heading: string; blocks: { tag: string; html?: string; items?: string[] }[] }) => (
+            <Fragment>
+              <h2 set:html={section.heading} />
+              {section.blocks.map((block) =>
+                block.tag === 'ul' ? (
+                  <ul>{(block.items ?? []).map((item) => <li set:html={item} />)}</ul>
+                ) : (
+                  <p set:html={block.html} />
+                ),
+              )}
+            </Fragment>
+          ))}
+
+          {content.page.cta && (
+            <p class="privacy-cta">
+              <Button href={content.page.cta.href} variant="primary" size="lg" set:html={content.page.cta.label} />
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer
+    locale={locale.code}
+    brandTitle={content.footer.brand.h3}
+    brandBlurb={content.footer.brand.text}
+    quickLinksTitle={content.footer.quickLinks.h3}
+    quickLinksAriaLabel={content.footer.quickLinks.ariaLabel}
+    links={content.footer.quickLinks.links}
+    languageTitle=""
+    connectTitle={content.footer.connect.h3}
+    social={socialLinks}
+    copyright={content.footer.copyright}
+    subpath="privacy-policy"
+    showLanguage={false}
+  />
+</Base>
+
+<style>
+  .privacy-meta {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+  }
+
+  .privacy-disclaimer {
+    font-size: var(--text-sm);
+    opacity: 0.75;
+  }
+
+  .privacy-cta {
+    margin-top: var(--space-7) !important;
+    text-align: center;
+  }
+</style>

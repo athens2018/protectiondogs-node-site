@@ -26,6 +26,8 @@ interface Props {
   /** Raw HTML including <span id="copyright-year">…</span> */
   copyright: string;
   subpath?: string;
+  /** Standalone pages (e.g. privacy policy) omit the Language column entirely — verified against the live source, which has no footer-lang markup there */
+  showLanguage?: boolean;
 }
 
 const {
@@ -40,6 +42,7 @@ const {
   social,
   copyright,
   subpath = '',
+  showLanguage = true,
 } = Astro.props;
 
 const locale = getLocale(localeCode);
@@ -67,22 +70,26 @@ const locale = getLocale(localeCode);
       </div>
 
       <div>
-        <h3 class="footer__title" set:html={languageTitle} />
-        <div class="footer-lang-list">
-          {LOCALES.map((l) => (
-            <a
-              href={localePath(l.code, subpath)}
-              hreflang={l.htmlLang}
-              lang={l.htmlLang}
-              class:list={['footer-lang', { 'footer-lang-active': l.code === locale.code }]}
-              aria-current={l.code === locale.code ? 'true' : undefined}
-            >
-              {l.nativeName}
-            </a>
-          ))}
-        </div>
+        {showLanguage && (
+          <Fragment>
+            <h3 class="footer__title" set:html={languageTitle} />
+            <div class="footer-lang-list">
+              {LOCALES.map((l) => (
+                <a
+                  href={localePath(l.code, subpath)}
+                  hreflang={l.htmlLang}
+                  lang={l.htmlLang}
+                  class:list={['footer-lang', { 'footer-lang-active': l.code === locale.code }]}
+                  aria-current={l.code === locale.code ? 'true' : undefined}
+                >
+                  {l.nativeName}
+                </a>
+              ))}
+            </div>
+          </Fragment>
+        )}
 
-        <h3 class="footer__title footer__title--spaced" set:html={connectTitle} />
+        <h3 class:list={['footer__title', { 'footer__title--spaced': showLanguage }]} set:html={connectTitle} />
         <div class="social-links">
           {social.map((s) => (
             <a href={s.href} aria-label={s.ariaLabel} class="social-link">

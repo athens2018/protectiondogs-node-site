@@ -26,6 +26,8 @@ interface Props {
   subpath?: string;
   /** English homepage only: offer the visitor's browser language (never a redirect) */
   showLangSuggest?: boolean;
+  /** Standalone pages (e.g. privacy policy) omit the language trigger/drawer entirely — verified against the live source, which has no lang-trigger/langDrawer markup there */
+  showLanguageSwitcher?: boolean;
 }
 
 const {
@@ -43,6 +45,7 @@ const {
   bannerDismissLabel,
   subpath = '',
   showLangSuggest = false,
+  showLanguageSwitcher = true,
 } = Astro.props;
 
 const locale = getLocale(localeCode);
@@ -65,18 +68,20 @@ const locale = getLocale(localeCode);
       </a>
 
       <div class="mobile-nav-controls">
-        <button
-          type="button"
-          class="lang-trigger lang-trigger--mobile"
-          id="mobileLangTrigger"
-          aria-haspopup="dialog"
-          aria-expanded="false"
-          aria-controls="langDrawer"
-          aria-label={langTriggerLabel}
-        >
-          <Icon name="globe" size="1.1em" />
-          <span class="lang-current">{locale.short}</span>
-        </button>
+        {showLanguageSwitcher && (
+          <button
+            type="button"
+            class="lang-trigger lang-trigger--mobile"
+            id="mobileLangTrigger"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="langDrawer"
+            aria-label={langTriggerLabel}
+          >
+            <Icon name="globe" size="1.1em" />
+            <span class="lang-current">{locale.short}</span>
+          </button>
+        )}
         <button
           class="navbar-toggler"
           type="button"
@@ -97,43 +102,49 @@ const locale = getLocale(localeCode);
               <a class="nav-link" href={item.href} set:html={item.label} />
             </li>
           ))}
-          <li class="nav-item lang-nav-item">
-            <button
-              type="button"
-              class="lang-trigger"
-              id="langTrigger"
-              aria-haspopup="dialog"
-              aria-expanded="false"
-              aria-controls="langDrawer"
-              aria-label={langTriggerLabel}
-            >
-              <Icon name="globe" size="1.1em" />
-              <span class="lang-current">{locale.short}</span>
-              <Icon name="chevron-down" size="0.9em" class="lang-chevron" />
-            </button>
-          </li>
+          {showLanguageSwitcher && (
+            <li class="nav-item lang-nav-item">
+              <button
+                type="button"
+                class="lang-trigger"
+                id="langTrigger"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="langDrawer"
+                aria-label={langTriggerLabel}
+              >
+                <Icon name="globe" size="1.1em" />
+                <span class="lang-current">{locale.short}</span>
+                <Icon name="chevron-down" size="0.9em" class="lang-chevron" />
+              </button>
+            </li>
+          )}
         </ul>
       </div>
     </div>
 
-    <div class="lang-drawer-backdrop" id="langDrawerBackdrop"></div>
-    <div class="lang-drawer" id="langDrawer" role="dialog" aria-label={drawerTitle}>
-      <button type="button" class="lang-drawer-close" id="langDrawerClose" aria-label={drawerCloseLabel}>&times;</button>
-      <p class="lang-drawer-title">{drawerTitle}</p>
-      <div class="lang-drawer-list">
-        {LOCALES.map((l) => (
-          <a
-            class:list={['lang-option', { 'is-active': l.code === locale.code }]}
-            href={localePath(l.code, subpath)}
-            hreflang={l.htmlLang}
-            lang={l.htmlLang}
-            aria-current={l.code === locale.code ? 'true' : undefined}
-          >
-            {l.nativeName}
-          </a>
-        ))}
-      </div>
-    </div>
+    {showLanguageSwitcher && (
+      <Fragment>
+        <div class="lang-drawer-backdrop" id="langDrawerBackdrop"></div>
+        <div class="lang-drawer" id="langDrawer" role="dialog" aria-label={drawerTitle}>
+          <button type="button" class="lang-drawer-close" id="langDrawerClose" aria-label={drawerCloseLabel}>&times;</button>
+          <p class="lang-drawer-title">{drawerTitle}</p>
+          <div class="lang-drawer-list">
+            {LOCALES.map((l) => (
+              <a
+                class:list={['lang-option', { 'is-active': l.code === locale.code }]}
+                href={localePath(l.code, subpath)}
+                hreflang={l.htmlLang}
+                lang={l.htmlLang}
+                aria-current={l.code === locale.code ? 'true' : undefined}
+              >
+                {l.nativeName}
+              </a>
+            ))}
+          </div>
+        </div>
+      </Fragment>
+    )}
   </nav>
 </header>
 
