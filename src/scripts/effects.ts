@@ -1,8 +1,9 @@
-// Pointer-only flourishes. Every one of these is an enhancement layered on a
-// page that is complete without it: hero cursor glow, magnetic primary
-// buttons, and the clip-path wipe for phase media. The wipe's hidden state
-// is gated in CSS by html.pdg-anim.pdg-io, so a script that never runs
-// leaves the media fully visible.
+// Pointer-only flourishes: hero cursor glow and magnetic primary buttons.
+// Every one of these is an enhancement layered on a page that is complete
+// without it. (The clip-path wipe for phase media used to be handled here
+// via a scroll IntersectionObserver, but that media starts inside a hidden
+// tab panel and a click — not a scroll — is what reveals it, so that reveal
+// now lives in phases.ts's activate(), right where the panel is shown.)
 export function initEffects(): void {
   const hoverCapable = window.matchMedia('(hover: hover)').matches;
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -29,23 +30,5 @@ export function initEffects(): void {
         btn.style.transform = '';
       });
     });
-  }
-
-  const wipes = document.querySelectorAll<HTMLElement>('.wipe-reveal');
-  if (wipes.length && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('wipe-revealed');
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-    wipes.forEach((el) => observer.observe(el));
-  } else {
-    wipes.forEach((el) => el.classList.add('wipe-revealed'));
   }
 }

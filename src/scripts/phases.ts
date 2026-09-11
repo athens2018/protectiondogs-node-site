@@ -40,6 +40,22 @@ export function initPhases(): void {
         if (on) video.play().catch(() => {});
         else video.pause();
       });
+      // Phase media starts inside a hidden (display:none) panel, so a
+      // scroll-triggered IntersectionObserver never gets a real chance to
+      // see it — observing it at page load reports "not intersecting" once
+      // and nothing reliably re-checks it after `hidden` is later cleared.
+      // Tab content is shown by a deliberate click, not by scrolling into
+      // view, so reveal its wipe-reveal media directly the moment its panel
+      // becomes the active one instead of relying on scroll intersection.
+      // Deferred one frame so the browser paints the still-clipped state
+      // first (display:none -> display:block and the reveal class in the
+      // same tick would skip straight to the end state with no transition).
+      if (on) {
+        const media = panel.querySelectorAll('.wipe-reveal');
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => media.forEach((el) => el.classList.add('wipe-revealed')));
+        });
+      }
     });
 
     if (currentOut) currentOut.textContent = String(current);
