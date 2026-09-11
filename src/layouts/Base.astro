@@ -1,0 +1,105 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/playfair-display';
+import '../styles/global.css';
+import { getLocale, hreflangAlternates, localeUrl, LOCALES, DEFAULT_LOCALE, SITE_ORIGIN } from '../lib/i18n';
+
+interface Props {
+  locale: string;
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  ogImage?: string;
+  /** Path under the locale prefix, e.g. '' for the homepage or 'privacy-policy' */
+  subpath?: string;
+  /** Emit the reciprocal 13-locale hreflang cluster (pages that exist in every language) */
+  alternates?: boolean;
+  robots?: string;
+  /** Only the bare root (x-default) honours a previously saved language choice */
+  langRedirect?: boolean;
+  skipLinkLabel?: string;
+  bodyClass?: string;
+}
+
+const {
+  locale: localeCode,
+  title,
+  description,
+  ogTitle = title,
+  ogDescription = description,
+  twitterTitle = ogTitle,
+  twitterDescription = ogDescription,
+  ogImage = '/images/hero1.jpg',
+  subpath = '',
+  alternates = true,
+  robots = 'index, follow',
+  langRedirect = false,
+  skipLinkLabel = 'Skip to main content',
+  bodyClass,
+} = Astro.props;
+
+const locale = getLocale(localeCode);
+const canonical = localeUrl(locale.code, subpath);
+const ogLocaleMap: Record<string, string> = {
+  en: 'en_US', el: 'el_GR', de: 'de_DE', fr: 'fr_FR', ar: 'ar_AR', es: 'es_ES', zh: 'zh_CN',
+  ru: 'ru_RU', tr: 'tr_TR', it: 'it_IT', pt: 'pt_PT', nl: 'nl_NL', ja: 'ja_JP',
+};
+const alternateList = alternates ? hreflangAlternates(subpath) : [];
+const redirectTargets = Object.fromEntries(
+  LOCALES.filter((l) => l.code !== DEFAULT_LOCALE).map((l) => [l.prefCode, localeUrl(l.code, subpath)]),
+);
+---
+
+<!doctype html>
+<html lang={locale.htmlLang} dir={locale.dir}>
+  <head>
+    <meta charset="UTF-8" />
+    {langRedirect && (
+      <script is:inline define:vars={{ redirectTargets }}>
+        (function () {
+          try {
+            var pref = localStorage.getItem('pdg-lang-pref');
+            if (pref && redirectTargets[pref]) {
+              window.location.replace(redirectTargets[pref]);
+            }
+          } catch (e) {}
+        })();
+      </script>
+    )}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){document.documentElement.classList.add('pdg-anim');}</script>
+    <meta name="google" content="notranslate" />
+    <meta name="theme-color" content="#0d0d0d" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="googlebot" content={`${robots}, max-image-preview:large`} />
+    {alternateList.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/png" href="/app-icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/app-icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/app-icons/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/app-icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${SITE_ORIGIN}${ogImage}`} />
+    <meta property="og:locale" content={ogLocaleMap[locale.code]} />
+    <meta property="og:locale:alternate" content={locale.code === 'en' ? 'en_GB' : locale.code === 'nl' ? 'nl_BE' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={twitterTitle} />
+    <meta name="twitter:description" content={twitterDescription} />
+    <meta name="twitter:image" content={`${SITE_ORIGIN}${ogImage}`} />
+    <link rel="canonical" href={canonical} />
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main-content">{skipLinkLabel}</a>
+    <slot />
+  </body>
+</html>

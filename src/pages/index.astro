@@ -1,17 +1,23 @@
 ---
+import Base from '../layouts/Base.astro';
+import facts from '../data/facts.json';
 
+const f = facts.formats.en;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base
+  locale="en"
+  title="Belgian Malinois Protection Dogs | Protection Dogs GR"
+  description="Trained Belgian Malinois protection dogs, developed through a hands-on system for real protection needs. A small number raised at a time."
+  langRedirect
+>
+  <main id="main-content">
+    <section class="section section--deep">
+      <div class="container">
+        <p class="eyebrow">Toolchain smoke test</p>
+        <h1>Built one at a time.</h1>
+        <p>{facts.facts.dog_name} — {f.stage_display} — €{f.price_current}</p>
+      </div>
+    </section>
+  </main>
+</Base>

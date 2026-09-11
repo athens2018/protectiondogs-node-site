@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import facts from '../../data/facts.json';
+import { getLocale, nonDefaultLocaleParams } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return nonDefaultLocaleParams();
+}
+
+const locale = getLocale(Astro.params.lang);
+const f = facts.formats[locale.code as keyof typeof facts.formats];
+---
+
+<Base locale={locale.code} title={`Smoke test — ${locale.htmlLang}`} description="Toolchain smoke test">
+  <main id="main-content">
+    <section class="section section--deep">
+      <div class="container">
+        <p class="eyebrow">{locale.htmlLang} · {locale.dir}</p>
+        <h1>{facts.facts.dog_name}</h1>
+        <p set:html={`${f.stage_display} — €${f.price_current}`} />
+      </div>
+    </section>
+  </main>
+</Base>

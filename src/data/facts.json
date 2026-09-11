@@ -1,0 +1,162 @@
+{
+  "_readme": "SINGLE SOURCE OF TRUTH for language-independent commercial facts and shared media, direct successor to the live site's site-data.json. Edit this file; every locale's template data flows from it. Never hardcode a price/date/status string in a component or a locale JSON file.",
+  "facts": {
+    "dog_name": "Bobo",
+    "dog_dob_iso": "2026-03-11",
+    "current_price": "50000",
+    "future_price": "70000",
+    "currency": "EUR",
+    "currency_symbol": "€",
+    "next_litter_period": "2026-Q4",
+    "available_for_reservation": true
+  },
+  "_formats_note": "Display formatting (thousands separator, date format, 'Late 2026' phrasing) is language-specific because e.g. Greek writes 50.000 and English writes 50,000. Keys must exist for every locale in astro.config.mjs's i18n.locales.",
+  "formats": {
+    "en": {
+      "price_current": "50,000",
+      "price_future": "70,000",
+      "dob_display": "Mar 11, 2026",
+      "next_litter": "Late 2026",
+      "next_litter_label": "Expected",
+      "status_display": "Available for Reservation",
+      "stage_display": "Protection Dog &middot; In Development"
+    },
+    "el": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11 Μαρ, 2026",
+      "next_litter": "Τέλη 2026",
+      "next_litter_label": "Αναμένεται",
+      "status_display": "Διαθέσιμος για Κράτηση",
+      "stage_display": "Σκύλος Προστασίας &middot; Σε Ανάπτυξη"
+    },
+    "de": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11. März 2026",
+      "next_litter": "Ende 2026",
+      "next_litter_label": "Erwartet",
+      "status_display": "Reservierung möglich",
+      "stage_display": "Schutzhund &middot; In Ausbildung"
+    },
+    "fr": {
+      "price_current": "50 000",
+      "price_future": "70 000",
+      "dob_display": "11 mars 2026",
+      "next_litter": "fin 2026",
+      "next_litter_label": "Prévue",
+      "status_display": "Réservation possible",
+      "stage_display": "Chien de protection &middot; En formation"
+    },
+    "ar": {
+      "price_current": "50,000",
+      "price_future": "70,000",
+      "dob_display": "11 مارس 2026",
+      "next_litter": "أواخر 2026",
+      "next_litter_label": "متوقع",
+      "status_display": "متاح للحجز",
+      "stage_display": "كلب حماية &middot; قيد الإعداد"
+    },
+    "es": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11 de marzo de 2026",
+      "next_litter": "finales de 2026",
+      "next_litter_label": "Previsto",
+      "status_display": "Reserva disponible",
+      "stage_display": "Perro de protección &middot; En formación"
+    },
+    "zh": {
+      "price_current": "50,000",
+      "price_future": "70,000",
+      "dob_display": "2026年3月11日",
+      "next_litter": "2026年底",
+      "next_litter_label": "预计",
+      "status_display": "可预订",
+      "stage_display": "护卫犬 &middot; 训练中"
+    },
+    "ru": {
+      "price_current": "50 000",
+      "price_future": "70 000",
+      "dob_display": "11 марта 2026 г.",
+      "next_litter": "конец 2026 года",
+      "next_litter_label": "Ожидается",
+      "status_display": "Доступна для брони",
+      "stage_display": "Защитная собака &middot; В подготовке"
+    },
+    "tr": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11 Mart 2026",
+      "next_litter": "2026 sonu",
+      "next_litter_label": "Beklenen",
+      "status_display": "Rezervasyona açık",
+      "stage_display": "Koruma köpeği &middot; Eğitimde"
+    },
+    "it": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11 marzo 2026",
+      "next_litter": "fine 2026",
+      "next_litter_label": "Previsto",
+      "status_display": "Prenotazione aperta",
+      "stage_display": "Cane da protezione &middot; in addestramento"
+    },
+    "pt": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11 de março de 2026",
+      "next_litter": "fim de 2026",
+      "next_litter_label": "Previsto",
+      "status_display": "Reserva aberta",
+      "stage_display": "Cão de proteção &middot; em treino"
+    },
+    "nl": {
+      "price_current": "50.000",
+      "price_future": "70.000",
+      "dob_display": "11 maart 2026",
+      "next_litter": "eind 2026",
+      "next_litter_label": "Verwacht",
+      "status_display": "Beschikbaar voor Reservering",
+      "stage_display": "Beschermhond &middot; In Ontwikkeling"
+    },
+    "ja": {
+      "price_current": "50,000",
+      "price_future": "70,000",
+      "dob_display": "2026年3月11日",
+      "next_litter": "2026年末",
+      "next_litter_label": "予定",
+      "status_display": "予約受付中",
+      "stage_display": "護衛犬 &middot; 育成中"
+    }
+  },
+  "_media_note": "Shared image/video assignments. Paths are relative to /public — copy the referenced files from the live site's images/ folder into node-site/public/images/ verbatim.",
+  "media": {
+    "hero_1": "/images/hero1.jpg",
+    "hero_2": "/images/hero2.jpg",
+    "hero_3": "/images/hero3.jpg",
+    "dog_primary": "/images/bobo-beach-15840.avif",
+    "phase_1": "/images/bobo-training-15888-poster.webp",
+    "phase_2": "/images/bobo-training-15891-poster.webp",
+    "phase_3": "/images/bobo-training-15890-poster.webp",
+    "phase_4": "/images/elite-protection-dog-training.avif",
+    "video_phase_1": "/images/bobo-training-15888.mp4",
+    "video_phase_2": "/images/bobo-training-15891.mp4",
+    "video_phase_3": "/images/bobo-training-15890.mp4",
+    "story_video_1": "/images/bobo-training-15893.mp4",
+    "story_0": "/images/bobo-beach-15840.avif",
+    "story_1": "/images/bobo-training-15893-poster.webp",
+    "story_2": "/images/bobo-training-15888-poster.webp",
+    "story_3": "/images/bobo-beach-15842.avif",
+    "phase_5": "/images/nikky1.avif",
+    "partner_logo": "/images/safari-medic.jpg",
+    "logo": "/images/logo.png",
+    "og_image": "/images/hero1.jpg"
+  },
+  "contact": {
+    "email": "contact@protectiondogs.gr",
+    "whatsapp_e164": "306931736026",
+    "phone_display": "+30 693 173 6026",
+    "instagram": "protectiondogsgr"
+  }
+}
