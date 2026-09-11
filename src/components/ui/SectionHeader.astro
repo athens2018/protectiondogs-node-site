@@ -1,0 +1,69 @@
+---
+interface Props {
+  /** Raw HTML from the locale JSON (rendered with set:html, may contain entities/inline tags) */
+  heading: string;
+  eyebrow?: string;
+  intro?: string;
+  align?: 'center' | 'start';
+  id?: string;
+  /** Use h1 only for standalone pages; the homepage sections are h2 */
+  level?: 'h1' | 'h2';
+  class?: string;
+}
+
+const { heading, eyebrow, intro, align = 'center', id, level = 'h2', class: className } = Astro.props;
+const Heading = level;
+---
+
+<header class:list={['section-header', `section-header--${align}`, className]}>
+  {eyebrow && <p class="eyebrow reveal" set:html={eyebrow} />}
+  <Heading id={id} class="section-header__title reveal" style="--reveal-delay: 80ms" set:html={heading} />
+  <span class="section-header__rule reveal" style="--reveal-delay: 160ms" aria-hidden="true"></span>
+  {intro && <p class="section-header__intro reveal" style="--reveal-delay: 220ms" set:html={intro} />}
+  <slot />
+</header>
+
+<style>
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .section-header--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-header--start {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .section-header__title {
+    color: var(--gold);
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+
+  .section-header__rule {
+    display: block;
+    width: 3.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    border-radius: var(--radius-pill);
+  }
+
+  .section-header--center .section-header__rule {
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .section-header__intro {
+    max-width: var(--measure);
+    font-size: var(--text-md);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+    text-wrap: pretty;
+  }
+</style>

@@ -1,0 +1,120 @@
+---
+interface Dot {
+  href: string;
+  section: string;
+  label: string;
+}
+
+interface Props {
+  dots: Dot[];
+  ariaLabel: string;
+}
+
+const { dots, ariaLabel } = Astro.props;
+---
+
+<nav class="section-dots" aria-label={ariaLabel}>
+  {dots.map((dot) => (
+    <a href={dot.href} class="section-dot" data-section={dot.section} aria-label={dot.label}>
+      <span class="dot-tooltip" set:html={dot.label} />
+    </a>
+  ))}
+</nav>
+
+<style>
+  .section-dots {
+    position: fixed;
+    inset-inline-end: clamp(8px, 1.5vw, 22px);
+    top: 50%;
+    z-index: var(--z-dots);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transform: translateY(-50%);
+  }
+
+  .section-dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+  }
+
+  .section-dot::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transition:
+      transform var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out);
+  }
+
+  .section-dot:hover::before,
+  .section-dot:focus-visible::before {
+    background: var(--text-strong);
+    transform: scale(1.4);
+  }
+
+  .section-dot.active::before {
+    background: var(--gold);
+    transform: scale(1.5);
+    box-shadow: 0 0 0 4px var(--gold-20);
+  }
+
+  .dot-tooltip {
+    position: absolute;
+    inset-inline-end: calc(100% + 6px);
+    top: 50%;
+    padding: 0.3rem 0.65rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(6px, -50%);
+    pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+  }
+
+  [dir='rtl'] .dot-tooltip {
+    transform: translate(-6px, -50%);
+  }
+
+  .section-dot:hover .dot-tooltip,
+  .section-dot:focus-visible .dot-tooltip {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+
+  /* Owner requirement: the dots stay visible on phones. Kept slim so they never
+     cover copy; the touch target is the 22px box, not the 6px dot. */
+  @media (max-width: 767px) {
+    .section-dots {
+      gap: 4px;
+    }
+
+    .section-dot {
+      width: 20px;
+      height: 20px;
+    }
+
+    .section-dot::before {
+      width: 5px;
+      height: 5px;
+    }
+
+    .dot-tooltip {
+      display: none;
+    }
+  }
+</style>

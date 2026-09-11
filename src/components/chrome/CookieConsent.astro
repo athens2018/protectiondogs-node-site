@@ -1,0 +1,72 @@
+---
+import Button from '../ui/Button.astro';
+
+interface Props {
+  text: string;
+  rejectLabel: string;
+  acceptLabel: string;
+  ariaLabel: string;
+}
+
+const { text, rejectLabel, acceptLabel, ariaLabel } = Astro.props;
+---
+
+<div id="cookieConsent" class="cookie-consent" role="dialog" aria-label={ariaLabel} aria-hidden="true">
+  <p class="cookie-consent-text" set:html={text} />
+  <div class="cookie-consent-actions">
+    <Button id="cookieReject" variant="outline" size="md" set:html={rejectLabel} />
+    <Button id="cookieAccept" variant="primary" size="md" set:html={acceptLabel} />
+  </div>
+</div>
+
+<style>
+  .cookie-consent {
+    position: fixed;
+    inset-inline-start: 20px;
+    inset-inline-end: 20px;
+    bottom: 20px;
+    z-index: var(--z-toast);
+    max-width: 480px;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line-gold);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lift);
+    opacity: 0;
+    transform: translateY(16px);
+    visibility: hidden;
+    transition:
+      opacity var(--dur-slow) var(--ease-out),
+      transform var(--dur-slow) var(--ease-out),
+      visibility 0s linear var(--dur-slow);
+  }
+
+  .cookie-consent.visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  .cookie-consent-text {
+    margin-bottom: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--text);
+    line-height: var(--leading-relaxed);
+  }
+
+  .cookie-consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 576px) {
+    .cookie-consent {
+      inset-inline: 12px;
+      bottom: 12px;
+      padding: 1rem 1.15rem;
+    }
+  }
+</style>

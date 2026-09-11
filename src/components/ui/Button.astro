@@ -1,0 +1,182 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Variant = 'primary' | 'outline' | 'ghost';
+type Size = 'md' | 'lg';
+
+interface Props extends HTMLAttributes<'a'>, Omit<HTMLAttributes<'button'>, 'type'> {
+  href?: string;
+  variant?: Variant;
+  size?: Size;
+  type?: 'button' | 'submit';
+  block?: boolean;
+}
+
+const {
+  href,
+  variant = 'primary',
+  size = 'md',
+  type = 'button',
+  block = false,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  href={href}
+  type={href ? undefined : type}
+  class:list={['btn', `btn--${variant}`, `btn--${size}`, { 'btn--block': block }, className]}
+  {...rest}
+>
+  <span class="btn__label"><slot /></span>
+  <span class="btn__sheen" aria-hidden="true"></span>
+</Tag>
+
+<style>
+  .btn {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    min-height: 3rem;
+    padding: 0.85em 1.75em;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-button);
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    transition:
+      transform var(--dur-base) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out),
+      color var(--dur-base) var(--ease-out);
+  }
+
+  .btn--lg {
+    min-height: 3.5rem;
+    padding: 1em 2.25em;
+    font-size: var(--text-base);
+  }
+
+  .btn--block {
+    display: flex;
+    width: 100%;
+  }
+
+  .btn__label {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn__sheen {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.28) 50%, transparent 70%);
+    transform: translateX(-120%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+    transition-duration: var(--dur-fast);
+  }
+
+  /* Primary: solid gold, the one high-emphasis action on any screen */
+  .btn--primary {
+    background: var(--gold);
+    color: var(--text-on-gold);
+    border-color: var(--gold);
+    box-shadow: 0 6px 18px rgba(244, 180, 0, 0.16);
+  }
+
+  .btn--primary:hover {
+    background: var(--gold-hover);
+    border-color: var(--gold-hover);
+    color: var(--text-on-gold);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn--primary:hover .btn__sheen {
+    opacity: 1;
+    transition: transform 0.9s var(--ease-out), opacity var(--dur-fast);
+    transform: translateX(120%);
+  }
+
+  /* Outline: hairline gold, fills softly on hover */
+  .btn--outline {
+    background: transparent;
+    color: var(--gold);
+    border-color: var(--line-gold);
+  }
+
+  .btn--outline:hover {
+    background: var(--gold-10);
+    border-color: var(--gold);
+    color: var(--gold-hover);
+  }
+
+  /* Ghost: text with an animated underline, for tertiary links */
+  .btn--ghost {
+    min-height: auto;
+    padding: 0.35em 0;
+    border-radius: 0;
+    background: none;
+    color: var(--gold);
+    overflow: visible;
+  }
+
+  .btn--ghost::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0.35);
+    transform-origin: inline-start;
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  .btn--ghost:hover {
+    transform: none;
+    color: var(--gold-hover);
+  }
+
+  .btn--ghost:hover::after {
+    transform: scaleX(1);
+  }
+
+  .btn--ghost .btn__sheen {
+    display: none;
+  }
+
+  .btn[disabled],
+  .btn[aria-disabled='true'] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  @media (max-width: 480px) {
+    .btn {
+      white-space: normal;
+    }
+  }
+</style>

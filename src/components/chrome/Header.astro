@@ -1,0 +1,544 @@
+---
+import Icon from '../ui/Icon.astro';
+import { LOCALES, getLocale, localePath } from '../../lib/i18n';
+
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  locale: string;
+  nav: NavItem[];
+  navAriaLabel: string;
+  brandAlt: string;
+  homeHref: string;
+  menuToggleLabel: string;
+  langTriggerLabel: string;
+  drawerTitle: string;
+  drawerCloseLabel: string;
+  /** Raw HTML containing <strong id="langSuggestName"></strong> */
+  bannerText: string;
+  bannerSwitchLabel: string;
+  bannerDismissLabel: string;
+  /** Path under each locale prefix for the language links ('' on the homepage) */
+  subpath?: string;
+}
+
+const {
+  locale: localeCode,
+  nav,
+  navAriaLabel,
+  brandAlt,
+  homeHref,
+  menuToggleLabel,
+  langTriggerLabel,
+  drawerTitle,
+  drawerCloseLabel,
+  bannerText,
+  bannerSwitchLabel,
+  bannerDismissLabel,
+  subpath = '',
+} = Astro.props;
+
+const locale = getLocale(localeCode);
+const suggestNames = Object.fromEntries(LOCALES.filter((l) => l.code !== locale.code).map((l) => [l.code, l.nativeName]));
+const suggestUrls = Object.fromEntries(LOCALES.filter((l) => l.code !== locale.code).map((l) => [l.code, localePath(l.code, subpath)]));
+---
+
+<header class="site-header">
+  <div id="langSuggestBanner" class="lang-suggest-banner" hidden>
+    <span class="lang-suggest-text" set:html={bannerText} />
+    <a href="#" id="langSuggestSwitch" class="lang-suggest-switch">{bannerSwitchLabel}</a>
+    <button type="button" class="lang-suggest-dismiss" aria-label={bannerDismissLabel}>&times;</button>
+  </div>
+  <script is:inline define:vars={{ suggestNames, suggestUrls }}>
+    // Decides before first paint whether the language suggestion shows, so it
+    // never flashes in late, and reserves its height for the fixed header.
+    (function () {
+      try {
+        var pref = localStorage.getItem('pdg-lang-pref');
+        var dismissed = localStorage.getItem('pdg-lang-suggest-dismissed') === 'true';
+        if (pref || dismissed) return;
+        var langs = navigator.languages || [navigator.language || ''];
+        var code = null;
+        for (var i = 0; i < langs.length; i++) {
+          var c = (langs[i] || '').split('-')[0].toLowerCase();
+          if (suggestNames[c]) { code = c; break; }
+        }
+        if (!code) return;
+        var banner = document.getElementById('langSuggestBanner');
+        if (!banner) return;
+        document.getElementById('langSuggestName').textContent = suggestNames[code];
+        var link = document.getElementById('langSuggestSwitch');
+        link.href = suggestUrls[code];
+        link.setAttribute('data-lang-code', code);
+        banner.hidden = false;
+        document.documentElement.style.setProperty('--banner-h', (window.innerWidth <= 576 ? 44 : 38) + 'px');
+      } catch (e) {}
+    })();
+  </script>
+
+  <nav class="navbar" aria-label={navAriaLabel}>
+    <div class="container container--wide navbar__inner">
+      <a class="navbar-brand" href={homeHref}>
+        <img src="/images/logo.webp" alt={brandAlt} width="270" height="270" fetchpriority="high" />
+      </a>
+
+      <div class="mobile-nav-controls">
+        <button
+          type="button"
+          class="lang-trigger lang-trigger--mobile"
+          id="mobileLangTrigger"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="langDrawer"
+          aria-label={langTriggerLabel}
+        >
+          <Icon name="globe" size="1.1em" />
+          <span class="lang-current">{locale.short}</span>
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label={menuToggleLabel}
+        >
+          <span class="navbar-toggler__bar" aria-hidden="true"></span>
+          <span class="navbar-toggler__bar" aria-hidden="true"></span>
+          <span class="navbar-toggler__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          {nav.map((item) => (
+            <li class="nav-item">
+              <a class="nav-link" href={item.href} set:html={item.label} />
+            </li>
+          ))}
+          <li class="nav-item lang-nav-item">
+            <button
+              type="button"
+              class="lang-trigger"
+              id="langTrigger"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="langDrawer"
+              aria-label={langTriggerLabel}
+            >
+              <Icon name="globe" size="1.1em" />
+              <span class="lang-current">{locale.short}</span>
+              <Icon name="chevron-down" size="0.9em" class="lang-chevron" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lang-drawer-backdrop" id="langDrawerBackdrop"></div>
+    <div class="lang-drawer" id="langDrawer" role="dialog" aria-label={drawerTitle}>
+      <button type="button" class="lang-drawer-close" id="langDrawerClose" aria-label={drawerCloseLabel}>&times;</button>
+      <p class="lang-drawer-title">{drawerTitle}</p>
+      <div class="lang-drawer-list">
+        {LOCALES.map((l) => (
+          <a
+            class:list={['lang-option', { 'is-active': l.code === locale.code }]}
+            href={localePath(l.code, subpath)}
+            hreflang={l.htmlLang}
+            lang={l.htmlLang}
+            aria-current={l.code === locale.code ? 'true' : undefined}
+          >
+            {l.nativeName}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: var(--z-nav);
+  }
+
+  /* ----- Language suggestion banner ----- */
+  .lang-suggest-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    min-height: 38px;
+    padding: 0.4rem var(--gutter);
+    background: var(--gold);
+    color: var(--text-on-gold);
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+
+  .lang-suggest-banner[hidden] {
+    display: none;
+  }
+
+  .lang-suggest-switch {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .lang-suggest-dismiss {
+    font-size: 1.4rem;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.75;
+    padding: 0 0.25rem;
+  }
+
+  .lang-suggest-dismiss:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 576px) {
+    .lang-suggest-banner {
+      min-height: 44px;
+      gap: var(--space-3);
+    }
+  }
+
+  /* ----- Bar ----- */
+  .navbar {
+    position: relative;
+    height: var(--nav-h);
+    background: rgba(13, 13, 13, 0.55);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color var(--dur-slow) var(--ease-out),
+      border-color var(--dur-slow) var(--ease-out);
+  }
+
+  .navbar.navbar-scrolled {
+    background: rgba(13, 13, 13, 0.88);
+    border-bottom-color: var(--line);
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    height: 100%;
+  }
+
+  .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .navbar-brand img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .mobile-nav-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .navbar-toggler {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line-strong);
+  }
+
+  .navbar-toggler__bar {
+    display: block;
+    height: 2px;
+    background: var(--text-strong);
+    border-radius: 2px;
+    transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out);
+    transform-origin: center;
+  }
+
+  .navbar-toggler[aria-expanded='true'] .navbar-toggler__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .navbar-toggler[aria-expanded='true'] .navbar-toggler__bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggler[aria-expanded='true'] .navbar-toggler__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.25rem, 1vw, 0.75rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.55rem 0.85rem;
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color var(--dur-base) var(--ease-out);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0.85rem;
+    bottom: 0.25rem;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: inline-start;
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    color: var(--text-strong);
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .lang-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    height: 40px;
+    padding: 0 0.9rem;
+    border: 1px solid var(--line-gold);
+    border-radius: var(--radius-pill);
+    color: var(--gold);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition: background-color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  }
+
+  .lang-trigger:hover,
+  .lang-trigger[aria-expanded='true'] {
+    background: var(--gold-10);
+    border-color: var(--gold);
+  }
+
+  .lang-chevron {
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  .lang-trigger[aria-expanded='true'] .lang-chevron {
+    transform: rotate(180deg);
+  }
+
+  .lang-trigger--mobile {
+    height: 40px;
+  }
+
+  /* ----- Language drawer ----- */
+  .lang-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  .lang-drawer-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lang-drawer {
+    position: absolute;
+    inset-inline-end: var(--gutter);
+    top: calc(100% + 10px);
+    width: min(360px, calc(100vw - 2 * var(--gutter)));
+    padding: var(--space-5);
+    background: var(--bg-elevated);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lift);
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    visibility: hidden;
+    transition:
+      opacity var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out),
+      visibility 0s linear var(--dur-base);
+  }
+
+  .lang-drawer.open {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  .lang-drawer-close {
+    display: none;
+  }
+
+  .lang-drawer-title {
+    margin-bottom: var(--space-4);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .lang-drawer-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem 0.75rem;
+  }
+
+  .lang-option {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: var(--text-sm);
+    transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+  }
+
+  .lang-option:hover,
+  .lang-option:focus-visible {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-strong);
+  }
+
+  .lang-option.is-active {
+    color: var(--gold);
+    font-weight: 600;
+    background: var(--gold-10);
+  }
+
+  /* ----- Mobile ----- */
+  @media (min-width: 992px) {
+    .mobile-nav-controls {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .lang-nav-item {
+      display: none;
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      inset-inline: 0;
+      top: 100%;
+      max-height: 0;
+      overflow: hidden;
+      background: rgba(13, 13, 13, 0.97);
+      border-bottom: 1px solid var(--line);
+      transition: max-height var(--dur-slow) var(--ease-out);
+    }
+
+    .navbar-collapse.show {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: var(--space-3) var(--gutter) var(--space-5);
+    }
+
+    .nav-link {
+      display: block;
+      padding: 0.9rem 0.5rem;
+      font-size: var(--text-base);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-link::after {
+      display: none;
+    }
+
+    .lang-drawer {
+      position: fixed;
+      inset-inline: 0;
+      top: auto;
+      bottom: 0;
+      width: auto;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: var(--space-5) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      border-bottom: 0;
+      transform: translateY(100%);
+    }
+
+    .lang-drawer.open {
+      transform: none;
+    }
+
+    .lang-drawer-backdrop {
+      z-index: auto;
+    }
+
+    .lang-drawer-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      inset-inline-end: var(--space-4);
+      top: var(--space-3);
+      width: 40px;
+      height: 40px;
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--text-muted);
+      border-radius: 50%;
+    }
+
+    .lang-drawer-close:hover {
+      color: var(--text-strong);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .lang-option {
+      padding: 0.8rem 0.75rem;
+      font-size: var(--text-base);
+    }
+  }
+</style>

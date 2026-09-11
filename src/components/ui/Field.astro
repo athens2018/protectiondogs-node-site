@@ -1,0 +1,155 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Kind = 'text' | 'email' | 'tel' | 'textarea' | 'select';
+
+interface Option {
+  value: string;
+  /** Raw HTML label from the locale JSON */
+  label: string;
+  disabled?: boolean;
+  selected?: boolean;
+}
+
+interface Props extends HTMLAttributes<'input'> {
+  id: string;
+  name: string;
+  /** Raw HTML label from the locale JSON */
+  label: string;
+  kind?: Kind;
+  options?: Option[];
+  rows?: number;
+  /** Adds the live-region error container the validation script writes into */
+  validated?: boolean;
+}
+
+const {
+  id,
+  name,
+  label,
+  kind = 'text',
+  options = [],
+  rows = 5,
+  validated = false,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const errorId = `${id}-error`;
+const control = validated ? { 'aria-describedby': errorId } : {};
+---
+
+<div class:list={['field', className]}>
+  <label class="field__label" for={id} set:html={label} />
+  {kind === 'textarea' ? (
+    <textarea class="field__control field__control--area" id={id} name={name} rows={rows} {...control} {...rest} />
+  ) : kind === 'select' ? (
+    <div class="field__select-wrap">
+      <select class="field__control field__control--select" id={id} name={name} {...control} {...rest}>
+        {options.map((o) => (
+          <option value={o.value} disabled={o.disabled} selected={o.selected} set:html={o.label} />
+        ))}
+      </select>
+      <svg class="field__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+    </div>
+  ) : (
+    <input class="field__control" type={kind} id={id} name={name} {...control} {...rest} />
+  )}
+  {validated && <div class="field__error" id={errorId} role="alert" aria-live="polite"></div>}
+</div>
+
+<style>
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .field__label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--gold);
+  }
+
+  .field__control {
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.1rem;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    font-size: var(--text-base);
+    line-height: 1.4;
+    transition:
+      border-color var(--dur-base) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out);
+  }
+
+  .field__control::placeholder {
+    color: var(--text-faint);
+  }
+
+  .field__control:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .field__control:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 4px var(--gold-20);
+  }
+
+  .field__control[aria-invalid='true'] {
+    border-color: var(--error);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.18);
+  }
+
+  .field__control--area {
+    resize: vertical;
+    min-height: 9rem;
+  }
+
+  .field__select-wrap {
+    position: relative;
+  }
+
+  .field__control--select {
+    appearance: none;
+    padding-inline-end: 3rem;
+    cursor: pointer;
+  }
+
+  .field__control--select option {
+    background: var(--bg-2);
+    color: var(--text);
+  }
+
+  .field__chevron {
+    position: absolute;
+    inset-inline-end: 1.1rem;
+    top: 50%;
+    width: 1.1rem;
+    height: 1.1rem;
+    transform: translateY(-50%);
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+  }
+
+  .field__error {
+    min-height: 1.2em;
+    font-size: var(--text-sm);
+    color: var(--error);
+  }
+
+  .field__error:empty {
+    display: none;
+  }
+</style>

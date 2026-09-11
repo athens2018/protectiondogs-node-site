@@ -1,0 +1,370 @@
+---
+import Button from '../ui/Button.astro';
+
+interface HeroImage {
+  base: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface Props {
+  ariaLabel: string;
+  eyebrow: string;
+  /** Raw HTML with one <span> per word (word-reveal) */
+  heading: string;
+  lead: string;
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel: string;
+  secondaryHref: string;
+  /** Image basenames without extension, e.g. /images/hero1 — .avif/.webp/.jpg variants exist */
+  images: HeroImage[];
+  videoSrc: string;
+  videoPoster: string;
+}
+
+const {
+  ariaLabel,
+  eyebrow,
+  heading,
+  lead,
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+  images,
+  videoSrc,
+  videoPoster,
+} = Astro.props;
+---
+
+<!-- FAIL-SAFE: nothing in this section has a resting opacity below 1 and no
+     element depends on a script or the video to be visible. Entrance
+     animations exist only under html.pdg-anim (one-line head script). -->
+<section class="hero" aria-label={ariaLabel}>
+  <div class="hero__media" aria-hidden="true">
+    <video
+      class="hero__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster={videoPoster}
+      tabindex="-1"
+    >
+      <source src={videoSrc} type="video/mp4" />
+    </video>
+    <div class="hero__grain"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__shade"></div>
+  </div>
+
+  <div class="container container--wide hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow hero-reveal" set:html={eyebrow} />
+      <h1 class="hero__title word-reveal" set:html={heading} />
+      <p class="hero__lead hero-reveal hero-reveal-2" set:html={lead} />
+      <div class="hero__actions hero-reveal hero-reveal-3">
+        <Button href={primaryHref} variant="primary" size="lg" set:html={primaryLabel} />
+        <Button href={secondaryHref} variant="outline" size="lg" set:html={secondaryLabel} />
+      </div>
+    </div>
+
+    <div class="hero__gallery hero-reveal hero-reveal-4">
+      {images.map((img, i) => (
+        <figure class:list={['hero__frame', `hero__frame--${i + 1}`]}>
+          <picture>
+            <source srcset={`${img.base}.avif`} type="image/avif" />
+            <source srcset={`${img.base}.webp`} type="image/webp" />
+            <img
+              src={`${img.base}.jpg`}
+              width={img.width}
+              height={img.height}
+              alt={img.alt}
+              fetchpriority={i === 0 ? 'high' : undefined}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </picture>
+        </figure>
+      ))}
+    </div>
+  </div>
+
+  <a class="hero__scroll hero-reveal hero-reveal-4" href="#about" aria-hidden="true" tabindex="-1">
+    <span class="hero__scroll-line"></span>
+  </a>
+</section>
+
+<style>
+  .hero {
+    --glow-x: 50%;
+    --glow-y: 30%;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 100svh;
+    padding-block: calc(var(--nav-h) + var(--banner-h) + var(--space-8)) var(--space-9);
+    background: var(--bg-0);
+    overflow: hidden;
+  }
+
+  .hero__media {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.55;
+    filter: saturate(0.85) contrast(1.05);
+  }
+
+  .hero__shade {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(13, 13, 13, 0.55) 0%, rgba(13, 13, 13, 0.25) 40%, rgba(13, 13, 13, 0.92) 100%),
+      linear-gradient(90deg, rgba(13, 13, 13, 0.85) 0%, rgba(13, 13, 13, 0.35) 55%, rgba(13, 13, 13, 0.1) 100%);
+  }
+
+  [dir='rtl'] .hero__shade {
+    background:
+      linear-gradient(180deg, rgba(13, 13, 13, 0.55) 0%, rgba(13, 13, 13, 0.25) 40%, rgba(13, 13, 13, 0.92) 100%),
+      linear-gradient(270deg, rgba(13, 13, 13, 0.85) 0%, rgba(13, 13, 13, 0.35) 55%, rgba(13, 13, 13, 0.1) 100%);
+  }
+
+  .hero__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px circle at var(--glow-x) var(--glow-y), rgba(244, 180, 0, 0.14), transparent 60%);
+    transition: background var(--dur-slow) var(--ease-out);
+    pointer-events: none;
+  }
+
+  .hero__grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+
+  .hero__title {
+    max-width: 12ch;
+    color: var(--text-strong);
+    text-wrap: balance;
+  }
+
+  .hero__title :global(span) {
+    display: inline-block;
+  }
+
+  .hero__lead {
+    max-width: 52ch;
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--text);
+    text-wrap: pretty;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+
+  /* Triptych: three portrait frames, staggered like a contact sheet */
+  .hero__gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.5rem, 1.2vw, 1rem);
+    align-items: end;
+  }
+
+  .hero__frame {
+    margin: 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lift);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform var(--dur-slow) var(--ease-out), box-shadow var(--dur-slow) var(--ease-out);
+  }
+
+  .hero__frame img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+  }
+
+  .hero__frame--1 {
+    transform: translateY(2.5rem);
+  }
+
+  .hero__frame--3 {
+    transform: translateY(1.25rem);
+  }
+
+  .hero__frame:hover {
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--gold-40);
+  }
+
+  .hero__frame--1:hover {
+    transform: translateY(2.5rem) scale(1.03);
+  }
+
+  .hero__frame--2:hover {
+    transform: scale(1.03);
+  }
+
+  .hero__frame--3:hover {
+    transform: translateY(1.25rem) scale(1.03);
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: var(--space-6);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 56px;
+    overflow: hidden;
+    opacity: 0.6;
+  }
+
+  .hero__scroll-line {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  }
+
+  /* ---- Entrance animations: opt-in only ---- */
+  html.pdg-anim .word-reveal :global(span) {
+    animation: heroWordIn 0.7s var(--ease-out) both;
+  }
+
+  html.pdg-anim .word-reveal :global(span:nth-child(1)) { animation-delay: 0.08s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(2)) { animation-delay: 0.16s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(3)) { animation-delay: 0.24s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(4)) { animation-delay: 0.32s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(5)) { animation-delay: 0.4s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(6)) { animation-delay: 0.48s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(7)) { animation-delay: 0.56s; }
+  html.pdg-anim .word-reveal :global(span:nth-child(8)) { animation-delay: 0.64s; }
+
+  html.pdg-anim .hero-reveal {
+    animation: heroIn 0.8s var(--ease-out) both;
+  }
+
+  html.pdg-anim .hero-reveal-2 { animation-delay: 0.45s; }
+  html.pdg-anim .hero-reveal-3 { animation-delay: 0.6s; }
+  html.pdg-anim .hero-reveal-4 { animation-delay: 0.5s; }
+
+  html.pdg-anim .hero__scroll-line {
+    animation: scrollLine 2.4s var(--ease-in-out) 1.4s infinite;
+  }
+
+  @keyframes heroWordIn {
+    from {
+      opacity: 0;
+      transform: translateY(0.35em) rotate(0.5deg);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
+  }
+
+  @keyframes heroIn {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes scrollLine {
+    0% { transform: translateY(-100%); }
+    60%, 100% { transform: translateY(100%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__video {
+      display: none;
+    }
+
+    .hero__media {
+      background: url('/images/hero1.webp') center / cover no-repeat;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .hero {
+      align-items: flex-start;
+      padding-block: calc(var(--nav-h) + var(--banner-h) + var(--space-7)) var(--space-8);
+    }
+
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-7);
+    }
+
+    .hero__title {
+      max-width: 14ch;
+    }
+
+    .hero__gallery {
+      max-width: 520px;
+    }
+
+    .hero__frame--1,
+    .hero__frame--3 {
+      transform: none;
+    }
+
+    .hero__scroll {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero__video {
+      opacity: 0.4;
+    }
+
+    .hero__actions :global(.btn) {
+      flex: 1 1 100%;
+    }
+  }
+</style>

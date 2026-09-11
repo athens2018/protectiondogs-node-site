@@ -1,0 +1,78 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'div'> {
+  tone?: 'default' | 'elevated' | 'gold';
+  interactive?: boolean;
+  padding?: 'md' | 'lg';
+  as?: 'div' | 'article' | 'section' | 'li';
+}
+
+const {
+  tone = 'default',
+  interactive = false,
+  padding = 'md',
+  as: Tag = 'div',
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<Tag
+  class:list={['card', `card--${tone}`, `card--pad-${padding}`, { 'card--interactive': interactive }, className]}
+  {...rest}
+>
+  <slot />
+</Tag>
+
+<style>
+  .card {
+    position: relative;
+    background: var(--bg-4);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    transition:
+      transform var(--dur-slow) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out),
+      box-shadow var(--dur-slow) var(--ease-out);
+  }
+
+  .card--pad-md {
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  .card--pad-lg {
+    padding: clamp(2rem, 4vw, 3.25rem);
+  }
+
+  .card--elevated {
+    background: linear-gradient(160deg, var(--bg-4), var(--bg-2));
+    border-color: var(--line-strong);
+  }
+
+  .card--gold {
+    background: linear-gradient(160deg, rgba(244, 180, 0, 0.08), var(--bg-2) 45%);
+    border-color: var(--line-gold);
+  }
+
+  .card--gold::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(140deg, var(--gold-40), transparent 50%, var(--gold-20));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .card--interactive:hover {
+    transform: translateY(-4px);
+    border-color: var(--line-gold);
+    box-shadow: var(--shadow-lift);
+  }
+</style>

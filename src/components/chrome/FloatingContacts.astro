@@ -1,0 +1,115 @@
+---
+import Icon from '../ui/Icon.astro';
+
+interface Link {
+  href: string;
+  ariaLabel: string;
+  label: string;
+  icon: 'envelope' | 'whatsapp' | 'instagram' | 'phone';
+  external?: boolean;
+}
+
+interface Props {
+  links: Link[];
+  ariaLabel: string;
+}
+
+const { links, ariaLabel } = Astro.props;
+---
+
+<div class="contact-icons" role="navigation" aria-label={ariaLabel}>
+  {links.map((link) => (
+    <a
+      aria-label={link.ariaLabel}
+      href={link.href}
+      class="contact-icon"
+      target={link.external ? '_blank' : undefined}
+      rel={link.external ? 'noopener noreferrer' : undefined}
+    >
+      <span class="contact-icon-label" set:html={link.label} />
+      <span class="contact-icon__glyph"><Icon name={link.icon} size="1.25em" /></span>
+    </a>
+  ))}
+</div>
+
+<style>
+  .contact-icons {
+    position: fixed;
+    inset-inline-end: clamp(12px, 2vw, 28px);
+    bottom: clamp(16px, 3vh, 32px);
+    z-index: var(--z-floating);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .contact-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    color: var(--gold);
+  }
+
+  .contact-icon__glyph {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(13, 13, 13, 0.85);
+    border: 1px solid var(--line-gold);
+    box-shadow: var(--shadow-card);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition:
+      background-color var(--dur-base) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out),
+      color var(--dur-base) var(--ease-out);
+  }
+
+  .contact-icon:hover .contact-icon__glyph,
+  .contact-icon:focus-visible .contact-icon__glyph {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--text-on-gold);
+    transform: translateY(-2px);
+  }
+
+  .contact-icon-label {
+    max-width: 0;
+    overflow: hidden;
+    padding-inline-end: 0;
+    color: var(--text-strong);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transition:
+      max-width var(--dur-slow) var(--ease-out),
+      opacity var(--dur-base) var(--ease-out),
+      padding var(--dur-slow) var(--ease-out);
+  }
+
+  .contact-icon:hover .contact-icon-label,
+  .contact-icon:focus-visible .contact-icon-label {
+    max-width: 12rem;
+    padding-inline-end: 0.75rem;
+    opacity: 1;
+  }
+
+  @media (max-width: 767px) {
+    .contact-icon__glyph {
+      width: 44px;
+      height: 44px;
+    }
+
+    .contact-icon-label {
+      display: none;
+    }
+  }
+</style>
