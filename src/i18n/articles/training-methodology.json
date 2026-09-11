@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "title": "Training Methodology | Belgian Malinois | Protection Dogs GR",
+    "description": "The five-phase system used to develop every Belgian Malinois in the program, from early development through final evaluation and handler integration.",
+    "robots": "index, follow",
+    "canonical": "https://www.protectiondogs.gr/training-methodology.html",
+    "ogTitle": "Training Methodology | Belgian Malinois Protection Dogs",
+    "ogDescription": "The five-phase system used to develop every Belgian Malinois in the program, from early development through final evaluation and handler integration.",
+    "ogType": "article",
+    "ogUrl": "https://www.protectiondogs.gr/training-methodology.html",
+    "ogImage": "https://www.protectiondogs.gr/images/elite-protection-dog-training.jpg",
+    "twitterCard": "summary_large_image",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Training Methodology",
+        "description": "The five-phase system used to develop every Belgian Malinois in the program, from early development through final evaluation and handler integration.",
+        "url": "https://www.protectiondogs.gr/training-methodology.html"
+      }
+    ]
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "brand": {
+      "href": "/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Toggle navigation",
+    "items": [
+      {
+        "label": "Dogs",
+        "href": "/#dogs"
+      },
+      {
+        "label": "Process",
+        "href": "/#training"
+      },
+      {
+        "label": "Breeding",
+        "href": "/#breeding"
+      },
+      {
+        "label": "Placement",
+        "href": "/#pricing"
+      },
+      {
+        "label": "About",
+        "href": "/#about"
+      },
+      {
+        "label": "Enquire",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Training Methodology",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Training",
+    "h1": "Training Methodology",
+    "image": {
+      "src": "/images/elite-protection-dog-training.jpg",
+      "alt": "Malinois protection dog training program",
+      "width": "1080",
+      "height": "720",
+      "style": null,
+      "sources": [
+        {
+          "srcset": "/images/elite-protection-dog-training.avif",
+          "type": "image/avif"
+        },
+        {
+          "srcset": "/images/elite-protection-dog-training.webp",
+          "type": "image/webp"
+        }
+      ]
+    },
+    "cards": [
+      {
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Every dog in the program follows the same five-phase development system, built around one principle: drive and self-control are developed separately, then brought together deliberately. Rushing that order is the most common mistake in this industry, and it's the one that produces dogs that look impressive in a demonstration and fall apart the first time real life doesn't follow the script.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Phase 1 — Early Development"
+          },
+          {
+            "tag": "p",
+            "html": "0-3 Weeks",
+            "class": "text-light opacity-75 mb-3"
+          },
+          {
+            "tag": "p",
+            "html": "Development begins in the first days of life. Early handling and controlled stimulation build a stronger foundation for later environmental confidence and stress resilience. Structured early handling exercises here build a foundation for stress resilience later in life, alongside controlled exposure to textures, surfaces, and sensory experiences, and continuous evaluation of genetic expression and aptitude.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Phase 2 — Socialization"
+          },
+          {
+            "tag": "p",
+            "html": "3-12 Weeks",
+            "class": "text-light opacity-75 mb-3"
+          },
+          {
+            "tag": "p",
+            "html": "Structured exposure to people, animals, and environments during this critical period develops confident, stable dogs capable of functioning across diverse settings — systematic exposure to different surfaces, sounds, and scenarios, plus early foundation work relevant to specialized detection capability.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Phase 3 — Foundation Training"
+          },
+          {
+            "tag": "p",
+            "html": "3-6 Months",
+            "class": "text-light opacity-75 mb-3"
+          },
+          {
+            "tag": "p",
+            "html": "This phase establishes core obedience and introduces foundational protection concepts — reliable command response across environments, and channeling genetic drive into focused, usable working capability rather than raw intensity.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Phase 4 — Advanced Protection Work"
+          },
+          {
+            "tag": "p",
+            "html": "6-12 Months",
+            "class": "text-light opacity-75 mb-3"
+          },
+          {
+            "tag": "p",
+            "html": "Work becomes progressively more demanding through varied people, locations, surfaces, distractions, and pressure. The purpose isn't to make the dog more aggressive — it's to test whether the dog can keep thinking as the difficulty increases. A dog that only performs when everything is predictable hasn't actually learned the job.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Phase 5 — Final Evaluation & Handler Integration"
+          },
+          {
+            "tag": "p",
+            "html": "12-18 Months",
+            "class": "text-light opacity-75 mb-3"
+          },
+          {
+            "tag": "p",
+            "html": "The final phase is about proving the dog consistently, honestly identifying any remaining weaknesses, and teaching the future handler how to maintain the work correctly. A protection dog that arrives without proper handler training is a liability, not an asset — this step isn't optional.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "One Standard, Adapted Later"
+          },
+          {
+            "tag": "p",
+            "html": "Every dog in the program follows this same core standard — there are no lower or higher training tiers. Once a dog is matched with a future handler, later work can be adapted to that person's environment and needs. The standard underneath it doesn't change.",
+            "class": null
+          }
+        ]
+      }
+    ],
+    "ctas": [
+      {
+        "label": "Discuss a Dog",
+        "href": "/#contact",
+        "target": null,
+        "rel": null
+      }
+    ]
+  },
+  "cookie": {
+    "ariaLabel": "Cookie consent",
+    "text": "This site uses cookies for basic analytics to understand how the site is used. No data is collected until you accept.",
+    "reject": "Necessary Only",
+    "accept": "Accept"
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "A small, trainer-led working-dog program developing protection Malinois from proven working lines."
+    },
+    "quickLinks": {
+      "h3": "Quick Links",
+      "ariaLabel": "Footer navigation",
+      "links": [
+        {
+          "label": "Dogs",
+          "href": "/#dogs"
+        },
+        {
+          "label": "Process",
+          "href": "/#training"
+        },
+        {
+          "label": "Breeding",
+          "href": "/#breeding"
+        },
+        {
+          "label": "Placement",
+          "href": "/#pricing"
+        },
+        {
+          "label": "About",
+          "href": "/#about"
+        },
+        {
+          "label": "Enquire",
+          "href": "/#contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy.html"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Connect",
+      "links": [
+        {
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "ariaLabel": "Visit my Instagram",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "href": "https://wa.me/306931736026",
+          "ariaLabel": "Contact me on WhatsApp",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "href": "mailto:contact@protectiondogs.gr",
+          "ariaLabel": "Send me an email",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Skip to main content",
+      "href": "#main-content"
+    }
+  }
+}

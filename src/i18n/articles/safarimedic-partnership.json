@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "SafariMedic Partnership | Protection Dogs GR",
+    "description": "Why I recommend SafariMedic's medical preparedness solutions to clients working with a protection dog in demanding environments.",
+    "robots": "index, follow",
+    "canonical": "https://www.protectiondogs.gr/safarimedic-partnership.html",
+    "ogTitle": "SafariMedic Partnership | Protection Dogs GR",
+    "ogDescription": "Why I recommend SafariMedic's medical preparedness solutions to clients working with a protection dog in demanding environments.",
+    "ogType": "article",
+    "ogUrl": "https://www.protectiondogs.gr/safarimedic-partnership.html",
+    "ogImage": "https://www.protectiondogs.gr/images/safari-medic.jpg",
+    "twitterCard": "summary_large_image",
+    "jsonld": []
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "brand": {
+      "href": "/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Toggle navigation",
+    "items": [
+      {
+        "label": "Dogs",
+        "href": "/#dogs"
+      },
+      {
+        "label": "Process",
+        "href": "/#training"
+      },
+      {
+        "label": "Breeding",
+        "href": "/#breeding"
+      },
+      {
+        "label": "Placement",
+        "href": "/#pricing"
+      },
+      {
+        "label": "About",
+        "href": "/#about"
+      },
+      {
+        "label": "Enquire",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "SafariMedic Partnership",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Partnership",
+    "h1": "Why I Recommend SafariMedic",
+    "image": {
+      "src": "/images/safari-medic.jpg",
+      "alt": "SafariMedic Logo",
+      "width": "300",
+      "height": "300",
+      "style": "max-height: 120px; width: auto;",
+      "sources": [
+        {
+          "srcset": "/images/safari-medic.avif",
+          "type": "image/avif"
+        },
+        {
+          "srcset": "/images/safari-medic.webp",
+          "type": "image/webp"
+        }
+      ]
+    },
+    "cards": [
+      {
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "Working with a protection dog means working in situations where things can go wrong quickly — for the dog, and sometimes for the handler. Medical preparedness isn't an afterthought in that context, it's part of taking the responsibility seriously.",
+            "class": null
+          },
+          {
+            "tag": "p",
+            "html": "SafariMedic's kits stood out to me for the same reason I care about training the way I do: they're built for real conditions, not just a checklist. That's the standard I hold my own work to, and it's why I point clients toward them rather than a generic first-aid kit.",
+            "class": null
+          },
+          {
+            "tag": "p",
+            "html": "This isn't a paid endorsement dressed up as advice — I recommend them because I'd want a client to have the right kit on hand if something happens, and I haven't found a better option for this kind of work.",
+            "class": null
+          }
+        ]
+      }
+    ],
+    "ctas": [
+      {
+        "label": "Visit SafariMedic",
+        "href": "https://www.safarimedic.com",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
+  },
+  "cookie": {
+    "ariaLabel": "Cookie consent",
+    "text": "This site uses cookies for basic analytics to understand how the site is used. No data is collected until you accept.",
+    "reject": "Necessary Only",
+    "accept": "Accept"
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "A small, trainer-led working-dog program developing protection Malinois from proven working lines."
+    },
+    "quickLinks": {
+      "h3": "Quick Links",
+      "ariaLabel": "Footer navigation",
+      "links": [
+        {
+          "label": "Dogs",
+          "href": "/#dogs"
+        },
+        {
+          "label": "Process",
+          "href": "/#training"
+        },
+        {
+          "label": "Breeding",
+          "href": "/#breeding"
+        },
+        {
+          "label": "Placement",
+          "href": "/#pricing"
+        },
+        {
+          "label": "About",
+          "href": "/#about"
+        },
+        {
+          "label": "Enquire",
+          "href": "/#contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy.html"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Connect",
+      "links": [
+        {
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "ariaLabel": "Visit my Instagram",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "href": "https://wa.me/306931736026",
+          "ariaLabel": "Contact me on WhatsApp",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "href": "mailto:contact@protectiondogs.gr",
+          "ariaLabel": "Send me an email",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Skip to main content",
+      "href": "#main-content"
+    }
+  }
+}

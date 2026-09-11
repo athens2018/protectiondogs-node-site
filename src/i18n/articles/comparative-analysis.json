@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "title": "What Makes This Program Different | Protection Dogs GR",
+    "description": "An honest look at how this program approaches breeding, testing, and training differently — not a scorecard, just what actually happens and why.",
+    "robots": "index, follow",
+    "canonical": "https://www.protectiondogs.gr/comparative-analysis.html",
+    "ogTitle": "What Makes This Program Different | Protection Dogs GR",
+    "ogDescription": "An honest look at how this program approaches breeding, testing, and training differently — not a scorecard, just what actually happens and why.",
+    "ogType": "article",
+    "ogUrl": "https://www.protectiondogs.gr/comparative-analysis.html",
+    "ogImage": "https://www.protectiondogs.gr/images/hero1.jpg",
+    "twitterCard": "summary_large_image",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "What Makes This Program Different",
+        "description": "An honest look at how this program approaches breeding, testing, and training differently — not a scorecard, just what actually happens and why.",
+        "url": "https://www.protectiondogs.gr/comparative-analysis.html"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is this program different from other protection dog providers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The biggest difference is scale and who's actually doing the work. I breed, evaluate, train, and place every dog myself, in a program that stays deliberately small so I can be directly involved with each one from start to finish. Larger programs often split those roles across breeders, trainers, and a sales team — which can still produce good dogs, but it's a different model with different trade-offs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer international placement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, dogs are placed internationally. Availability depends on current training capacity rather than location, so reach out directly to discuss timing and logistics."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "brand": {
+      "href": "/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Toggle navigation",
+    "items": [
+      {
+        "label": "Dogs",
+        "href": "/#dogs"
+      },
+      {
+        "label": "Process",
+        "href": "/#training"
+      },
+      {
+        "label": "Breeding",
+        "href": "/#breeding"
+      },
+      {
+        "label": "Placement",
+        "href": "/#pricing"
+      },
+      {
+        "label": "About",
+        "href": "/#about"
+      },
+      {
+        "label": "Enquire",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "What Makes This Program Different",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Comparison",
+    "h1": "What Makes This Program Different",
+    "image": null,
+    "cards": [
+      {
+        "blocks": [
+          {
+            "tag": "p",
+            "html": "I'm not going to hand you a scorecard with invented numbers on it. What I can do is explain, honestly, where this program's approach differs from how most protection dog providers operate — and let you judge whether that difference matters to you.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "Breeding"
+          },
+          {
+            "tag": "p",
+            "html": "A lot of the industry sells on pedigree names and sport titles. I use those as one data point among several — working ability, nerve, health, pedigree depth, and complementary drive traits between sire and dam all matter, and I run coefficient-of-inbreeding calculations across the full pedigree rather than just the first couple of generations. But none of that substitutes for evaluating the dog directly. A name on paper tells you what's possible. It doesn't tell you what's actually there.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "Testing"
+          },
+          {
+            "tag": "p",
+            "html": "Intensity alone tells me very little. I want to see what happens when pressure becomes layered, unfamiliar, and unpredictable — the dog has to remain committed without losing clarity, and be capable of returning to a controlled state once the situation changes. Recovery matters more to me than raw intensity: how quickly a dog can process stress, re-engage, and return to productive work tells me considerably more than a single pass in a familiar setup.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "Program Size"
+          },
+          {
+            "tag": "p",
+            "html": "Many programs scale up to place more dogs. I don't. I evaluate far more dogs than I ever place, and I'd rather develop fewer of them properly than increase numbers and lose control of the process. That's a deliberate trade-off, not a limitation I'm working around.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "Who You're Actually Dealing With"
+          },
+          {
+            "tag": "p",
+            "html": "In a lot of larger operations, the person who bred the dog, the person who trained it, and the person selling it to you are three different people. Here, they're the same person. There's no sales layer between you and the trainer — the same person evaluating a dog is the person discussing that dog with you, from first contact through delivery.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "Reservation During Development"
+          },
+          {
+            "tag": "p",
+            "html": "Most providers sell a dog once it's finished. I let clients reserve a dog earlier than that, during development, with an agreed staged monthly payment schedule rather than one payment at handover. That's not a financing gimmick — it means the relationship starts before delivery day, not on it. A reserved client can follow real progress, and I have time to shape the later stages of training around their household, routine, and requirements.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "The Honest Trade-Off"
+          },
+          {
+            "tag": "p",
+            "html": "None of this makes this program objectively \"better\" on some universal scale — it makes it a specific kind of program, with specific trade-offs. Smaller numbers, slower placement, and a standard I don't lower to grow faster. If that's what you're looking for, it's worth a conversation. If you need volume or a faster timeline, a larger operation may genuinely be the better fit for you, and I'd rather say that directly than pretend otherwise.",
+            "class": null
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Frequently Asked Questions"
+          },
+          {
+            "tag": "h3",
+            "html": "How is this different from other protection dog providers?"
+          },
+          {
+            "tag": "p",
+            "html": "The biggest difference is scale and who's actually doing the work. I breed, evaluate, train, and place every dog myself, in a program that stays deliberately small so I can be directly involved with each one from start to finish. Larger programs often split those roles across breeders, trainers, and a sales team — which can still produce good dogs, but it's a different model with different trade-offs.",
+            "class": null
+          },
+          {
+            "tag": "h3",
+            "html": "Do you offer international placement?"
+          },
+          {
+            "tag": "p",
+            "html": "Yes, dogs are placed internationally. Availability depends on current training capacity rather than location, so reach out directly to discuss timing and logistics.",
+            "class": null
+          }
+        ]
+      }
+    ],
+    "ctas": [
+      {
+        "label": "Discuss a Dog",
+        "href": "/#contact",
+        "target": null,
+        "rel": null
+      }
+    ]
+  },
+  "cookie": {
+    "ariaLabel": "Cookie consent",
+    "text": "This site uses cookies for basic analytics to understand how the site is used. No data is collected until you accept.",
+    "reject": "Necessary Only",
+    "accept": "Accept"
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "A small, trainer-led working-dog program developing protection Malinois from proven working lines."
+    },
+    "quickLinks": {
+      "h3": "Quick Links",
+      "ariaLabel": "Footer navigation",
+      "links": [
+        {
+          "label": "Dogs",
+          "href": "/#dogs"
+        },
+        {
+          "label": "Process",
+          "href": "/#training"
+        },
+        {
+          "label": "Breeding",
+          "href": "/#breeding"
+        },
+        {
+          "label": "Placement",
+          "href": "/#pricing"
+        },
+        {
+          "label": "About",
+          "href": "/#about"
+        },
+        {
+          "label": "Enquire",
+          "href": "/#contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy.html"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Connect",
+      "links": [
+        {
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "ariaLabel": "Visit my Instagram",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "href": "https://wa.me/306931736026",
+          "ariaLabel": "Contact me on WhatsApp",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "href": "mailto:contact@protectiondogs.gr",
+          "ariaLabel": "Send me an email",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Skip to main content",
+      "href": "#main-content"
+    }
+  }
+}

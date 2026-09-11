@@ -1,0 +1,4247 @@
+{
+  "generatedBy": "scripts/extract-articles.mjs",
+  "articles": {
+    "breeding-science": {
+      "sourceFile": "breeding-science.html",
+      "sourceBytes": 16498,
+      "outputFile": "src/i18n/articles/breeding-science.json",
+      "outputBytes": 6878,
+      "counts": {
+        "entries": 99,
+        "html": 35,
+        "attr": 49,
+        "jsonld": 1,
+        "nulls": 7
+      },
+      "checkA": {
+        "pass": 85,
+        "fail": 0,
+        "na": 14,
+        "failures": []
+      },
+      "checkB": {
+        "pass": 35,
+        "fail": 0,
+        "na": 64,
+        "failures": []
+      },
+      "coverage": {
+        "total": 36,
+        "covered": 36,
+        "pct": 100,
+        "uncovered": []
+      },
+      "inventory": {
+        "cards": 1,
+        "blocks": 7,
+        "h2": 3,
+        "h3": 0,
+        "p": 4,
+        "pWithClass": 0,
+        "lists": 0,
+        "listItems": 0,
+        "blockquotes": 0,
+        "inlineImages": 0,
+        "inlineLinks": 0,
+        "unexpected": 0,
+        "heroImage": 1,
+        "heroSources": 2,
+        "ctas": 1,
+        "externalCtas": 0,
+        "jsonld": "WebPage",
+        "navItems": 6,
+        "footerQuickLinks": 7,
+        "footerConnect": 3
+      },
+      "observations": {
+        "heroSourceLine": 116,
+        "footerHeadingTags": [
+          "h3",
+          "h3",
+          "h3"
+        ],
+        "footerLanguageColumn": false,
+        "cookieBanner": true,
+        "mainColumnClass": "col-lg-9"
+      },
+      "missing": [],
+      "strippedDecorations": [],
+      "multilineValues": [],
+      "unexpectedBlocks": [],
+      "jsonldErrors": [],
+      "jsonldUrlMatchesCanonical": true,
+      "parseErrors": [],
+      "entries": [
+        {
+          "path": "meta.title",
+          "kind": "html",
+          "line": 22,
+          "start": 2003,
+          "end": 2061,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "meta.description",
+          "kind": "attr",
+          "line": 24,
+          "start": 2100,
+          "end": 2262,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.robots",
+          "kind": "attr",
+          "line": 25,
+          "start": 2284,
+          "end": 2307,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.canonical",
+          "kind": "attr",
+          "line": 26,
+          "start": 2335,
+          "end": 2393,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogTitle",
+          "kind": "attr",
+          "line": 33,
+          "start": 2725,
+          "end": 2788,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogDescription",
+          "kind": "attr",
+          "line": 34,
+          "start": 2826,
+          "end": 2988,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogType",
+          "kind": "attr",
+          "line": 35,
+          "start": 3019,
+          "end": 3036,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogUrl",
+          "kind": "attr",
+          "line": 36,
+          "start": 3066,
+          "end": 3127,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogImage",
+          "kind": "attr",
+          "line": 37,
+          "start": 3159,
+          "end": 3215,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.twitterCard",
+          "kind": "attr",
+          "line": 38,
+          "start": 3247,
+          "end": 3276,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.jsonld[0]",
+          "kind": "jsonld",
+          "line": 49,
+          "start": 3724,
+          "end": 4087,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.ariaLabel",
+          "kind": "attr",
+          "line": 72,
+          "start": 4977,
+          "end": 5005,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.href",
+          "kind": "attr",
+          "line": 74,
+          "start": 5067,
+          "end": 5075,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.alt",
+          "kind": "attr",
+          "line": 75,
+          "start": 5244,
+          "end": 5268,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.toggleAriaLabel",
+          "kind": "attr",
+          "line": 77,
+          "start": 5525,
+          "end": 5555,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[0].label",
+          "kind": "html",
+          "line": 82,
+          "start": 5806,
+          "end": 5810,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[0].href",
+          "kind": "attr",
+          "line": 82,
+          "start": 5792,
+          "end": 5805,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[1].label",
+          "kind": "html",
+          "line": 83,
+          "start": 5895,
+          "end": 5902,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[1].href",
+          "kind": "attr",
+          "line": 83,
+          "start": 5877,
+          "end": 5894,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[2].label",
+          "kind": "html",
+          "line": 84,
+          "start": 5987,
+          "end": 5995,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[2].href",
+          "kind": "attr",
+          "line": 84,
+          "start": 5969,
+          "end": 5986,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[3].label",
+          "kind": "html",
+          "line": 85,
+          "start": 6079,
+          "end": 6088,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[3].href",
+          "kind": "attr",
+          "line": 85,
+          "start": 6062,
+          "end": 6078,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[4].label",
+          "kind": "html",
+          "line": 86,
+          "start": 6170,
+          "end": 6175,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[4].href",
+          "kind": "attr",
+          "line": 86,
+          "start": 6155,
+          "end": 6169,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[5].label",
+          "kind": "html",
+          "line": 87,
+          "start": 6259,
+          "end": 6266,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[5].href",
+          "kind": "attr",
+          "line": 87,
+          "start": 6242,
+          "end": 6258,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.ariaLabel",
+          "kind": "attr",
+          "line": 94,
+          "start": 6361,
+          "end": 6384,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[0].label",
+          "kind": "html",
+          "line": 97,
+          "start": 6705,
+          "end": 6709,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "breadcrumb.items[0].href",
+          "kind": "attr",
+          "line": 97,
+          "start": 6637,
+          "end": 6645,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[1].label",
+          "kind": "html",
+          "line": 101,
+          "start": 6978,
+          "end": 6996,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.eyebrow",
+          "kind": "html",
+          "line": 112,
+          "start": 7336,
+          "end": 7344,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.h1",
+          "kind": "html",
+          "line": 113,
+          "start": 7417,
+          "end": 7435,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.image.src",
+          "kind": "attr",
+          "line": 116,
+          "start": 7640,
+          "end": 7663,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.alt",
+          "kind": "attr",
+          "line": 116,
+          "start": 7664,
+          "end": 7713,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.width",
+          "kind": "attr",
+          "line": 116,
+          "start": 7745,
+          "end": 7756,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.height",
+          "kind": "attr",
+          "line": 116,
+          "start": 7757,
+          "end": 7770,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.style",
+          "kind": "attr",
+          "line": 116,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[0].srcset",
+          "kind": "attr",
+          "line": 116,
+          "start": 7535,
+          "end": 7562,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[0].type",
+          "kind": "attr",
+          "line": 116,
+          "start": 7563,
+          "end": 7580,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[1].srcset",
+          "kind": "attr",
+          "line": 116,
+          "start": 7589,
+          "end": 7616,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[1].type",
+          "kind": "attr",
+          "line": 116,
+          "start": 7617,
+          "end": 7634,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].html",
+          "kind": "html",
+          "line": 118,
+          "start": 7842,
+          "end": 7856,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[1].html",
+          "kind": "html",
+          "line": 119,
+          "start": 7889,
+          "end": 8177,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[1].class",
+          "kind": "attr",
+          "line": 119,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[2].html",
+          "kind": "html",
+          "line": 121,
+          "start": 8242,
+          "end": 8263,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[3].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[3].html",
+          "kind": "html",
+          "line": 122,
+          "start": 8296,
+          "end": 8802,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[3].class",
+          "kind": "attr",
+          "line": 122,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[4].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[4].html",
+          "kind": "html",
+          "line": 123,
+          "start": 8834,
+          "end": 9208,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[4].class",
+          "kind": "attr",
+          "line": 123,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[5].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[5].html",
+          "kind": "html",
+          "line": 125,
+          "start": 9273,
+          "end": 9298,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[6].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[6].html",
+          "kind": "html",
+          "line": 126,
+          "start": 9331,
+          "end": 9685,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[6].class",
+          "kind": "attr",
+          "line": 126,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].label",
+          "kind": "html",
+          "line": 130,
+          "start": 9841,
+          "end": 9859,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.ctas[0].href",
+          "kind": "attr",
+          "line": 130,
+          "start": 9796,
+          "end": 9809,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].target",
+          "kind": "attr",
+          "line": 130,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].rel",
+          "kind": "attr",
+          "line": 130,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.ariaLabel",
+          "kind": "attr",
+          "line": 63,
+          "start": 4389,
+          "end": 4416,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.text",
+          "kind": "html",
+          "line": 64,
+          "start": 4476,
+          "end": 4593,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.reject",
+          "kind": "html",
+          "line": 66,
+          "start": 4734,
+          "end": 4748,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.accept",
+          "kind": "html",
+          "line": 67,
+          "start": 4851,
+          "end": 4857,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.h3",
+          "kind": "html",
+          "line": 142,
+          "start": 10148,
+          "end": 10166,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.text",
+          "kind": "html",
+          "line": 143,
+          "start": 10191,
+          "end": 10289,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.h3",
+          "kind": "html",
+          "line": 146,
+          "start": 10394,
+          "end": 10405,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.ariaLabel",
+          "kind": "attr",
+          "line": 147,
+          "start": 10432,
+          "end": 10462,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[0].label",
+          "kind": "html",
+          "line": 149,
+          "start": 10596,
+          "end": 10600,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[0].href",
+          "kind": "attr",
+          "line": 149,
+          "start": 10542,
+          "end": 10555,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[1].label",
+          "kind": "html",
+          "line": 150,
+          "start": 10699,
+          "end": 10706,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[1].href",
+          "kind": "attr",
+          "line": 150,
+          "start": 10641,
+          "end": 10658,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[2].label",
+          "kind": "html",
+          "line": 151,
+          "start": 10805,
+          "end": 10813,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[2].href",
+          "kind": "attr",
+          "line": 151,
+          "start": 10747,
+          "end": 10764,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[3].label",
+          "kind": "html",
+          "line": 152,
+          "start": 10911,
+          "end": 10920,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[3].href",
+          "kind": "attr",
+          "line": 152,
+          "start": 10854,
+          "end": 10870,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[4].label",
+          "kind": "html",
+          "line": 153,
+          "start": 11016,
+          "end": 11021,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[4].href",
+          "kind": "attr",
+          "line": 153,
+          "start": 10961,
+          "end": 10975,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[5].label",
+          "kind": "html",
+          "line": 154,
+          "start": 11119,
+          "end": 11126,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[5].href",
+          "kind": "attr",
+          "line": 154,
+          "start": 11062,
+          "end": 11078,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[6].label",
+          "kind": "html",
+          "line": 155,
+          "start": 11235,
+          "end": 11249,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[6].href",
+          "kind": "attr",
+          "line": 155,
+          "start": 11167,
+          "end": 11194,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.h3",
+          "kind": "html",
+          "line": 160,
+          "start": 11408,
+          "end": 11415,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.connect.links[0].href",
+          "kind": "attr",
+          "line": 162,
+          "start": 11487,
+          "end": 11536,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].ariaLabel",
+          "kind": "attr",
+          "line": 162,
+          "start": 11561,
+          "end": 11592,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].icon",
+          "kind": "attr",
+          "line": 163,
+          "start": 11621,
+          "end": 11651,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].href",
+          "kind": "attr",
+          "line": 165,
+          "start": 11705,
+          "end": 11738,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].ariaLabel",
+          "kind": "attr",
+          "line": 165,
+          "start": 11763,
+          "end": 11798,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].icon",
+          "kind": "attr",
+          "line": 166,
+          "start": 11827,
+          "end": 11856,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].href",
+          "kind": "attr",
+          "line": 168,
+          "start": 11910,
+          "end": 11949,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].ariaLabel",
+          "kind": "attr",
+          "line": 168,
+          "start": 11969,
+          "end": 11998,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].icon",
+          "kind": "attr",
+          "line": 169,
+          "start": 12027,
+          "end": 12056,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.copyright",
+          "kind": "html",
+          "line": 177,
+          "start": 12307,
+          "end": 12392,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.label",
+          "kind": "html",
+          "line": 60,
+          "start": 4158,
+          "end": 4178,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.href",
+          "kind": "attr",
+          "line": 60,
+          "start": 4119,
+          "end": 4139,
+          "a": "pass",
+          "b": "n/a"
+        }
+      ]
+    },
+    "training-methodology": {
+      "sourceFile": "training-methodology.html",
+      "sourceBytes": 18554,
+      "outputFile": "src/i18n/articles/training-methodology.json",
+      "outputBytes": 9268,
+      "counts": {
+        "entries": 129,
+        "html": 46,
+        "attr": 54,
+        "jsonld": 1,
+        "nulls": 10
+      },
+      "checkA": {
+        "pass": 101,
+        "fail": 0,
+        "na": 28,
+        "failures": []
+      },
+      "checkB": {
+        "pass": 46,
+        "fail": 0,
+        "na": 83,
+        "failures": []
+      },
+      "coverage": {
+        "total": 47,
+        "covered": 47,
+        "pct": 100,
+        "uncovered": []
+      },
+      "inventory": {
+        "cards": 7,
+        "blocks": 18,
+        "h2": 6,
+        "h3": 0,
+        "p": 12,
+        "pWithClass": 5,
+        "lists": 0,
+        "listItems": 0,
+        "blockquotes": 0,
+        "inlineImages": 0,
+        "inlineLinks": 0,
+        "unexpected": 0,
+        "heroImage": 1,
+        "heroSources": 2,
+        "ctas": 1,
+        "externalCtas": 0,
+        "jsonld": "WebPage",
+        "navItems": 6,
+        "footerQuickLinks": 7,
+        "footerConnect": 3
+      },
+      "observations": {
+        "heroSourceLine": 116,
+        "footerHeadingTags": [
+          "h3",
+          "h3",
+          "h3"
+        ],
+        "footerLanguageColumn": false,
+        "cookieBanner": true,
+        "mainColumnClass": "col-lg-9"
+      },
+      "missing": [],
+      "strippedDecorations": [],
+      "multilineValues": [],
+      "unexpectedBlocks": [],
+      "jsonldErrors": [],
+      "jsonldUrlMatchesCanonical": true,
+      "parseErrors": [],
+      "entries": [
+        {
+          "path": "meta.title",
+          "kind": "html",
+          "line": 22,
+          "start": 2003,
+          "end": 2063,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "meta.description",
+          "kind": "attr",
+          "line": 24,
+          "start": 2102,
+          "end": 2261,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.robots",
+          "kind": "attr",
+          "line": 25,
+          "start": 2283,
+          "end": 2306,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.canonical",
+          "kind": "attr",
+          "line": 26,
+          "start": 2334,
+          "end": 2396,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogTitle",
+          "kind": "attr",
+          "line": 33,
+          "start": 2728,
+          "end": 2793,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogDescription",
+          "kind": "attr",
+          "line": 34,
+          "start": 2831,
+          "end": 2990,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogType",
+          "kind": "attr",
+          "line": 35,
+          "start": 3021,
+          "end": 3038,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogUrl",
+          "kind": "attr",
+          "line": 36,
+          "start": 3068,
+          "end": 3133,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogImage",
+          "kind": "attr",
+          "line": 37,
+          "start": 3165,
+          "end": 3245,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.twitterCard",
+          "kind": "attr",
+          "line": 38,
+          "start": 3277,
+          "end": 3306,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.jsonld[0]",
+          "kind": "jsonld",
+          "line": 49,
+          "start": 3754,
+          "end": 4120,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.ariaLabel",
+          "kind": "attr",
+          "line": 72,
+          "start": 5010,
+          "end": 5038,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.href",
+          "kind": "attr",
+          "line": 74,
+          "start": 5100,
+          "end": 5108,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.alt",
+          "kind": "attr",
+          "line": 75,
+          "start": 5277,
+          "end": 5301,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.toggleAriaLabel",
+          "kind": "attr",
+          "line": 77,
+          "start": 5558,
+          "end": 5588,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[0].label",
+          "kind": "html",
+          "line": 82,
+          "start": 5839,
+          "end": 5843,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[0].href",
+          "kind": "attr",
+          "line": 82,
+          "start": 5825,
+          "end": 5838,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[1].label",
+          "kind": "html",
+          "line": 83,
+          "start": 5928,
+          "end": 5935,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[1].href",
+          "kind": "attr",
+          "line": 83,
+          "start": 5910,
+          "end": 5927,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[2].label",
+          "kind": "html",
+          "line": 84,
+          "start": 6020,
+          "end": 6028,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[2].href",
+          "kind": "attr",
+          "line": 84,
+          "start": 6002,
+          "end": 6019,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[3].label",
+          "kind": "html",
+          "line": 85,
+          "start": 6112,
+          "end": 6121,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[3].href",
+          "kind": "attr",
+          "line": 85,
+          "start": 6095,
+          "end": 6111,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[4].label",
+          "kind": "html",
+          "line": 86,
+          "start": 6203,
+          "end": 6208,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[4].href",
+          "kind": "attr",
+          "line": 86,
+          "start": 6188,
+          "end": 6202,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[5].label",
+          "kind": "html",
+          "line": 87,
+          "start": 6292,
+          "end": 6299,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[5].href",
+          "kind": "attr",
+          "line": 87,
+          "start": 6275,
+          "end": 6291,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.ariaLabel",
+          "kind": "attr",
+          "line": 94,
+          "start": 6394,
+          "end": 6417,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[0].label",
+          "kind": "html",
+          "line": 97,
+          "start": 6738,
+          "end": 6742,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "breadcrumb.items[0].href",
+          "kind": "attr",
+          "line": 97,
+          "start": 6670,
+          "end": 6678,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[1].label",
+          "kind": "html",
+          "line": 101,
+          "start": 7011,
+          "end": 7031,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.eyebrow",
+          "kind": "html",
+          "line": 112,
+          "start": 7371,
+          "end": 7379,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.h1",
+          "kind": "html",
+          "line": 113,
+          "start": 7452,
+          "end": 7472,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.image.src",
+          "kind": "attr",
+          "line": 116,
+          "start": 7725,
+          "end": 7772,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.alt",
+          "kind": "attr",
+          "line": 116,
+          "start": 7773,
+          "end": 7819,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.width",
+          "kind": "attr",
+          "line": 116,
+          "start": 7851,
+          "end": 7863,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.height",
+          "kind": "attr",
+          "line": 116,
+          "start": 7864,
+          "end": 7876,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.style",
+          "kind": "attr",
+          "line": 116,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[0].srcset",
+          "kind": "attr",
+          "line": 116,
+          "start": 7572,
+          "end": 7623,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[0].type",
+          "kind": "attr",
+          "line": 116,
+          "start": 7624,
+          "end": 7641,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[1].srcset",
+          "kind": "attr",
+          "line": 116,
+          "start": 7650,
+          "end": 7701,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[1].type",
+          "kind": "attr",
+          "line": 116,
+          "start": 7702,
+          "end": 7719,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].html",
+          "kind": "html",
+          "line": 117,
+          "start": 7915,
+          "end": 8307,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[0].class",
+          "kind": "attr",
+          "line": 117,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[0].html",
+          "kind": "html",
+          "line": 121,
+          "start": 8446,
+          "end": 8473,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[1].html",
+          "kind": "html",
+          "line": 122,
+          "start": 8541,
+          "end": 8550,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[1].class",
+          "kind": "attr",
+          "line": 122,
+          "start": 8506,
+          "end": 8540,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[2].html",
+          "kind": "html",
+          "line": 123,
+          "start": 8582,
+          "end": 8992,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[2].class",
+          "kind": "attr",
+          "line": 123,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[2].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[2].blocks[0].html",
+          "kind": "html",
+          "line": 127,
+          "start": 9131,
+          "end": 9154,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[2].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[2].blocks[1].html",
+          "kind": "html",
+          "line": 128,
+          "start": 9222,
+          "end": 9232,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[2].blocks[1].class",
+          "kind": "attr",
+          "line": 128,
+          "start": 9187,
+          "end": 9221,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[2].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[2].blocks[2].html",
+          "kind": "html",
+          "line": 129,
+          "start": 9264,
+          "end": 9568,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[2].blocks[2].class",
+          "kind": "attr",
+          "line": 129,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[3].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[3].blocks[0].html",
+          "kind": "html",
+          "line": 133,
+          "start": 9707,
+          "end": 9736,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[3].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[3].blocks[1].html",
+          "kind": "html",
+          "line": 134,
+          "start": 9804,
+          "end": 9814,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[3].blocks[1].class",
+          "kind": "attr",
+          "line": 134,
+          "start": 9769,
+          "end": 9803,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[3].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[3].blocks[2].html",
+          "kind": "html",
+          "line": 135,
+          "start": 9846,
+          "end": 10076,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[3].blocks[2].class",
+          "kind": "attr",
+          "line": 135,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[4].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[4].blocks[0].html",
+          "kind": "html",
+          "line": 139,
+          "start": 10215,
+          "end": 10249,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[4].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[4].blocks[1].html",
+          "kind": "html",
+          "line": 140,
+          "start": 10317,
+          "end": 10328,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[4].blocks[1].class",
+          "kind": "attr",
+          "line": 140,
+          "start": 10282,
+          "end": 10316,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[4].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[4].blocks[2].html",
+          "kind": "html",
+          "line": 141,
+          "start": 10360,
+          "end": 10690,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[4].blocks[2].class",
+          "kind": "attr",
+          "line": 141,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[5].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[5].blocks[0].html",
+          "kind": "html",
+          "line": 145,
+          "start": 10829,
+          "end": 10877,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[5].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[5].blocks[1].html",
+          "kind": "html",
+          "line": 146,
+          "start": 10945,
+          "end": 10957,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[5].blocks[1].class",
+          "kind": "attr",
+          "line": 146,
+          "start": 10910,
+          "end": 10944,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[5].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[5].blocks[2].html",
+          "kind": "html",
+          "line": 147,
+          "start": 10989,
+          "end": 11277,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[5].blocks[2].class",
+          "kind": "attr",
+          "line": 147,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[6].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[6].blocks[0].html",
+          "kind": "html",
+          "line": 151,
+          "start": 11416,
+          "end": 11443,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[6].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[6].blocks[1].html",
+          "kind": "html",
+          "line": 152,
+          "start": 11476,
+          "end": 11733,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[6].blocks[1].class",
+          "kind": "attr",
+          "line": 152,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].label",
+          "kind": "html",
+          "line": 156,
+          "start": 11892,
+          "end": 11905,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.ctas[0].href",
+          "kind": "attr",
+          "line": 156,
+          "start": 11844,
+          "end": 11860,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].target",
+          "kind": "attr",
+          "line": 156,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].rel",
+          "kind": "attr",
+          "line": 156,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.ariaLabel",
+          "kind": "attr",
+          "line": 63,
+          "start": 4422,
+          "end": 4449,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.text",
+          "kind": "html",
+          "line": 64,
+          "start": 4509,
+          "end": 4626,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.reject",
+          "kind": "html",
+          "line": 66,
+          "start": 4767,
+          "end": 4781,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.accept",
+          "kind": "html",
+          "line": 67,
+          "start": 4884,
+          "end": 4890,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.h3",
+          "kind": "html",
+          "line": 168,
+          "start": 12194,
+          "end": 12212,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.text",
+          "kind": "html",
+          "line": 169,
+          "start": 12237,
+          "end": 12335,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.h3",
+          "kind": "html",
+          "line": 172,
+          "start": 12440,
+          "end": 12451,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.ariaLabel",
+          "kind": "attr",
+          "line": 173,
+          "start": 12478,
+          "end": 12508,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[0].label",
+          "kind": "html",
+          "line": 175,
+          "start": 12642,
+          "end": 12646,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[0].href",
+          "kind": "attr",
+          "line": 175,
+          "start": 12588,
+          "end": 12601,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[1].label",
+          "kind": "html",
+          "line": 176,
+          "start": 12745,
+          "end": 12752,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[1].href",
+          "kind": "attr",
+          "line": 176,
+          "start": 12687,
+          "end": 12704,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[2].label",
+          "kind": "html",
+          "line": 177,
+          "start": 12851,
+          "end": 12859,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[2].href",
+          "kind": "attr",
+          "line": 177,
+          "start": 12793,
+          "end": 12810,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[3].label",
+          "kind": "html",
+          "line": 178,
+          "start": 12957,
+          "end": 12966,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[3].href",
+          "kind": "attr",
+          "line": 178,
+          "start": 12900,
+          "end": 12916,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[4].label",
+          "kind": "html",
+          "line": 179,
+          "start": 13062,
+          "end": 13067,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[4].href",
+          "kind": "attr",
+          "line": 179,
+          "start": 13007,
+          "end": 13021,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[5].label",
+          "kind": "html",
+          "line": 180,
+          "start": 13165,
+          "end": 13172,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[5].href",
+          "kind": "attr",
+          "line": 180,
+          "start": 13108,
+          "end": 13124,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[6].label",
+          "kind": "html",
+          "line": 181,
+          "start": 13281,
+          "end": 13295,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[6].href",
+          "kind": "attr",
+          "line": 181,
+          "start": 13213,
+          "end": 13240,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.h3",
+          "kind": "html",
+          "line": 186,
+          "start": 13454,
+          "end": 13461,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.connect.links[0].href",
+          "kind": "attr",
+          "line": 188,
+          "start": 13533,
+          "end": 13582,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].ariaLabel",
+          "kind": "attr",
+          "line": 188,
+          "start": 13607,
+          "end": 13638,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].icon",
+          "kind": "attr",
+          "line": 189,
+          "start": 13667,
+          "end": 13697,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].href",
+          "kind": "attr",
+          "line": 191,
+          "start": 13751,
+          "end": 13784,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].ariaLabel",
+          "kind": "attr",
+          "line": 191,
+          "start": 13809,
+          "end": 13844,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].icon",
+          "kind": "attr",
+          "line": 192,
+          "start": 13873,
+          "end": 13902,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].href",
+          "kind": "attr",
+          "line": 194,
+          "start": 13956,
+          "end": 13995,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].ariaLabel",
+          "kind": "attr",
+          "line": 194,
+          "start": 14015,
+          "end": 14044,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].icon",
+          "kind": "attr",
+          "line": 195,
+          "start": 14073,
+          "end": 14102,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.copyright",
+          "kind": "html",
+          "line": 203,
+          "start": 14353,
+          "end": 14438,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.label",
+          "kind": "html",
+          "line": 60,
+          "start": 4191,
+          "end": 4211,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.href",
+          "kind": "attr",
+          "line": 60,
+          "start": 4152,
+          "end": 4172,
+          "a": "pass",
+          "b": "n/a"
+        }
+      ]
+    },
+    "comparative-analysis": {
+      "sourceFile": "comparative-analysis.html",
+      "sourceBytes": 19950,
+      "outputFile": "src/i18n/articles/comparative-analysis.json",
+      "outputBytes": 10593,
+      "counts": {
+        "entries": 118,
+        "html": 46,
+        "attr": 41,
+        "jsonld": 2,
+        "nulls": 11
+      },
+      "checkA": {
+        "pass": 89,
+        "fail": 0,
+        "na": 29,
+        "failures": []
+      },
+      "checkB": {
+        "pass": 46,
+        "fail": 0,
+        "na": 72,
+        "failures": []
+      },
+      "coverage": {
+        "total": 47,
+        "covered": 47,
+        "pct": 100,
+        "uncovered": []
+      },
+      "inventory": {
+        "cards": 2,
+        "blocks": 18,
+        "h2": 7,
+        "h3": 2,
+        "p": 9,
+        "pWithClass": 0,
+        "lists": 0,
+        "listItems": 0,
+        "blockquotes": 0,
+        "inlineImages": 0,
+        "inlineLinks": 0,
+        "unexpected": 0,
+        "heroImage": 0,
+        "heroSources": 0,
+        "ctas": 1,
+        "externalCtas": 0,
+        "jsonld": "WebPage+FAQPage",
+        "navItems": 6,
+        "footerQuickLinks": 7,
+        "footerConnect": 3
+      },
+      "observations": {
+        "heroSourceLine": null,
+        "footerHeadingTags": [
+          "h3",
+          "h3",
+          "h3"
+        ],
+        "footerLanguageColumn": false,
+        "cookieBanner": true,
+        "mainColumnClass": "col-lg-9"
+      },
+      "missing": [],
+      "strippedDecorations": [],
+      "multilineValues": [],
+      "unexpectedBlocks": [],
+      "jsonldErrors": [],
+      "jsonldUrlMatchesCanonical": true,
+      "parseErrors": [],
+      "entries": [
+        {
+          "path": "meta.title",
+          "kind": "html",
+          "line": 22,
+          "start": 2003,
+          "end": 2057,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "meta.description",
+          "kind": "attr",
+          "line": 24,
+          "start": 2096,
+          "end": 2250,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.robots",
+          "kind": "attr",
+          "line": 25,
+          "start": 2272,
+          "end": 2295,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.canonical",
+          "kind": "attr",
+          "line": 26,
+          "start": 2323,
+          "end": 2385,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogTitle",
+          "kind": "attr",
+          "line": 33,
+          "start": 2717,
+          "end": 2781,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogDescription",
+          "kind": "attr",
+          "line": 34,
+          "start": 2819,
+          "end": 2973,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogType",
+          "kind": "attr",
+          "line": 35,
+          "start": 3004,
+          "end": 3021,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogUrl",
+          "kind": "attr",
+          "line": 36,
+          "start": 3051,
+          "end": 3116,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogImage",
+          "kind": "attr",
+          "line": 37,
+          "start": 3148,
+          "end": 3204,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.twitterCard",
+          "kind": "attr",
+          "line": 38,
+          "start": 3236,
+          "end": 3265,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.jsonld[0]",
+          "kind": "jsonld",
+          "line": 49,
+          "start": 3713,
+          "end": 4087,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.jsonld[1]",
+          "kind": "jsonld",
+          "line": 59,
+          "start": 4137,
+          "end": 5260,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.ariaLabel",
+          "kind": "attr",
+          "line": 97,
+          "start": 6150,
+          "end": 6178,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.href",
+          "kind": "attr",
+          "line": 99,
+          "start": 6240,
+          "end": 6248,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.alt",
+          "kind": "attr",
+          "line": 100,
+          "start": 6417,
+          "end": 6441,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.toggleAriaLabel",
+          "kind": "attr",
+          "line": 102,
+          "start": 6698,
+          "end": 6728,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[0].label",
+          "kind": "html",
+          "line": 107,
+          "start": 6979,
+          "end": 6983,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[0].href",
+          "kind": "attr",
+          "line": 107,
+          "start": 6965,
+          "end": 6978,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[1].label",
+          "kind": "html",
+          "line": 108,
+          "start": 7068,
+          "end": 7075,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[1].href",
+          "kind": "attr",
+          "line": 108,
+          "start": 7050,
+          "end": 7067,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[2].label",
+          "kind": "html",
+          "line": 109,
+          "start": 7160,
+          "end": 7168,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[2].href",
+          "kind": "attr",
+          "line": 109,
+          "start": 7142,
+          "end": 7159,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[3].label",
+          "kind": "html",
+          "line": 110,
+          "start": 7252,
+          "end": 7261,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[3].href",
+          "kind": "attr",
+          "line": 110,
+          "start": 7235,
+          "end": 7251,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[4].label",
+          "kind": "html",
+          "line": 111,
+          "start": 7343,
+          "end": 7348,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[4].href",
+          "kind": "attr",
+          "line": 111,
+          "start": 7328,
+          "end": 7342,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[5].label",
+          "kind": "html",
+          "line": 112,
+          "start": 7432,
+          "end": 7439,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[5].href",
+          "kind": "attr",
+          "line": 112,
+          "start": 7415,
+          "end": 7431,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.ariaLabel",
+          "kind": "attr",
+          "line": 119,
+          "start": 7534,
+          "end": 7557,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[0].label",
+          "kind": "html",
+          "line": 122,
+          "start": 7878,
+          "end": 7882,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "breadcrumb.items[0].href",
+          "kind": "attr",
+          "line": 122,
+          "start": 7810,
+          "end": 7818,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[1].label",
+          "kind": "html",
+          "line": 126,
+          "start": 8151,
+          "end": 8184,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.eyebrow",
+          "kind": "html",
+          "line": 137,
+          "start": 8524,
+          "end": 8534,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.h1",
+          "kind": "html",
+          "line": 138,
+          "start": 8607,
+          "end": 8640,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].html",
+          "kind": "html",
+          "line": 141,
+          "start": 8726,
+          "end": 8973,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[0].class",
+          "kind": "attr",
+          "line": 141,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[1].html",
+          "kind": "html",
+          "line": 143,
+          "start": 9038,
+          "end": 9046,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[2].html",
+          "kind": "html",
+          "line": 144,
+          "start": 9079,
+          "end": 9572,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[2].class",
+          "kind": "attr",
+          "line": 144,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[3].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[3].html",
+          "kind": "html",
+          "line": 146,
+          "start": 9637,
+          "end": 9644,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[4].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[4].html",
+          "kind": "html",
+          "line": 147,
+          "start": 9677,
+          "end": 10132,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[4].class",
+          "kind": "attr",
+          "line": 147,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[5].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[5].html",
+          "kind": "html",
+          "line": 149,
+          "start": 10197,
+          "end": 10209,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[6].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[6].html",
+          "kind": "html",
+          "line": 150,
+          "start": 10242,
+          "end": 10506,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[6].class",
+          "kind": "attr",
+          "line": 150,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[7].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[7].html",
+          "kind": "html",
+          "line": 152,
+          "start": 10571,
+          "end": 10603,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[8].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[8].html",
+          "kind": "html",
+          "line": 153,
+          "start": 10636,
+          "end": 10981,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[8].class",
+          "kind": "attr",
+          "line": 153,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[9].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[9].html",
+          "kind": "html",
+          "line": 155,
+          "start": 11046,
+          "end": 11076,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[10].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[10].html",
+          "kind": "html",
+          "line": 156,
+          "start": 11109,
+          "end": 11552,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[10].class",
+          "kind": "attr",
+          "line": 156,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[11].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[11].html",
+          "kind": "html",
+          "line": 158,
+          "start": 11617,
+          "end": 11637,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[12].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[12].html",
+          "kind": "html",
+          "line": 159,
+          "start": 11670,
+          "end": 12114,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[12].class",
+          "kind": "attr",
+          "line": 159,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[0].html",
+          "kind": "html",
+          "line": 163,
+          "start": 12253,
+          "end": 12279,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[1].html",
+          "kind": "html",
+          "line": 164,
+          "start": 12339,
+          "end": 12397,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[2].html",
+          "kind": "html",
+          "line": 165,
+          "start": 12430,
+          "end": 12834,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[2].class",
+          "kind": "attr",
+          "line": 165,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[3].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[3].html",
+          "kind": "html",
+          "line": 166,
+          "start": 12893,
+          "end": 12930,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[4].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[1].blocks[4].html",
+          "kind": "html",
+          "line": 167,
+          "start": 12963,
+          "end": 13127,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[1].blocks[4].class",
+          "kind": "attr",
+          "line": 167,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].label",
+          "kind": "html",
+          "line": 171,
+          "start": 13286,
+          "end": 13299,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.ctas[0].href",
+          "kind": "attr",
+          "line": 171,
+          "start": 13238,
+          "end": 13254,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].target",
+          "kind": "attr",
+          "line": 171,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].rel",
+          "kind": "attr",
+          "line": 171,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.ariaLabel",
+          "kind": "attr",
+          "line": 88,
+          "start": 5562,
+          "end": 5589,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.text",
+          "kind": "html",
+          "line": 89,
+          "start": 5649,
+          "end": 5766,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.reject",
+          "kind": "html",
+          "line": 91,
+          "start": 5907,
+          "end": 5921,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.accept",
+          "kind": "html",
+          "line": 92,
+          "start": 6024,
+          "end": 6030,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.h3",
+          "kind": "html",
+          "line": 183,
+          "start": 13588,
+          "end": 13606,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.text",
+          "kind": "html",
+          "line": 184,
+          "start": 13631,
+          "end": 13729,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.h3",
+          "kind": "html",
+          "line": 187,
+          "start": 13834,
+          "end": 13845,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.ariaLabel",
+          "kind": "attr",
+          "line": 188,
+          "start": 13872,
+          "end": 13902,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[0].label",
+          "kind": "html",
+          "line": 190,
+          "start": 14036,
+          "end": 14040,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[0].href",
+          "kind": "attr",
+          "line": 190,
+          "start": 13982,
+          "end": 13995,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[1].label",
+          "kind": "html",
+          "line": 191,
+          "start": 14139,
+          "end": 14146,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[1].href",
+          "kind": "attr",
+          "line": 191,
+          "start": 14081,
+          "end": 14098,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[2].label",
+          "kind": "html",
+          "line": 192,
+          "start": 14245,
+          "end": 14253,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[2].href",
+          "kind": "attr",
+          "line": 192,
+          "start": 14187,
+          "end": 14204,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[3].label",
+          "kind": "html",
+          "line": 193,
+          "start": 14351,
+          "end": 14360,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[3].href",
+          "kind": "attr",
+          "line": 193,
+          "start": 14294,
+          "end": 14310,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[4].label",
+          "kind": "html",
+          "line": 194,
+          "start": 14456,
+          "end": 14461,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[4].href",
+          "kind": "attr",
+          "line": 194,
+          "start": 14401,
+          "end": 14415,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[5].label",
+          "kind": "html",
+          "line": 195,
+          "start": 14559,
+          "end": 14566,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[5].href",
+          "kind": "attr",
+          "line": 195,
+          "start": 14502,
+          "end": 14518,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[6].label",
+          "kind": "html",
+          "line": 196,
+          "start": 14675,
+          "end": 14689,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[6].href",
+          "kind": "attr",
+          "line": 196,
+          "start": 14607,
+          "end": 14634,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.h3",
+          "kind": "html",
+          "line": 201,
+          "start": 14848,
+          "end": 14855,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.connect.links[0].href",
+          "kind": "attr",
+          "line": 203,
+          "start": 14927,
+          "end": 14976,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].ariaLabel",
+          "kind": "attr",
+          "line": 203,
+          "start": 15001,
+          "end": 15032,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].icon",
+          "kind": "attr",
+          "line": 204,
+          "start": 15061,
+          "end": 15091,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].href",
+          "kind": "attr",
+          "line": 206,
+          "start": 15145,
+          "end": 15178,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].ariaLabel",
+          "kind": "attr",
+          "line": 206,
+          "start": 15203,
+          "end": 15238,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].icon",
+          "kind": "attr",
+          "line": 207,
+          "start": 15267,
+          "end": 15296,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].href",
+          "kind": "attr",
+          "line": 209,
+          "start": 15350,
+          "end": 15389,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].ariaLabel",
+          "kind": "attr",
+          "line": 209,
+          "start": 15409,
+          "end": 15438,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].icon",
+          "kind": "attr",
+          "line": 210,
+          "start": 15467,
+          "end": 15496,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.copyright",
+          "kind": "html",
+          "line": 218,
+          "start": 15747,
+          "end": 15832,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.label",
+          "kind": "html",
+          "line": 85,
+          "start": 5331,
+          "end": 5351,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.href",
+          "kind": "attr",
+          "line": 85,
+          "start": 5292,
+          "end": 5312,
+          "a": "pass",
+          "b": "n/a"
+        }
+      ]
+    },
+    "safarimedic-partnership": {
+      "sourceFile": "safarimedic-partnership.html",
+      "sourceBytes": 15053,
+      "outputFile": "src/i18n/articles/safarimedic-partnership.json",
+      "outputBytes": 5346,
+      "counts": {
+        "entries": 89,
+        "html": 31,
+        "attr": 52,
+        "jsonld": 0,
+        "nulls": 3
+      },
+      "checkA": {
+        "pass": 83,
+        "fail": 0,
+        "na": 6,
+        "failures": []
+      },
+      "checkB": {
+        "pass": 31,
+        "fail": 0,
+        "na": 58,
+        "failures": []
+      },
+      "coverage": {
+        "total": 32,
+        "covered": 32,
+        "pct": 100,
+        "uncovered": []
+      },
+      "inventory": {
+        "cards": 1,
+        "blocks": 3,
+        "h2": 0,
+        "h3": 0,
+        "p": 3,
+        "pWithClass": 0,
+        "lists": 0,
+        "listItems": 0,
+        "blockquotes": 0,
+        "inlineImages": 0,
+        "inlineLinks": 0,
+        "unexpected": 0,
+        "heroImage": 1,
+        "heroSources": 2,
+        "ctas": 1,
+        "externalCtas": 1,
+        "jsonld": "(none)",
+        "navItems": 6,
+        "footerQuickLinks": 7,
+        "footerConnect": 3
+      },
+      "observations": {
+        "heroSourceLine": 106,
+        "footerHeadingTags": [
+          "h2",
+          "h2",
+          "h2"
+        ],
+        "footerLanguageColumn": false,
+        "cookieBanner": true,
+        "mainColumnClass": "col-lg-8"
+      },
+      "missing": [],
+      "strippedDecorations": [],
+      "multilineValues": [],
+      "unexpectedBlocks": [],
+      "jsonldErrors": [],
+      "jsonldUrlMatchesCanonical": null,
+      "parseErrors": [],
+      "entries": [
+        {
+          "path": "meta.title",
+          "kind": "html",
+          "line": 22,
+          "start": 2003,
+          "end": 2047,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "meta.description",
+          "kind": "attr",
+          "line": 24,
+          "start": 2086,
+          "end": 2224,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.robots",
+          "kind": "attr",
+          "line": 25,
+          "start": 2246,
+          "end": 2269,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.canonical",
+          "kind": "attr",
+          "line": 26,
+          "start": 2297,
+          "end": 2362,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogTitle",
+          "kind": "attr",
+          "line": 33,
+          "start": 2694,
+          "end": 2748,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogDescription",
+          "kind": "attr",
+          "line": 34,
+          "start": 2786,
+          "end": 2924,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogType",
+          "kind": "attr",
+          "line": 35,
+          "start": 2955,
+          "end": 2972,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogUrl",
+          "kind": "attr",
+          "line": 36,
+          "start": 3002,
+          "end": 3070,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.ogImage",
+          "kind": "attr",
+          "line": 37,
+          "start": 3102,
+          "end": 3165,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "meta.twitterCard",
+          "kind": "attr",
+          "line": 38,
+          "start": 3197,
+          "end": 3226,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.ariaLabel",
+          "kind": "attr",
+          "line": 62,
+          "start": 4514,
+          "end": 4542,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.href",
+          "kind": "attr",
+          "line": 64,
+          "start": 4604,
+          "end": 4612,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.brand.alt",
+          "kind": "attr",
+          "line": 65,
+          "start": 4781,
+          "end": 4805,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.toggleAriaLabel",
+          "kind": "attr",
+          "line": 67,
+          "start": 5062,
+          "end": 5092,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[0].label",
+          "kind": "html",
+          "line": 72,
+          "start": 5343,
+          "end": 5347,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[0].href",
+          "kind": "attr",
+          "line": 72,
+          "start": 5329,
+          "end": 5342,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[1].label",
+          "kind": "html",
+          "line": 73,
+          "start": 5432,
+          "end": 5439,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[1].href",
+          "kind": "attr",
+          "line": 73,
+          "start": 5414,
+          "end": 5431,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[2].label",
+          "kind": "html",
+          "line": 74,
+          "start": 5524,
+          "end": 5532,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[2].href",
+          "kind": "attr",
+          "line": 74,
+          "start": 5506,
+          "end": 5523,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[3].label",
+          "kind": "html",
+          "line": 75,
+          "start": 5616,
+          "end": 5625,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[3].href",
+          "kind": "attr",
+          "line": 75,
+          "start": 5599,
+          "end": 5615,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[4].label",
+          "kind": "html",
+          "line": 76,
+          "start": 5707,
+          "end": 5712,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[4].href",
+          "kind": "attr",
+          "line": 76,
+          "start": 5692,
+          "end": 5706,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "nav.items[5].label",
+          "kind": "html",
+          "line": 77,
+          "start": 5796,
+          "end": 5803,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "nav.items[5].href",
+          "kind": "attr",
+          "line": 77,
+          "start": 5779,
+          "end": 5795,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.ariaLabel",
+          "kind": "attr",
+          "line": 84,
+          "start": 5898,
+          "end": 5921,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[0].label",
+          "kind": "html",
+          "line": 87,
+          "start": 6242,
+          "end": 6246,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "breadcrumb.items[0].href",
+          "kind": "attr",
+          "line": 87,
+          "start": 6174,
+          "end": 6182,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "breadcrumb.items[1].label",
+          "kind": "html",
+          "line": 91,
+          "start": 6515,
+          "end": 6538,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.eyebrow",
+          "kind": "html",
+          "line": 102,
+          "start": 6878,
+          "end": 6889,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.h1",
+          "kind": "html",
+          "line": 103,
+          "start": 6962,
+          "end": 6989,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.image.src",
+          "kind": "attr",
+          "line": 106,
+          "start": 7208,
+          "end": 7238,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.alt",
+          "kind": "attr",
+          "line": 106,
+          "start": 7239,
+          "end": 7261,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.width",
+          "kind": "attr",
+          "line": 106,
+          "start": 7333,
+          "end": 7344,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.height",
+          "kind": "attr",
+          "line": 106,
+          "start": 7345,
+          "end": 7357,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.style",
+          "kind": "attr",
+          "line": 106,
+          "start": 7293,
+          "end": 7332,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[0].srcset",
+          "kind": "attr",
+          "line": 106,
+          "start": 7089,
+          "end": 7123,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[0].type",
+          "kind": "attr",
+          "line": 106,
+          "start": 7124,
+          "end": 7141,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[1].srcset",
+          "kind": "attr",
+          "line": 106,
+          "start": 7150,
+          "end": 7184,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.image.sources[1].type",
+          "kind": "attr",
+          "line": 106,
+          "start": 7185,
+          "end": 7202,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[0].html",
+          "kind": "html",
+          "line": 108,
+          "start": 7397,
+          "end": 7644,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[0].class",
+          "kind": "attr",
+          "line": 108,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[1].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[1].html",
+          "kind": "html",
+          "line": 110,
+          "start": 7677,
+          "end": 7945,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[1].class",
+          "kind": "attr",
+          "line": 110,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[2].tag",
+          "kind": "derived",
+          "line": null,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.cards[0].blocks[2].html",
+          "kind": "html",
+          "line": 112,
+          "start": 7978,
+          "end": 8184,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.cards[0].blocks[2].class",
+          "kind": "attr",
+          "line": 112,
+          "start": null,
+          "end": null,
+          "a": "n/a",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].label",
+          "kind": "html",
+          "line": 116,
+          "start": 8403,
+          "end": 8420,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "page.ctas[0].href",
+          "kind": "attr",
+          "line": 116,
+          "start": 8295,
+          "end": 8329,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].target",
+          "kind": "attr",
+          "line": 116,
+          "start": 8330,
+          "end": 8345,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "page.ctas[0].rel",
+          "kind": "attr",
+          "line": 116,
+          "start": 8346,
+          "end": 8371,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.ariaLabel",
+          "kind": "attr",
+          "line": 53,
+          "start": 3926,
+          "end": 3953,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "cookie.text",
+          "kind": "html",
+          "line": 54,
+          "start": 4013,
+          "end": 4130,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.reject",
+          "kind": "html",
+          "line": 56,
+          "start": 4271,
+          "end": 4285,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "cookie.accept",
+          "kind": "html",
+          "line": 57,
+          "start": 4388,
+          "end": 4394,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.h3",
+          "kind": "html",
+          "line": 128,
+          "start": 8709,
+          "end": 8727,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.brand.text",
+          "kind": "html",
+          "line": 129,
+          "start": 8752,
+          "end": 8850,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.h3",
+          "kind": "html",
+          "line": 132,
+          "start": 8955,
+          "end": 8966,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.ariaLabel",
+          "kind": "attr",
+          "line": 133,
+          "start": 8993,
+          "end": 9023,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[0].label",
+          "kind": "html",
+          "line": 135,
+          "start": 9157,
+          "end": 9161,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[0].href",
+          "kind": "attr",
+          "line": 135,
+          "start": 9103,
+          "end": 9116,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[1].label",
+          "kind": "html",
+          "line": 136,
+          "start": 9260,
+          "end": 9267,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[1].href",
+          "kind": "attr",
+          "line": 136,
+          "start": 9202,
+          "end": 9219,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[2].label",
+          "kind": "html",
+          "line": 137,
+          "start": 9366,
+          "end": 9374,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[2].href",
+          "kind": "attr",
+          "line": 137,
+          "start": 9308,
+          "end": 9325,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[3].label",
+          "kind": "html",
+          "line": 138,
+          "start": 9472,
+          "end": 9481,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[3].href",
+          "kind": "attr",
+          "line": 138,
+          "start": 9415,
+          "end": 9431,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[4].label",
+          "kind": "html",
+          "line": 139,
+          "start": 9577,
+          "end": 9582,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[4].href",
+          "kind": "attr",
+          "line": 139,
+          "start": 9522,
+          "end": 9536,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[5].label",
+          "kind": "html",
+          "line": 140,
+          "start": 9680,
+          "end": 9687,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[5].href",
+          "kind": "attr",
+          "line": 140,
+          "start": 9623,
+          "end": 9639,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.quickLinks.links[6].label",
+          "kind": "html",
+          "line": 141,
+          "start": 9796,
+          "end": 9810,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.quickLinks.links[6].href",
+          "kind": "attr",
+          "line": 141,
+          "start": 9728,
+          "end": 9755,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.h3",
+          "kind": "html",
+          "line": 146,
+          "start": 9969,
+          "end": 9976,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "footer.connect.links[0].href",
+          "kind": "attr",
+          "line": 148,
+          "start": 10048,
+          "end": 10097,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].ariaLabel",
+          "kind": "attr",
+          "line": 148,
+          "start": 10122,
+          "end": 10153,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[0].icon",
+          "kind": "attr",
+          "line": 149,
+          "start": 10182,
+          "end": 10212,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].href",
+          "kind": "attr",
+          "line": 151,
+          "start": 10266,
+          "end": 10299,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].ariaLabel",
+          "kind": "attr",
+          "line": 151,
+          "start": 10324,
+          "end": 10359,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[1].icon",
+          "kind": "attr",
+          "line": 152,
+          "start": 10388,
+          "end": 10417,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].href",
+          "kind": "attr",
+          "line": 154,
+          "start": 10471,
+          "end": 10510,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].ariaLabel",
+          "kind": "attr",
+          "line": 154,
+          "start": 10530,
+          "end": 10559,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.connect.links[2].icon",
+          "kind": "attr",
+          "line": 155,
+          "start": 10588,
+          "end": 10617,
+          "a": "pass",
+          "b": "n/a"
+        },
+        {
+          "path": "footer.copyright",
+          "kind": "html",
+          "line": 163,
+          "start": 10868,
+          "end": 10953,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.label",
+          "kind": "html",
+          "line": 50,
+          "start": 3695,
+          "end": 3715,
+          "a": "pass",
+          "b": "pass"
+        },
+        {
+          "path": "a11y.skipLink.href",
+          "kind": "attr",
+          "line": 50,
+          "start": 3656,
+          "end": 3676,
+          "a": "pass",
+          "b": "n/a"
+        }
+      ]
+    }
+  },
+  "notes": [
+    "breeding-science.html: footer quick link \"Privacy Policy\" points at /privacy-policy.html (the old physical file, now a 301); kept verbatim in JSON.",
+    "training-methodology.html: 7 .feature-card blocks (not one) — kept as page.cards[] in DOM order; the page template renders them as consecutive prose groups.",
+    "training-methodology.html: 5 <p> block(s) carry a class attribute (\"text-light opacity-75 mb-3\") — recorded as blocks[].class so the template can style them (phase timing lines).",
+    "training-methodology.html: footer quick link \"Privacy Policy\" points at /privacy-policy.html (the old physical file, now a 301); kept verbatim in JSON.",
+    "comparative-analysis.html: 2 .feature-card blocks (not one) — kept as page.cards[] in DOM order; the page template renders them as consecutive prose groups.",
+    "comparative-analysis.html: no <picture>/<img> inside any .feature-card — page.image is null.",
+    "comparative-analysis.html: 2 JSON-LD block(s) (WebPage+FAQPage).",
+    "comparative-analysis.html: footer quick link \"Privacy Policy\" points at /privacy-policy.html (the old physical file, now a 301); kept verbatim in JSON.",
+    "safarimedic-partnership.html: footer column headings are <h2>, <h2>, <h2> rather than <h3> — extracted as footer.*.h3 regardless (the key names the slot, the new Footer component renders its own heading level).",
+    "safarimedic-partnership.html: hero <img> carries an inline style attribute (\"max-height: 120px; width: auto;\") — recorded as page.image.style verbatim.",
+    "safarimedic-partnership.html: CTA(s) with target/rel (external link) — recorded as ctas[].target / ctas[].rel.",
+    "safarimedic-partnership.html: 0 JSON-LD block(s) ((none)).",
+    "safarimedic-partnership.html: footer quick link \"Privacy Policy\" points at /privacy-policy.html (the old physical file, now a 301); kept verbatim in JSON.",
+    "meta.canonical / meta.ogUrl / JSON-LD WebPage.url are the OLD .html URLs, kept as extracted; the page template computes the new clean canonical itself and rewrites only the JSON-LD url at render time.",
+    "meta.ogImage is the absolute live URL as extracted; the template derives the root-relative path because Base.astro prepends SITE_ORIGIN."
+  ],
+  "summary": {
+    "files": 4,
+    "checkA": {
+      "pass": 358,
+      "fail": 0
+    },
+    "checkB": {
+      "pass": 158,
+      "fail": 0
+    },
+    "coverage": {
+      "total": 162,
+      "covered": 162,
+      "pct": 100
+    },
+    "unexpectedBlocks": 0,
+    "missing": 0
+  }
+}

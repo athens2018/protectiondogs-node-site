@@ -1,0 +1,301 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/chrome/Header.astro';
+import Footer from '../components/chrome/Footer.astro';
+import Breadcrumb from '../components/chrome/Breadcrumb.astro';
+import CookieConsent from '../components/chrome/CookieConsent.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import Button from '../components/ui/Button.astro';
+import breedingScience from '../i18n/articles/breeding-science.json';
+import trainingMethodology from '../i18n/articles/training-methodology.json';
+import comparativeAnalysis from '../i18n/articles/comparative-analysis.json';
+import safarimedicPartnership from '../i18n/articles/safarimedic-partnership.json';
+import homeContent from '../i18n/locales/en.json';
+import { localeUrl } from '../lib/i18n';
+import { faToIconName, iconFromHref } from '../lib/icon-map';
+import '../styles/prose.css';
+
+// The four English-only long-form articles kept from the live site (owner
+// decision "option A": still indexed, off-nav, reached by direct URL/search).
+// Copy comes verbatim from scripts/extract-articles.mjs output; see
+// scripts/reports/articles-report.md for the block union and per-page checks.
+
+interface ArticleImage {
+  src: string;
+  alt: string;
+  width: string;
+  height: string;
+  /** Inline style attribute carried over verbatim (only the SafariMedic logo has one) */
+  style: string | null;
+  sources: { srcset: string; type: string }[];
+}
+
+type Block =
+  | { tag: 'h2' | 'h3' | 'h4' | 'blockquote'; html: string }
+  | { tag: 'p'; html: string; class: string | null }
+  | { tag: 'ul' | 'ol'; items: string[] }
+  | ({ tag: 'image' } & ArticleImage)
+  | { tag: 'a'; label: string; href: string; target: string | null; rel: string | null };
+
+interface Cta {
+  label: string;
+  href: string;
+  target: string | null;
+  rel: string | null;
+}
+
+interface Article {
+  meta: {
+    title: string;
+    description: string;
+    robots: string;
+    canonical: string;
+    ogTitle: string;
+    ogDescription: string;
+    ogType: string;
+    ogUrl: string;
+    ogImage: string;
+    twitterCard: string;
+    jsonld: Record<string, unknown>[];
+  };
+  nav: {
+    ariaLabel: string;
+    brand: { href: string; alt: string };
+    toggleAriaLabel: string;
+    items: { label: string; href: string }[];
+  };
+  breadcrumb: { ariaLabel: string; items: { label: string; href: string | null }[] };
+  page: {
+    eyebrow: string;
+    h1: string;
+    image: ArticleImage | null;
+    cards: { blocks: Block[] }[];
+    ctas: Cta[];
+  };
+  cookie: { ariaLabel: string; text: string; reject: string; accept: string };
+  footer: {
+    brand: { h3: string; text: string };
+    quickLinks: { h3: string; ariaLabel: string; links: { label: string; href: string }[] };
+    connect: { h3: string; links: { href: string; ariaLabel: string; icon: string }[] };
+    copyright: string;
+  };
+  a11y: { skipLink: { label: string; href: string } };
+}
+
+// Static import map: this is a static build, no dynamic import().
+const ARTICLES = {
+  'breeding-science': breedingScience as unknown as Article,
+  'training-methodology': trainingMethodology as unknown as Article,
+  'comparative-analysis': comparativeAnalysis as unknown as Article,
+  'safarimedic-partnership': safarimedicPartnership as unknown as Article,
+} as const;
+type Slug = keyof typeof ARTICLES;
+
+export function getStaticPaths() {
+  return (['breeding-science', 'training-methodology', 'comparative-analysis', 'safarimedic-partnership'] as const).map((article) => ({
+    params: { article },
+  }));
+}
+
+const locale = 'en';
+const slug = Astro.params.article as Slug;
+const content = ARTICLES[slug];
+const canonical = localeUrl(locale, slug);
+
+// Base.astro prepends SITE_ORIGIN to ogImage, so hand it the root-relative
+// path derived from the absolute live URL the source carries.
+const ogImagePath = new URL(content.meta.ogImage).pathname;
+
+// The source's WebPage block names the old physical URL, which now 301s to
+// this page; point the structured data at the clean canonical instead. Every
+// other block (comparative-analysis also carries a FAQPage) passes through
+// untouched.
+const jsonldBlocks = content.meta.jsonld.map((block) => (block['@type'] === 'WebPage' ? { ...block, url: canonical } : block));
+
+// footer.connect.links[].icon is the legacy Font Awesome class; Footer.astro
+// wants the Icon kit's semantic name (same mapping as 404.astro).
+const socialLinks = content.footer.connect.links.map((s) => ({
+  href: s.href,
+  ariaLabel: s.ariaLabel,
+  icon: faToIconName(s.icon, iconFromHref(s.href)) as 'instagram' | 'whatsapp' | 'envelope',
+}));
+
+// The live footer links the old physical privacy file; on this site that is
+// a 301 to the clean URL, so link the destination directly. Label untouched.
+const quickLinks = content.footer.quickLinks.links.map((l) => ({
+  label: l.label,
+  href: l.href.replace(/^\/privacy-policy\.html$/, '/privacy-policy/'),
+}));
+
+// training-methodology's phase timing lines are <p class="text-light opacity-75 mb-3">
+const isMuted = (block: Extract<Block, { tag: 'p' }>) => /\bopacity-75\b/.test(block.class ?? '');
+---
+
+<Base
+  locale={locale}
+  title={content.meta.title}
+  description={content.meta.description}
+  ogTitle={content.meta.ogTitle}
+  ogDescription={content.meta.ogDescription}
+  ogImage={ogImagePath}
+  subpath={slug}
+  alternates={false}
+  robots={content.meta.robots}
+  skipLinkLabel={content.a11y.skipLink.label}
+  backToTopLabel={homeContent.a11y.backToTopAriaLabel}
+>
+  {jsonldBlocks.length > 0 && (
+    <Fragment slot="head">
+      {jsonldBlocks.map((block) => <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />)}
+    </Fragment>
+  )}
+
+  <CookieConsent
+    ariaLabel={content.cookie.ariaLabel}
+    text={content.cookie.text}
+    rejectLabel={content.cookie.reject}
+    acceptLabel={content.cookie.accept}
+  />
+
+  <Header
+    locale={locale}
+    nav={content.nav.items}
+    navAriaLabel={content.nav.ariaLabel}
+    brandAlt={content.nav.brand.alt}
+    homeHref={content.nav.brand.href}
+    menuToggleLabel={content.nav.toggleAriaLabel}
+    langTriggerLabel={homeContent.nav.langDrawer.ariaLabel}
+    drawerTitle={homeContent.nav.langDrawer.title}
+    drawerCloseLabel={homeContent.nav.langDrawer.close.ariaLabel}
+    bannerText=""
+    bannerSwitchLabel=""
+    bannerDismissLabel=""
+    subpath={slug}
+    showLanguageSwitcher={false}
+  />
+
+  <Breadcrumb
+    homeLabel={content.breadcrumb.items[0].label}
+    homeHref={content.breadcrumb.items[0].href as string}
+    current={content.breadcrumb.items[1].label}
+    ariaLabel={content.breadcrumb.ariaLabel}
+  />
+
+  <main id="main-content">
+    <article class="section section--dark">
+      <div class="container container--narrow">
+        <SectionHeader eyebrow={content.page.eyebrow} heading={content.page.h1} level="h1" align="start" />
+
+        {content.page.image && (
+          <picture class="article-hero">
+            {content.page.image.sources.map((s) => <source srcset={s.srcset} type={s.type} />)}
+            <img
+              src={content.page.image.src}
+              alt={content.page.image.alt}
+              width={content.page.image.width}
+              height={content.page.image.height}
+              style={content.page.image.style ?? undefined}
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        )}
+
+        {content.page.cards.map((card, index) => (
+          <div class:list={['prose', 'article-body', { 'article-body--divided': index > 0 }]}>
+            {card.blocks.map((block) =>
+              block.tag === 'h2' ? (
+                <h2 set:html={block.html} />
+              ) : block.tag === 'h3' ? (
+                <h3 set:html={block.html} />
+              ) : block.tag === 'h4' ? (
+                <h4 set:html={block.html} />
+              ) : block.tag === 'p' ? (
+                <p class={isMuted(block) ? 'article-meta' : undefined} set:html={block.html} />
+              ) : block.tag === 'ul' ? (
+                <ul>{block.items.map((item) => <li set:html={item} />)}</ul>
+              ) : block.tag === 'ol' ? (
+                <ol>{block.items.map((item) => <li set:html={item} />)}</ol>
+              ) : block.tag === 'blockquote' ? (
+                <blockquote set:html={block.html} />
+              ) : block.tag === 'image' ? (
+                <picture>
+                  {block.sources.map((s) => <source srcset={s.srcset} type={s.type} />)}
+                  <img src={block.src} alt={block.alt} width={block.width} height={block.height} style={block.style ?? undefined} loading="lazy" decoding="async" />
+                </picture>
+              ) : block.tag === 'a' ? (
+                <p>
+                  <Button href={block.href} variant="outline" target={block.target ?? undefined} rel={block.rel ?? undefined} set:html={block.label} />
+                </p>
+              ) : null,
+            )}
+          </div>
+        ))}
+
+        {content.page.ctas.length > 0 && (
+          <div class="article-cta">
+            {content.page.ctas.map((cta) => (
+              <Button href={cta.href} variant="primary" size="lg" target={cta.target ?? undefined} rel={cta.rel ?? undefined} set:html={cta.label} />
+            ))}
+          </div>
+        )}
+      </div>
+    </article>
+  </main>
+
+  <Footer
+    locale={locale}
+    brandTitle={content.footer.brand.h3}
+    brandBlurb={content.footer.brand.text}
+    quickLinksTitle={content.footer.quickLinks.h3}
+    quickLinksAriaLabel={content.footer.quickLinks.ariaLabel}
+    links={quickLinks}
+    languageTitle=""
+    connectTitle={content.footer.connect.h3}
+    social={socialLinks}
+    copyright={content.footer.copyright}
+    subpath={slug}
+    showLanguage={false}
+  />
+</Base>
+
+<style>
+  .article-hero {
+    display: block;
+    margin-bottom: var(--space-7);
+  }
+
+  .article-hero img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+  }
+
+  .article-body--divided {
+    margin-top: var(--space-7);
+    padding-top: var(--space-7);
+    border-top: 1px solid var(--line);
+  }
+
+  .article-body :global(.article-meta) {
+    margin-top: var(--space-2);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .article-body :global(.article-meta + p) {
+    margin-top: var(--space-4);
+  }
+
+  .article-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+</style>

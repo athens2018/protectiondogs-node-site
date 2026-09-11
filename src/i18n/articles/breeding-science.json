@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "title": "Breeding Standards | Belgian Malinois | Protection Dogs GR",
+    "description": "How breeding pairings are actually chosen: health testing, pedigree-depth COI calculations, complementary drive traits, and why the program stays small.",
+    "robots": "index, follow",
+    "canonical": "https://www.protectiondogs.gr/breeding-science.html",
+    "ogTitle": "Breeding Standards | Belgian Malinois Protection Dogs",
+    "ogDescription": "How breeding pairings are actually chosen: health testing, pedigree-depth COI calculations, complementary drive traits, and why the program stays small.",
+    "ogType": "article",
+    "ogUrl": "https://www.protectiondogs.gr/breeding-science.html",
+    "ogImage": "https://www.protectiondogs.gr/images/yukon.jpg",
+    "twitterCard": "summary_large_image",
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Breeding Standards",
+        "description": "How breeding pairings are actually chosen: health testing, pedigree-depth COI calculations, complementary drive traits, and why the program stays small.",
+        "url": "https://www.protectiondogs.gr/breeding-science.html"
+      }
+    ]
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "brand": {
+      "href": "/",
+      "alt": "Protection Dogs GR"
+    },
+    "toggleAriaLabel": "Toggle navigation",
+    "items": [
+      {
+        "label": "Dogs",
+        "href": "/#dogs"
+      },
+      {
+        "label": "Process",
+        "href": "/#training"
+      },
+      {
+        "label": "Breeding",
+        "href": "/#breeding"
+      },
+      {
+        "label": "Placement",
+        "href": "/#pricing"
+      },
+      {
+        "label": "About",
+        "href": "/#about"
+      },
+      {
+        "label": "Enquire",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "ariaLabel": "breadcrumb",
+    "items": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Breeding Standards",
+        "href": null
+      }
+    ]
+  },
+  "page": {
+    "eyebrow": "Breeding",
+    "h1": "Breeding Standards",
+    "image": {
+      "src": "/images/yukon.jpg",
+      "alt": "Belgian Malinois working line breeding pair",
+      "width": "963",
+      "height": "1280",
+      "style": null,
+      "sources": [
+        {
+          "srcset": "/images/yukon.avif",
+          "type": "image/avif"
+        },
+        {
+          "srcset": "/images/yukon.webp",
+          "type": "image/webp"
+        }
+      ]
+    },
+    "cards": [
+      {
+        "blocks": [
+          {
+            "tag": "h2",
+            "html": "Health Testing"
+          },
+          {
+            "tag": "p",
+            "html": "Every breeding candidate undergoes extensive health testing, including hip and elbow certification, comprehensive DNA screening, and a full veterinary examination. I only breed dogs that meet my strict health and working requirements — health testing is a baseline, not the whole picture.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "How I Choose Pairings"
+          },
+          {
+            "tag": "p",
+            "html": "Breeding decisions go beyond a health clearance and a good pedigree on paper. I look for genuine complementary drive character between sire and dam — lines that fill in each other's gaps rather than stacking the same strengths and the same risks. I also work closely with the math behind it: coefficient-of-inbreeding calculations across the full pedigree, not just the first two or three generations, so I understand exactly what I'm concentrating and what I'm diluting before a breeding decision is made.",
+            "class": null
+          },
+          {
+            "tag": "p",
+            "html": "I've also brought in outside lines deliberately — including dogs from rare, closed Belgian working bloodlines used by special forces and law enforcement programs — specifically to strengthen genetic depth rather than simply chase a name on paper. It's a slower way to breed and develop dogs, but it gives me more control over what I'm producing and why each pairing is made.",
+            "class": null
+          },
+          {
+            "tag": "h2",
+            "html": "Why Quality Over Quantity"
+          },
+          {
+            "tag": "p",
+            "html": "I keep the breeding program small and selective. The goal is not to produce more litters — it's to give the training program better raw material to work with. A pedigree tells you what's possible in a dog. It doesn't tell you what's actually there. I still have to evaluate every dog directly, and that's the part no amount of pedigree research replaces.",
+            "class": null
+          }
+        ]
+      }
+    ],
+    "ctas": [
+      {
+        "label": "See Available Dogs",
+        "href": "/#dogs",
+        "target": null,
+        "rel": null
+      }
+    ]
+  },
+  "cookie": {
+    "ariaLabel": "Cookie consent",
+    "text": "This site uses cookies for basic analytics to understand how the site is used. No data is collected until you accept.",
+    "reject": "Necessary Only",
+    "accept": "Accept"
+  },
+  "footer": {
+    "brand": {
+      "h3": "Protection Dogs GR",
+      "text": "A small, trainer-led working-dog program developing protection Malinois from proven working lines."
+    },
+    "quickLinks": {
+      "h3": "Quick Links",
+      "ariaLabel": "Footer navigation",
+      "links": [
+        {
+          "label": "Dogs",
+          "href": "/#dogs"
+        },
+        {
+          "label": "Process",
+          "href": "/#training"
+        },
+        {
+          "label": "Breeding",
+          "href": "/#breeding"
+        },
+        {
+          "label": "Placement",
+          "href": "/#pricing"
+        },
+        {
+          "label": "About",
+          "href": "/#about"
+        },
+        {
+          "label": "Enquire",
+          "href": "/#contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy.html"
+        }
+      ]
+    },
+    "language": null,
+    "connect": {
+      "h3": "Connect",
+      "links": [
+        {
+          "href": "https://www.instagram.com/protectiondogsgr",
+          "ariaLabel": "Visit my Instagram",
+          "icon": "fab fa-instagram fa-2x"
+        },
+        {
+          "href": "https://wa.me/306931736026",
+          "ariaLabel": "Contact me on WhatsApp",
+          "icon": "fab fa-whatsapp fa-2x"
+        },
+        {
+          "href": "mailto:contact@protectiondogs.gr",
+          "ariaLabel": "Send me an email",
+          "icon": "fas fa-envelope fa-2x"
+        }
+      ]
+    },
+    "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
+  },
+  "a11y": {
+    "skipLink": {
+      "label": "Skip to main content",
+      "href": "#main-content"
+    }
+  }
+}
