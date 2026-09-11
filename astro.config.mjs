@@ -45,7 +45,12 @@ export default defineConfig({
       },
       scriptDirective: {
         resources: ["'self'", 'https://testimonial.to', 'https://embed-v2.testimonial.to', 'https://www.googletagmanager.com'],
-        hashes: inlineScriptHashes(),
+        // inlineScriptHashes() returns plain `sha256-…` strings, exactly the
+        // shape Astro's own CspHashEntry accepts at runtime (verified in a
+        // real build: the hashes show up correctly in the generated CSP
+        // header) — zod's `.custom()` validator just doesn't expose a static
+        // type that structurally equals `string` for `// @ts-check` to see.
+        hashes: /** @type {any} */ (inlineScriptHashes()),
       },
     },
   },

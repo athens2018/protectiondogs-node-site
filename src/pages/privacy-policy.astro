@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/chrome/Header.astro';
 import Footer from '../components/chrome/Footer.astro';
 import Breadcrumb from '../components/chrome/Breadcrumb.astro';
-import CookieConsent from '../components/chrome/CookieConsent.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
 import Button from '../components/ui/Button.astro';
 import content from '../i18n/privacy/en.json';
@@ -54,13 +53,6 @@ const socialLinks = content.footer.connect.links.map((s: { href: string; ariaLab
       {jsonldBlocks.map((block) => <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />)}
     </Fragment>
   )}
-
-  <CookieConsent
-    ariaLabel={homeContent.cookie.ariaLabel}
-    text={homeContent.cookie.text}
-    rejectLabel={homeContent.cookie.reject}
-    acceptLabel={homeContent.cookie.accept}
-  />
 
   <Header
     locale={locale}

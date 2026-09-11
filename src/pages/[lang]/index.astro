@@ -1,24 +1,30 @@
 ---
-import Base from '../../layouts/Base.astro';
-import facts from '../../data/facts.json';
+import HomePage from '../../layouts/HomePage.astro';
 import { getLocale, nonDefaultLocaleParams } from '../../lib/i18n';
+
+// Static, explicit import map for the 12 non-default locales — this is a
+// static build (output: 'static'), so dynamic import() is not an option.
+import el from '../../i18n/locales/el.json';
+import de from '../../i18n/locales/de.json';
+import fr from '../../i18n/locales/fr.json';
+import ar from '../../i18n/locales/ar.json';
+import es from '../../i18n/locales/es.json';
+import zh from '../../i18n/locales/zh.json';
+import ru from '../../i18n/locales/ru.json';
+import tr from '../../i18n/locales/tr.json';
+import it from '../../i18n/locales/it.json';
+import pt from '../../i18n/locales/pt.json';
+import nl from '../../i18n/locales/nl.json';
+import ja from '../../i18n/locales/ja.json';
+
+const CONTENT: Record<string, any> = { el, de, fr, ar, es, zh, ru, tr, it, pt, nl, ja };
 
 export function getStaticPaths() {
   return nonDefaultLocaleParams();
 }
 
 const locale = getLocale(Astro.params.lang);
-const f = facts.formats[locale.code as keyof typeof facts.formats];
+const content = CONTENT[locale.code];
 ---
 
-<Base locale={locale.code} title={`Smoke test — ${locale.htmlLang}`} description="Toolchain smoke test">
-  <main id="main-content">
-    <section class="section section--deep">
-      <div class="container">
-        <p class="eyebrow">{locale.htmlLang} · {locale.dir}</p>
-        <h1>{facts.facts.dog_name}</h1>
-        <p set:html={`${f.stage_display} — €${f.price_current}`} />
-      </div>
-    </section>
-  </main>
-</Base>
+<HomePage localeCode={locale.code} rawContent={content} />

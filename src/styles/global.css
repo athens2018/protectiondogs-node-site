@@ -40,6 +40,18 @@ svg {
   height: auto;
 }
 
+/* The reset above is an author-stylesheet rule, so it silently outranks the
+   browser's own UA-stylesheet `[hidden] { display: none }` regardless of
+   specificity (author origin always beats UA origin). Without this, any
+   img/picture/video/svg toggled via the native `hidden` attribute or
+   property — e.g. story.ts's slide media swap — stays visibly laid out. */
+img[hidden],
+picture[hidden],
+video[hidden],
+svg[hidden] {
+  display: none;
+}
+
 button,
 input,
 select,

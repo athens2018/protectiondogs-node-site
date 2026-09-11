@@ -1,0 +1,160 @@
+---
+import Base from './Base.astro';
+import CookieConsent from '../components/chrome/CookieConsent.astro';
+import Header from '../components/chrome/Header.astro';
+import SectionDots from '../components/chrome/SectionDots.astro';
+import FloatingContacts from '../components/chrome/FloatingContacts.astro';
+import Footer from '../components/chrome/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro';
+import Dogs from '../components/sections/Dogs.astro';
+import BoboStoryModal from '../components/sections/BoboStoryModal.astro';
+import WatchDevelop from '../components/sections/WatchDevelop.astro';
+import Training from '../components/sections/Training.astro';
+import Testing from '../components/sections/Testing.astro';
+import Breeding from '../components/sections/Breeding.astro';
+import Family from '../components/sections/Family.astro';
+import WhoItsFor from '../components/sections/WhoItsFor.astro';
+import Pricing from '../components/sections/Pricing.astro';
+import Faq from '../components/sections/Faq.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import Partner from '../components/sections/Partner.astro';
+import Contact from '../components/sections/Contact.astro';
+import { mergeFacts } from '../lib/facts-merge';
+import { faToIconName, iconFromHref } from '../lib/icon-map';
+import facts from '../data/facts.json';
+
+interface Props {
+  localeCode: string;
+  /** Raw locale JSON from src/i18n/locales/<code>.json, BEFORE facts merge */
+  rawContent: any;
+}
+
+const { localeCode, rawContent } = Astro.props;
+const content = mergeFacts(localeCode, rawContent);
+
+// Hero background video is a net-new premium enhancement (plan §5) — the
+// live source hero has no video at all, so there is no extracted field for
+// it. Reuses the same Phase-1 training clip already licensed for the
+// Process section rather than sourcing a new asset.
+const heroVideoSrc = (facts as any).media.video_phase_1;
+const heroVideoPoster = (facts as any).media.phase_1;
+
+// The live source hardcodes these three intrinsic sizes on the hero
+// <img>s (verified against index.html); the extracted JSON only kept
+// src/alt, so they're carried here rather than invented.
+const HERO_DIMS: { width: number; height: number }[] = [
+  { width: 479, height: 720 },
+  { width: 479, height: 720 },
+  { width: 482, height: 720 },
+];
+const heroImages = content.hero.images.map((img: { src: string; alt: string }, i: number) => ({
+  base: img.src.replace(/\.[a-z0-9]+$/i, ''),
+  alt: img.alt,
+  ...HERO_DIMS[i],
+}));
+
+const contactIcons = content.a11y.contactIcons.items.map((item: any) => ({
+  ...item,
+  icon: faToIconName(item.icon, iconFromHref(item.href)),
+}));
+
+const footerSocial = content.footer.connect.links.map((s: any) => ({
+  href: s.href,
+  ariaLabel: s.ariaLabel,
+  icon: faToIconName(s.icon, iconFromHref(s.href)),
+}));
+
+const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
+---
+
+<Base
+  locale={localeCode}
+  title={content.meta.title}
+  description={content.meta.description}
+  ogTitle={content.meta.ogTitle ?? undefined}
+  ogDescription={content.meta.ogDescription ?? undefined}
+  twitterTitle={content.meta.twitterTitle ?? undefined}
+  twitterDescription={content.meta.twitterDescription ?? undefined}
+  alternates={true}
+  robots="index, follow"
+  langRedirect={localeCode === 'en'}
+  skipLinkLabel={content.a11y.skipLink.label}
+  backToTopLabel={content.a11y.backToTopAriaLabel}
+  toastCloseLabel={content.contact.messages.notificationClose}
+>
+  <Fragment slot="head">
+    {jsonldBlocks.map((block) => <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />)}
+  </Fragment>
+
+  <CookieConsent
+    ariaLabel={content.cookie.ariaLabel}
+    text={content.cookie.text}
+    rejectLabel={content.cookie.reject}
+    acceptLabel={content.cookie.accept}
+  />
+
+  <SectionDots dots={content.a11y.sectionDots.items} ariaLabel={content.a11y.sectionDots.ariaLabel} />
+  <FloatingContacts links={contactIcons} ariaLabel={content.a11y.contactIcons.ariaLabel} />
+
+  <Header
+    locale={localeCode}
+    nav={content.nav.items}
+    navAriaLabel={content.nav.ariaLabel}
+    brandAlt={content.nav.brand.alt}
+    homeHref={content.nav.brand.href}
+    menuToggleLabel={content.nav.toggleAriaLabel}
+    langTriggerLabel={content.nav.langDrawer.ariaLabel}
+    drawerTitle={content.nav.langDrawer.title}
+    drawerCloseLabel={content.nav.langDrawer.close.ariaLabel}
+    bannerText={content.nav.langSuggest?.text ?? ''}
+    bannerSwitchLabel={content.nav.langSuggest?.switchLabel ?? ''}
+    bannerDismissLabel={content.nav.langSuggest?.dismiss?.ariaLabel ?? ''}
+    showLangSuggest={localeCode === 'en'}
+  />
+
+  <main id="main-content">
+    <Hero
+      ariaLabel={content.a11y.heroAriaLabel}
+      eyebrow={content.hero.eyebrow}
+      heading={content.hero.h1}
+      lead={content.hero.lead}
+      primaryLabel={content.hero.ctas[0].label}
+      primaryHref={content.hero.ctas[0].href}
+      secondaryLabel={content.hero.ctas[1].label}
+      secondaryHref={content.hero.ctas[1].href}
+      images={heroImages}
+      videoSrc={heroVideoSrc}
+      videoPoster={heroVideoPoster}
+    />
+
+    <About {...content.about} />
+    <Dogs {...content.dogs} />
+    <WatchDevelop {...content.watchDevelop} />
+    <Training {...content.training} />
+    <Testing {...content.testing} />
+    <Breeding {...content.breeding} />
+    <Family {...content.family} />
+    <WhoItsFor {...content.whoItsFor} />
+    <Pricing {...content.pricing} />
+    <Faq {...content.faq} />
+    <Testimonials {...content.testimonials} />
+    <Partner {...content.partner} />
+    <Contact content={content.contact} locale={localeCode} />
+  </main>
+
+  <BoboStoryModal id={content.dogs.bobo.storyOpen} {...content.boboStory} />
+
+  <Footer
+    locale={localeCode}
+    brandTitle={content.footer.brand.h3}
+    brandBlurb={content.footer.brand.text}
+    quickLinksTitle={content.footer.quickLinks.h3}
+    quickLinksAriaLabel={content.footer.quickLinks.ariaLabel}
+    links={content.footer.quickLinks.links}
+    languageTitle={content.footer.language.h3}
+    connectTitle={content.footer.connect.h3}
+    social={footerSocial}
+    copyright={content.footer.copyright}
+  />
+</Base>
