@@ -5,7 +5,8 @@ import '../styles/global.css';
 import '../styles/app-mode.css';
 import '../styles/fa-shim.css';
 import Icon from '../components/ui/Icon.astro';
-import { getLocale, hreflangAlternates, localeUrl, LOCALES, DEFAULT_LOCALE, SITE_ORIGIN } from '../lib/i18n';
+import { getLocale, hreflangAlternates, localeUrl, SITE_ORIGIN } from '../lib/i18n';
+import { animOptInScript, langRedirectScript } from '../lib/inline-scripts.mjs';
 
 interface Props {
   locale: string;
@@ -55,29 +56,15 @@ const ogLocaleMap: Record<string, string> = {
   ru: 'ru_RU', tr: 'tr_TR', it: 'it_IT', pt: 'pt_PT', nl: 'nl_NL', ja: 'ja_JP',
 };
 const alternateList = alternates ? hreflangAlternates(subpath) : [];
-const redirectTargets = Object.fromEntries(
-  LOCALES.filter((l) => l.code !== DEFAULT_LOCALE).map((l) => [l.prefCode, localeUrl(l.code, subpath)]),
-);
 ---
 
 <!doctype html>
 <html lang={locale.htmlLang} dir={locale.dir}>
   <head>
     <meta charset="UTF-8" />
-    {langRedirect && (
-      <script is:inline define:vars={{ redirectTargets }}>
-        (function () {
-          try {
-            var pref = localStorage.getItem('pdg-lang-pref');
-            if (pref && redirectTargets[pref]) {
-              window.location.replace(redirectTargets[pref]);
-            }
-          } catch (e) {}
-        })();
-      </script>
-    )}
+    {langRedirect && <script is:inline set:html={langRedirectScript(subpath)} />}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script is:inline>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){document.documentElement.classList.add('pdg-anim');}</script>
+    <script is:inline set:html={animOptInScript()} />
     <meta name="google" content="notranslate" />
     <meta name="theme-color" content="#0d0d0d" />
     <title>{title}</title>
