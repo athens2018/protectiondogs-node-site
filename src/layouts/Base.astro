@@ -2,6 +2,9 @@
 import '@fontsource-variable/inter';
 import '@fontsource-variable/playfair-display';
 import '../styles/global.css';
+import '../styles/app-mode.css';
+import '../styles/fa-shim.css';
+import Icon from '../components/ui/Icon.astro';
 import { getLocale, hreflangAlternates, localeUrl, LOCALES, DEFAULT_LOCALE, SITE_ORIGIN } from '../lib/i18n';
 
 interface Props {
@@ -21,6 +24,8 @@ interface Props {
   /** Only the bare root (x-default) honours a previously saved language choice */
   langRedirect?: boolean;
   skipLinkLabel?: string;
+  backToTopLabel?: string;
+  toastCloseLabel?: string;
   bodyClass?: string;
 }
 
@@ -38,6 +43,8 @@ const {
   robots = 'index, follow',
   langRedirect = false,
   skipLinkLabel = 'Skip to main content',
+  backToTopLabel = 'Back to top',
+  toastCloseLabel = 'Close',
   bodyClass,
 } = Astro.props;
 
@@ -100,6 +107,13 @@ const redirectTargets = Object.fromEntries(
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main-content">{skipLinkLabel}</a>
+    <div id="scrollProgressBar" class="scroll-progress" aria-hidden="true"></div>
+    <button id="backToTopBtn" class="back-to-top" aria-label={backToTopLabel} type="button">
+      <Icon name="arrow-up" size="1.2em" />
+    </button>
     <slot />
+    <div class="notification-container" data-label-close={toastCloseLabel}></div>
+    <script src="../scripts/main.ts"></script>
+    <script is:inline defer src="/js/app-mode.js?v=20260911"></script>
   </body>
 </html>

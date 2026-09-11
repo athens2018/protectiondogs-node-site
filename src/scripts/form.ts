@@ -29,12 +29,10 @@ export function initForm(): void {
 
     [name, email, message, consent].forEach((f) => setError(f, ''));
 
-    let valid = true;
-    let firstInvalid: HTMLElement | null = null;
+    const invalid: HTMLElement[] = [];
     const fail = (field: HTMLElement | null, text: string) => {
       setError(field, text);
-      valid = false;
-      if (!firstInvalid) firstInvalid = field;
+      if (field) invalid.push(field);
     };
 
     if (name && !name.value.trim()) fail(name, msg.msgName || '');
@@ -43,8 +41,8 @@ export function initForm(): void {
     if (message && !message.value.trim()) fail(message, msg.msgMessage || '');
     if (consent && !consent.checked) fail(consent, msg.msgConsent || '');
 
-    if (!valid) {
-      firstInvalid?.focus();
+    if (invalid.length) {
+      invalid[0].focus();
       return;
     }
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>Offline | Protection Dogs GR</title>
+    <!-- Self-contained on purpose: this page is served by the service worker
+         when there is no connection, so it cannot depend on any CDN. -->
+    <style>
+        :root { color-scheme: dark; }
+        html, body { margin: 0; min-height: 100%; background: #0d0d0d; color: #ddd; font-family: Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+        main { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 1.5rem; box-sizing: border-box; }
+        img { width: 96px; height: 96px; border-radius: 50%; margin-bottom: 1.5rem; }
+        .eyebrow { text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.75rem; font-weight: 600; color: #f4b400; margin: 0 0 0.6rem; }
+        h1 { font-size: 1.6rem; margin: 0 0 0.75rem; color: #fff; }
+        p { max-width: 32rem; line-height: 1.6; margin: 0 0 1.75rem; }
+        button { background: #f4b400; color: #1a1a1a; border: 0; border-radius: 30px; padding: 0.8rem 1.8rem; font-size: 1rem; font-weight: 700; cursor: pointer; }
+        button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+        .contact { margin-top: 2.5rem; font-size: 0.9rem; color: #9a9a9a; }
+        .contact a { color: #f4b400; text-decoration: none; }
+    </style>
+</head>
+<body>
+<main>
+    <img src="/images/logo.webp" alt="" width="96" height="96">
+    <p class="eyebrow">Protection Dogs GR</p>
+    <h1 id="title">You're offline</h1>
+    <p id="text">The page will load again as soon as your connection returns.</p>
+    <button type="button" id="retry">Try again</button>
+    <p class="contact"><a href="mailto:contact@protectiondogs.gr">contact@protectiondogs.gr</a> · <a href="tel:+306931736026">+30 693 173 6026</a></p>
+</main>
+<script>
+    (function () {
+        var t = {
+            en: ["You're offline", "The page will load again as soon as your connection returns.", "Try again"],
+            el: ["Είστε εκτός σύνδεσης", "Η σελίδα θα φορτώσει ξανά μόλις επανέλθει η σύνδεση.", "Δοκιμάστε ξανά"],
+            de: ["Sie sind offline", "Die Seite wird geladen, sobald die Verbindung wieder besteht.", "Erneut versuchen"],
+            fr: ["Vous êtes hors ligne", "La page se rechargera dès que la connexion sera rétablie.", "Réessayer"],
+            ar: ["أنت غير متصل بالإنترنت", "ستُحمَّل الصفحة مجدداً فور عودة الاتصال.", "إعادة المحاولة"],
+            es: ["Estás sin conexión", "La página se cargará de nuevo en cuanto vuelva la conexión.", "Reintentar"],
+            zh: ["您当前处于离线状态", "网络恢复后页面将重新加载。", "重试"],
+            ru: ["Вы не в сети", "Страница загрузится снова, как только появится подключение.", "Повторить"],
+            tr: ["Çevrimdışısınız", "Bağlantı geri geldiğinde sayfa yeniden yüklenecek.", "Tekrar dene"],
+            it: ["Sei offline", "La pagina verrà ricaricata non appena tornerà la connessione.", "Riprova"],
+            pt: ["Está offline", "A página voltará a carregar assim que a ligação regressar.", "Tentar novamente"],
+            nl: ["Je bent offline", "De pagina laadt opnieuw zodra de verbinding terug is.", "Opnieuw proberen"],
+            ja: ["オフラインです", "接続が回復すると、ページは再び読み込まれます。", "再試行"]
+        };
+        // The worker serves this page AT the address the visitor asked for,
+        // so /de/, /ar/ ... is in location itself; then the saved site
+        // language; then the browser's.
+        var fromPath = (location.pathname.match(/^\/([a-z]{2})\/?$/) || [])[1];
+        var saved = null;
+        try { saved = localStorage.getItem('pdg-lang-pref'); } catch (e) {}
+        var browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+        var lang = [fromPath, saved, browser].filter(function (l) { return l && t[l]; })[0] || 'en';
+        var s = t[lang];
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        document.title = s[0] + ' | Protection Dogs GR';
+        document.getElementById('title').textContent = s[0];
+        document.getElementById('text').textContent = s[1];
+        var btn = document.getElementById('retry');
+        btn.textContent = s[2];
+        btn.addEventListener('click', function () { location.reload(); });
+        window.addEventListener('online', function () { location.reload(); });
+    })();
+</script>
+</body>
+</html>

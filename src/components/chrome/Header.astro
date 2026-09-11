@@ -47,11 +47,14 @@ const suggestUrls = Object.fromEntries(LOCALES.filter((l) => l.code !== locale.c
 ---
 
 <header class="site-header">
+  {locale.code === 'en' && (
   <div id="langSuggestBanner" class="lang-suggest-banner" hidden>
     <span class="lang-suggest-text" set:html={bannerText} />
     <a href="#" id="langSuggestSwitch" class="lang-suggest-switch">{bannerSwitchLabel}</a>
     <button type="button" class="lang-suggest-dismiss" aria-label={bannerDismissLabel}>&times;</button>
   </div>
+  )}
+  {locale.code === 'en' && (
   <script is:inline define:vars={{ suggestNames, suggestUrls }}>
     // Decides before first paint whether the language suggestion shows, so it
     // never flashes in late, and reserves its height for the fixed header.
@@ -78,6 +81,7 @@ const suggestUrls = Object.fromEntries(LOCALES.filter((l) => l.code !== locale.c
       } catch (e) {}
     })();
   </script>
+  )}
 
   <nav class="navbar" aria-label={navAriaLabel}>
     <div class="container container--wide navbar__inner">

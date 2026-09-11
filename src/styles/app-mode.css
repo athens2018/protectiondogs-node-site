@@ -1,0 +1,341 @@
+/* App mode — only inside the installed app (html.app-mode is set by
+   /js/app-mode.js when the page runs as a standalone/TWA app). A normal
+   browser never gets any of this. Carried over from the live site's
+   styles.css (frozen PWA layer); only the colour tokens were renamed. */
+html.app-mode .app-tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1700;
+  display: flex;
+  background: rgba(13, 13, 13, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(244, 180, 0, 0.25);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  font-size: 0.58rem; /* app-mode.js lowers this in steps (to 0.5rem) if a label would overflow */
+}
+
+html.app-mode .app-tab {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.2rem 0.45rem;
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+html.app-mode .app-tab i {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+html.app-mode .app-tab span {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.05;
+  text-align: center;
+}
+
+html.app-mode .app-tabbar.app-tabbar-wrap .app-tab span {
+  white-space: normal;
+  max-height: 2.2em;
+  overflow: hidden;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: anywhere;
+}
+
+html.app-mode .app-tab[href$='#contact'],
+html.app-mode .app-tab.active,
+html.app-mode .app-tab:hover,
+html.app-mode .app-tab:focus-visible {
+  color: var(--gold);
+}
+
+html.app-mode .app-tab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+html.app-mode .app-tab.active i {
+  transform: translateY(-1px) scale(1.12);
+}
+
+html.app-mode body {
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+}
+
+html.app-mode .contact-icons,
+html.app-mode .back-to-top {
+  display: none !important;
+}
+
+html.app-mode .cookie-consent {
+  bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+}
+
+html.app-mode .navbar-brand img {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+html.app-mode {
+  --nav-h: 64px;
+}
+
+html.app-mode section[id] {
+  scroll-margin-top: calc(var(--nav-h) + var(--banner-h, 0px) + 12px);
+}
+
+html.app-mode nav.navbar {
+  transition: transform 0.28s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.app-mode.app-nav-hidden nav.navbar {
+  transform: translateY(-110%);
+}
+
+html.app-mode .app-concierge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 180, 0, 0.45);
+  background: rgba(244, 180, 0, 0.1);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+html.app-mode .app-concierge::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+}
+
+html.app-mode .app-concierge[aria-expanded='true'] {
+  background: rgba(244, 180, 0, 0.22);
+}
+
+.app-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1900;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.app-sheet-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.app-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1901;
+  background: #141414;
+  border-top: 1px solid rgba(244, 180, 0, 0.35);
+  border-radius: 18px 18px 0 0;
+  padding: 0.75rem 1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+  transform: translateY(100%);
+  visibility: hidden;
+  transition: transform 0.28s ease, visibility 0.28s ease;
+  box-shadow: 0 -20px 48px rgba(0, 0, 0, 0.5);
+}
+
+.app-sheet.open {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.app-sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.app-sheet-title {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.app-sheet-close {
+  background: none;
+  border: 0;
+  color: #bdbdbd;
+  font-size: 1.6rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.app-sheet-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 52px;
+  padding: 0.55rem 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.app-sheet-row i {
+  width: 1.6rem;
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.15rem;
+}
+
+.app-sheet-row:hover,
+.app-sheet-row:focus-visible {
+  color: var(--gold);
+  outline: none;
+  background: rgba(244, 180, 0, 0.08);
+  border-radius: 8px;
+}
+
+.app-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 16px);
+  z-index: 1950;
+  max-width: min(92vw, 30rem);
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(13, 13, 13, 0.96);
+  border: 1px solid rgba(244, 180, 0, 0.35);
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.app-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+html:not(.app-mode) .app-toast {
+  bottom: 20px;
+}
+
+html.app-mode .app-share {
+  margin-inline-start: 0.5rem;
+}
+
+/* Install prompt (normal browser only) */
+.app-install-bar {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 1650;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  background: rgba(13, 13, 13, 0.97);
+  border: 1px solid rgba(244, 180, 0, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.app-install-bar.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.app-install-text {
+  margin: 0;
+  max-width: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.app-install-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-inline-start: auto;
+}
+
+.app-install-later,
+.app-install-go {
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.app-install-later {
+  background: none;
+  border: 1px solid rgba(244, 180, 0, 0.5);
+  color: var(--gold);
+}
+
+.app-install-go {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: #1a1a1a;
+}
+
+/* The cookie banner and the install strip must not stack on each other. */
+.cookie-consent.visible ~ .app-install-bar {
+  display: none;
+}
+
+/* While the install strip shows, lift the floating contact icons above it. */
+body:has(.app-install-bar.show) .contact-icons {
+  bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.app-mode nav.navbar,
+  .app-sheet,
+  .app-sheet-backdrop,
+  .app-toast,
+  .app-install-bar,
+  html.app-mode .app-tab i {
+    transition: none;
+  }
+}

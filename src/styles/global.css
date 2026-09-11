@@ -231,6 +231,120 @@ section[id],
   top: var(--space-4);
 }
 
+/* ---------- Page chrome ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  z-index: calc(var(--z-nav) + 1);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold));
+  pointer-events: none;
+}
+
+.back-to-top {
+  position: fixed;
+  inset-inline-start: clamp(12px, 2vw, 28px);
+  bottom: clamp(16px, 3vh, 32px);
+  z-index: var(--z-floating);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(13, 13, 13, 0.85);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  transform: translateY(12px);
+  visibility: hidden;
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    visibility 0s linear var(--dur-base);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.back-to-top:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.notification-container {
+  position: fixed;
+  top: calc(var(--nav-h) + var(--banner-h) + 12px);
+  inset-inline-end: 16px;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(420px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-strong);
+  border-inline-start: 3px solid var(--gold);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lift);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: auto;
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.toast.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.toast--success {
+  border-inline-start-color: var(--ok);
+}
+
+.toast--error {
+  border-inline-start-color: var(--error);
+}
+
+.toast__text {
+  flex: 1;
+  margin: 0;
+  max-width: none;
+  font-size: var(--text-sm);
+  color: var(--text-strong);
+}
+
+.toast__close {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--text-muted);
+}
+
+.toast__close:hover {
+  color: var(--text-strong);
+}
+
+.btn.is-busy {
+  opacity: 0.75;
+  cursor: progress;
+}
+
 /* ---------- Motion (opt-in, fail-safe) ----------
    The base CSS never hides anything. `html.pdg-anim` is added by a
    one-line head script only when the visitor has not asked for reduced
