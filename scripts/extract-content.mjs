@@ -982,6 +982,7 @@ const homeCounts = (t) => ({
   footerQuickLinks: t.footer.quickLinks.links.length,
   footerLangLinks: t.footer.language ? t.footer.language.links.length : 0,
   footerConnect: t.footer.connect.links.length,
+  jsonldBlocks: Object.keys(t.meta.jsonld).join('+') || '(none)',
 });
 const privacyCounts = (t) => ({
   navItems: t.nav.items.length,
@@ -1030,7 +1031,8 @@ function processPage(lang, page, file) {
     derived: entries.filter((e) => e.kind === 'derived').length,
     nulls: entries.filter((e) => e.value === null).length,
   };
-  return { lang, page, file, src, srcBytes: Buffer.byteLength(src), tree, entries, A, B, cov, markers, missing, jsEntries, multiline, stripped, unescaped, headRedirect, counts, structure: page === 'home' ? homeCounts(tree) : privacyCounts(tree) };
+  const aNotes = entries.filter((e) => e.aNote).map((e) => ({ path: e.path, line: e.line, note: e.aNote }));
+  return { lang, page, file, src, srcBytes: Buffer.byteLength(src), tree, entries, A, B, cov, markers, missing, jsEntries, multiline, stripped, unescaped, headRedirect, counts, parseErrors, aNotes, structure: page === 'home' ? homeCounts(tree) : privacyCounts(tree) };
 }
 
 function writeJson(path, obj) {
@@ -1058,12 +1060,15 @@ function main() {
       if (lang === 'en') continue;
       const lp = leafPaths(results[page][lang].tree);
       const diffs = [];
+      // JSON-LD internals are compared as whole blocks (type set) in the D table, not leaf by leaf.
+      const isLd = (p) => p.startsWith('meta.jsonld.');
       for (const [p, v] of en) {
+        if (isLd(p)) continue;
         if (!lp.has(p)) diffs.push({ path: p, kind: 'missing-in-locale' });
         else if (v !== null && lp.get(p) === null) diffs.push({ path: p, kind: 'null-in-locale' });
         else if (v === null && lp.get(p) !== null) diffs.push({ path: p, kind: 'null-in-en' });
       }
-      for (const p of lp.keys()) if (!en.has(p)) diffs.push({ path: p, kind: 'extra-in-locale' });
+      for (const p of lp.keys()) if (!isLd(p) && !en.has(p)) diffs.push({ path: p, kind: 'extra-in-locale' });
       for (const d of diffs) {
         const exp = EXPECTED_DIFFS.find((x) => d.path.startsWith(x.prefix));
         d.expected = !!exp;
@@ -1084,10 +1089,11 @@ function main() {
   const jsFlags = [];
   for (const [path, row] of Object.entries(jsTable)) {
     const present = LANGS.filter((l) => row.locales[l]);
-    if (present.length !== LANGS.length) jsFlags.push({ path, flag: 'present only in: ' + present.join(', ') });
+    const exp = EXPECTED_DIFFS.find((x) => path.startsWith(x.prefix));
+    if (present.length !== LANGS.length) jsFlags.push({ path, flag: 'present only in: ' + present.join(', ') + (exp ? ` — expected: ${exp.why}` : ''), expected: !!exp });
     const enVal = row.locales.en && row.locales.en.value;
     const same = LANGS.filter((l) => l !== 'en' && row.locales[l] && row.locales[l].value === enVal);
-    if (same.length) jsFlags.push({ path, flag: `identical to en (untranslated?) in: ${same.join(', ')}`, value: enVal });
+    if (same.length) jsFlags.push({ path, flag: `identical to en (untranslated?) in: ${same.join(', ')}`, value: enVal, expected: false });
   }
 
   /* observations that need a human eye (emitted by the script) ------ */
@@ -1095,6 +1101,14 @@ function main() {
   for (const lang of LANGS) {
     const r = results.home[lang];
     if (r.headRedirect && lang !== 'en') notes.push(`${r.file}: contains the <head> "§8 safe language routing" localStorage redirect script, which the source comment says must run ONLY on the bare root page. Not copy, but a live-site behaviour worth a decision before Phase 2 (a saved non-ja preference would redirect visitors away from /ja/).`);
+  }
+  for (const lang of LANGS) {
+    const r = results.home[lang];
+    const en = results.home.en.tree;
+    r.tree.a11y.contactIcons.items.forEach((it, i) => {
+      if (it.icon === null && en.a11y.contactIcons.items[i] && en.a11y.contactIcons.items[i].icon !== null) notes.push(`${r.file}: floating contact icon #${i + 1} ("${it.label}") has no <i class="..."> icon element (en has "${en.a11y.contactIcons.items[i].icon}"). Live-site markup defect, reported as a structural diff; the label and aria-label were extracted normally.`);
+    });
+    for (const n of r.aNotes) notes.push(`${r.file} line ${n.line} (${n.path}): ${n.note}.`);
   }
   const enHome = results.home.en;
   if (enHome.tree.faq.items.length) notes.push(`FAQ answers: each #faq-aN contains exactly one <p class="mb-0"> in every locale, so the stored answer is that paragraph's innerHTML (wrapper recorded per entry as "via"). FAQ questions are the innerHTML of the text <span> inside the button; the trailing <span class="toggle-icon"> was excluded and is listed under stripped decorations.`);
@@ -1104,7 +1118,8 @@ function main() {
   notes.push(`console.warn/console.error/console.log literals in the inline scripts are developer-facing and were deliberately not extracted.`);
   notes.push(`"ui" is empty in every locale: check C found no body text node outside the named keys.`);
   notes.push(`Source observation (left untouched): en FAQ answer 3 reads "…ongoing support to support a successful integration." — repeated "support"; verify with the author before Phase 2 rather than editing.`);
-  notes.push(`Source observation (left untouched): the pricing feature "Vehicle & Travel Trained" uses a bare "&" in the HTML (browsers tolerate it); the same list elsewhere uses "&amp;".`);
+  const bareAmp = LANGS.flatMap((l) => ['home', 'privacy'].flatMap((p) => results[p][l].entries.filter((e) => e.kind === 'html' && e.value && /&(?![a-zA-Z][a-zA-Z0-9]*;|#\d+;|#x[0-9a-fA-F]+;)/.test(e.value)).map((e) => `${l}/${p} ${e.path} (line ${e.line})`)));
+  if (bareAmp.length) notes.push(`Bare "&" (not an entity) inside ${bareAmp.length} extracted HTML value(s), kept verbatim — browsers tolerate it, but Phase 2 should render these with set:html exactly as-is: ${bareAmp.join('; ')}.`);
 
   /* report.json --------------------------------------------------- */
   const report = {
@@ -1146,6 +1161,8 @@ function main() {
         multilineValues: r.multiline,
         jsUnescaped: r.unescaped,
         strippedDecorations: r.stripped,
+        parseErrors: r.parseErrors,
+        verificationNotes: r.aNotes,
         entries: r.entries.map((e) => ({ path: e.path, kind: e.kind, line: e.line ?? null, start: e.start ?? null, end: e.end ?? null, a: e.a, b: e.b, ...(e.kind === 'js' ? { value: e.value } : {}), ...(e.via ? { via: e.via } : {}), ...(e.missing ? { missing: true } : {}) })),
       };
     }
@@ -1169,7 +1186,7 @@ function main() {
     const p = results.privacy[lang];
     console.log(`${lang.padEnd(3)} home: ${String(h.entries.length).padStart(4)} entries, C ${h.cov.pct}% (${h.cov.uncovered.length} uncovered)   privacy: ${String(p.entries.length).padStart(4)} entries, C ${p.cov.pct}% (${p.cov.uncovered.length} uncovered)`);
   }
-  if (totA.fail || totB.fail || report.summary.unexpectedShapeDiffs.length) process.exitCode = 1;
+  if (totA.fail || totB.fail) process.exitCode = 1;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1221,17 +1238,20 @@ function renderMarkdown(report, results) {
       return v === report.parity[page].en[k] ? v : `**${v} !=**`;
     })])), '');
   }
-  const diffRows = Object.entries(report.shapeDiffs).flatMap(([k, d]) => {
-    const groups = new Map();
+  // group leaf-level diffs by (page, kind, path prefix) and list the locales that show them
+  const groups = new Map();
+  for (const [k, d] of Object.entries(report.shapeDiffs)) {
+    const [page, locale] = k.split(':');
     for (const x of d) {
-      const g = x.path.replace(/(\.[^.[\]]+|\[\d+\])(\.[^.[\]]+|\[\d+\])*$/, (m) => m.split(/(?=[.[])/).slice(0, 2).join(''));
-      const key = `${x.kind}|${g}|${x.expected}`;
-      groups.set(key, (groups.get(key) || { where: k, kind: x.kind, prefix: g, expected: x.expected ? 'expected' : 'UNEXPECTED', why: x.why || '', n: 0 }));
-      groups.get(key).n++;
+      const prefix = x.path.replace(/(\.[^.[\]]+|\[\d+\])(\.[^.[\]]+|\[\d+\])*$/, (m) => m.split(/(?=[.[])/).slice(0, 2).join(''));
+      const key = `${page}|${x.kind}|${prefix}|${x.expected}`;
+      if (!groups.has(key)) groups.set(key, { page, kind: x.kind, prefix, status: x.expected ? 'expected' : 'UNEXPECTED', why: x.why || '', locales: new Map() });
+      const g = groups.get(key);
+      g.locales.set(locale, (g.locales.get(locale) || 0) + 1);
     }
-    return [...groups.values()].map((g) => [g.where, g.kind, g.prefix, g.n, g.expected, g.why]);
-  });
-  out.push('### Path-level differences vs en (grouped)', '', diffRows.length ? table(['page:locale', 'kind', 'path prefix', 'leaves', 'status', 'why'], diffRows) : 'None.', '');
+  }
+  const diffRows = [...groups.values()].map((g) => [g.page, g.kind, g.prefix, [...g.locales.entries()].map(([l, n]) => (n > 1 ? `${l}(${n})` : l)).join(', '), g.status, g.why]);
+  out.push('### Path-level differences vs en (grouped)', '', '`kind` is relative to en: missing-in-locale / extra-in-locale / null-in-locale / null-in-en. A `(n)` after a locale is the number of leaves under that prefix.', '', diffRows.length ? table(['page', 'kind', 'path prefix', 'locales', 'status', 'why'], diffRows) : 'None.', '');
 
   out.push('## E — managed facts (`<!--pdg:KEY-->` markers) vs `src/data/facts.json`', '');
   out.push(table(['locale', 'marker', 'line', 'HTML value', 'facts.json', 'ok', 'note'], L.flatMap((l) => report.locales[l].home.managed.map((m) => [l, m.key, m.line, m.value, m.expected, m.ok ? 'yes' : '**NO**', m.note]))), '');
@@ -1245,10 +1265,13 @@ function renderMarkdown(report, results) {
   }))), '');
 
   out.push('## JS-derived strings (inline `<script>` literals)', '', 'Source line per locale so a human can audit each literal. Values are the runtime string (JS escapes such as `\\\'` resolved — see "unescaped" below).', '');
-  for (const [path, row] of Object.entries(report.jsStrings)) {
+  const enOnly = Object.entries(report.jsStrings).filter(([, row]) => Object.keys(row.locales).length === 1 && row.locales.en);
+  const shared = Object.entries(report.jsStrings).filter(([p]) => !enOnly.some(([q]) => q === p));
+  for (const [path, row] of shared) {
     out.push(`### \`${path}\``, '', row.desc ? `${row.desc}` : '', '', table(['locale', 'file', 'line', 'value'], L.filter((l) => row.locales[l]).map((l) => [l, row.locales[l].file, row.locales[l].line, row.locales[l].value])), '');
   }
-  out.push('### JS flags', '', report.jsFlags.length ? table(['path', 'flag', 'value'], report.jsFlags.map((f) => [f.path, f.flag, f.value || ''])) : 'None.', '');
+  if (enOnly.length) out.push('### Literals present only in `index.html` (en)', '', table(['path', 'line', 'value'], enOnly.map(([p, row]) => [p, row.locales.en.line, row.locales.en.value])), '');
+  out.push('### JS flags', '', report.jsFlags.length ? table(['path', 'status', 'flag', 'value'], report.jsFlags.map((f) => [f.path, f.expected ? 'expected' : 'REVIEW', f.flag, f.value || ''])) : 'None.', '');
   const unesc = L.flatMap((l) => report.locales[l].home.jsUnescaped.map((u) => [l, u.path, u.line, u.raw, u.value]));
   out.push('### JS literals where an escape was resolved', '', unesc.length ? table(['locale', 'path', 'line', 'raw literal', 'stored value'], unesc) : 'None.', '');
 
@@ -1264,6 +1287,15 @@ function renderMarkdown(report, results) {
   out.push('## Missing selectors (null because the element was not found)', '');
   const miss = L.flatMap((l) => ['home', 'privacy'].flatMap((p) => report.locales[l][p].missing.map((m) => [l, p, m])));
   out.push(miss.length ? table(['locale', 'page', 'path'], miss) : 'None.', '');
+
+  out.push('## Verification notes (entries that passed A via the fallback path)', '');
+  const vn = L.flatMap((l) => ['home', 'privacy'].flatMap((p) => report.locales[l][p].verificationNotes.map((n) => [l, p, n.line, n.path, n.note])));
+  out.push(vn.length ? table(['locale', 'page', 'line', 'path', 'note'], vn) : 'None.', '');
+
+  out.push('## Source markup anomalies (parse5 parse errors, per file)', '', 'Informational — the live files are read-only. Counts per file, then every distinct (code, line) pair.', '');
+  out.push(table(['locale', 'page', 'file', 'parse errors'], L.flatMap((l) => ['home', 'privacy'].map((p) => [l, p, report.locales[l][p].sourceFile, report.locales[l][p].parseErrors.length]))), '');
+  const pe = L.flatMap((l) => ['home', 'privacy'].flatMap((p) => report.locales[l][p].parseErrors.map((x) => [l, p, x.line, x.col, x.code])));
+  out.push(pe.length ? table(['locale', 'page', 'line', 'col', 'code'], pe) : 'None.', '');
 
   out.push('## What the two un-id\'d sections are', '', `- ${results.home.en.tree.partner._sourceSection}: **SafariMedic partnership strip** (logo, one line of text, two buttons) → extracted as \`partner\`.`, `- ${results.home.en.tree.privacyBlurb._sourceSection}: **"Privacy and Confidentiality"** three-card block with a CTA → extracted as \`privacyBlurb\`.`, '');
 

@@ -18,8 +18,8 @@
   "summary": {
     "files": 26,
     "checkA": {
-      "pass": 14351,
-      "fail": 1
+      "pass": 14352,
+      "fail": 0
     },
     "checkB": {
       "pass": 7386,
@@ -33,63 +33,9 @@
     "managedMismatches": [],
     "unexpectedShapeDiffs": [
       {
-        "where": "home:el",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:de",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:fr",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:ar",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:es",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:zh",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:ru",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "where": "home:tr",
         "path": "a11y.contactIcons.items[2].icon",
         "kind": "null-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:tr",
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[2]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:tr",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
         "expected": false
       },
       {
@@ -99,45 +45,9 @@
         "expected": false
       },
       {
-        "where": "home:it",
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[2]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:it",
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[3]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:it",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "where": "home:pt",
         "path": "a11y.contactIcons.items[2].icon",
         "kind": "null-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:pt",
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[2]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:pt",
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[3]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "where": "home:pt",
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
         "expected": false
       }
     ]
@@ -545,6 +455,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -10376,24 +10288,24 @@
         "outputFile": "src/i18n/privacy/en.json",
         "outputBytes": 8930,
         "counts": {
-          "entries": 98,
+          "entries": 96,
           "html": 46,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 83,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 46,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -10403,13 +10315,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -10464,26 +10375,6 @@
             "end": 2636,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -11700,6 +11591,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -21255,24 +21148,24 @@
         "outputFile": "src/i18n/privacy/el.json",
         "outputBytes": 14909,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -21282,13 +21175,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -21343,26 +21235,6 @@
             "end": 2719,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -22588,6 +22460,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -32143,24 +32017,24 @@
         "outputFile": "src/i18n/privacy/de.json",
         "outputBytes": 10102,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -32170,13 +32044,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -32231,26 +32104,6 @@
             "end": 2687,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -33483,6 +33336,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -43038,24 +42893,24 @@
         "outputFile": "src/i18n/privacy/fr.json",
         "outputBytes": 10429,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -43065,13 +42920,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -43126,26 +42980,6 @@
             "end": 2689,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -44371,6 +44205,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -53926,24 +53762,24 @@
         "outputFile": "src/i18n/privacy/ar.json",
         "outputBytes": 12204,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 38,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 2
+          "nulls": 0
         },
         "checkA": {
           "pass": 85,
           "fail": 0,
-          "na": 14,
+          "na": 12,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -53953,13 +53789,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -54014,26 +53849,6 @@
             "end": 2615,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -55259,6 +55074,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -64814,24 +64631,24 @@
         "outputFile": "src/i18n/privacy/es.json",
         "outputBytes": 9841,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -64841,13 +64658,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -64902,26 +64718,6 @@
             "end": 2635,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -66147,6 +65943,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -75702,24 +75500,24 @@
         "outputFile": "src/i18n/privacy/zh.json",
         "outputBytes": 9117,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -75729,13 +75527,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -75790,26 +75587,6 @@
             "end": 2494,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -77035,6 +76812,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -86590,24 +86369,24 @@
         "outputFile": "src/i18n/privacy/ru.json",
         "outputBytes": 13959,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -86617,13 +86396,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -86678,26 +86456,6 @@
             "end": 2705,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -87923,6 +87681,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -97469,24 +97229,24 @@
         "outputFile": "src/i18n/privacy/tr.json",
         "outputBytes": 10195,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -97496,13 +97256,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -97557,26 +97316,6 @@
             "end": 2693,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -98416,16 +98155,10 @@
           "nulls": 13
         },
         "checkA": {
-          "pass": 1016,
-          "fail": 1,
+          "pass": 1017,
+          "fail": 0,
           "na": 39,
-          "failures": [
-            {
-              "path": "hero.images[1].alt",
-              "kind": "attr",
-              "line": 386
-            }
-          ]
+          "failures": []
         },
         "checkB": {
           "pass": 521,
@@ -98813,6 +98546,25 @@
                 "html": "<i class=\"fas fa-clock me-2\"></i>"
               }
             ]
+          }
+        ],
+        "parseErrors": [
+          {
+            "code": "missing-whitespace-between-attributes",
+            "line": 386,
+            "col": 233
+          },
+          {
+            "code": "unexpected-character-in-attribute-name",
+            "line": 386,
+            "col": 233
+          }
+        ],
+        "verificationNotes": [
+          {
+            "path": "hero.images[1].alt",
+            "line": 386,
+            "note": "parse5 attribute-token location was unusable (malformed start tag, raw token \"alt\"); verified name=\"value\" verbatim inside the start tag"
           }
         ],
         "entries": [
@@ -100217,7 +99969,7 @@
             "line": 386,
             "start": 21820,
             "end": 21823,
-            "a": "fail",
+            "a": "pass",
             "b": "n/a"
           },
           {
@@ -108361,24 +108113,24 @@
         "outputFile": "src/i18n/privacy/it.json",
         "outputBytes": 10070,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -108388,13 +108140,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -108449,26 +108200,6 @@
             "end": 2671,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -109694,6 +109425,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -119240,24 +118973,24 @@
         "outputFile": "src/i18n/privacy/pt.json",
         "outputBytes": 10018,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -119267,13 +119000,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -119328,26 +119060,6 @@
             "end": 2661,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -120573,6 +120285,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -130128,24 +129842,24 @@
         "outputFile": "src/i18n/privacy/nl.json",
         "outputBytes": 9755,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -130155,13 +129869,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -130216,26 +129929,6 @@
             "end": 2655,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -131461,6 +131154,8 @@
             ]
           }
         ],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -141016,24 +140711,24 @@
         "outputFile": "src/i18n/privacy/ja.json",
         "outputBytes": 11300,
         "counts": {
-          "entries": 99,
+          "entries": 97,
           "html": 47,
           "attr": 37,
           "js": 0,
           "jsonld": 0,
           "derived": 12,
-          "nulls": 3
+          "nulls": 1
         },
         "checkA": {
           "pass": 84,
           "fail": 0,
-          "na": 15,
+          "na": 13,
           "failures": []
         },
         "checkB": {
           "pass": 47,
           "fail": 0,
-          "na": 52,
+          "na": 50,
           "failures": []
         },
         "coverage": {
@@ -141043,13 +140738,12 @@
           "uncovered": []
         },
         "managed": [],
-        "missing": [
-          "meta.twitterTitle",
-          "meta.twitterDescription"
-        ],
+        "missing": [],
         "multilineValues": [],
         "jsUnescaped": [],
         "strippedDecorations": [],
+        "parseErrors": [],
+        "verificationNotes": [],
         "entries": [
           {
             "path": "meta.title",
@@ -141104,26 +140798,6 @@
             "end": 2541,
             "a": "pass",
             "b": "n/a"
-          },
-          {
-            "path": "meta.twitterTitle",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
-          },
-          {
-            "path": "meta.twitterDescription",
-            "kind": "attr",
-            "line": null,
-            "start": null,
-            "end": null,
-            "a": "n/a",
-            "b": "n/a",
-            "missing": true
           },
           {
             "path": "meta.canonical",
@@ -141976,7 +141650,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "el": {
         "navItems": 6,
@@ -142004,7 +141679,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "de": {
         "navItems": 6,
@@ -142032,7 +141708,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "fr": {
         "navItems": 6,
@@ -142060,7 +141737,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "ar": {
         "navItems": 6,
@@ -142088,7 +141766,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "es": {
         "navItems": 6,
@@ -142116,7 +141795,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "zh": {
         "navItems": 6,
@@ -142144,7 +141824,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "ru": {
         "navItems": 6,
@@ -142172,7 +141853,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "tr": {
         "navItems": 6,
@@ -142200,7 +141882,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "it": {
         "navItems": 6,
@@ -142228,7 +141911,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "pt": {
         "navItems": 6,
@@ -142256,7 +141940,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "nl": {
         "navItems": 6,
@@ -142284,7 +141969,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       },
       "ja": {
         "navItems": 6,
@@ -142312,7 +141998,8 @@
         "privacyBlurbCards": 3,
         "footerQuickLinks": 7,
         "footerLangLinks": 13,
-        "footerConnect": 3
+        "footerConnect": 3,
+        "jsonldBlocks": "organization+faqpage+product+service"
       }
     },
     "privacy": {
@@ -142619,11 +142306,6 @@
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
       },
       {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "path": "nav.langSuggest",
         "kind": "extra-in-locale",
         "expected": true,
@@ -142800,11 +142482,6 @@
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
       },
       {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "path": "nav.langSuggest",
         "kind": "extra-in-locale",
         "expected": true,
@@ -142979,11 +142656,6 @@
         "kind": "missing-in-locale",
         "expected": true,
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
-      },
-      {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
       },
       {
         "path": "nav.langSuggest",
@@ -143168,11 +142840,6 @@
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
       },
       {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "path": "nav.langSuggest",
         "kind": "extra-in-locale",
         "expected": true,
@@ -143347,11 +143014,6 @@
         "kind": "missing-in-locale",
         "expected": true,
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
-      },
-      {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
       },
       {
         "path": "nav.langSuggest",
@@ -143530,11 +143192,6 @@
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
       },
       {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "path": "nav.langSuggest",
         "kind": "extra-in-locale",
         "expected": true,
@@ -143709,11 +143366,6 @@
         "kind": "missing-in-locale",
         "expected": true,
         "why": "language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)"
-      },
-      {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
       },
       {
         "path": "nav.langSuggest",
@@ -143894,16 +143546,6 @@
       {
         "path": "a11y.contactIcons.items[2].icon",
         "kind": "null-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[2]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
         "expected": false
       },
       {
@@ -144088,21 +143730,6 @@
         "expected": false
       },
       {
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[2]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[3]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
         "path": "nav.langSuggest",
         "kind": "extra-in-locale",
         "expected": true,
@@ -144281,21 +143908,6 @@
       {
         "path": "a11y.contactIcons.items[2].icon",
         "kind": "null-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[2]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.organization.contactPoint[0].availableLanguage[3]",
-        "kind": "extra-in-locale",
-        "expected": false
-      },
-      {
-        "path": "meta.jsonld.faqpage.inLanguage",
-        "kind": "extra-in-locale",
         "expected": false
       },
       {
@@ -145915,113 +145527,143 @@
   "jsFlags": [
     {
       "path": "nav.langSuggest.names.el",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.de",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.fr",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.ar",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.es",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.zh",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.ru",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.tr",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.it",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.pt",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.nl",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.names.ja",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.el",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.de",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.fr",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.ar",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.es",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.zh",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.ru",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.tr",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.it",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.pt",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.nl",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "nav.langSuggest.urls.ja",
-      "flag": "present only in: en"
+      "flag": "present only in: en — expected: language-suggestion banner exists only on the x-default root page (en) by design (source comment §8)",
+      "expected": true
     },
     {
       "path": "testimonials.embeds.jsIframeTitle",
       "flag": "identical to en (untranslated?) in: el, de, fr, ar, es, zh, ru, tr, it, pt, nl",
-      "value": "Client testimonials"
+      "value": "Client testimonials",
+      "expected": false
     },
     {
       "path": "contact.messages.notificationClose",
       "flag": "identical to en (untranslated?) in: tr, nl, ja",
-      "value": "Close"
+      "value": "Close",
+      "expected": false
     }
   ],
   "notes": [
     "index-ja.html: contains the <head> \"§8 safe language routing\" localStorage redirect script, which the source comment says must run ONLY on the bare root page. Not copy, but a live-site behaviour worth a decision before Phase 2 (a saved non-ja preference would redirect visitors away from /ja/).",
+    "index-tr.html: floating contact icon #3 (\"Instagram\") has no <i class=\"...\"> icon element (en has \"fab fa-instagram\"). Live-site markup defect, reported as a structural diff; the label and aria-label were extracted normally.",
+    "index-it.html: floating contact icon #3 (\"Instagram\") has no <i class=\"...\"> icon element (en has \"fab fa-instagram\"). Live-site markup defect, reported as a structural diff; the label and aria-label were extracted normally.",
+    "index-it.html line 386 (hero.images[1].alt): parse5 attribute-token location was unusable (malformed start tag, raw token \"alt\"); verified name=\"value\" verbatim inside the start tag.",
+    "index-pt.html: floating contact icon #3 (\"Instagram\") has no <i class=\"...\"> icon element (en has \"fab fa-instagram\"). Live-site markup defect, reported as a structural diff; the label and aria-label were extracted normally.",
     "FAQ answers: each #faq-aN contains exactly one <p class=\"mb-0\"> in every locale, so the stored answer is that paragraph's innerHTML (wrapper recorded per entry as \"via\"). FAQ questions are the innerHTML of the text <span> inside the button; the trailing <span class=\"toggle-icon\"> was excluded and is listed under stripped decorations.",
     "Managed facts: the <!--pdg:KEY-->value<!--/pdg--> marker comments are kept verbatim inside the extracted values (they are part of the source slice). The \"managed\" table lists which JSON paths embed which marker so Phase 2 can substitute facts.json at render time.",
     "contact.messages.sending keeps the spinner <span class=\"spinner-border ...\"> exactly as the inline script assigns it to innerHTML.",
@@ -146029,6 +145671,6 @@
     "console.warn/console.error/console.log literals in the inline scripts are developer-facing and were deliberately not extracted.",
     "\"ui\" is empty in every locale: check C found no body text node outside the named keys.",
     "Source observation (left untouched): en FAQ answer 3 reads \"…ongoing support to support a successful integration.\" — repeated \"support\"; verify with the author before Phase 2 rather than editing.",
-    "Source observation (left untouched): the pricing feature \"Vehicle & Travel Trained\" uses a bare \"&\" in the HTML (browsers tolerate it); the same list elsewhere uses \"&amp;\"."
+    "Bare \"&\" (not an entity) inside 3 extracted HTML value(s), kept verbatim — browsers tolerate it, but Phase 2 should render these with set:html exactly as-is: en/home pricing.cards[0].features[3] (line 1137); el/home pricing.cards[0].features[3] (line 1049); nl/home pricing.cards[0].features[3] (line 1046)."
   ]
 }
