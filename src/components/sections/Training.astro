@@ -60,13 +60,16 @@ function iconName(fa: string): string {
          > #timelineTrackFill + .timeline-item[data-phase="N"]; phase-nav
          buttons + [data-phase-current]; .phase-content-wrapper >
          .phase-content[id="phase-N"]. -->
-    <div class="timeline-track reveal" style="--reveal-delay: 100ms" role="group" aria-label={timeline.ariaLabel} tabindex="0">
+    <div class="timeline-track reveal" style="--reveal-delay: 100ms" role="tablist" aria-label={timeline.ariaLabel} tabindex="0">
       <div id="timelineTrackFill" class="timeline-track-fill"></div>
       {timeline.items.map((item, i) => (
         <div
           class:list={['timeline-item', { active: i === 0 }]}
           data-phase={item.phase}
+          id={`phase-tab-${item.phase}`}
+          role="tab"
           aria-selected={i === 0 ? 'true' : 'false'}
+          aria-controls={`phase-${item.phase}`}
           tabindex={i === 0 ? 0 : -1}
         >
           <div class="timeline-number">{item.number}</div>
@@ -88,7 +91,14 @@ function iconName(fa: string): string {
 
     <div class="phase-content-wrapper">
       {phases.map((phase, i) => (
-        <div class:list={['phase-content', { active: i === 0 }]} id={phase.id} hidden={i !== 0}>
+        <div
+          class:list={['phase-content', { active: i === 0 }]}
+          id={phase.id}
+          role="tabpanel"
+          aria-labelledby={`phase-tab-${i + 1}`}
+          tabindex="0"
+          hidden={i !== 0}
+        >
           <div class="phase-card">
             <div class="phase-header">
               <span class="phase-badge" set:html={phase.badge} />
@@ -181,7 +191,9 @@ function iconName(fa: string): string {
     padding: var(--space-3) var(--space-1);
     text-align: center;
     cursor: pointer;
-    color: var(--text-faint);
+    /* --text-faint fails WCAG AA on this dark surface at this size (~3.6:1,
+       needs 4.5:1) — caught by an automated Lighthouse/axe pass. */
+    color: var(--text-muted);
     border-radius: var(--radius-sm);
     transition: color var(--dur-base) var(--ease-out);
   }
@@ -220,7 +232,7 @@ function iconName(fa: string): string {
 
   .timeline-period {
     font-size: var(--text-xs);
-    color: var(--text-faint);
+    color: var(--text-muted);
   }
 
   .phase-nav {
@@ -311,7 +323,7 @@ function iconName(fa: string): string {
   }
 
   .phase-timing {
-    color: var(--text-faint);
+    color: var(--text-muted);
     font-size: var(--text-sm);
   }
 

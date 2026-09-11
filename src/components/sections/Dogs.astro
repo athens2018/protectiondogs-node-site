@@ -268,7 +268,10 @@ function iconName(fa: string): string {
     font-size: var(--text-xs);
     letter-spacing: var(--tracking-eyebrow);
     text-transform: uppercase;
-    color: var(--text-faint);
+    /* --text-faint fails WCAG AA here (~3.4:1 on this card's surface,
+       needs 4.5:1 at this size) — caught by an automated Lighthouse/axe
+       pass, not a design choice. */
+    color: var(--text-muted);
   }
 
   .dog-card__stat-value {

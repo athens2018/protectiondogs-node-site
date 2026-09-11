@@ -2,7 +2,8 @@
 interface Dot {
   href: string;
   section: string;
-  label: string;
+  ariaLabel: string;
+  tooltip: string;
 }
 
 interface Props {
@@ -15,8 +16,8 @@ const { dots, ariaLabel } = Astro.props;
 
 <nav class="section-dots" aria-label={ariaLabel}>
   {dots.map((dot) => (
-    <a href={dot.href} class="section-dot" data-section={dot.section} aria-label={dot.label}>
-      <span class="dot-tooltip" set:html={dot.label} />
+    <a href={dot.href} class="section-dot" data-section={dot.section} aria-label={dot.ariaLabel}>
+      <span class="dot-tooltip" set:html={dot.tooltip} />
     </a>
   ))}
 </nav>
