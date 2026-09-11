@@ -11,6 +11,7 @@ import { initForm } from './form';
 import { initTestimonials } from './testimonials';
 import { initEffects } from './effects';
 import { initReveal } from './reveal';
+import { initInstagram } from './instagram';
 import { initServiceWorker } from './sw';
 
 function init(): void {
@@ -27,6 +28,7 @@ function init(): void {
   initTestimonials();
   initEffects();
   initReveal();
+  initInstagram();
 
   const year = document.getElementById('copyright-year');
   if (year) year.textContent = String(new Date().getFullYear());

@@ -27,3 +27,7 @@ pnpm-debug.log*
 .vercel/
 
 .vercel
+.env*
+
+# keep the documented template even though real env files are ignored
+!.env.example

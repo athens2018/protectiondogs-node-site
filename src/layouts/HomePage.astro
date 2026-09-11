@@ -19,6 +19,7 @@ import Pricing from '../components/sections/Pricing.astro';
 import Faq from '../components/sections/Faq.astro';
 import Testimonials from '../components/sections/Testimonials.astro';
 import Partner from '../components/sections/Partner.astro';
+import InstagramFeed from '../components/sections/InstagramFeed.astro';
 import Contact from '../components/sections/Contact.astro';
 import { mergeFacts } from '../lib/facts-merge';
 import { faToIconName, iconFromHref } from '../lib/icon-map';
@@ -139,6 +140,7 @@ const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
     <Pricing {...content.pricing} />
     <Faq {...content.faq} />
     <Testimonials {...content.testimonials} />
+    <InstagramFeed handle={(facts as any).contact.instagram} />
     <Partner {...content.partner} />
     <Contact content={content.contact} locale={localeCode} />
   </main>

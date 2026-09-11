@@ -64,6 +64,9 @@ const legacy = {
 };
 
 export const REDIRECTS = {
+  // @astrojs/sitemap writes sitemap-index.xml; the live site (and anything
+  // that has crawled it) knows the sitemap as /sitemap.xml.
+  '/sitemap.xml': '/sitemap-index.xml',
   ...homepageFiles,
   ...privacyFiles,
   ...articleFiles,

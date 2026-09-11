@@ -1,0 +1,151 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/chrome/Header.astro';
+import Footer from '../components/chrome/Footer.astro';
+import CookieConsent from '../components/chrome/CookieConsent.astro';
+import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+import home from '../i18n/locales/en.json';
+import privacy from '../i18n/privacy/en.json';
+import { faToIconName, iconFromHref } from '../lib/icon-map';
+
+// Copy carried verbatim from the live 404.html. Its nav used an older label
+// set; the frozen navigation (Dogs · Process · Breeding · Placement · About ·
+// Enquire) is used instead, as on every other standalone page.
+const social = privacy.footer.connect.links.map((s) => ({
+  href: s.href,
+  ariaLabel: s.ariaLabel,
+  icon: faToIconName(s.icon, iconFromHref(s.href)) as 'instagram' | 'whatsapp' | 'envelope',
+}));
+---
+
+<Base
+  locale="en"
+  title="Page Not Found | Protection Dogs GR"
+  description="That page doesn't exist, or it's moved."
+  robots="noindex, follow"
+  alternates={false}
+  skipLinkLabel={home.a11y.skipLink.label}
+  backToTopLabel={home.a11y.backToTopAriaLabel}
+>
+  <CookieConsent
+    ariaLabel={home.cookie.ariaLabel}
+    text={home.cookie.text}
+    rejectLabel={home.cookie.reject}
+    acceptLabel={home.cookie.accept}
+  />
+
+  <Header
+    locale="en"
+    nav={privacy.nav.items}
+    navAriaLabel={privacy.nav.ariaLabel}
+    brandAlt={privacy.nav.brand.alt}
+    homeHref={privacy.nav.brand.href}
+    menuToggleLabel={privacy.nav.toggleAriaLabel}
+    langTriggerLabel={home.nav.langDrawer.ariaLabel}
+    drawerTitle={home.nav.langDrawer.title}
+    drawerCloseLabel={home.nav.langDrawer.close.ariaLabel}
+    bannerText=""
+    bannerSwitchLabel=""
+    bannerDismissLabel=""
+    showLanguageSwitcher={false}
+  />
+
+  <main id="main-content">
+    <section class="section section--dark not-found">
+      <div class="container container--narrow">
+        <p class="eyebrow">404</p>
+        <h1 class="not-found__title">Page Not Found</h1>
+        <p class="not-found__lead">That page doesn't exist, or it's moved. Here's where you probably wanted to go:</p>
+
+        <div class="not-found__grid">
+          <Card tone="elevated">
+            <h2 class="not-found__card-title">Available Dogs</h2>
+            <p>See current prospects and pricing.</p>
+            <Button href="/#dogs" variant="outline">View</Button>
+          </Card>
+          <Card tone="elevated">
+            <h2 class="not-found__card-title">Contact</h2>
+            <p>Ask a question or discuss a dog directly.</p>
+            <Button href="/#contact" variant="outline">Get in Touch</Button>
+          </Card>
+        </div>
+
+        <div class="not-found__home">
+          <Button href="/" variant="primary" size="lg">Back to Home</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer
+    locale="en"
+    brandTitle={privacy.footer.brand.h3}
+    brandBlurb={privacy.footer.brand.text}
+    quickLinksTitle={privacy.footer.quickLinks.h3}
+    quickLinksAriaLabel={privacy.footer.quickLinks.ariaLabel}
+    links={privacy.footer.quickLinks.links}
+    languageTitle=""
+    connectTitle={privacy.footer.connect.h3}
+    social={social}
+    copyright={privacy.footer.copyright}
+    showLanguage={false}
+  />
+</Base>
+
+<style>
+  .not-found {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding-top: calc(var(--nav-h) + var(--banner-h) + var(--space-9));
+    text-align: center;
+  }
+
+  .not-found .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .not-found__title {
+    color: var(--gold);
+    font-size: var(--text-4xl);
+  }
+
+  .not-found__lead {
+    font-size: var(--text-lg);
+    color: var(--text);
+  }
+
+  .not-found__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+    width: 100%;
+    margin-top: var(--space-4);
+  }
+
+  .not-found__grid :global(.card) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .not-found__card-title {
+    color: var(--gold);
+    font-size: var(--text-xl);
+  }
+
+  .not-found__home {
+    margin-top: var(--space-6);
+  }
+
+  @media (max-width: 640px) {
+    .not-found__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /private/
 Disallow: /admin/
+Disallow: /api/
 
-Sitemap: https://www.protectiondogs.gr/sitemap.xml
+Sitemap: https://www.protectiondogs.gr/sitemap-index.xml

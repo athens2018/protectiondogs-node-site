@@ -1,0 +1,117 @@
+---
+import Icon from '../ui/Icon.astro';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  handle: string;
+}
+
+const { handle } = Astro.props;
+const profileUrl = `https://www.instagram.com/${handle}`;
+---
+
+<!-- New section (plan §6.3), not a parity item. Deliberately carries no
+     translatable copy: the heading is the account handle and every link is
+     named after the platform, so nothing here needs a translator or the
+     claims register. Hidden until src/scripts/instagram.ts has real posts
+     from /api/instagram/; without JavaScript or without a cached feed it
+     simply never appears. Images only — captions are excluded on purpose. -->
+<section id="instagram" class="section section--dark ig" hidden data-profile-url={profileUrl}>
+  <div class="container">
+    <header class="section-header section-header--center ig__header">
+      <p class="eyebrow">Instagram</p>
+      <h2 class="ig__title">
+        <a href={profileUrl} target="_blank" rel="noopener noreferrer">@{handle}</a>
+      </h2>
+      <span class="section-header__rule" aria-hidden="true"></span>
+    </header>
+
+    <ul class="ig__grid" data-ig-grid></ul>
+
+    <div class="ig__follow">
+      <Button href={profileUrl} variant="outline" target="_blank" rel="noopener noreferrer">
+        <Icon name="instagram" size="1.1em" />
+        <span>@{handle}</span>
+      </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ig[hidden] {
+    display: none;
+  }
+
+  .ig__header {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .ig__title {
+    color: var(--gold);
+  }
+
+  .ig__title a {
+    color: inherit;
+  }
+
+  .ig__grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: clamp(0.5rem, 1.2vw, 1rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ig__grid :global(.ig-tile) {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--bg-4);
+    border: 1px solid var(--line);
+  }
+
+  .ig__grid :global(.ig-tile img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+
+  .ig__grid :global(.ig-tile:hover img),
+  .ig__grid :global(.ig-tile:focus-visible img) {
+    transform: scale(1.04);
+  }
+
+  .ig__grid :global(.ig-tile__icon) {
+    position: absolute;
+    inset-inline-end: 0.6rem;
+    top: 0.6rem;
+    display: inline-flex;
+    padding: 0.35rem;
+    border-radius: 50%;
+    background: rgba(13, 13, 13, 0.7);
+    color: var(--text-strong);
+    opacity: 0;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  .ig__grid :global(.ig-tile:hover .ig-tile__icon),
+  .ig__grid :global(.ig-tile:focus-visible .ig-tile__icon) {
+    opacity: 1;
+  }
+
+  .ig__follow {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-6);
+  }
+
+  @media (max-width: 900px) {
+    .ig__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>
