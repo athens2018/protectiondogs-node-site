@@ -1,8 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "gr.protectiondogs.app",
-    "sha256_cert_fingerprints": ["38:0F:24:64:AD:D1:D6:B1:E9:80:B8:2A:1C:03:05:A8:ED:98:DC:91:F2:40:5C:F5:37:67:23:7B:C9:B6:BB:B6"]
-  }
-}]
