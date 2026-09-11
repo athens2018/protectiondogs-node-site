@@ -93,8 +93,8 @@ function footnoteIcon(faClass: string): string {
         <form
           id="contact-form"
           class="contact-form"
-          action={content.form.action}
-          method={content.form.method}
+          action="/api/enquiry/"
+          method="POST"
           novalidate
           data-msg-name={content.messages.nameRequired}
           data-msg-email={content.messages.emailInvalid}
@@ -106,9 +106,10 @@ function footnoteIcon(faClass: string): string {
           data-msg-network={content.messages.networkError}
         >
           {/* Honeypot spam trap: invisible to real visitors; bots that
-              auto-fill every field fill this too, and Formspree silently
-              discards the submission when it's non-empty. */}
+              auto-fill every field fill this too, and the /api/enquiry
+              route silently discards the submission when it's non-empty. */}
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_locale" value={locale} />
 
           <div class="form-grid form-grid--2">
             <Field
@@ -176,7 +177,7 @@ function footnoteIcon(faClass: string): string {
           />
 
           <div class="form-check">
-            <input type="checkbox" id="privacy-consent" required />
+            <input type="checkbox" id="privacy-consent" name="privacy-consent" required />
             <label for="privacy-consent" set:html={consentLabel} />
           </div>
 

@@ -90,7 +90,7 @@
         "blocks": [
           {
             "tag": "p",
-            "html": "<strong class=\"text-warning\">When you use the contact form:</strong> your name, email address, phone number (if provided), and whatever you write in the message field. This is sent to and processed by Formspree, a third-party form-handling service, and delivered to my email inbox. Formspree has its own <a href=\"https://formspree.io/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacy policy</a> covering how they handle that data in transit."
+            "html": "<strong class=\"text-warning\">When you use the contact form:</strong> your name, email address, phone number (if provided), and whatever you write in the message field. This is sent to this site's own contact endpoint and delivered to my inbox using Resend, a transactional email service. Resend has its own <a href=\"https://resend.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-warning\">privacy policy</a> covering how they handle that data in transit."
           },
           {
             "tag": "p",
