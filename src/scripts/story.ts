@@ -1,9 +1,14 @@
 import { track } from './consent';
 
+// Minimum horizontal drag, in CSS pixels, before a touch gesture counts as
+// a deliberate swipe rather than an incidental finger wobble.
+const SWIPE_THRESHOLD_PX = 40;
+
 // "Meet the dog" story modal — click-based navigation (dots, prev/next,
-// arrow keys), focus trapped while open, focus returned on close, any other
-// playing video paused while it is up. Labels come from data attributes so
-// every locale's own wording is used.
+// arrow keys), touch-swipe navigation (left/right, RTL-aware, same as the
+// arrow keys below), focus trapped while open, focus returned on close,
+// any other playing video paused while it is up. Labels come from data
+// attributes so every locale's own wording is used.
 export function initStory(): void {
   const modals = Array.from(document.querySelectorAll<HTMLElement>('.story-modal'));
   if (!modals.length) return;
@@ -100,6 +105,20 @@ export function initStory(): void {
       }
     }
 
+    // Shared by the Next button and the swipe handler below, so "swipe past
+    // the last slide" and "tap Next on the last slide" behave identically
+    // (both close the modal) — the keyboard's forward arrow deliberately
+    // doesn't (Escape is the dedicated close key there), but a touch
+    // gesture has no separate close key, and swiping past the end to
+    // dismiss is the expected feel on a phone (same as Stories-style UIs).
+    function goNext() {
+      if (current === slides.length - 1) close();
+      else show(current + 1);
+    }
+    function goPrev() {
+      show(current - 1);
+    }
+
     document.querySelectorAll<HTMLElement>(`[data-story-open="${modal.id}"]`).forEach((trigger) => {
       trigger.addEventListener('click', () => open(trigger));
       if (trigger.getAttribute('role') === 'button') {
@@ -114,11 +133,49 @@ export function initStory(): void {
 
     modal.querySelectorAll<HTMLElement>('[data-story-close]').forEach((btn) => btn.addEventListener('click', close));
     dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
-    prevBtn?.addEventListener('click', () => show(current - 1));
-    nextBtn?.addEventListener('click', () => {
-      if (current === slides.length - 1) close();
-      else show(current + 1);
-    });
+    prevBtn?.addEventListener('click', goPrev);
+    nextBtn?.addEventListener('click', goNext);
+
+    // Touch swipe: a single-finger horizontal drag past the threshold, with
+    // more horizontal than vertical movement (so a vertical scroll inside a
+    // tall slide is never hijacked as a swipe). RTL mirrors the arrow keys'
+    // own mapping above: "forward" is a leading-edge swipe either way.
+    if (slidesWrap) {
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let tracking = false;
+
+      slidesWrap.addEventListener(
+        'touchstart',
+        (e) => {
+          if (e.touches.length !== 1) {
+            tracking = false;
+            return;
+          }
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          tracking = true;
+        },
+        { passive: true },
+      );
+
+      slidesWrap.addEventListener(
+        'touchend',
+        (e) => {
+          if (!tracking) return;
+          tracking = false;
+          const touch = e.changedTouches[0];
+          const dx = touch.clientX - touchStartX;
+          const dy = touch.clientY - touchStartY;
+          if (Math.abs(dx) < SWIPE_THRESHOLD_PX || Math.abs(dx) < Math.abs(dy)) return;
+          const rtl = document.documentElement.dir === 'rtl';
+          const swipedTowardStart = dx > 0; // finger moved rightward
+          if (swipedTowardStart === rtl) goNext();
+          else goPrev();
+        },
+        { passive: true },
+      );
+    }
 
     document.addEventListener('keydown', (e) => {
       if (!modal.classList.contains('open')) return;
