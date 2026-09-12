@@ -49,11 +49,15 @@ interface SessionPayload {
   exp: number;
 }
 
-function mintSessionToken(secret: string): string {
+function mintSessionTokenWithTtl(secret: string, ttlMs: number): string {
   const now = Date.now();
-  const payload: SessionPayload = { iat: now, exp: now + SESSION_TTL_MS };
+  const payload: SessionPayload = { iat: now, exp: now + ttlMs };
   const encoded = b64url(JSON.stringify(payload));
   return `${encoded}.${sign(encoded, secret)}`;
+}
+
+function mintSessionToken(secret: string): string {
+  return mintSessionTokenWithTtl(secret, SESSION_TTL_MS);
 }
 
 function verifySessionToken(token: string, secret: string): boolean {
@@ -71,6 +75,25 @@ function verifySessionToken(token: string, secret: string): boolean {
   } catch {
     return false;
   }
+}
+
+/**
+ * Mints the same signed session token as the cookie-based web login, but
+ * for handing back as JSON instead of a Set-Cookie — used by
+ * src/pages/admin/api/mobile-login.ts so a native app (which manages its
+ * own token storage, not a cookie jar) can authenticate once with the
+ * admin password and then send this back as `Authorization: Bearer
+ * <token>` on every later request. Longer-lived than the web session (365
+ * days vs. 7): a phone is one person's own device, re-entering a password
+ * on it regularly is exactly the friction this exists to remove, and
+ * rotating ADMIN_SESSION_SECRET (which invalidates every outstanding
+ * token, web and mobile alike) is the real revocation lever if a device
+ * is ever lost.
+ */
+const MOBILE_TOKEN_TTL_MS = 365 * 24 * 60 * 60 * 1000;
+
+export function mintMobileToken(secret: string): string {
+  return mintSessionTokenWithTtl(secret, MOBILE_TOKEN_TTL_MS);
 }
 
 export function setSessionCookie(cookies: AstroCookies, secret: string): void {
@@ -128,10 +151,19 @@ export type AdminGuardResult = { ok: true } | { ok: false; reason: 'not-configur
  * owner hasn't set the env vars yet" (fail closed with a clear message,
  * never fail open) from "no valid session" (send to /admin/login) so
  * both pages and API routes can react appropriately.
+ *
+ * `authHeader` is optional and only relevant to the handful of gallery API
+ * routes the portal native app also calls (src/pages/admin/api/gallery/**)
+ * — pass `request.headers.get('authorization')` there so a mobile-token
+ * bearer request (src/pages/admin/api/mobile-login.ts) is accepted the
+ * same as a valid cookie session. Every other admin page/route keeps
+ * calling this with just `cookies`, unchanged.
  */
-export function checkAdminAccess(cookies: AstroCookies): AdminGuardResult {
+export function checkAdminAccess(cookies: AstroCookies, authHeader?: string | null): AdminGuardResult {
   const config = getAdminConfig();
   if (!config) return { ok: false, reason: 'not-configured' };
-  if (!hasValidSession(cookies, config.sessionSecret)) return { ok: false, reason: 'unauthenticated' };
-  return { ok: true };
+  if (hasValidSession(cookies, config.sessionSecret)) return { ok: true };
+  const bearer = authHeader?.match(/^Bearer\s+(.+)$/)?.[1];
+  if (bearer && verifySessionToken(bearer, config.sessionSecret)) return { ok: true };
+  return { ok: false, reason: 'unauthenticated' };
 }

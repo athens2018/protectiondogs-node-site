@@ -14,7 +14,7 @@ export const prerender = false;
  * cleanly, in their own voice.
  */
 export const POST: APIRoute = async ({ request, cookies }) => {
-  const access = checkAdminAccess(cookies);
+  const access = checkAdminAccess(cookies, request.headers.get('authorization'));
   if (!access.ok) return new Response(JSON.stringify({ ok: false, error: 'unauthorized' }), { status: 401 });
 
   let body: { text?: string };
