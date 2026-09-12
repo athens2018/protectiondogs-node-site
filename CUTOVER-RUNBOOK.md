@@ -53,7 +53,7 @@ vercel --prod --yes --scope pdg3     # deploys to the stable alias
 curl -sI https://node-site-pdg3.vercel.app/ | head -5   # 200, real headers
 ```
 
-## Step 2 — Add the apex/www domains to the Vercel project (still zero live impact)
+## Step 2 — Add the apex/www domains to the Vercel project (done 2026-09-12, zero live impact)
 
 This makes Vercel *aware* of the domains and issues TLS for them, but
 **does nothing to live traffic** until Step 3's DNS change actually
@@ -61,10 +61,15 @@ points visitors there — Vercel simply won't receive any requests for
 `protectiondogs.gr` until the DNS record says so.
 
 ```bash
-vercel domains add protectiondogs.gr --scope pdg3
-vercel domains add www.protectiondogs.gr --scope pdg3
+vercel domains add protectiondogs.gr node-site --scope pdg3
+vercel domains add www.protectiondogs.gr node-site --scope pdg3
 ```
-Vercel will show a "pending verification" state until Step 3. That's expected.
+Already done. Vercel wants the same simple A record for both apex and
+`www` (no CNAME needed — confirmed via `vercel domains inspect`):
+```
+A    protectiondogs.gr        76.76.21.21
+A    www.protectiondogs.gr    76.76.21.21
+```
 
 ## Step 3 — DNS cutover (the one irreversible step — do this last, deliberately)
 
@@ -78,10 +83,12 @@ zone despite claiming pending changes).
 Change only these two records, in that same zone, leaving everything
 else untouched:
 - Root `A` record: from `15.235.109.155` (current Plesk server) to
-  Vercel's apex IP (get the exact current value from
-  `vercel domains inspect protectiondogs.gr --scope pdg3` after Step 2 —
-  don't hardcode a value here that Vercel might change).
-- `www` `CNAME`: to Vercel's target (same command shows this).
+  `76.76.21.21` (Vercel's anycast IP — re-confirm with
+  `vercel domains inspect protectiondogs.gr --scope pdg3` in case it
+  ever changes; don't blindly trust this file if it's been a while).
+- `www` — also a plain `A` record to `76.76.21.21` (not a CNAME; Vercel
+  supports a direct A record on the subdomain too, confirmed via the
+  same inspect command).
 
 Leave untouched, in the same zone: `mail` A record, root `MX`, SPF TXT,
 `portal` A record (the client portal), `send`/`resend._domainkey` (Resend
@@ -90,10 +97,16 @@ sending records). None of these are Vercel-related and none should move.
 Verify against the real authoritative nameserver directly, not a public
 resolver and not this machine's own resolver (a stale local cache is
 exactly what caused a false "site is down" scare during the portal's own
-DNS work):
+DNS work). **The real authoritative nameservers, confirmed live on
+2026-09-12, are `dns3.easy.gr` / `dns4.easy.gr`** — an earlier version of
+this runbook (and a memory note) said `ns214`/`ns215.easy.gr`, which is
+wrong (though it happened to still resolve correctly, which is exactly
+why this needs re-confirming with `nslookup -type=NS protectiondogs.gr`
+rather than trusted from memory, every time):
 ```bash
-nslookup -type=A protectiondogs.gr ns214.easy.gr
-nslookup -type=A www.protectiondogs.gr ns214.easy.gr
+nslookup -type=NS protectiondogs.gr        # confirm the real NS names first
+nslookup -type=A protectiondogs.gr dns3.easy.gr
+nslookup -type=A www.protectiondogs.gr dns3.easy.gr
 ```
 
 ## Step 4 — TLS
