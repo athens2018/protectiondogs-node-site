@@ -340,19 +340,19 @@
         },
         "notes": [
           {
-            "en": "Bobo is the last dog at this price point. Pricing moves to €<!--pdg:price_future-->70,000<!--/pdg--> starting with the next litter.",
-            "el": "Ο Bobo είναι ο τελευταίος σκύλος σε αυτή την τιμή. Η τιμή γίνεται €<!--pdg:price_future-->70.000<!--/pdg--> από την επόμενη γέννα.",
-            "de": "Bobo ist der letzte Hund zu diesem Preis. Ab dem nächsten Wurf liegt der Preis bei <!--pdg:price_future-->70.000<!--/pdg--> €.",
-            "fr": "Bobo est le dernier chien à ce tarif. À partir de la prochaine portée, le prix passe à <!--pdg:price_future-->70 000<!--/pdg--> €.",
-            "ar": "بوبو آخر كلب بهذا السعر. ابتداءً من البطن القادم يصبح السعر <!--pdg:price_future-->70,000<!--/pdg--> يورو.",
-            "es": "Bobo es el último perro a este precio. A partir de la próxima camada, el precio pasa a <!--pdg:price_future-->70.000<!--/pdg--> €.",
-            "zh": "Bobo 是这一价位的最后一条犬。从下一窝开始，价格调整为 <!--pdg:price_future-->70,000<!--/pdg--> 欧元。",
-            "ru": "Бобо — последняя собака по этой цене. Со следующего помёта стоимость составит <!--pdg:price_future-->70 000<!--/pdg--> €.",
-            "tr": "Bobo bu fiyattan çıkan son köpek. Bir sonraki batından itibaren fiyat <!--pdg:price_future-->70.000<!--/pdg--> € olacak.",
-            "it": "Bobo è l’ultimo cane a questo prezzo. A partire dalla prossima cucciolata il prezzo salirà a €<!--pdg:price_future-->70.000<!--/pdg-->.",
-            "pt": "O Bobo é o último cão a este preço. A partir da próxima ninhada, o preço passa para €<!--pdg:price_future-->70.000<!--/pdg-->.",
-            "nl": "Bobo is de laatste hond op dit prijsniveau. Vanaf het volgende nest gaat de prijs naar €<!--pdg:price_future-->70.000<!--/pdg-->.",
-            "ja": "この価格帯でご案内できる最後の1頭です。次の産仔からは価格が€<!--pdg:price_future-->70,000<!--/pdg-->になります。"
+            "en": "Bobo is the last dog at this price point. Pricing moves to €70,000 starting with the next litter.",
+            "el": "Ο Bobo είναι ο τελευταίος σκύλος σε αυτή την τιμή. Η τιμή γίνεται €70.000 από την επόμενη γέννα.",
+            "de": "Bobo ist der letzte Hund zu diesem Preis. Ab dem nächsten Wurf liegt der Preis bei 70.000 €.",
+            "fr": "Bobo est le dernier chien à ce tarif. À partir de la prochaine portée, le prix passe à 70 000 €.",
+            "ar": "بوبو آخر كلب بهذا السعر. ابتداءً من البطن القادم يصبح السعر 70,000 يورو.",
+            "es": "Bobo es el último perro a este precio. A partir de la próxima camada, el precio pasa a 70.000 €.",
+            "zh": "Bobo 是这一价位的最后一条犬。从下一窝开始，价格调整为 70,000 欧元。",
+            "ru": "Бобо — последняя собака по этой цене. Со следующего помёта стоимость составит 70 000 €.",
+            "tr": "Bobo bu fiyattan çıkan son köpek. Bir sonraki batından itibaren fiyat 70.000 € olacak.",
+            "it": "Bobo è l’ultimo cane a questo prezzo. A partire dalla prossima cucciolata il prezzo salirà a €70.000.",
+            "pt": "O Bobo é o último cão a este preço. A partir da próxima ninhada, o preço passa para €70.000.",
+            "nl": "Bobo is de laatste hond op dit prijsniveau. Vanaf het volgende nest gaat de prijs naar €70.000.",
+            "ja": "この価格帯でご案内できる最後の1頭です。次の産仔からは価格が€70,000になります。"
           },
           {
             "en": "An agreed staged monthly payment schedule can be arranged so the cost is spread across his remaining development, rather than paid all at once.",
