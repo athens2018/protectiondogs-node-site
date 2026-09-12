@@ -77,8 +77,12 @@ export default defineConfig({
       // filter it was leaking /admin/login/, /admin/dogs/, etc. into the
       // public sitemap.xml. Those routes already carry a `noindex,
       // nofollow` meta tag and sit behind requireAdmin's real auth check,
-      // so this is defense in depth, not the only protection.
-      filter: (page) => !new URL(page).pathname.startsWith('/admin'),
+      // so this is defense in depth, not the only protection. /gallery is
+      // the same idea — request-access only, noindex, never listed.
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        return !path.startsWith('/admin') && !path.startsWith('/gallery');
+      },
       i18n: {
         defaultLocale: 'en',
         locales: {

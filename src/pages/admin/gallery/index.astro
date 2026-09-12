@@ -1,0 +1,198 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Card from '../../../components/ui/Card.astro';
+import Field from '../../../components/ui/Field.astro';
+import Button from '../../../components/ui/Button.astro';
+import Badge from '../../../components/ui/Badge.astro';
+import { checkAdminAccess } from '../../../lib/admin-auth';
+import { getGallerySection, getDogsSection, resolveLocaleString } from '../../../lib/cms';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+const [section, dogsSection] = await Promise.all([getGallerySection(), getDogsSection()]);
+const saved = Astro.url.searchParams.get('saved');
+const error = Astro.url.searchParams.get('error');
+
+const dogOptions = dogsSection.dogs.map((d) => ({ id: d.id, name: resolveLocaleString(d.name, 'en') }));
+const dogName = (id: string | null) => (id ? dogOptions.find((d) => d.id === id)?.name ?? id : null);
+
+const STATUS_ORDER = { pending: 0, approved: 1, revoked: 2 } as const;
+const sortedVisitors = [...section.visitors].sort((a, b) => {
+  const byStatus = STATUS_ORDER[a.status] - STATUS_ORDER[b.status];
+  if (byStatus !== 0) return byStatus;
+  // Within "approved", most-engaged first — the actual point of tracking views.
+  if (a.status === 'approved') return b.totalViews - a.totalViews;
+  return new Date(b.requestedAt).getTime() - new Date(a.requestedAt).getTime();
+});
+
+const pendingCount = section.visitors.filter((v) => v.status === 'pending').length;
+
+const LAPSE_DAYS = 60;
+function daysSince(iso: string | null): number | null {
+  if (!iso) return null;
+  return Math.floor((Date.now() - new Date(iso).getTime()) / (24 * 60 * 60 * 1000));
+}
+function isLapsing(v: (typeof section.visitors)[number]): boolean {
+  if (v.status !== 'approved') return false;
+  const days = daysSince(v.lastVisitAt ?? v.approvedAt);
+  return days !== null && days >= LAPSE_DAYS;
+}
+function isEngagedNoContact(v: (typeof section.visitors)[number]): boolean {
+  return v.status === 'approved' && v.totalViews >= 5 && !v.contactedAt;
+}
+
+const sortedItems = [...section.items].sort((a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime());
+---
+
+<AdminLayout title="Gallery">
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>Private Gallery</h1>
+      <div class="admin-topbar__actions">
+        <span class="admin-hint">{pendingCount > 0 ? `${pendingCount} requests awaiting review · ` : ''}v{section.version}</span>
+        <a class="admin-topbar__link" href="/admin/gallery/history/">History</a>
+        <a class="admin-topbar__link" href="/admin/">All sections</a>
+        <form method="POST" action="/admin/api/logout/"><button class="admin-topbar__link" type="submit" style="background:none;border:none;cursor:pointer;">Sign out</button></form>
+      </div>
+    </div>
+
+    {saved === '1' && <div class="admin-flash admin-flash--ok">Saved.</div>}
+    {error && <div class="admin-flash admin-flash--error">{error}</div>}
+
+    <p class="admin-hint">
+      Visitors request access from the site's private gallery page; approving one emails them a personal link — no
+      password for them to manage. Sorted by most-engaged first among approved visitors, so the top of the list is
+      who's actually watching.
+    </p>
+
+    <h2 class="admin-section-title">Visitors</h2>
+    {sortedVisitors.length === 0 ? (
+      <Card padding="lg"><p class="admin-hint">No requests yet.</p></Card>
+    ) : (
+      <ul class="admin-list">
+        {sortedVisitors.map((v) => {
+          const lapsing = isLapsing(v);
+          const engagedNoContact = isEngagedNoContact(v);
+          return (
+            <li>
+              <Card padding="md">
+                <div class="admin-list-item">
+                  <div class="admin-list-item__body">
+                    <div class="admin-list-item__name">
+                      {v.name}{' '}
+                      <Badge variant={v.status === 'approved' ? 'solid' : v.status === 'pending' ? 'outline' : 'muted'}>{v.status}</Badge>
+                      {lapsing && <Badge variant="outline">inactive {daysSince(v.lastVisitAt ?? v.approvedAt)}d</Badge>}
+                      {engagedNoContact && <Badge variant="outline">engaged, no contact yet</Badge>}
+                    </div>
+                    <div class="admin-list-item__meta">
+                      {v.email}
+                      {(v.locationCity || v.locationCountry) && ` · ${[v.locationCity, v.locationCountry].filter(Boolean).join(', ')}`}
+                      {v.dogId && ` · interested in ${dogName(v.dogId)}`}
+                    </div>
+                    <div class="admin-list-item__meta">
+                      Requested {new Date(v.requestedAt).toLocaleDateString()}
+                      {v.status === 'approved' && ` · ${v.totalViews} view${v.totalViews === 1 ? '' : 's'}`}
+                      {v.lastVisitAt && ` · last visit ${new Date(v.lastVisitAt).toLocaleDateString()}`}
+                      {v.contactedAt && ` · tapped Contact ${new Date(v.contactedAt).toLocaleDateString()}`}
+                    </div>
+                    <div class="admin-list-item__meta">"{v.qualifyingAnswer}"</div>
+                  </div>
+                  <div class="admin-list-item__actions">
+                    {v.status === 'pending' && (
+                      <form method="POST" action="/admin/api/gallery/visitors/">
+                        <input type="hidden" name="action" value="approve" />
+                        <input type="hidden" name="version" value={section.version} />
+                        <input type="hidden" name="id" value={v.id} />
+                        <Button type="submit" variant="primary">Approve</Button>
+                      </form>
+                    )}
+                    {v.status !== 'revoked' && (
+                      <form method="POST" action="/admin/api/gallery/visitors/">
+                        <input type="hidden" name="action" value="revoke" />
+                        <input type="hidden" name="version" value={section.version} />
+                        <input type="hidden" name="id" value={v.id} />
+                        <Button type="submit" variant="ghost">Revoke</Button>
+                      </form>
+                    )}
+                    <form method="POST" action="/admin/api/gallery/visitors/">
+                      <input type="hidden" name="action" value="delete" />
+                      <input type="hidden" name="version" value={section.version} />
+                      <input type="hidden" name="id" value={v.id} />
+                      <Button type="submit" variant="ghost">Delete</Button>
+                    </form>
+                  </div>
+                </div>
+              </Card>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+
+    <h2 class="admin-section-title" id="items">Items</h2>
+    <Card padding="lg">
+      <form method="POST" action="/admin/api/gallery/items/" enctype="multipart/form-data" class="admin-form-grid">
+        <input type="hidden" name="action" value="upload" />
+        <input type="hidden" name="version" value={section.version} />
+        <div class="admin-form-row">
+          <div>
+            <label class="field__label" for="gallery-file">Photo or short video</label>
+            <input type="file" id="gallery-file" name="file" accept="image/jpeg,image/png,image/webp,image/avif,video/mp4" required />
+          </div>
+          <Field
+            id="gallery-dog"
+            name="dogId"
+            label="About which dog? (optional)"
+            kind="select"
+            options={[{ value: '', label: '— none —', selected: true }, ...dogOptions.map((d) => ({ value: d.id, label: d.name, selected: false }))]}
+          />
+          <Field id="gallery-stage" name="stage" label="Training stage (optional)" kind="text" placeholder="e.g. Puppy foundation" />
+        </div>
+        <Field id="gallery-caption" name="caption" label="Caption — one short, real line, not sales talk" kind="text" />
+        <div>
+          <Button type="submit" variant="primary">Upload</Button>
+        </div>
+      </form>
+    </Card>
+
+    {sortedItems.length === 0 ? (
+      <Card padding="lg"><p class="admin-hint">No items yet.</p></Card>
+    ) : (
+      <ul class="admin-list">
+        {sortedItems.map((item) => (
+          <li>
+            <Card padding="md">
+              <div class="admin-list-item">
+                {item.type === 'photo' ? (
+                  <img class="admin-list-item__photo" src={item.url} alt="" />
+                ) : (
+                  <video class="admin-list-item__photo" src={item.url} muted />
+                )}
+                <div class="admin-list-item__body">
+                  <div class="admin-list-item__name">{item.caption || <em>(no caption)</em>}</div>
+                  <div class="admin-list-item__meta">
+                    {item.type} · {new Date(item.uploadedAt).toLocaleDateString()}
+                    {item.dogId && ` · ${dogName(item.dogId)}`}
+                    {item.stage && ` · ${item.stage}`}
+                    {' · '}{item.interestCount} interested tap{item.interestCount === 1 ? '' : 's'}
+                  </div>
+                </div>
+                <div class="admin-list-item__actions">
+                  <form method="POST" action="/admin/api/gallery/items/">
+                    <input type="hidden" name="action" value="delete" />
+                    <input type="hidden" name="version" value={section.version} />
+                    <input type="hidden" name="id" value={item.id} />
+                    <Button type="submit" variant="ghost">Delete</Button>
+                  </form>
+                </div>
+              </div>
+            </Card>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</AdminLayout>

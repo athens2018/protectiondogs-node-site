@@ -415,3 +415,94 @@ export const restoreTestimonialsHistoryVersion = testimonialsStore.restoreHistor
 export function approvedTestimonials(section: TestimonialsSection): TestimonialEntry[] {
   return section.items.filter((t) => t.status === 'approved');
 }
+
+// ---------------------------------------------------------------------------
+// Gallery section — a private, request-access "behind the scenes" archive
+// of real training photos/video (src/pages/gallery/**, src/pages/admin/
+// gallery/**). Distinct from Dogs/FAQ/Testimonials in one way: viewing
+// activity (view counts, last-visit timestamps, "interested" taps) is
+// written on nearly every page load by visitors, not just by the owner —
+// so those specific fields use recordGalleryView/recordGalleryInterest
+// below (a short best-effort retry loop) instead of the strict
+// optimistic-concurrency saveGallerySection, which exists for the owner's
+// own rarer edits (approving a request, uploading an item) where losing a
+// write would actually matter. Losing an occasional view-count increment
+// under a rare write race does not.
+// ---------------------------------------------------------------------------
+
+export const GALLERY_SECTION_PATH = 'cms/sections/gallery.json';
+
+export type GalleryVisitorStatus = 'pending' | 'approved' | 'revoked';
+
+export interface GalleryVisitor {
+  id: string;
+  name: string;
+  email: string;
+  /** Answer to the one soft qualifying question asked at request time. */
+  qualifyingAnswer: string;
+  /** If set, this visitor only ever sees this one dog's items — the "your dog's progress" use case for an actual buyer, rather than the general archive. */
+  dogId: string | null;
+  locationCountry: string | null;
+  locationCity: string | null;
+  status: GalleryVisitorStatus;
+  /** SHA-256 hex of the raw access token emailed to them on approval — the raw token is never stored. */
+  accessTokenHash: string | null;
+  requestedAt: string;
+  approvedAt: string | null;
+  lastVisitAt: string | null;
+  totalViews: number;
+  /** itemId -> view count, for "what did this person actually watch" */
+  itemViews: Record<string, number>;
+  /** Set once, the first time they tap "Contact now" from inside the gallery — the proxy this system uses for "did they reach out" (there's no persisted store of enquiry-form submissions to cross-reference against). */
+  contactedAt: string | null;
+}
+
+export interface GalleryItem {
+  id: string;
+  type: 'photo' | 'video';
+  url: string;
+  /** One short line, plain text — not marketing copy, not localized (the gallery is an English-only, request-access archive; see the brief this section was built from). */
+  caption: string;
+  /** Optional tag linking this item to one Dogs CMS entry. */
+  dogId: string | null;
+  /** Optional free-text stage label, e.g. "Puppy foundation", "Protection work". */
+  stage: string | null;
+  uploadedAt: string;
+  interestCount: number;
+}
+
+export interface GallerySection extends VersionedSection {
+  visitors: GalleryVisitor[];
+  items: GalleryItem[];
+}
+
+const gallerySeed: GallerySection = { version: 1, updatedAt: new Date().toISOString(), visitors: [], items: [] };
+
+const galleryStore = createSectionStore<GallerySection>({
+  path: GALLERY_SECTION_PATH,
+  historyPrefix: 'cms/history/gallery/',
+  seed: gallerySeed,
+});
+
+export const getGallerySection = galleryStore.getSection;
+export const saveGallerySection = galleryStore.saveSection;
+export const listGalleryHistory = galleryStore.listHistory;
+export const getGalleryHistoryVersion = galleryStore.getHistoryVersion;
+export const restoreGalleryHistoryVersion = galleryStore.restoreHistoryVersion;
+
+/**
+ * Best-effort mutation for high-frequency, low-stakes writes (a view count,
+ * a "last visited" timestamp, an interest tap) — retries a few times on a
+ * version conflict and simply gives up silently past that, rather than
+ * failing the visitor's page load or looping indefinitely. Never used for
+ * the owner's own edits (requests/approvals/uploads still go through the
+ * strict saveGallerySection above, where losing a write would matter).
+ */
+export async function recordGalleryMutation(mutate: (section: GallerySection) => GallerySection): Promise<void> {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const current = await getGallerySection();
+    const result = await saveGallerySection(mutate(current), current.version);
+    if (result.ok) return;
+    if (result.error !== 'stale') return;
+  }
+}

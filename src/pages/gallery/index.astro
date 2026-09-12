@@ -1,0 +1,255 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getGallerySection, getDogsSection, recordGalleryMutation, resolveLocaleString } from '../../lib/cms';
+import { readAccessToken, setGalleryAccessCookie, accessTokenMatches } from '../../lib/gallery-auth';
+
+// Server-rendered — every visit needs a live lookup against the current
+// visitor roster (an approval can happen at any time) and records a view;
+// this can never be part of the static build like Dogs/FAQ/Testimonials.
+export const prerender = false;
+
+const WHATSAPP_NUMBER = '306931736026';
+
+const token = readAccessToken(Astro.cookies, Astro.url);
+const section = await getGallerySection();
+
+const visitorIndex = token ? section.visitors.findIndex((v) => v.status === 'approved' && v.accessTokenHash && accessTokenMatches(token, v.accessTokenHash)) : -1;
+const visitor = visitorIndex === -1 ? null : section.visitors[visitorIndex];
+
+let requestStatus: 'none' | 'pending' | 'revoked' = 'none';
+if (token && !visitor) {
+  const byToken = section.visitors.find((v) => v.accessTokenHash && accessTokenMatches(token, v.accessTokenHash));
+  if (byToken?.status === 'revoked') requestStatus = 'revoked';
+}
+
+if (visitor && token) {
+  // Persist the token as a cookie the first time it arrives via ?token= from
+  // the approval email, so later visits don't need the URL at all.
+  setGalleryAccessCookie(Astro.cookies, token);
+
+  // Best-effort view recording — never blocks rendering, and losing an
+  // occasional increment under a rare write race is fine (see cms.ts's
+  // recordGalleryMutation comment).
+  const visitorId = visitor.id;
+  recordGalleryMutation((current) => ({
+    ...current,
+    visitors: current.visitors.map((v) => (v.id === visitorId ? { ...v, lastVisitAt: new Date().toISOString(), totalViews: v.totalViews + 1 } : v)),
+  })).catch(() => {});
+}
+
+const dogsSection = await getDogsSection();
+const visitorDogName = visitor?.dogId ? resolveLocaleString(dogsSection.dogs.find((d) => d.id === visitor.dogId)?.name, 'en') : null;
+
+const visibleItems = visitor
+  ? [...section.items].filter((i) => i.dogId === null || i.dogId === visitor.dogId).sort((a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime())
+  : [];
+
+const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').map((d) => ({ id: d.id, name: resolveLocaleString(d.name, 'en') }));
+---
+
+<Base locale="en" title="Private Gallery — Protection Dogs GR" description="Real training footage, by request only." robots="noindex, nofollow">
+  <main id="main-content" class="gallery-page">
+    <div class="container container--narrow">
+      {visitor ? (
+        <Fragment>
+          <div class="gallery-header">
+            <h1>Hi {visitor.name}</h1>
+            <p class="gallery-header__sub">
+              {visitorDogName ? `Here's the real, day-to-day footage of ${visitorDogName}'s development.` : "Here's the real, day-to-day training footage — not the highlight reel."}
+            </p>
+          </div>
+
+          {visibleItems.length === 0 ? (
+            <p class="gallery-empty">Nothing here yet — check back soon.</p>
+          ) : (
+            <div class="gallery-grid" data-gallery-grid data-token={token}>
+              {visibleItems.map((item) => (
+                <div class="gallery-item" data-item-id={item.id}>
+                  {item.type === 'photo' ? (
+                    <img src={item.url} alt={item.caption || 'Training photo'} loading="lazy" />
+                  ) : (
+                    <video src={item.url} controls preload="metadata" playsinline />
+                  )}
+                  {item.caption && <p class="gallery-item__caption">{item.caption}</p>}
+                  <div class="gallery-item__actions">
+                    <button type="button" class="gallery-interest" data-item-id={item.id}>
+                      ♥ Interested <span class="gallery-interest__count">({item.interestCount})</span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div class="gallery-contact">
+            <p>Have a question about what you're seeing?</p>
+            <a
+              class="gallery-contact__button"
+              id="gallery-contact-link"
+              data-token={token}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi — I've been looking at the private gallery and had a question.")}`}
+              target="_blank"
+              rel="noopener"
+            >
+              Contact now on WhatsApp
+            </a>
+          </div>
+        </Fragment>
+      ) : (
+        <div class="gallery-request">
+          <h1>Private Gallery</h1>
+          <p>
+            This is real, unpolished training footage — not curated for social media. Access is by request, so tell
+            us a little about yourself and we'll send you a personal link.
+          </p>
+          {requestStatus === 'revoked' && <p class="gallery-request__notice">That link is no longer active — you're welcome to request access again below.</p>}
+
+          <form id="gallery-request-form" class="gallery-request-form">
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="admin-form-row">
+              <div class="field">
+                <label class="field__label" for="gallery-req-name">Your name</label>
+                <input class="field__control" id="gallery-req-name" name="name" type="text" required />
+              </div>
+              <div class="field">
+                <label class="field__label" for="gallery-req-email">Your email</label>
+                <input class="field__control" id="gallery-req-email" name="email" type="email" required />
+              </div>
+            </div>
+            {dogOptionsForForm.length > 0 && (
+              <div class="field">
+                <label class="field__label" for="gallery-req-dog">Is there a specific dog you're interested in?</label>
+                <select class="field__control" id="gallery-req-dog" name="dogId">
+                  <option value="">— not sure yet / general interest —</option>
+                  {dogOptionsForForm.map((d) => <option value={d.id}>{d.name}</option>)}
+                </select>
+              </div>
+            )}
+            <div class="field">
+              <label class="field__label" for="gallery-req-answer">What's drawing you to a protection dog right now?</label>
+              <textarea class="field__control" id="gallery-req-answer" name="qualifyingAnswer" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Request access</button>
+            <p id="gallery-request-status" class="gallery-request-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      )}
+    </div>
+  </main>
+</Base>
+
+<script>
+  import { initGalleryPage } from '../../scripts/gallery';
+  initGalleryPage();
+</script>
+
+<style>
+  .gallery-page {
+    padding-block: var(--space-8);
+    min-height: 60vh;
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: var(--space-7);
+  }
+
+  .gallery-header h1,
+  .gallery-request h1 {
+    font-family: var(--font-serif);
+    color: var(--gold);
+  }
+
+  .gallery-header__sub {
+    color: var(--text-muted);
+  }
+
+  .gallery-empty {
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-5);
+    margin-bottom: var(--space-8);
+  }
+
+  .gallery-item img,
+  .gallery-item video {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    display: block;
+  }
+
+  .gallery-item__caption {
+    margin-top: var(--space-2);
+    color: var(--text);
+    font-size: var(--text-sm);
+  }
+
+  .gallery-item__actions {
+    margin-top: var(--space-2);
+  }
+
+  .gallery-interest {
+    background: none;
+    border: 1px solid var(--line-gold);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.9rem;
+    color: var(--gold);
+    cursor: pointer;
+    font-size: var(--text-sm);
+  }
+
+  .gallery-interest[disabled] {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .gallery-contact {
+    text-align: center;
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--line);
+  }
+
+  .gallery-contact__button {
+    display: inline-block;
+    margin-top: var(--space-3);
+    padding: 0.8rem 1.6rem;
+    background: var(--gold);
+    color: var(--bg);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .gallery-request {
+    max-width: 560px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .gallery-request p {
+    color: var(--text-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  .gallery-request__notice {
+    color: var(--error);
+  }
+
+  .gallery-request-form {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .gallery-request-status {
+    min-height: 1.2em;
+    font-size: var(--text-sm);
+    color: var(--gold);
+  }
+</style>
