@@ -1,13 +1,17 @@
 import type { APIRoute } from 'astro';
 import { waitUntil } from '@vercel/functions';
 import { checkAdminAccess } from '../../../../lib/admin-auth';
-import { getDogsSection, saveDogsSection, type DogEntry, type DogsSection } from '../../../../lib/cms';
+import { getDogsSection, saveDogsSection, resolveLocaleString, type DogEntry, type DogsSection } from '../../../../lib/cms';
 import { validateDogEntry } from '../../../../lib/dogs-validate';
 import { parseDogForm } from '../../../../lib/dog-form-parse';
 import { triggerDeploy } from '../../../../lib/deploy-hook';
 import { translateDogEntry } from '../../../../lib/translate';
+import { notifyOwner, sleep } from '../../../../lib/notify';
 
 export const prerender = false;
+
+/** How long to wait after triggering a rebuild before emailing "it's live" — not a real completion check (Deploy Hooks don't expose one; see the comment below), just comfortably past the ~20-30s rebuilds this project normally takes. */
+const REBUILD_SETTLE_MS = 45_000;
 
 /**
  * Runs after the English-only save has already redirected the owner back to
@@ -18,12 +22,23 @@ export const prerender = false;
  * waitUntil (see astro.config.mjs's maxDuration) — the owner's browser never
  * waits on this; the site just gets a second, translated deploy a little
  * after the first.
+ *
+ * Finishes by emailing the owner that the update is live. Vercel Deploy
+ * Hooks don't expose a way to check whether the rebuild they triggered has
+ * actually finished (there's no status endpoint for the job id they
+ * return), so this waits a fixed, generous delay rather than actually
+ * confirming — a real check would need the owner to create and store a
+ * separate Vercel API token just for this.
  */
 async function backgroundTranslateAndSave(dogId: string): Promise<void> {
+  let dogName = dogId;
+  let translatedAndRedeployed = false;
+
   try {
     const initial = await getDogsSection();
     const initialIndex = initial.dogs.findIndex((d) => d.id === dogId);
-    if (initialIndex === -1) return;
+    if (initialIndex === -1) return; // dog was deleted/renamed before this ran — nothing left to translate or report on
+    dogName = resolveLocaleString(initial.dogs[initialIndex].name, 'en');
     const translated = await translateDogEntry(initial.dogs[initialIndex]);
 
     for (let attempt = 0; attempt < 3; attempt++) {
@@ -34,12 +49,26 @@ async function backgroundTranslateAndSave(dogId: string): Promise<void> {
       const result = await saveDogsSection({ ...latest, dogs: nextDogs }, latest.version);
       if (result.ok) {
         await triggerDeploy();
-        return;
+        translatedAndRedeployed = true;
+        break;
       }
-      if (result.error !== 'stale') return;
+      if (result.error !== 'stale') break;
     }
   } catch (err) {
     console.error('[admin/dogs/save] background translation failed:', err instanceof Error ? err.message : String(err));
+  }
+
+  await sleep(REBUILD_SETTLE_MS);
+  if (translatedAndRedeployed) {
+    await notifyOwner(
+      'protectiondogs.gr was just updated',
+      `Your change to "${dogName}" should be live now, translated into every language.\n\nhttps://www.protectiondogs.gr/`,
+    );
+  } else {
+    await notifyOwner(
+      'protectiondogs.gr was just updated (English only for now)',
+      `Your change to "${dogName}" should be live now in English. Automatic translation into the other languages didn't finish this time, so those languages will show the English text as a fallback until it's retried.\n\nhttps://www.protectiondogs.gr/`,
+    );
   }
 }
 

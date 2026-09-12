@@ -12,12 +12,13 @@ export default defineConfig({
   trailingSlash: 'always',
   output: 'static',
   // maxDuration: the Dogs CMS save route (src/pages/admin/api/dogs/save.ts)
-  // returns to the admin immediately, then keeps translating into the other
-  // 12 locales in the background via @vercel/functions' waitUntil — this
-  // gives that background call room to finish (well under it in practice;
-  // 60s is supported on every Vercel plan, so it's a safe ceiling rather
-  // than a number we expect to hit).
-  adapter: vercel({ staticHeaders: true, maxDuration: 60 }),
+  // returns to the admin immediately, then keeps working in the background
+  // via @vercel/functions' waitUntil — translating into the other 12
+  // locales, redeploying, waiting out a fixed settle delay, then emailing
+  // the owner that the update is live. 150s gives that whole chain room to
+  // finish; Vercel's Hobby plan (with fluid compute, the default) allows up
+  // to 300s, so this is a safe ceiling rather than a number expected to be hit.
+  adapter: vercel({ staticHeaders: true, maxDuration: 150 }),
   redirects: REDIRECTS,
   i18n: {
     defaultLocale: 'en',

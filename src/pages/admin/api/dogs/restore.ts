@@ -1,9 +1,13 @@
 import type { APIRoute } from 'astro';
+import { waitUntil } from '@vercel/functions';
 import { checkAdminAccess } from '../../../../lib/admin-auth';
 import { restoreDogsHistoryVersion } from '../../../../lib/cms';
 import { triggerDeploy } from '../../../../lib/deploy-hook';
+import { notifyOwner, sleep } from '../../../../lib/notify';
 
 export const prerender = false;
+
+const REBUILD_SETTLE_MS = 45_000;
 
 function redirect(location: string): Response {
   return new Response(null, { status: 303, headers: { Location: location } });
@@ -25,5 +29,14 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   }
 
   await triggerDeploy();
+  waitUntil(
+    (async () => {
+      await sleep(REBUILD_SETTLE_MS);
+      await notifyOwner(
+        'protectiondogs.gr was just updated',
+        `Version ${version} of the dogs list was just restored and should be live now.\n\nhttps://www.protectiondogs.gr/`,
+      );
+    })(),
+  );
   return redirect('/admin/dogs/?saved=1');
 };
