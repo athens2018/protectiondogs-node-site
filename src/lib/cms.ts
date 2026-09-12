@@ -29,10 +29,14 @@
 // present in a bare local build) — this module fails closed (never
 // throws into a build/response) when the store id is missing so a
 // not-yet-configured or locally-run CMS never takes the site down.
-import { get, put } from '@vercel/blob';
+import { get, put, list, del } from '@vercel/blob';
 import dogsSeed from '../data/dogs-seed.json';
 
 export const DOGS_SECTION_PATH = 'cms/sections/dogs.json';
+/** Every successful save also drops a snapshot here (see saveDogsSection), so a bad edit can be rolled back from src/pages/admin/dogs/history/. */
+const HISTORY_PREFIX = 'cms/history/dogs/';
+/** How many past versions to keep around before pruning the oldest. */
+const HISTORY_KEEP = 30;
 
 /** Every editable string in the CMS is stored per-locale, English required. */
 export interface LocalizedString {
@@ -215,11 +219,97 @@ export async function saveDogsSection(next: DogsSection, expectedVersion: number
       allowOverwrite: true,
       contentType: 'application/json',
     });
-    return { ok: true, section: toWrite };
   } catch (err) {
     console.error('[cms] failed to write dogs.json to Blob:', err instanceof Error ? err.message : String(err));
     return { ok: false, error: 'write-failed' };
   }
+
+  // Best-effort version snapshot for rollback — a failure here must never
+  // fail the save itself, since the live document above already wrote
+  // successfully.
+  try {
+    await put(`${HISTORY_PREFIX}${toWrite.version}.json`, JSON.stringify(toWrite), {
+      access: 'private',
+      storeId,
+      addRandomSuffix: false,
+      allowOverwrite: true,
+      contentType: 'application/json',
+    });
+    await pruneDogsHistory(storeId);
+  } catch (err) {
+    console.error('[cms] failed to write history snapshot:', err instanceof Error ? err.message : String(err));
+  }
+
+  return { ok: true, section: toWrite };
+}
+
+function parseHistoryVersion(pathname: string): number | null {
+  if (!pathname.startsWith(HISTORY_PREFIX)) return null;
+  const version = Number(pathname.slice(HISTORY_PREFIX.length).replace(/\.json$/, ''));
+  return Number.isFinite(version) ? version : null;
+}
+
+async function pruneDogsHistory(storeId: string): Promise<void> {
+  const { blobs } = await list({ prefix: HISTORY_PREFIX, storeId, limit: 1000 });
+  const versioned = blobs
+    .map((b) => ({ url: b.url, version: parseHistoryVersion(b.pathname) }))
+    .filter((b): b is { url: string; version: number } => b.version !== null)
+    .sort((a, b) => b.version - a.version);
+  const toDelete = versioned.slice(HISTORY_KEEP).map((b) => b.url);
+  if (toDelete.length > 0) await del(toDelete, { storeId });
+}
+
+export interface DogsHistoryEntry {
+  version: number;
+  updatedAt: string;
+}
+
+/** Lists past saved versions of the dogs section, newest first, for the "History" admin page. */
+export async function listDogsHistory(limit = HISTORY_KEEP): Promise<DogsHistoryEntry[]> {
+  const storeId = cmsStoreId();
+  if (!storeId) return [];
+  try {
+    const { blobs } = await list({ prefix: HISTORY_PREFIX, storeId, limit: 1000 });
+    return blobs
+      .map((b) => {
+        const version = parseHistoryVersion(b.pathname);
+        return version === null ? null : { version, updatedAt: b.uploadedAt.toISOString() };
+      })
+      .filter((entry): entry is DogsHistoryEntry => entry !== null)
+      .sort((a, b) => b.version - a.version)
+      .slice(0, limit);
+  } catch (err) {
+    console.error('[cms] failed to list dogs history:', err instanceof Error ? err.message : String(err));
+    return [];
+  }
+}
+
+/** Reads one historical snapshot of the dogs section by version number. */
+export async function getDogsHistoryVersion(version: number): Promise<DogsSection | null> {
+  const storeId = cmsStoreId();
+  if (!storeId) return null;
+  try {
+    const result = await get(`${HISTORY_PREFIX}${version}.json`, { access: 'private', storeId, useCache: false });
+    if (!result || result.statusCode !== 200 || !result.stream) return null;
+    const text = await new Response(result.stream).text();
+    return JSON.parse(text) as DogsSection;
+  } catch (err) {
+    console.error('[cms] failed to read dogs history version:', err instanceof Error ? err.message : String(err));
+    return null;
+  }
+}
+
+/**
+ * Restores a historical snapshot's dog list as the new current version —
+ * this becomes a new, further-undoable version rather than rewinding
+ * version numbers, so history stays a simple, append-only log and an
+ * accidental restore is itself never unrecoverable.
+ */
+export async function restoreDogsHistoryVersion(version: number): Promise<SaveResult> {
+  const snapshot = await getDogsHistoryVersion(version);
+  if (!snapshot) return { ok: false, error: 'write-failed' };
+  const current = await getDogsSection();
+  return saveDogsSection({ ...current, dogs: snapshot.dogs }, current.version);
 }
 
 /** Sitewide "currently available for reservation" count, computed directly from CMS data (see HomePage.astro for how this replaces facts.json's fact_available_for_reservation marker for the dogs section specifically). */

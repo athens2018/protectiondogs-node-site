@@ -36,12 +36,19 @@ async function handleUpload(input: HTMLInputElement) {
 
   const body = new FormData();
   body.set('file', input.files[0]);
+  body.set('target', targetName);
 
   try {
     const res = await fetch('/admin/api/upload/', { method: 'POST', body });
-    const data = (await res.json()) as { ok: boolean; url?: string; error?: string };
+    const data = (await res.json()) as { ok: boolean; url?: string; altText?: string | null; error?: string };
     if (data.ok && data.url) {
       target.value = data.url;
+      // Only for the main photo, and only if the owner hasn't already
+      // written their own alt text — this never overwrites a manual entry.
+      if (targetName === 'photo.src' && data.altText) {
+        const altField = document.querySelector<HTMLInputElement>('[name="photo.alt.en"]');
+        if (altField && !altField.value.trim()) altField.value = data.altText;
+      }
     } else {
       target.value = original;
       alert(data.error || 'Upload failed.');
