@@ -35,7 +35,7 @@ const ERROR_MESSAGES: Record<string, string> = {
 
     <Card padding="lg">
       <form method="POST" action="/admin/api/login/" class="admin-form-grid">
-        <Field id="password" name="password" label="Password" kind="text" type="password" required disabled={!configured} autofocus />
+        <Field id="password" name="password" label="Password" kind="password" required disabled={!configured} autofocus />
         <Button type="submit" variant="primary" block disabled={!configured}>Sign in</Button>
       </form>
     </Card>

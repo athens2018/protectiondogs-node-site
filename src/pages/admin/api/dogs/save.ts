@@ -1,11 +1,47 @@
 import type { APIRoute } from 'astro';
+import { waitUntil } from '@vercel/functions';
 import { checkAdminAccess } from '../../../../lib/admin-auth';
 import { getDogsSection, saveDogsSection, type DogEntry, type DogsSection } from '../../../../lib/cms';
 import { validateDogEntry } from '../../../../lib/dogs-validate';
 import { parseDogForm } from '../../../../lib/dog-form-parse';
 import { triggerDeploy } from '../../../../lib/deploy-hook';
+import { translateDogEntry } from '../../../../lib/translate';
 
 export const prerender = false;
+
+/**
+ * Runs after the English-only save has already redirected the owner back to
+ * the dog list. Translates the just-saved dog into the other 12 locales and
+ * writes that back, re-fetching the section and retrying on a version
+ * conflict (another save landing in the meantime) so this never clobbers a
+ * concurrent edit. Kept alive past the response via @vercel/functions'
+ * waitUntil (see astro.config.mjs's maxDuration) — the owner's browser never
+ * waits on this; the site just gets a second, translated deploy a little
+ * after the first.
+ */
+async function backgroundTranslateAndSave(dogId: string): Promise<void> {
+  try {
+    const initial = await getDogsSection();
+    const initialIndex = initial.dogs.findIndex((d) => d.id === dogId);
+    if (initialIndex === -1) return;
+    const translated = await translateDogEntry(initial.dogs[initialIndex]);
+
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const latest = await getDogsSection();
+      const latestIndex = latest.dogs.findIndex((d) => d.id === dogId);
+      if (latestIndex === -1) return;
+      const nextDogs = latest.dogs.map((d, i) => (i === latestIndex ? translated : d));
+      const result = await saveDogsSection({ ...latest, dogs: nextDogs }, latest.version);
+      if (result.ok) {
+        await triggerDeploy();
+        return;
+      }
+      if (result.error !== 'stale') return;
+    }
+  } catch (err) {
+    console.error('[admin/dogs/save] background translation failed:', err instanceof Error ? err.message : String(err));
+  }
+}
 
 function redirect(location: string): Response {
   return new Response(null, { status: 303, headers: { Location: location } });
@@ -39,6 +75,8 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   }
 
   let nextDogs: DogEntry[];
+  /** Set only for 'upsert' — triggers the background auto-translate pass below once the English save has succeeded. */
+  let upsertedDogId: string | null = null;
 
   if (action === 'reorder') {
     let order: string[];
@@ -68,6 +106,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
       return withError(returnTo, `Could not save: ${result.errors.join('; ')}`);
     }
     const dog = result.dog!;
+    upsertedDogId = dog.id;
     const existingIndex = current.dogs.findIndex((d) => d.id === dog.id);
     if (existingIndex === -1) {
       nextDogs = [...current.dogs, dog];
@@ -90,6 +129,10 @@ export const POST: APIRoute = async ({ request, cookies }) => {
       );
     }
     return withError(returnTo, 'Save failed. Please try again.');
+  }
+
+  if (upsertedDogId) {
+    waitUntil(backgroundTranslateAndSave(upsertedDogId));
   }
 
   const deployResult = await triggerDeploy();

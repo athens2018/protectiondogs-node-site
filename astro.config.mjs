@@ -11,7 +11,13 @@ export default defineConfig({
   site: 'https://www.protectiondogs.gr',
   trailingSlash: 'always',
   output: 'static',
-  adapter: vercel({ staticHeaders: true }),
+  // maxDuration: the Dogs CMS save route (src/pages/admin/api/dogs/save.ts)
+  // returns to the admin immediately, then keeps translating into the other
+  // 12 locales in the background via @vercel/functions' waitUntil — this
+  // gives that background call room to finish (well under it in practice;
+  // 60s is supported on every Vercel plan, so it's a safe ceiling rather
+  // than a number we expect to hit).
+  adapter: vercel({ staticHeaders: true, maxDuration: 60 }),
   redirects: REDIRECTS,
   i18n: {
     defaultLocale: 'en',
