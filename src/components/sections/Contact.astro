@@ -177,9 +177,10 @@ function footnoteIcon(faClass: string): string {
           />
 
           <div class="form-check">
-            <input type="checkbox" id="privacy-consent" name="privacy-consent" required />
+            <input type="checkbox" id="privacy-consent" name="privacy-consent" required aria-describedby="privacy-consent-error" />
             <label for="privacy-consent" set:html={consentLabel} />
           </div>
+          <div class="form-check__error" id="privacy-consent-error" role="alert" aria-live="polite"></div>
 
           <Button type="submit" variant="primary" block set:html={content.form.submit} />
         </form>
@@ -333,6 +334,20 @@ function footnoteIcon(faClass: string): string {
   .form-check input[aria-invalid='true'] {
     outline: 2px solid var(--error);
     outline-offset: 2px;
+  }
+
+  /* Mirrors Field.astro's .field__error so the consent checkbox shows the
+     same translated validation text as the other three fields instead of
+     silently dropping it (form.ts writes into this id regardless). */
+  .form-check__error {
+    min-height: 1.2em;
+    margin-top: -0.25em;
+    font-size: var(--text-sm);
+    color: var(--error);
+  }
+
+  .form-check__error:empty {
+    display: none;
   }
 
   .form-check label {
