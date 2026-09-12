@@ -31,6 +31,15 @@ const {
   options = [],
   rows = 5,
   validated = false,
+  // Destructured explicitly (rather than left in `...rest`) only so the
+  // textarea branch below can render it as real text content — a raw
+  // `value` HTML *attribute* on `<textarea>` is not part of the spec and
+  // browsers ignore it, so passing one through `...rest` (as every other
+  // caller implicitly did before this) silently failed to pre-fill a
+  // textarea. The admin/CMS edit form (src/components/admin/LocalizedField.astro)
+  // needs pre-filled multi-line fields; every existing `kind="text"` caller
+  // is unaffected since `value` still flows to `<input>` exactly as before.
+  value,
   class: className,
   ...rest
 } = Astro.props;
@@ -42,7 +51,7 @@ const control = validated ? { 'aria-describedby': errorId } : {};
 <div class:list={['field', className]}>
   <label class="field__label" for={id} set:html={label} />
   {kind === 'textarea' ? (
-    <textarea class="field__control field__control--area" id={id} name={name} rows={rows} {...control} {...rest} />
+    <textarea class="field__control field__control--area" id={id} name={name} rows={rows} {...control} {...rest}>{value}</textarea>
   ) : kind === 'select' ? (
     <div class="field__select-wrap">
       <select class="field__control field__control--select" id={id} name={name} {...control} {...rest}>
@@ -53,7 +62,7 @@ const control = validated ? { 'aria-describedby': errorId } : {};
       <svg class="field__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
     </div>
   ) : (
-    <input class="field__control" type={kind} id={id} name={name} {...control} {...rest} />
+    <input class="field__control" type={kind} id={id} name={name} value={value} {...control} {...rest} />
   )}
   {validated && <div class="field__error" id={errorId} role="alert" aria-live="polite"></div>}
 </div>

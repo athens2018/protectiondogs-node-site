@@ -29,7 +29,15 @@ export default defineConfig({
         "default-src 'self'",
         "font-src 'self' data:",
         "img-src 'self' data: https:",
-        "media-src 'self'",
+        // 'self' covered every video before the Dogs CMS: today's assets
+        // all sit under /images (public/). The CMS's new public Blob
+        // store (see src/lib/cms.ts, src/pages/admin/api/upload.ts) puts
+        // owner-uploaded story-modal videos on Vercel's own Blob CDN
+        // domain instead, so media-src needs that host too — scoped to
+        // Vercel's public-blob domain suffix specifically, not a bare
+        // https: wildcard (img-src already allows that broadly; video
+        // doesn't need to).
+        "media-src 'self' https://*.public.blob.vercel-storage.com",
         'frame-src https://testimonial.to https://embed-v2.testimonial.to https://www.instagram.com',
         "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://embed-v2.testimonial.to https://testimonial.to",
         "worker-src 'self'",
@@ -56,6 +64,14 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      // The admin/CMS panel (src/pages/admin/**) is all SSR-only
+      // (prerender = false), but @astrojs/sitemap still enumerates it from
+      // the route manifest regardless of render mode — without this
+      // filter it was leaking /admin/login/, /admin/dogs/, etc. into the
+      // public sitemap.xml. Those routes already carry a `noindex,
+      // nofollow` meta tag and sit behind requireAdmin's real auth check,
+      // so this is defense in depth, not the only protection.
+      filter: (page) => !new URL(page).pathname.startsWith('/admin'),
       i18n: {
         defaultLocale: 'en',
         locales: {

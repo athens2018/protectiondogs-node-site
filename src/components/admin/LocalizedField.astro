@@ -1,0 +1,56 @@
+---
+// One CMS string field: English is the primary, required control; every
+// other one of the 13 locales is optional and tucked behind a collapsed
+// <details> so editing Bobo's price (say) stays a two-field, one-click
+// action, while a translator-supplied string for another language still
+// has somewhere to go. See src/lib/cms.ts's LocalizedString and the brief:
+// "don't make this UI so heavy that just updating Bobo's price feels like
+// a chore."
+import Field from '../ui/Field.astro';
+import type { LocalizedString } from '../../lib/cms';
+
+const OTHER_LOCALES = ['el', 'de', 'fr', 'ar', 'es', 'zh', 'ru', 'tr', 'it', 'pt', 'nl', 'ja'] as const;
+const LOCALE_LABELS: Record<string, string> = {
+  el: 'Greek', de: 'German', fr: 'French', ar: 'Arabic', es: 'Spanish', zh: 'Chinese',
+  ru: 'Russian', tr: 'Turkish', it: 'Italian', pt: 'Portuguese', nl: 'Dutch', ja: 'Japanese',
+};
+
+interface Props {
+  /** Form field name prefix, e.g. "name" or "stats.0.label" */
+  name: string;
+  label: string;
+  value?: LocalizedString;
+  kind?: 'text' | 'textarea';
+  required?: boolean;
+}
+
+const { name, label, value, kind = 'text', required = true } = Astro.props;
+const hasTranslations = OTHER_LOCALES.some((l) => value?.[l]);
+---
+
+<div class="loc-field">
+  <Field id={`${name}.en`} name={`${name}.en`} label={`${label} (English)`} kind={kind} value={value?.en ?? ''} required={required} rows={kind === 'textarea' ? 3 : undefined} />
+  <details class="admin-translations" open={hasTranslations}>
+    <summary>Other languages (optional)</summary>
+    <div class="admin-translations-grid">
+      {OTHER_LOCALES.map((locale) => (
+        <Field
+          id={`${name}.${locale}`}
+          name={`${name}.${locale}`}
+          label={LOCALE_LABELS[locale]}
+          kind={kind}
+          value={value?.[locale] ?? ''}
+          rows={kind === 'textarea' ? 2 : undefined}
+        />
+      ))}
+    </div>
+  </details>
+</div>
+
+<style>
+  .loc-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+</style>

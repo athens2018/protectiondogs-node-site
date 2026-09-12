@@ -1,0 +1,30 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import DogForm from '../../../components/admin/DogForm.astro';
+import { checkAdminAccess } from '../../../lib/admin-auth';
+import { getDogsSection, resolveLocaleString } from '../../../lib/cms';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+const { id } = Astro.params;
+const section = await getDogsSection();
+const dog = section.dogs.find((d) => d.id === id);
+if (!dog) return new Response('Dog not found', { status: 404 });
+
+const error = Astro.url.searchParams.get('error');
+const title = resolveLocaleString(dog.name, 'en');
+---
+
+<AdminLayout title={`Edit ${title}`}>
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>Edit {title}</h1>
+      <a class="admin-topbar__link" href="/admin/dogs/">&larr; Back to list</a>
+    </div>
+    {error && <div class="admin-flash admin-flash--error">{error}</div>}
+    <DogForm dog={dog} version={section.version} returnTo={`/admin/dogs/${dog.id}/`} mode="edit" />
+  </div>
+</AdminLayout>

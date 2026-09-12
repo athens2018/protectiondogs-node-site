@@ -24,6 +24,8 @@ import Contact from '../components/sections/Contact.astro';
 import { mergeFacts } from '../lib/facts-merge';
 import { faToIconName, iconFromHref } from '../lib/icon-map';
 import facts from '../data/facts.json';
+import { getDogsSection } from '../lib/cms';
+import { toDogsProps, toStoryModalProps } from '../lib/dogs-render';
 
 interface Props {
   localeCode: string;
@@ -33,6 +35,36 @@ interface Props {
 
 const { localeCode, rawContent } = Astro.props;
 const content = mergeFacts(localeCode, rawContent);
+
+// Dogs CMS — a static build-time fetch (this runs once per `astro build`;
+// Astro's static output bakes the current CMS data into the generated
+// HTML, it does not make this page server-rendered or add per-request
+// latency). Supersedes mergeFacts()'s dogs.bobo.*/dogs.future.* patches
+// for the actual per-dog content: those substitutions still run above
+// (harmlessly, into content.dogs.bobo/content.dogs.future) but are simply
+// never read below — only content.dogs.{eyebrow,h2,availability,intro}
+// (static per-locale UI chrome, unaffected by the CMS) still come from
+// there, exactly as today. pricing.cards[0].price.amount is a completely
+// separate field (the pricing SECTION, not this dogs list) and keeps
+// going through mergeFacts() untouched.
+//
+// dogs.availability's sitewide "currently available for reservation"
+// count is ALSO left exactly as today (from facts.json via mergeFacts),
+// not recomputed from the CMS — see src/lib/cms.ts's countAvailable() for
+// the (unused-here) alternative and the deployment report for why.
+const dogsSection = await getDogsSection();
+const dogsProps = toDogsProps(dogsSection, localeCode, {
+  eyebrow: content.dogs.eyebrow,
+  h2: content.dogs.h2,
+  availability: content.dogs.availability,
+  intro: content.dogs.intro,
+});
+const storyProps = toStoryModalProps(dogsSection, localeCode, {
+  ariaLabelledby: content.boboStory.ariaLabelledby,
+  close: content.boboStory.close,
+  media: content.boboStory.media,
+  nav: content.boboStory.nav,
+});
 
 // Hero background video is a net-new premium enhancement (plan §5) — the
 // live source hero has no video at all, so there is no extracted field for
@@ -130,7 +162,7 @@ const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
     />
 
     <About {...content.about} />
-    <Dogs {...content.dogs} />
+    <Dogs {...dogsProps} />
     <WatchDevelop {...content.watchDevelop} />
     <Training {...content.training} />
     <Testing {...content.testing} />
@@ -145,7 +177,7 @@ const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
     <Contact content={content.contact} locale={localeCode} />
   </main>
 
-  <BoboStoryModal id={content.dogs.bobo.storyOpen} {...content.boboStory} />
+  {storyProps && <BoboStoryModal id={dogsProps.bobo.storyOpen} {...storyProps} />}
 
   <Footer
     locale={localeCode}

@@ -1,0 +1,219 @@
+---
+// The one edit form used by both src/pages/admin/dogs/new.astro and
+// src/pages/admin/dogs/[id].astro. Plain progressive-enhancement HTML
+// (works with JS disabled): reordering story slides uses a numeric
+// "Position" field rather than drag-and-drop or client-side DOM
+// manipulation (see src/lib/dog-form-parse.ts, which sorts by it before
+// saving) so nothing here depends on a client script to function
+// correctly. A small optional script (src/scripts/admin-dog-form.ts) adds
+// pure UX sugar on top: show/hide the reservation vs. future-CTA
+// fieldsets based on the status dropdown, and an "Upload" button next to
+// each image/video URL field that fills it in via /admin/api/upload
+// instead of asking the owner to know a Blob URL.
+import Field from '../ui/Field.astro';
+import Button from '../ui/Button.astro';
+import Card from '../ui/Card.astro';
+import LocalizedField from './LocalizedField.astro';
+import { ALLOWED_INTERESTS } from '../../lib/dogs-validate';
+import type { DogEntry } from '../../lib/cms';
+
+interface Props {
+  dog: DogEntry | null;
+  version: number;
+  returnTo: string;
+  mode: 'new' | 'edit';
+}
+
+const { dog, version, returnTo, mode } = Astro.props;
+
+const INTEREST_LABELS: Record<string, string> = {
+  'Bobo - Early Reservation': 'Bobo — Early Reservation',
+  'Future Litter': 'Future Litter / General Availability',
+  'General Enquiry': 'General Enquiry',
+  Other: 'Other',
+};
+
+const STAT_SLOTS = 4;
+const PARAGRAPH_SLOTS = 8;
+const FEATURE_SLOTS = 10;
+const NOTE_SLOTS = 4;
+const SLIDE_SLOTS = 6;
+
+const stats = dog?.stats ?? [];
+const paragraphs = dog?.paragraphs ?? [];
+const features = dog?.features ?? [];
+const notes = dog?.reservation?.notes ?? [];
+const slides = dog?.story?.slides ?? [];
+const status = dog?.status ?? 'available';
+---
+
+<form method="POST" action="/admin/api/dogs/save/" class="admin-form-grid" id="dog-form">
+  <input type="hidden" name="action" value="upsert" />
+  <input type="hidden" name="version" value={version} />
+  <input type="hidden" name="returnTo" value={returnTo} />
+
+  <Card padding="lg">
+    <h2 class="admin-section-title">Basics</h2>
+    <div class="admin-form-row">
+      {mode === 'new' ? (
+        <Field id="id" name="id" label={'ID (slug, e.g. "max")'} kind="text" required pattern="[a-z0-9]+(-[a-z0-9]+)*" />
+      ) : (
+        <>
+          <Field id="id-display" name="id-display" label="ID" kind="text" value={dog?.id} disabled />
+          <input type="hidden" name="id" value={dog?.id} />
+        </>
+      )}
+      <Field
+        id="status"
+        name="status"
+        label="Status"
+        kind="select"
+        options={[
+          { value: 'available', label: 'Available (full card + reservation)', selected: status === 'available' },
+          { value: 'future', label: 'Future (placeholder card)', selected: status === 'future' },
+          { value: 'placed', label: 'Placed (hidden from the site, kept in history)', selected: status === 'placed' },
+        ]}
+      />
+      <Field id="dob" name="dob" label="Date of birth (leave blank if unknown)" kind="text" type="date" value={dog?.dob ?? ''} />
+    </div>
+    <LocalizedField name="name" label="Name" value={dog?.name} />
+  </Card>
+
+  <Card padding="lg">
+    <h2 class="admin-section-title">Photo</h2>
+    <div class="admin-form-row">
+      <Field id="photo-src" name="photo.src" label="Photo URL" kind="text" value={dog?.photo?.src ?? ''} data-upload-target="photo.src" />
+      <div>
+        <label class="field__label" for="photo-upload">Upload a photo (JPG/PNG/WebP/AVIF, max 10MB)</label>
+        <input type="file" id="photo-upload" accept="image/jpeg,image/png,image/webp,image/avif" data-upload-for="photo.src" />
+      </div>
+    </div>
+    <LocalizedField name="photo.alt" label="Photo alt text" value={dog?.photo?.alt} />
+  </Card>
+
+  <Card padding="lg">
+    <h2 class="admin-section-title">Card text</h2>
+    <LocalizedField name="tagline" label="Tagline" value={dog?.tagline} />
+
+    <h3 class="admin-hint" style="margin-top: var(--space-4);">Stats (2-4 shown as label/value pairs on the card)</h3>
+    {Array.from({ length: STAT_SLOTS }).map((_, i) => (
+      <div class="admin-form-row" style="align-items:end;">
+        <LocalizedField name={`stats.${i}.label`} label={`Stat ${i + 1} label`} value={stats[i]?.label} required={false} />
+        <LocalizedField name={`stats.${i}.value`} label={`Stat ${i + 1} value`} value={stats[i]?.value} required={false} />
+        {i >= 2 && (
+          <label><input type="checkbox" name={`remove.stats.${i}`} /> Leave blank / remove this stat</label>
+        )}
+      </div>
+    ))}
+
+    <h3 class="admin-hint" style="margin-top: var(--space-4);">Bio paragraphs</h3>
+    {Array.from({ length: PARAGRAPH_SLOTS }).map((_, i) => (
+      <div>
+        <LocalizedField name={`paragraphs.${i}`} label={`Paragraph ${i + 1}`} kind="textarea" value={paragraphs[i]} required={false} />
+        <label><input type="checkbox" name={`remove.paragraphs.${i}`} /> Remove this paragraph</label>
+      </div>
+    ))}
+
+    <h3 class="admin-hint" style="margin-top: var(--space-4);">Checklist features (only shown for "Available" dogs)</h3>
+    {Array.from({ length: FEATURE_SLOTS }).map((_, i) => (
+      <div>
+        <LocalizedField name={`features.${i}`} label={`Feature ${i + 1}`} value={features[i]} required={false} />
+        <label><input type="checkbox" name={`remove.features.${i}`} /> Remove this feature</label>
+      </div>
+    ))}
+
+    <div class="admin-form-row" data-section="available-only">
+      <LocalizedField name="aboutHeading" label='"About [Name]" heading' value={dog?.aboutHeading ?? undefined} required={false} />
+      <LocalizedField name="meetButtonLabel" label='"Meet [Name]" button label' value={dog?.meetButtonLabel ?? undefined} required={false} />
+    </div>
+  </Card>
+
+  <Card padding="lg" data-section="reservation">
+    <h2 class="admin-section-title">Reservation (only used when status is "Available")</h2>
+    <div class="admin-form-row">
+      <LocalizedField name="reservation.eyebrow" label="Eyebrow" value={dog?.reservation?.eyebrow} required={false} />
+      <Field id="reservation-price-currency" name="reservation.priceCurrency" label="Currency code" kind="text" value={dog?.reservation?.priceCurrency ?? 'EUR'} />
+      <LocalizedField name="reservation.priceAmount" label="Price (as typed, e.g. 50,000)" value={dog?.reservation?.priceAmount} required={false} />
+    </div>
+    {Array.from({ length: NOTE_SLOTS }).map((_, i) => (
+      <div>
+        <LocalizedField name={`reservation.notes.${i}`} label={`Note ${i + 1}`} kind="textarea" value={notes[i]} required={false} />
+        <label><input type="checkbox" name={`remove.reservation.notes.${i}`} /> Remove this note</label>
+      </div>
+    ))}
+    <div class="admin-form-row">
+      <LocalizedField name="reservation.ctaLabel" label="Reservation button label" value={dog?.reservation?.ctaLabel} required={false} />
+      <Field
+        id="reservation-interest"
+        name="reservation.ctaInterest"
+        label="Enquiry form pre-selects"
+        kind="select"
+        options={ALLOWED_INTERESTS.map((v) => ({ value: v, label: INTEREST_LABELS[v], selected: dog?.reservation?.ctaInterest === v }))}
+      />
+    </div>
+  </Card>
+
+  <Card padding="lg" data-section="future">
+    <h2 class="admin-section-title">Future-dog call to action (only used when status is "Future")</h2>
+    <label><input type="checkbox" name="futureCta.enabled" checked={!!dog?.futureCta} /> Show a call-to-action button on this card</label>
+    <div class="admin-form-row">
+      <LocalizedField name="futureCta.label" label="Button label" value={dog?.futureCta?.label} required={false} />
+      <Field id="future-cta-href" name="futureCta.href" label="Link (usually #contact)" kind="text" value={dog?.futureCta?.href ?? '#contact'} />
+      <Field
+        id="future-cta-interest"
+        name="futureCta.interest"
+        label="Enquiry form pre-selects"
+        kind="select"
+        options={ALLOWED_INTERESTS.map((v) => ({ value: v, label: INTEREST_LABELS[v], selected: (dog?.futureCta?.interest ?? 'Future Litter') === v }))}
+      />
+    </div>
+  </Card>
+
+  <Card padding="lg">
+    <h2 class="admin-section-title">"Meet [Name]" story modal (optional)</h2>
+    <label><input type="checkbox" id="story-enabled" name="story.enabled" checked={!!dog?.story} /> This dog has a story modal</label>
+    <div data-section="story">
+      <LocalizedField name="story.title" label="Modal title" value={dog?.story?.title} required={false} />
+      {Array.from({ length: SLIDE_SLOTS }).map((_, i) => (
+        <div class="slide-editor">
+          <div class="admin-form-row">
+            <Field
+              id={`slide-${i}-position`}
+              name={`story.slides.${i}.position`}
+              label="Position"
+              kind="select"
+              options={Array.from({ length: SLIDE_SLOTS }, (_, p) => ({
+                value: String(p + 1),
+                label: String(p + 1),
+                selected: p === i,
+              }))}
+            />
+            <label><input type="checkbox" name={`remove.story.slides.${i}`} /> Remove this slide</label>
+          </div>
+          <div class="admin-form-row">
+            <Field id={`slide-${i}-image`} name={`story.slides.${i}.image`} label="Image URL" kind="text" value={slides[i]?.image ?? ''} data-upload-target={`story.slides.${i}.image`} />
+            <div>
+              <label class="field__label" for={`slide-${i}-image-upload`}>Upload image</label>
+              <input type="file" id={`slide-${i}-image-upload`} accept="image/jpeg,image/png,image/webp,image/avif" data-upload-for={`story.slides.${i}.image`} />
+            </div>
+          </div>
+          <div class="admin-form-row">
+            <Field id={`slide-${i}-video`} name={`story.slides.${i}.video`} label="Video URL (optional, MP4)" kind="text" value={slides[i]?.video ?? ''} data-upload-target={`story.slides.${i}.video`} />
+            <div>
+              <label class="field__label" for={`slide-${i}-video-upload`}>Upload video (max 100MB)</label>
+              <input type="file" id={`slide-${i}-video-upload`} accept="video/mp4" data-upload-for={`story.slides.${i}.video`} />
+            </div>
+          </div>
+          <LocalizedField name={`story.slides.${i}.heading`} label="Slide heading" value={slides[i]?.heading} required={false} />
+          <LocalizedField name={`story.slides.${i}.body`} label="Slide text" kind="textarea" value={slides[i]?.body} required={false} />
+        </div>
+      ))}
+    </div>
+  </Card>
+
+  <div>
+    <Button type="submit" variant="primary" size="lg">Save</Button>
+  </div>
+</form>
+
+<script src="../../scripts/admin-dog-form.ts"></script>

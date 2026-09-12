@@ -1,0 +1,25 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import DogForm from '../../../components/admin/DogForm.astro';
+import { checkAdminAccess } from '../../../lib/admin-auth';
+import { getDogsSection } from '../../../lib/cms';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+const section = await getDogsSection();
+const error = Astro.url.searchParams.get('error');
+---
+
+<AdminLayout title="Add a dog">
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>Add a dog</h1>
+      <a class="admin-topbar__link" href="/admin/dogs/">&larr; Back to list</a>
+    </div>
+    {error && <div class="admin-flash admin-flash--error">{error}</div>}
+    <DogForm dog={null} version={section.version} returnTo="/admin/dogs/new/" mode="new" />
+  </div>
+</AdminLayout>

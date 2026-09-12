@@ -1,0 +1,43 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import Card from '../../components/ui/Card.astro';
+import Field from '../../components/ui/Field.astro';
+import Button from '../../components/ui/Button.astro';
+import { getAdminConfig } from '../../lib/admin-auth';
+
+export const prerender = false;
+
+const configured = !!getAdminConfig();
+const error = Astro.url.searchParams.get('error');
+
+const ERROR_MESSAGES: Record<string, string> = {
+  invalid: 'Incorrect password.',
+  'rate-limited': 'Too many attempts. Wait a few minutes and try again.',
+  'bad-request': 'Something went wrong submitting the form. Please try again.',
+  'not-configured':
+    'The admin panel is not configured yet: ADMIN_PASSWORD_HASH and ADMIN_SESSION_SECRET must be set as environment variables before anyone can sign in.',
+};
+---
+
+<AdminLayout title="Sign in">
+  <div class="admin-shell" style="max-width: 420px;">
+    <div class="admin-topbar" style="border-bottom: none;">
+      <h1>Protection Dogs GR — Admin</h1>
+    </div>
+
+    {!configured && (
+      <div class="admin-flash admin-flash--error">{ERROR_MESSAGES['not-configured']}</div>
+    )}
+
+    {configured && error && ERROR_MESSAGES[error] && (
+      <div class="admin-flash admin-flash--error">{ERROR_MESSAGES[error]}</div>
+    )}
+
+    <Card padding="lg">
+      <form method="POST" action="/admin/api/login/" class="admin-form-grid">
+        <Field id="password" name="password" label="Password" kind="text" type="password" required disabled={!configured} autofocus />
+        <Button type="submit" variant="primary" block disabled={!configured}>Sign in</Button>
+      </form>
+    </Card>
+  </div>
+</AdminLayout>

@@ -1,0 +1,8 @@
+---
+import { checkAdminAccess } from '../../lib/admin-auth';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+return Astro.redirect(access.ok ? '/admin/dogs/' : '/admin/login/');
+---
