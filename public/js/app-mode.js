@@ -93,8 +93,15 @@
     var mm = window.matchMedia;
     var preview = /[?&]app=1(?:&|$)/.test(window.location.search);
     var isApp = (mm && (mm('(display-mode: standalone)').matches || mm('(display-mode: fullscreen)').matches))
-        || navigator.standalone === true
+        || navigator.standalone === true // iOS Safari "Add to Home Screen" PWA launch — not the native wrapper below
         || (document.referrer || '').indexOf('android-app://gr.protectiondogs.app') === 0
+        // The iOS native wrapper (Website/ios-app) is a plain WKWebView, not a
+        // Safari PWA, so it gets none of the checks above — Android's
+        // referrer scheme has no WKWebView equivalent. It identifies itself
+        // with a UA suffix instead (App.tsx sets this explicitly); do the
+        // same startsWith-style substring check as the Android line above,
+        // not a version-sensitive exact match.
+        || /PDGiOSApp\//.test(navigator.userAgent || '')
         || preview
         || (session && session.getItem('pdg-app-mode') === '1');
 
