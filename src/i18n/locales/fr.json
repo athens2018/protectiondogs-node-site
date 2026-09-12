@@ -1028,13 +1028,17 @@
   "testimonials": {
     "eyebrow": "Témoignages",
     "h2": "Ce que disent les clients",
-    "consent": {
-      "text": "Les avis clients sont affichés via Testimonial.to, un service tiers susceptible de déposer ses propres cookies. Ils ne se chargent qu'après votre acceptation des cookies ou un appui sur le bouton.",
-      "button": "Charger les avis"
-    },
-    "embeds": {
-      "iframeTitle": "Carrousel de témoignages clients",
-      "jsIframeTitle": "Client testimonials"
+    "cta": "Partagez votre expérience",
+    "form": {
+      "title": "Partagez votre expérience",
+      "intro": "Racontez à d'autres familles votre expérience avec Protection Dogs GR. Votre témoignage sera examiné avant d'apparaître sur le site.",
+      "name": "Votre nom",
+      "location": "Lieu (facultatif)",
+      "rating": "Note",
+      "quote": "Votre témoignage",
+      "submit": "Envoyer",
+      "success": "Merci — votre témoignage a été envoyé et apparaîtra après validation.",
+      "error": "Une erreur est survenue lors de l'envoi. Veuillez réessayer."
     }
   },
   "partner": {

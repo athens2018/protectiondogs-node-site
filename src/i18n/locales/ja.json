@@ -1027,13 +1027,17 @@
   "testimonials": {
     "eyebrow": "お客様の声",
     "h2": "お客様からの評価",
-    "consent": {
-      "text": "お客様の声は、独自の Cookie を設定する場合がある第三者サービス Testimonial.to を通じて表示されます。Cookie に同意するか、ボタンを押した後にのみ読み込まれます。",
-      "button": "レビューを読み込む"
-    },
-    "embeds": {
-      "iframeTitle": "お客様の声カルーセル",
-      "jsIframeTitle": "お客様の声"
+    "cta": "体験談を共有する",
+    "form": {
+      "title": "体験談を共有する",
+      "intro": "Protection Dogs GRでの体験を他のご家族にお伝えください。投稿は確認後にサイトに掲載されます。",
+      "name": "お名前",
+      "location": "所在地(任意)",
+      "rating": "評価",
+      "quote": "体験談",
+      "submit": "送信",
+      "success": "ありがとうございます — 体験談が送信されました。確認後に掲載されます。",
+      "error": "送信中にエラーが発生しました。もう一度お試しください。"
     }
   },
   "partner": {

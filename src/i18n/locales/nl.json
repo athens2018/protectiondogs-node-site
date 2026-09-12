@@ -1027,13 +1027,17 @@
   "testimonials": {
     "eyebrow": "Recensies",
     "h2": "Wat Klanten Zeggen",
-    "consent": {
-      "text": "Klantbeoordelingen worden getoond via Testimonial.to, een dienst van een derde partij die eigen cookies kan plaatsen. Ze worden pas geladen nadat u cookies accepteert of op de knop drukt.",
-      "button": "Beoordelingen laden"
-    },
-    "embeds": {
-      "iframeTitle": "Carrousel met klantbeoordelingen",
-      "jsIframeTitle": "Client testimonials"
+    "cta": "Deel uw ervaring",
+    "form": {
+      "title": "Deel uw ervaring",
+      "intro": "Vertel andere gezinnen over uw ervaring met Protection Dogs GR. Uw inzending wordt beoordeeld voordat deze op de site verschijnt.",
+      "name": "Uw naam",
+      "location": "Locatie (optioneel)",
+      "rating": "Beoordeling",
+      "quote": "Uw ervaring",
+      "submit": "Versturen",
+      "success": "Bedankt — uw ervaring is verzonden en verschijnt na beoordeling.",
+      "error": "Er ging iets mis bij het versturen. Probeer het opnieuw."
     }
   },
   "partner": {

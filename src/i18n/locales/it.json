@@ -1030,13 +1030,17 @@
   "testimonials": {
     "eyebrow": "Recensioni",
     "h2": "Cosa dicono i clienti",
-    "consent": {
-      "text": "Le recensioni dei clienti sono mostrate tramite Testimonial.to, un servizio di terze parti che può impostare propri cookie. Vengono caricate solo dopo che accetti i cookie o premi il pulsante.",
-      "button": "Carica le recensioni"
-    },
-    "embeds": {
-      "iframeTitle": "Carosello delle testimonianze dei clienti",
-      "jsIframeTitle": "Client testimonials"
+    "cta": "Condividi la tua esperienza",
+    "form": {
+      "title": "Condividi la tua esperienza",
+      "intro": "Racconta ad altre famiglie la tua esperienza con Protection Dogs GR. La tua recensione sarà controllata prima di apparire sul sito.",
+      "name": "Il tuo nome",
+      "location": "Località (facoltativo)",
+      "rating": "Valutazione",
+      "quote": "La tua recensione",
+      "submit": "Invia",
+      "success": "Grazie — la tua recensione è stata inviata e apparirà dopo la verifica.",
+      "error": "Si è verificato un errore durante l'invio. Riprova."
     }
   },
   "partner": {

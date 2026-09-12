@@ -45,8 +45,8 @@ export default defineConfig({
         // https: wildcard (img-src already allows that broadly; video
         // doesn't need to).
         "media-src 'self' https://*.public.blob.vercel-storage.com",
-        'frame-src https://testimonial.to https://embed-v2.testimonial.to https://www.instagram.com',
-        "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://embed-v2.testimonial.to https://testimonial.to",
+        'frame-src https://www.instagram.com',
+        "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net",
         "worker-src 'self'",
         "manifest-src 'self'",
         "form-action 'self'",
@@ -59,7 +59,7 @@ export default defineConfig({
         resources: ["'self'", "'unsafe-inline'"],
       },
       scriptDirective: {
-        resources: ["'self'", 'https://testimonial.to', 'https://embed-v2.testimonial.to', 'https://www.googletagmanager.com'],
+        resources: ["'self'", 'https://www.googletagmanager.com'],
         // inlineScriptHashes() returns plain `sha256-…` strings, exactly the
         // shape Astro's own CspHashEntry accepts at runtime (verified in a
         // real build: the hashes show up correctly in the generated CSP

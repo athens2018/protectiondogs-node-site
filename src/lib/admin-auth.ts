@@ -7,6 +7,7 @@
 // or auth mechanism — private-portal is a completely separate app.
 import { createHmac, randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
 import type { AstroCookies } from 'astro';
+import { createRateLimiter } from './rate-limit';
 
 const SESSION_COOKIE = 'pdg_admin_session';
 const SESSION_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days, no "remember me" complexity
@@ -92,35 +93,13 @@ function hasValidSession(cookies: AstroCookies, secret: string): boolean {
 }
 
 // ---------- Login rate limiting ----------
-// Simple in-memory counter, module-scoped. Given single-tenant scale this
-// is intentionally not distributed/persistent (a cold serverless instance
-// resets it) — it slows down casual brute-forcing without pretending to be
-// a real WAF. See the brief: "don't overengineer, but don't leave it fully
-// unprotected either."
-const LOGIN_ATTEMPT_WINDOW_MS = 10 * 60 * 1000;
-const LOGIN_ATTEMPT_LIMIT = 8;
-const loginAttempts = new Map<string, { count: number; windowStart: number }>();
-
-export function isRateLimited(key: string): boolean {
-  const now = Date.now();
-  const entry = loginAttempts.get(key);
-  if (!entry || now - entry.windowStart > LOGIN_ATTEMPT_WINDOW_MS) return false;
-  return entry.count >= LOGIN_ATTEMPT_LIMIT;
-}
-
-export function recordLoginAttempt(key: string): void {
-  const now = Date.now();
-  const entry = loginAttempts.get(key);
-  if (!entry || now - entry.windowStart > LOGIN_ATTEMPT_WINDOW_MS) {
-    loginAttempts.set(key, { count: 1, windowStart: now });
-  } else {
-    entry.count += 1;
-  }
-}
-
-export function clearLoginAttempts(key: string): void {
-  loginAttempts.delete(key);
-}
+// See the brief: "don't overengineer, but don't leave it fully unprotected
+// either." src/lib/rate-limit.ts holds the actual counter now (also used
+// by the public testimonial submission endpoint).
+const loginLimiter = createRateLimiter(10 * 60 * 1000, 8);
+export const isRateLimited = loginLimiter.isLimited;
+export const recordLoginAttempt = loginLimiter.record;
+export const clearLoginAttempts = loginLimiter.clear;
 
 // ---------- Config + the shared guard ----------
 

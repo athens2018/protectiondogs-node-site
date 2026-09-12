@@ -24,9 +24,10 @@ import Contact from '../components/sections/Contact.astro';
 import { mergeFacts } from '../lib/facts-merge';
 import { faToIconName, iconFromHref } from '../lib/icon-map';
 import facts from '../data/facts.json';
-import { getDogsSection, getFaqSection } from '../lib/cms';
+import { getDogsSection, getFaqSection, getTestimonialsSection } from '../lib/cms';
 import { toDogsProps, toStoryModalProps } from '../lib/dogs-render';
 import { toFaqProps, toFaqJsonLd } from '../lib/faq-render';
+import { toTestimonialsProps } from '../lib/testimonials-render';
 
 interface Props {
   localeCode: string;
@@ -73,6 +74,12 @@ const storyProps = toStoryModalProps(dogsSection, localeCode, {
 // meta.jsonld.faqpage — see src/lib/faq-render.ts).
 const faqSection = await getFaqSection();
 const faqProps = toFaqProps(faqSection, localeCode);
+
+// Testimonials CMS — same static build-time fetch pattern. Supersedes the
+// old testimonial.to embed entirely (self-hosted now: public submission +
+// owner approval, see src/pages/admin/testimonials/).
+const testimonialsSection = await getTestimonialsSection();
+const testimonialsProps = { ...content.testimonials, ...toTestimonialsProps(testimonialsSection) };
 
 // Hero background video is a net-new premium enhancement (plan §5) — the
 // live source hero has no video at all, so there is no extracted field for
@@ -181,7 +188,7 @@ const jsonldBlocks = Object.entries(content.meta.jsonld ?? {}).map(([key, block]
     <WhoItsFor {...content.whoItsFor} />
     <Pricing {...content.pricing} />
     <Faq {...faqProps} />
-    <Testimonials {...content.testimonials} />
+    <Testimonials {...testimonialsProps} />
     <InstagramFeed handle={(facts as any).contact.instagram} />
     <Partner {...content.partner} />
     <Contact content={content.contact} locale={localeCode} />

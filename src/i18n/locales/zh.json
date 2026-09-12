@@ -1028,13 +1028,17 @@
   "testimonials": {
     "eyebrow": "客户评价",
     "h2": "客户怎么说",
-    "consent": {
-      "text": "客户评价通过第三方服务 Testimonial.to 显示，该服务可能会设置自己的 Cookie。只有在您接受 Cookie 或点击按钮后才会加载。",
-      "button": "加载评价"
-    },
-    "embeds": {
-      "iframeTitle": "客户评价轮播",
-      "jsIframeTitle": "Client testimonials"
+    "cta": "分享您的体验",
+    "form": {
+      "title": "分享您的体验",
+      "intro": "向其他家庭讲述您与 Protection Dogs GR 的体验。您的留言将在审核后显示在网站上。",
+      "name": "您的姓名",
+      "location": "所在地(可选)",
+      "rating": "评分",
+      "quote": "您的评价",
+      "submit": "提交",
+      "success": "谢谢 — 您的评价已提交,审核通过后将显示。",
+      "error": "提交时出错,请重试。"
     }
   },
   "partner": {

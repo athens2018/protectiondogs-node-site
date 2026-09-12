@@ -29,6 +29,7 @@
 import { get, put, list, del } from '@vercel/blob';
 import dogsSeed from '../data/dogs-seed.json';
 import faqSeed from '../data/faq-seed.json';
+import testimonialsSeed from '../data/testimonials-seed.json';
 
 /** Every editable string in the CMS is stored per-locale, English required. */
 export interface LocalizedString {
@@ -363,3 +364,54 @@ export const saveFaqSection = faqStore.saveSection;
 export const listFaqHistory = faqStore.listHistory;
 export const getFaqHistoryVersion = faqStore.getHistoryVersion;
 export const restoreFaqHistoryVersion = faqStore.restoreHistoryVersion;
+
+// ---------------------------------------------------------------------------
+// Testimonials section
+// ---------------------------------------------------------------------------
+
+export const TESTIMONIALS_SECTION_PATH = 'cms/sections/testimonials.json';
+
+export type TestimonialStatus = 'pending' | 'approved' | 'rejected';
+
+export interface TestimonialEntry {
+  id: string;
+  name: string;
+  /** Optional, e.g. a country/city the client mentioned — plain string, not localized. */
+  location: string | null;
+  /** 1-5 */
+  rating: number;
+  /**
+   * The testimonial text exactly as the client wrote it. Deliberately NOT
+   * run through src/lib/translate.ts like every other CMS field — that
+   * translator is instructed to rephrase naturally rather than literally,
+   * which is right for the owner's own marketing copy but wrong here: a
+   * testimonial is someone else's direct quote, and rewriting their words
+   * (even "naturally") would misrepresent what they actually said. Shown
+   * as-is on every locale of the site.
+   */
+  quote: string;
+  submittedAt: string;
+  status: TestimonialStatus;
+}
+
+export interface TestimonialsSection extends VersionedSection {
+  /** Order in this array = display order for approved testimonials */
+  items: TestimonialEntry[];
+}
+
+const testimonialsStore = createSectionStore<TestimonialsSection>({
+  path: TESTIMONIALS_SECTION_PATH,
+  historyPrefix: 'cms/history/testimonials/',
+  seed: testimonialsSeed as TestimonialsSection,
+});
+
+export const getTestimonialsSection = testimonialsStore.getSection;
+export const saveTestimonialsSection = testimonialsStore.saveSection;
+export const listTestimonialsHistory = testimonialsStore.listHistory;
+export const getTestimonialsHistoryVersion = testimonialsStore.getHistoryVersion;
+export const restoreTestimonialsHistoryVersion = testimonialsStore.restoreHistoryVersion;
+
+/** Approved testimonials only, in display order — what the public site renders. */
+export function approvedTestimonials(section: TestimonialsSection): TestimonialEntry[] {
+  return section.items.filter((t) => t.status === 'approved');
+}

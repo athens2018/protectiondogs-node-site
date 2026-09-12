@@ -1029,13 +1029,17 @@
   "testimonials": {
     "eyebrow": "Yorumlar",
     "h2": "Müşteriler ne diyor",
-    "consent": {
-      "text": "Müşteri yorumları, kendi çerezlerini bırakabilen üçüncü taraf bir hizmet olan Testimonial.to üzerinden gösterilir. Yalnızca çerezleri kabul ettiğinizde veya düğmeye bastığınızda yüklenir.",
-      "button": "Yorumları yükle"
-    },
-    "embeds": {
-      "iframeTitle": "Müşteri yorumları karuseli",
-      "jsIframeTitle": "Client testimonials"
+    "cta": "Deneyiminizi paylaşın",
+    "form": {
+      "title": "Deneyiminizi paylaşın",
+      "intro": "Protection Dogs GR ile deneyiminizi diğer ailelerle paylaşın. Gönderiniz siteye eklenmeden önce incelenecektir.",
+      "name": "Adınız",
+      "location": "Konum (isteğe bağlı)",
+      "rating": "Değerlendirme",
+      "quote": "Yorumunuz",
+      "submit": "Gönder",
+      "success": "Teşekkürler — yorumunuz gönderildi ve incelendikten sonra yayınlanacak.",
+      "error": "Gönderirken bir sorun oluştu. Lütfen tekrar deneyin."
     }
   },
   "partner": {

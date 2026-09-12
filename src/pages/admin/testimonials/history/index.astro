@@ -1,0 +1,68 @@
+---
+import AdminLayout from '../../../../layouts/AdminLayout.astro';
+import Button from '../../../../components/ui/Button.astro';
+import Badge from '../../../../components/ui/Badge.astro';
+import Card from '../../../../components/ui/Card.astro';
+import { checkAdminAccess } from '../../../../lib/admin-auth';
+import { getTestimonialsSection, listTestimonialsHistory } from '../../../../lib/cms';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+const [section, history] = await Promise.all([getTestimonialsSection(), listTestimonialsHistory()]);
+const error = Astro.url.searchParams.get('error');
+---
+
+<AdminLayout title="Testimonials — History">
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>Testimonials — Version history</h1>
+      <div class="admin-topbar__actions">
+        <a class="admin-topbar__link" href="/admin/testimonials/">&larr; Back to testimonials</a>
+      </div>
+    </div>
+
+    {error && <div class="admin-flash admin-flash--error">{error}</div>}
+
+    <p class="admin-hint">
+      Every save keeps a snapshot here (last {history.length} kept). Restoring makes a new, current version out of an
+      older one — it never deletes anything, so restoring is itself always undoable.
+    </p>
+
+    {history.length === 0 ? (
+      <Card padding="lg">
+        <p class="admin-hint">No history yet — it starts filling in after the next save.</p>
+      </Card>
+    ) : (
+      <ul class="admin-list">
+        {history.map((entry) => {
+          const isCurrent = entry.version === section.version;
+          return (
+            <li>
+              <Card padding="md">
+                <div class="admin-list-item">
+                  <div class="admin-list-item__body">
+                    <div class="admin-list-item__name">
+                      Version {entry.version} {isCurrent && <Badge variant="solid">current</Badge>}
+                    </div>
+                    <div class="admin-list-item__meta">{new Date(entry.updatedAt).toLocaleString()}</div>
+                  </div>
+                  <div class="admin-list-item__actions">
+                    {!isCurrent && (
+                      <form method="POST" action="/admin/api/testimonials/restore/">
+                        <input type="hidden" name="version" value={entry.version} />
+                        <Button type="submit" variant="outline">Restore this version</Button>
+                      </form>
+                    )}
+                  </div>
+                </div>
+              </Card>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </div>
+</AdminLayout>

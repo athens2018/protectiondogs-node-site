@@ -1,80 +1,181 @@
 ---
 import SectionHeader from '../ui/SectionHeader.astro';
 import Card from '../ui/Card.astro';
+import Field from '../ui/Field.astro';
 import Button from '../ui/Button.astro';
+
+interface TestimonialItem {
+  name: string;
+  location: string | null;
+  rating: number;
+  quote: string;
+}
+
+interface FormChrome {
+  title: string;
+  intro: string;
+  name: string;
+  location: string;
+  rating: string;
+  quote: string;
+  submit: string;
+  success: string;
+  error: string;
+}
 
 interface Props {
   eyebrow: string;
   h2: string;
-  consent: { text: string; button: string };
-  embeds: { iframeTitle: string; jsIframeTitle: string };
+  cta: string;
+  form: FormChrome;
+  testimonials: TestimonialItem[];
 }
 
-const { eyebrow, h2, consent, embeds } = Astro.props;
+const { eyebrow, h2, cta, form, testimonials } = Astro.props;
 ---
 
-<!-- DOM contract from src/scripts/testimonials.ts: #testimonial-consent,
-     #testimonial-load, #testimonial-embeds[hidden], the iframe's
-     data-src (fetched only on consent/click) and .testimonial-to-embed's
-     data-* attributes (data-frame-title is new: testimonials.ts reads
-     container.dataset.frameTitle so the injected iframe's title isn't
-     hardcoded in English). -->
-<section id="testimonial-widgets" class="section section--dark">
-  <div class="container">
-    <SectionHeader eyebrow={eyebrow} heading={h2} />
-  </div>
+<section id="testimonials" class="section section--dark">
   <div class="container container--narrow">
-    <Card padding="lg" id="testimonial-consent" class="testimonial-consent reveal">
-      <p set:html={consent.text} />
-      <Button type="button" id="testimonial-load" variant="primary" set:html={consent.button} />
+    <SectionHeader eyebrow={eyebrow} heading={h2} />
+
+    {testimonials.length > 0 && (
+      <div class="testimonial-grid">
+        {testimonials.map((t) => (
+          <Card padding="lg" class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label={`${t.rating}/5`}>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span class={i < t.rating ? 'is-filled' : 'is-empty'} aria-hidden="true">★</span>
+              ))}
+            </div>
+            <p class="testimonial-card__quote">{t.quote}</p>
+            <p class="testimonial-card__name">
+              {t.name}
+              {t.location && <span class="testimonial-card__location">{t.location}</span>}
+            </p>
+          </Card>
+        ))}
+      </div>
+    )}
+
+    <Card padding="lg" class="testimonial-form-card reveal">
+      <h3 class="testimonial-form__title">{cta}</h3>
+      <p class="testimonial-form__intro">{form.intro}</p>
+      <form id="testimonial-form" class="testimonial-form" action="/api/testimonials/submit/" method="POST">
+        {/* Honeypot spam trap: invisible to real visitors; a bot that
+            auto-fills every field fills this too, and the API route
+            silently discards the submission when it's non-empty. */}
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="admin-form-row">
+          <Field id="testimonial-name" name="name" label={form.name} kind="text" required />
+          <Field id="testimonial-location" name="location" label={form.location} kind="text" />
+        </div>
+        <Field
+          id="testimonial-rating"
+          name="rating"
+          label={form.rating}
+          kind="select"
+          options={[5, 4, 3, 2, 1].map((n) => ({ value: String(n), label: '★'.repeat(n), selected: n === 5 }))}
+        />
+        <Field id="testimonial-quote" name="quote" label={form.quote} kind="textarea" rows={4} required />
+
+        <Button
+          type="submit"
+          variant="primary"
+          block
+          data-msg-sending={form.submit}
+          data-msg-success={form.success}
+          data-msg-error={form.error}
+        >
+          {form.submit}
+        </Button>
+        <p id="testimonial-form-status" class="testimonial-form__status" role="status" aria-live="polite"></p>
+      </form>
     </Card>
-  </div>
-  <div id="testimonial-embeds" hidden>
-    <iframe
-      id="testimonialto-carousel-pdg-tag-all-light"
-      title={embeds.iframeTitle}
-      data-src="https://embed-v2.testimonial.to/carousel/all/pdg?theme=light&autoplay=off&showmore=off&one-row=on&same-height=off&tag=all&arrowColor=9BA9B4&column-scale=0&cc=off"
-      frameborder="0"
-      scrolling="no"
-      width="100%"
-    ></iframe>
-    <div
-      class="testimonial-to-embed"
-      data-url="https://embed-v2.testimonial.to/c/pdg?theme=dark"
-      data-allow="camera;microphone"
-      data-resize="true"
-      data-frame-title={embeds.jsIframeTitle}
-    >
-    </div>
   </div>
 </section>
 
+<script>
+  import { initTestimonialForm } from '../../scripts/testimonial-form';
+  initTestimonialForm();
+</script>
+
 <style>
-  .testimonial-consent {
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-5);
+    margin-block: var(--space-7);
+  }
+
+  .testimonial-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: var(--space-5);
-    text-align: center;
+    gap: var(--space-3);
   }
 
-  .testimonial-consent p {
+  .testimonial-card__stars {
+    display: flex;
+    gap: 2px;
+    color: var(--gold);
+  }
+
+  .testimonial-card__stars .is-empty {
+    opacity: 0.25;
+  }
+
+  .testimonial-card__quote {
     color: var(--text);
     line-height: var(--leading-relaxed);
+    white-space: pre-line;
   }
 
-  #testimonial-embeds {
-    max-width: var(--container-wide);
+  .testimonial-card__name {
+    margin-top: auto;
+    font-weight: 600;
+    color: var(--text-strong);
+  }
+
+  .testimonial-card__location {
+    display: block;
+    font-weight: 400;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .testimonial-form-card {
+    max-width: var(--container-narrow);
     margin-inline: auto;
-    padding-inline: var(--gutter);
-    margin-top: var(--space-6);
   }
 
-  #testimonial-embeds[hidden] {
-    display: none;
+  .testimonial-form__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: var(--gold);
+    margin-bottom: var(--space-2);
   }
 
-  .testimonial-to-embed {
-    margin-top: var(--space-6);
+  .testimonial-form__intro {
+    color: var(--text-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  .testimonial-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .testimonial-form__status {
+    min-height: 1.2em;
+    font-size: var(--text-sm);
+  }
+
+  .testimonial-form__status--success {
+    color: var(--gold);
+  }
+
+  .testimonial-form__status--error {
+    color: var(--error);
   }
 </style>

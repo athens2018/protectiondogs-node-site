@@ -1,0 +1,134 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Card from '../../../components/ui/Card.astro';
+import Field from '../../../components/ui/Field.astro';
+import Button from '../../../components/ui/Button.astro';
+import Badge from '../../../components/ui/Badge.astro';
+import { checkAdminAccess } from '../../../lib/admin-auth';
+import { getTestimonialsSection } from '../../../lib/cms';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+const section = await getTestimonialsSection();
+const saved = Astro.url.searchParams.get('saved');
+const deployMsg = Astro.url.searchParams.get('deploy');
+const error = Astro.url.searchParams.get('error');
+
+// Pending first (needs a decision), then approved, then rejected — newest within each group first.
+const STATUS_ORDER = { pending: 0, approved: 1, rejected: 2 } as const;
+const sorted = [...section.items].sort((a, b) => {
+  const byStatus = STATUS_ORDER[a.status] - STATUS_ORDER[b.status];
+  if (byStatus !== 0) return byStatus;
+  return new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime();
+});
+
+const pendingCount = section.items.filter((t) => t.status === 'pending').length;
+
+const ITEM_SLOTS_MAX = 120;
+// Existing rows + a few blank spares for the owner to add testimonials
+// directly (e.g. one a client emailed instead of using the form) — same
+// convention as src/components/admin/DogForm.astro.
+const SPARE_SLOTS = 3;
+const ITEM_SLOTS = Math.min(ITEM_SLOTS_MAX, sorted.length + SPARE_SLOTS);
+
+const STATUS_OPTIONS = (current: string) => [
+  { value: 'pending', label: 'Pending review', selected: current === 'pending' },
+  { value: 'approved', label: 'Approved (shown on site)', selected: current === 'approved' },
+  { value: 'rejected', label: 'Rejected (hidden)', selected: current === 'rejected' },
+];
+
+const BADGE_VARIANT: Record<string, 'solid' | 'outline' | 'muted'> = {
+  approved: 'solid',
+  pending: 'outline',
+  rejected: 'muted',
+};
+---
+
+<AdminLayout title="Testimonials">
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>Testimonials</h1>
+      <div class="admin-topbar__actions">
+        <span class="admin-hint">
+          {pendingCount > 0 ? `${pendingCount} awaiting review · ` : ''}v{section.version}
+        </span>
+        <a class="admin-topbar__link" href="/admin/testimonials/history/">History</a>
+        <a class="admin-topbar__link" href="/admin/">All sections</a>
+        <form method="POST" action="/admin/api/logout/"><button class="admin-topbar__link" type="submit" style="background:none;border:none;cursor:pointer;">Sign out</button></form>
+      </div>
+    </div>
+
+    {saved === '1' && <div class="admin-flash admin-flash--ok">Saved.</div>}
+    {deployMsg === 'skipped' && (
+      <div class="admin-flash admin-flash--ok">
+        Saved. Ask Claude to finish connecting auto-deploy, or redeploy manually for now — DEPLOY_HOOK_URL isn't set yet, so this save didn't trigger a rebuild by itself.
+      </div>
+    )}
+    {deployMsg === 'failed' && (
+      <div class="admin-flash admin-flash--error">
+        Saved, but the deploy-hook request itself failed. The content is safe; trigger a rebuild manually for now.
+      </div>
+    )}
+    {error && <div class="admin-flash admin-flash--error">{error}</div>}
+
+    <p class="admin-hint">
+      Testimonials submitted through the site's public form appear below as "Pending review" — set a testimonial to
+      "Approved" to show it on the site, or "Rejected" to hide it without deleting it. Quotes are never
+      auto-translated (they're someone else's exact words) — they show as submitted on every language of the site.
+    </p>
+
+    <form method="POST" action="/admin/api/testimonials/save/" class="admin-form-grid">
+      <input type="hidden" name="version" value={section.version} />
+
+      {Array.from({ length: ITEM_SLOTS }).map((_, i) => {
+        const item = sorted[i];
+        return (
+          <Card padding="md">
+            <div class="testimonial-editor">
+              <input type="hidden" name={`items.${i}.id`} value={item?.id ?? ''} />
+              <input type="hidden" name={`items.${i}.submittedAt`} value={item?.submittedAt ?? ''} />
+              <div class="admin-form-row" style="align-items:end;">
+                <Field id={`item-${i}-name`} name={`items.${i}.name`} label="Name" kind="text" value={item?.name ?? ''} required={false} />
+                <Field id={`item-${i}-location`} name={`items.${i}.location`} label="Location (optional)" kind="text" value={item?.location ?? ''} required={false} />
+                <Field
+                  id={`item-${i}-rating`}
+                  name={`items.${i}.rating`}
+                  label="Rating"
+                  kind="select"
+                  options={[1, 2, 3, 4, 5].map((n) => ({ value: String(n), label: `${n} star${n === 1 ? '' : 's'}`, selected: (item?.rating ?? 5) === n }))}
+                />
+                <Field
+                  id={`item-${i}-status`}
+                  name={`items.${i}.status`}
+                  label="Status"
+                  kind="select"
+                  options={STATUS_OPTIONS(item?.status ?? 'approved')}
+                />
+                {item && <Badge variant={BADGE_VARIANT[item.status]}>{item.status}</Badge>}
+                {item && (
+                  <label><input type="checkbox" name={`remove.items.${i}`} /> Delete permanently</label>
+                )}
+              </div>
+              <Field id={`item-${i}-quote`} name={`items.${i}.quote`} label="Testimonial" kind="textarea" value={item?.quote ?? ''} rows={4} required={false} />
+            </div>
+          </Card>
+        );
+      })}
+
+      <div>
+        <Button type="submit" variant="primary" size="lg">Save</Button>
+      </div>
+    </form>
+  </div>
+</AdminLayout>
+
+<style>
+  .testimonial-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+</style>

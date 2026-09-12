@@ -1062,13 +1062,17 @@
   "testimonials": {
     "eyebrow": "Reviews",
     "h2": "What Clients Say",
-    "consent": {
-      "text": "Client reviews are shown through Testimonial.to, a third-party service that may set its own cookies. They load only after you accept cookies or press the button.",
-      "button": "Load reviews"
-    },
-    "embeds": {
-      "iframeTitle": "Client testimonials carousel",
-      "jsIframeTitle": "Client testimonials"
+    "cta": "Share your experience",
+    "form": {
+      "title": "Share your experience",
+      "intro": "Tell other families about your experience with Protection Dogs GR. Your submission will be reviewed before it appears on the site.",
+      "name": "Your name",
+      "location": "Location (optional)",
+      "rating": "Rating",
+      "quote": "Your testimonial",
+      "submit": "Submit",
+      "success": "Thank you — your testimonial has been submitted and will appear once reviewed.",
+      "error": "Something went wrong submitting your testimonial. Please try again."
     }
   },
   "partner": {

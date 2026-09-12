@@ -8,7 +8,6 @@ import { initFaq } from './faq';
 import { initPhases } from './phases';
 import { initStory } from './story';
 import { initForm } from './form';
-import { initTestimonials } from './testimonials';
 import { initEffects } from './effects';
 import { initReveal } from './reveal';
 import { initInstagram } from './instagram';
@@ -25,7 +24,6 @@ function init(): void {
   initPhases();
   initStory();
   initForm();
-  initTestimonials();
   initEffects();
   initReveal();
   initInstagram();
