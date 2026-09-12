@@ -12,18 +12,23 @@
 // still goes through it exactly as before.
 //
 // Store: a SEPARATE blob store from pdg-site-cache (which is
-// Instagram-specific). Its read/write token is read from
-// CMS_BLOB_READ_WRITE_TOKEN — deliberately NOT the ambient
-// BLOB_READ_WRITE_TOKEN default (that name is already claimed by the
-// Instagram store's connection) — and passed explicitly as `token` on
-// every @vercel/blob call below, per @vercel/blob's own documented options
-// (see node_modules/@vercel/blob/dist/index.d.ts: every put/get/head/list
-// call accepts an optional `token`, defaulting to
-// process.env.BLOB_READ_WRITE_TOKEN when omitted — passing it explicitly
-// is exactly how two stores coexist in one project). See the deployment
-// report for exactly what the owner still has to do to populate that env
-// var; this module fails closed (never throws into a build/response) when
-// it's missing so a not-yet-configured CMS never takes the site down.
+// Instagram-specific). When the owner connected it via the Vercel
+// dashboard, Vercel did NOT issue a classic long-lived
+// BLOB_READ_WRITE_TOKEN for it — @vercel/blob 2.8.0's dashboard flow
+// instead wires up its newer OIDC-based auth: it created
+// CMS_BLOB_READ_WRITE_TOKEN_STORE_ID (and a _WEBHOOK_PUBLIC_KEY, unused
+// here) and relies on Vercel's ambient VERCEL_OIDC_TOKEN (auto-injected
+// into every Function at runtime, never something this code reads
+// itself) for the actual credential. Per
+// node_modules/@vercel/blob/dist/index.d.ts's own documented options:
+// "storeId ... Used to override process.env.BLOB_STORE_ID when Vercel
+// OIDC token is available" — passing storeId explicitly (rather than the
+// project-ambient BLOB_STORE_ID, which is already the Instagram store's)
+// is exactly how two stores coexist in one project under this auth mode.
+// This only works when actually deployed on Vercel (OIDC token isn't
+// present in a bare local build) — this module fails closed (never
+// throws into a build/response) when the store id is missing so a
+// not-yet-configured or locally-run CMS never takes the site down.
 import { get, put } from '@vercel/blob';
 import dogsSeed from '../data/dogs-seed.json';
 
@@ -135,8 +140,8 @@ export function resolveLocaleString(field: LocalizedString | null | undefined, l
   return field[locale] ?? field.en;
 }
 
-function cmsToken(): string | undefined {
-  return process.env.CMS_BLOB_READ_WRITE_TOKEN;
+function cmsStoreId(): string | undefined {
+  return process.env.CMS_BLOB_READ_WRITE_TOKEN_STORE_ID;
 }
 
 /**
@@ -147,18 +152,18 @@ function cmsToken(): string | undefined {
  * the checked-in seed data (src/data/dogs-seed.json, itself a lossless
  * migration of what's live today — see scripts/migrate-dogs-cms.mjs)
  * instead. This is what lets `astro build` succeed even before the owner
- * has finished connecting the CMS_BLOB_READ_WRITE_TOKEN env var — the
+ * has finished connecting the CMS_BLOB_READ_WRITE_TOKEN_STORE_ID env var — the
  * static build-time fetch in HomePage.astro must never fail the whole
  * 13-locale build over a not-yet-configured CMS.
  */
 export async function getDogsSection(): Promise<DogsSection> {
-  const token = cmsToken();
-  if (!token) {
-    console.warn('[cms] CMS_BLOB_READ_WRITE_TOKEN is not set; serving the checked-in seed data for dogs.json');
+  const storeId = cmsStoreId();
+  if (!storeId) {
+    console.warn('[cms] CMS_BLOB_READ_WRITE_TOKEN_STORE_ID is not set; serving the checked-in seed data for dogs.json');
     return dogsSeed as DogsSection;
   }
   try {
-    const result = await get(DOGS_SECTION_PATH, { access: 'private', token, useCache: false });
+    const result = await get(DOGS_SECTION_PATH, { access: 'private', storeId, useCache: false });
     if (!result || result.statusCode !== 200 || !result.stream) {
       console.warn('[cms] dogs.json not found in the CMS blob store yet; serving the checked-in seed data');
       return dogsSeed as DogsSection;
@@ -175,7 +180,7 @@ export async function getDogsSection(): Promise<DogsSection> {
 export interface SaveResult {
   ok: boolean;
   /** Present on failure: 'stale' means the loaded version no longer matches — reload and retry. */
-  error?: 'no-token' | 'stale' | 'write-failed';
+  error?: 'no-store' | 'stale' | 'write-failed';
   section?: DogsSection;
 }
 
@@ -188,8 +193,8 @@ export interface SaveResult {
  * clobbering the first save.
  */
 export async function saveDogsSection(next: DogsSection, expectedVersion: number): Promise<SaveResult> {
-  const token = cmsToken();
-  if (!token) return { ok: false, error: 'no-token' };
+  const storeId = cmsStoreId();
+  if (!storeId) return { ok: false, error: 'no-store' };
 
   const current = await getDogsSection();
   if (current.version !== expectedVersion) {
@@ -205,7 +210,7 @@ export async function saveDogsSection(next: DogsSection, expectedVersion: number
   try {
     await put(DOGS_SECTION_PATH, JSON.stringify(toWrite), {
       access: 'private',
-      token,
+      storeId,
       addRandomSuffix: false,
       allowOverwrite: true,
       contentType: 'application/json',

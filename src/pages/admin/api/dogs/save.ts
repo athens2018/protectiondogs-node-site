@@ -83,10 +83,10 @@ export const POST: APIRoute = async ({ request, cookies }) => {
 
   if (!result.ok) {
     if (result.error === 'stale') return withError(returnTo, 'Someone else changed this since you loaded the page. Reload and try again.');
-    if (result.error === 'no-token') {
+    if (result.error === 'no-store') {
       return withError(
         returnTo,
-        'The CMS storage isn\'t connected yet (CMS_BLOB_READ_WRITE_TOKEN is not set) — nothing was saved.',
+        'The CMS storage isn\'t connected yet (CMS_BLOB_READ_WRITE_TOKEN_STORE_ID is not set) — nothing was saved.',
       );
     }
     return withError(returnTo, 'Save failed. Please try again.');

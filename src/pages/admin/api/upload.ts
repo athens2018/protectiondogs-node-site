@@ -18,10 +18,13 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   const access = checkAdminAccess(cookies);
   if (!access.ok) return new Response(JSON.stringify({ ok: false, error: 'unauthorized' }), { status: 401 });
 
-  const token = process.env.CMS_BLOB_READ_WRITE_TOKEN;
-  if (!token) {
+  // See src/lib/cms.ts's top-of-file comment: this store's connection uses
+  // Vercel's OIDC-based Blob auth (ambient VERCEL_OIDC_TOKEN + an explicit
+  // storeId), not a classic bearer token — nothing here reads a token.
+  const storeId = process.env.CMS_BLOB_READ_WRITE_TOKEN_STORE_ID;
+  if (!storeId) {
     return new Response(
-      JSON.stringify({ ok: false, error: 'The CMS storage isn\'t connected yet (CMS_BLOB_READ_WRITE_TOKEN is not set).' }),
+      JSON.stringify({ ok: false, error: 'The CMS storage isn\'t connected yet (CMS_BLOB_READ_WRITE_TOKEN_STORE_ID is not set).' }),
       { status: 503, headers: { 'Content-Type': 'application/json' } },
     );
   }
@@ -58,7 +61,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   try {
     const blob = await put(pathname, file, {
       access: 'public',
-      token,
+      storeId,
       contentType: file.type,
       addRandomSuffix: false,
     });
