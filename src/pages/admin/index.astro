@@ -1,8 +1,47 @@
 ---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
 import { checkAdminAccess } from '../../lib/admin-auth';
 
 export const prerender = false;
 
 const access = checkAdminAccess(Astro.cookies);
-return Astro.redirect(access.ok ? '/admin/dogs/' : '/admin/login/');
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+// One card per CMS section (src/lib/cms.ts) — add a row here whenever a
+// new section gets an admin page, same way Dogs and FAQ did.
+const SECTIONS = [
+  { name: 'Available Dogs', href: '/admin/dogs/', description: 'Add, edit, reorder and retire dogs.' },
+  { name: 'FAQ', href: '/admin/faq/', description: 'Edit the frequently-asked questions shown on the homepage.' },
+];
 ---
+
+<AdminLayout title="Admin">
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>Protection Dogs GR — Admin</h1>
+      <div class="admin-topbar__actions">
+        <form method="POST" action="/admin/api/logout/"><button class="admin-topbar__link" type="submit" style="background:none;border:none;cursor:pointer;">Sign out</button></form>
+      </div>
+    </div>
+
+    <ul class="admin-list">
+      {SECTIONS.map((section) => (
+        <li>
+          <Card padding="md">
+            <div class="admin-list-item">
+              <div class="admin-list-item__body">
+                <div class="admin-list-item__name">{section.name}</div>
+                <div class="admin-list-item__meta">{section.description}</div>
+              </div>
+              <div class="admin-list-item__actions">
+                <Button href={section.href} variant="outline" size="md">Open</Button>
+              </div>
+            </div>
+          </Card>
+        </li>
+      ))}
+    </ul>
+  </div>
+</AdminLayout>

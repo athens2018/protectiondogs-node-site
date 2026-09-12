@@ -24,8 +24,9 @@ import Contact from '../components/sections/Contact.astro';
 import { mergeFacts } from '../lib/facts-merge';
 import { faToIconName, iconFromHref } from '../lib/icon-map';
 import facts from '../data/facts.json';
-import { getDogsSection } from '../lib/cms';
+import { getDogsSection, getFaqSection } from '../lib/cms';
 import { toDogsProps, toStoryModalProps } from '../lib/dogs-render';
+import { toFaqProps, toFaqJsonLd } from '../lib/faq-render';
 
 interface Props {
   localeCode: string;
@@ -66,6 +67,13 @@ const storyProps = toStoryModalProps(dogsSection, localeCode, {
   nav: content.boboStory.nav,
 });
 
+// FAQ CMS — same static build-time fetch pattern as the dogs section
+// above. Supersedes content.faq entirely (both the visible accordion and
+// the FAQPage JSON-LD previously duplicated by hand in each locale's
+// meta.jsonld.faqpage — see src/lib/faq-render.ts).
+const faqSection = await getFaqSection();
+const faqProps = toFaqProps(faqSection, localeCode);
+
 // Hero background video is a net-new premium enhancement (plan §5) — the
 // live source hero has no video at all, so there is no extracted field for
 // it. Reuses the same Phase-1 training clip already licensed for the
@@ -98,7 +106,9 @@ const footerSocial = content.footer.connect.links.map((s: any) => ({
   icon: faToIconName(s.icon, iconFromHref(s.href)),
 }));
 
-const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
+const jsonldBlocks = Object.entries(content.meta.jsonld ?? {}).map(([key, block]) =>
+  key === 'faqpage' ? toFaqJsonLd(faqSection, localeCode) : block,
+);
 ---
 
 <Base
@@ -170,7 +180,7 @@ const jsonldBlocks = Object.values(content.meta.jsonld ?? {});
     <Family {...content.family} />
     <WhoItsFor {...content.whoItsFor} />
     <Pricing {...content.pricing} />
-    <Faq {...content.faq} />
+    <Faq {...faqProps} />
     <Testimonials {...content.testimonials} />
     <InstagramFeed handle={(facts as any).contact.instagram} />
     <Partner {...content.partner} />

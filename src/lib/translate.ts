@@ -107,16 +107,15 @@ function extractJson(text: string): unknown {
 }
 
 /**
- * Returns a deep-cloned copy of `entry` with every English-only field
- * translated into the other 12 site locales via Claude. Throws on any
- * failure (missing API key, malformed response, API error) — callers should
- * treat that as "translation didn't happen this time" and keep the
- * English-only save that already succeeded rather than losing the edit.
+ * Sends every unit's English text to Claude in one call and writes the
+ * translations back via each unit's `set`. Shared by every CMS section's
+ * translation entry point below. Throws on any failure (missing API key,
+ * malformed response, API error) — callers should treat that as
+ * "translation didn't happen this time" and keep the English-only save
+ * that already succeeded rather than losing the edit.
  */
-export async function translateDogEntry(entry: DogEntry): Promise<DogEntry> {
-  const clone: DogEntry = JSON.parse(JSON.stringify(entry));
-  const units = collectUnits(clone);
-  if (units.length === 0) return clone;
+async function runTranslation(units: Unit[]): Promise<void> {
+  if (units.length === 0) return;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error('ANTHROPIC_API_KEY is not set');
@@ -161,6 +160,66 @@ export async function translateDogEntry(entry: DogEntry): Promise<DogEntry> {
     }
     units[i].set(next);
   }
+}
 
+/**
+ * Returns a deep-cloned copy of `entry` with every English-only field
+ * translated into the other 12 site locales via Claude.
+ */
+export async function translateDogEntry(entry: DogEntry): Promise<DogEntry> {
+  const clone: DogEntry = JSON.parse(JSON.stringify(entry));
+  await runTranslation(collectUnits(clone));
+  return clone;
+}
+
+function isLocalizedString(value: unknown): value is LocalizedString {
+  return !!value && typeof value === 'object' && typeof (value as { en?: unknown }).en === 'string';
+}
+
+/** Fallback hints for sections that don't need bespoke per-field instructions like translateDogEntry's (proper names, numbers) — just a plain-English description of what that field is, keyed by its property name. */
+const GENERIC_KEY_HINTS: Record<string, string> = {
+  eyebrow: 'A small label above a heading.',
+  h2: 'A section heading.',
+  heading: 'A section heading.',
+  question: 'A frequently-asked question, phrased as a question.',
+  answer: 'The answer to a FAQ question.',
+};
+const DEFAULT_HINT = 'Short marketing/site copy for a Greek working-dog breeding business\'s website.';
+
+function walkForUnits(container: Record<string, unknown> | unknown[], units: Unit[], inheritedHint: string): void {
+  const entries: [string | number, unknown][] = Array.isArray(container)
+    ? container.map((v, i) => [i, v] as [number, unknown])
+    : Object.entries(container);
+
+  for (const [key, value] of entries) {
+    const hint = typeof key === 'string' ? GENERIC_KEY_HINTS[key] ?? inheritedHint : inheritedHint;
+    if (isLocalizedString(value)) {
+      units.push({
+        hint,
+        get: () => (container as Record<string | number, unknown>)[key] as LocalizedString,
+        set: (next) => {
+          (container as Record<string | number, unknown>)[key] = next;
+        },
+      });
+    } else if (Array.isArray(value)) {
+      walkForUnits(value, units, hint);
+    } else if (value && typeof value === 'object') {
+      walkForUnits(value as Record<string, unknown>, units, hint);
+    }
+  }
+}
+
+/**
+ * Generic counterpart to translateDogEntry for any other CMS section: walks
+ * `root` for every `{en: string, ...}`-shaped LocalizedString it can find,
+ * however deeply nested, and translates each one — no bespoke per-field
+ * wiring needed. Add an entry to GENERIC_KEY_HINTS above for any field name
+ * that needs more specific instructions than the generic default.
+ */
+export async function translateLocalizedTree<T>(root: T): Promise<T> {
+  const clone: T = JSON.parse(JSON.stringify(root));
+  const units: Unit[] = [];
+  walkForUnits(clone as Record<string, unknown>, units, DEFAULT_HINT);
+  await runTranslation(units);
   return clone;
 }

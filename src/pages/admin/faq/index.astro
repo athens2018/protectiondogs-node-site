@@ -1,0 +1,113 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Card from '../../../components/ui/Card.astro';
+import Field from '../../../components/ui/Field.astro';
+import Button from '../../../components/ui/Button.astro';
+import LocalizedField from '../../../components/admin/LocalizedField.astro';
+import { checkAdminAccess } from '../../../lib/admin-auth';
+import { getFaqSection } from '../../../lib/cms';
+
+export const prerender = false;
+
+const access = checkAdminAccess(Astro.cookies);
+if (!access.ok) return Astro.redirect('/admin/login/');
+
+const section = await getFaqSection();
+const saved = Astro.url.searchParams.get('saved');
+const deployMsg = Astro.url.searchParams.get('deploy');
+const error = Astro.url.searchParams.get('error');
+
+const ITEM_SLOTS_MAX = 20;
+// Same "existing rows + one blank spare" convention as
+// src/components/admin/DogForm.astro — see that file's comment.
+const ITEM_SLOTS = Math.min(ITEM_SLOTS_MAX, Math.max(1, section.items.length + 1));
+---
+
+<AdminLayout title="FAQ">
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <h1>FAQ</h1>
+      <div class="admin-topbar__actions">
+        <span class="admin-hint">{section.items.length} questions &middot; v{section.version}</span>
+        <a class="admin-topbar__link" href="/admin/faq/history/">History</a>
+        <a class="admin-topbar__link" href="/admin/dogs/">Dogs</a>
+        <form method="POST" action="/admin/api/logout/"><button class="admin-topbar__link" type="submit" style="background:none;border:none;cursor:pointer;">Sign out</button></form>
+      </div>
+    </div>
+
+    {saved === '1' && <div class="admin-flash admin-flash--ok">Saved.</div>}
+    {deployMsg === 'skipped' && (
+      <div class="admin-flash admin-flash--ok">
+        Saved. Ask Claude to finish connecting auto-deploy, or redeploy manually for now — DEPLOY_HOOK_URL isn't set yet, so this save didn't trigger a rebuild by itself.
+      </div>
+    )}
+    {deployMsg === 'failed' && (
+      <div class="admin-flash admin-flash--error">
+        Saved, but the deploy-hook request itself failed. The content is safe; trigger a rebuild manually for now.
+      </div>
+    )}
+    {error && <div class="admin-flash admin-flash--error">{error}</div>}
+
+    <p class="admin-hint">Write everything in English — the other 12 languages are translated automatically when you save.</p>
+
+    <form method="POST" action="/admin/api/faq/save/" class="admin-form-grid">
+      <input type="hidden" name="version" value={section.version} />
+
+      <Card padding="lg">
+        <h2 class="admin-section-title">Section heading</h2>
+        <div class="admin-form-row">
+          <LocalizedField name="eyebrow" label="Eyebrow" value={section.eyebrow} />
+          <LocalizedField name="heading" label="Heading" value={section.heading} />
+        </div>
+      </Card>
+
+      <Card padding="lg">
+        <h2 class="admin-section-title">Questions</h2>
+        {Array.from({ length: ITEM_SLOTS }).map((_, i) => {
+          const item = section.items[i];
+          return (
+            <div class="faq-item-editor">
+              <input type="hidden" name={`items.${i}.id`} value={item?.id ?? ''} />
+              <div class="admin-form-row" style="align-items:end;">
+                <Field
+                  id={`item-${i}-position`}
+                  name={`items.${i}.position`}
+                  label="Position"
+                  kind="select"
+                  options={Array.from({ length: ITEM_SLOTS }, (_, p) => ({
+                    value: String(p + 1),
+                    label: String(p + 1),
+                    selected: p === i,
+                  }))}
+                />
+                {item && (
+                  <label><input type="checkbox" name={`remove.items.${i}`} /> Remove this question</label>
+                )}
+              </div>
+              <LocalizedField name={`items.${i}.question`} label={`Question ${i + 1}`} value={item?.question} required={false} />
+              <LocalizedField name={`items.${i}.answer`} label="Answer" kind="textarea" value={item?.answer} required={false} />
+            </div>
+          );
+        })}
+      </Card>
+
+      <div>
+        <Button type="submit" variant="primary" size="lg">Save</Button>
+      </div>
+    </form>
+  </div>
+</AdminLayout>
+
+<style>
+  .faq-item-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-block: var(--space-4);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .faq-item-editor:last-child {
+    border-bottom: none;
+  }
+</style>
