@@ -33,11 +33,11 @@ const INTEREST_LABELS: Record<string, string> = {
   Other: 'Other',
 };
 
-const STAT_SLOTS = 4;
-const PARAGRAPH_SLOTS = 8;
-const FEATURE_SLOTS = 10;
-const NOTE_SLOTS = 4;
-const SLIDE_SLOTS = 6;
+const STAT_SLOTS_MAX = 4;
+const PARAGRAPH_SLOTS_MAX = 8;
+const FEATURE_SLOTS_MAX = 10;
+const NOTE_SLOTS_MAX = 4;
+const SLIDE_SLOTS_MAX = 6;
 
 const stats = dog?.stats ?? [];
 const paragraphs = dog?.paragraphs ?? [];
@@ -45,12 +45,24 @@ const features = dog?.features ?? [];
 const notes = dog?.reservation?.notes ?? [];
 const slides = dog?.story?.slides ?? [];
 const status = dog?.status ?? 'available';
+
+// Only render as many rows as are already filled in, plus one blank spare
+// to add another — not every possible slot up front. Saving with that
+// spare filled in reveals one more the next time this dog is opened. Stats
+// keep a floor of 2 since a card always shows at least two.
+const STAT_SLOTS = Math.min(STAT_SLOTS_MAX, Math.max(2, stats.length + 1));
+const PARAGRAPH_SLOTS = Math.min(PARAGRAPH_SLOTS_MAX, Math.max(1, paragraphs.length + 1));
+const FEATURE_SLOTS = Math.min(FEATURE_SLOTS_MAX, Math.max(1, features.length + 1));
+const NOTE_SLOTS = Math.min(NOTE_SLOTS_MAX, Math.max(1, notes.length + 1));
+const SLIDE_SLOTS = Math.min(SLIDE_SLOTS_MAX, Math.max(1, slides.length + 1));
 ---
 
 <form method="POST" action="/admin/api/dogs/save/" class="admin-form-grid" id="dog-form">
   <input type="hidden" name="action" value="upsert" />
   <input type="hidden" name="version" value={version} />
   <input type="hidden" name="returnTo" value={returnTo} />
+
+  <p class="admin-hint">Write everything in English — the other 12 languages are translated automatically when you save.</p>
 
   <Card padding="lg">
     <h2 class="admin-section-title">Basics</h2>

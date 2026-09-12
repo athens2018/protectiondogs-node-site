@@ -20,21 +20,4 @@ interface Props {
 const { name, label, value, kind = 'text', required = true } = Astro.props;
 ---
 
-<div class="loc-field">
-  <Field id={`${name}.en`} name={`${name}.en`} label={label} kind={kind} value={value?.en ?? ''} required={required} rows={kind === 'textarea' ? 3 : undefined} />
-  <p class="loc-field__auto">Translated automatically into 12 languages on save.</p>
-</div>
-
-<style>
-  .loc-field {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .loc-field__auto {
-    margin: 0;
-    font-size: var(--text-sm);
-    color: var(--text-muted);
-  }
-</style>
+<Field id={`${name}.en`} name={`${name}.en`} label={label} kind={kind} value={value?.en ?? ''} required={required} rows={kind === 'textarea' ? 3 : undefined} />
