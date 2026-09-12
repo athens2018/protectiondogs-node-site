@@ -1,0 +1,33 @@
+{
+  "id": "/gallery/",
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Protection Dogs GR — Training Gallery",
+  "short_name": "Training Gallery",
+  "description": "Real, day-to-day training photos and video, by request only.",
+  "start_url": "/gallery/",
+  "scope": "/gallery/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "icons": [
+    {
+      "src": "/app-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/app-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/app-icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

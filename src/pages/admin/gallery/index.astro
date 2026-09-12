@@ -134,7 +134,7 @@ const sortedItems = [...section.items].sort((a, b) => new Date(b.uploadedAt).get
 
     <h2 class="admin-section-title" id="items">Items</h2>
     <Card padding="lg">
-      <form method="POST" action="/admin/api/gallery/items/" enctype="multipart/form-data" class="admin-form-grid">
+      <form id="gallery-upload-form" method="POST" action="/admin/api/gallery/items/" class="admin-form-grid">
         <input type="hidden" name="action" value="upload" />
         <input type="hidden" name="version" value={section.version} />
         <div class="admin-form-row">
@@ -155,8 +155,9 @@ const sortedItems = [...section.items].sort((a, b) => new Date(b.uploadedAt).get
           <Field id="gallery-caption" name="caption" label="Caption — jot down what's real, not sales talk" kind="text" />
           <Button id="gallery-caption-fix" variant="outline">AI fix</Button>
         </div>
+        <p id="gallery-upload-status" class="admin-hint"></p>
         <div>
-          <Button type="submit" variant="primary">Upload</Button>
+          <Button type="submit" variant="primary" id="gallery-upload-submit">Upload</Button>
         </div>
       </form>
     </Card>

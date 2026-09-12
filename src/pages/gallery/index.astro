@@ -51,7 +51,13 @@ const visibleItems = visitor
 const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').map((d) => ({ id: d.id, name: resolveLocaleString(d.name, 'en') }));
 ---
 
-<Base locale="en" title="Private Gallery — Protection Dogs GR" description="Real training footage, by request only." robots="noindex, nofollow">
+<Base
+  locale="en"
+  title="Private Gallery — Protection Dogs GR"
+  description="Real training footage, by request only."
+  robots="noindex, nofollow"
+  manifestHref="/gallery.webmanifest"
+>
   <main id="main-content" class="gallery-page">
     {visitor ? (
       <Fragment>
@@ -66,6 +72,14 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
         </div>
 
         <div class="container container--wide">
+          <div id="gallery-install-banner" class="gallery-install" hidden>
+            <p class="gallery-install__text">Get back in with one tap next time.</p>
+            <Button id="gallery-install-button" variant="outline" hidden>Add to Home Screen</Button>
+            <p id="gallery-install-ios-hint" class="gallery-install__ios-hint" hidden>
+              Tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>.
+            </p>
+          </div>
+
           {visibleItems.length === 0 ? (
             <p class="gallery-empty">Nothing here yet — check back soon.</p>
           ) : (
@@ -145,7 +159,9 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
 
 <script>
   import { initGalleryPage } from '../../scripts/gallery';
+  import { initGalleryInstall } from '../../scripts/gallery-install';
   initGalleryPage();
+  initGalleryInstall();
 </script>
 
 <style>
@@ -191,6 +207,30 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
     text-align: center;
     color: var(--text-muted);
     padding-block: var(--space-6);
+  }
+
+  .gallery-install {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    margin-bottom: var(--space-6);
+    border: 1px solid var(--line-gold);
+    border-radius: var(--radius-sm);
+    background: var(--gold-10);
+  }
+
+  .gallery-install__text {
+    color: var(--text);
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+
+  .gallery-install__ios-hint {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    margin: 0;
   }
 
   .gallery-grid {

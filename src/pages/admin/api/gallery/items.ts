@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { checkAdminAccess } from '../../../../lib/admin-auth';
 import { getGallerySection, saveGallerySection, type GalleryItem } from '../../../../lib/cms';
-import { storeUploadedMedia, IMAGE_TYPES } from '../../../../lib/media-upload';
+import { IMAGE_TYPES, VIDEO_TYPES } from '../../../../lib/media-upload';
 import { validateGalleryItemMeta } from '../../../../lib/gallery-validate';
 
 export const prerender = false;
@@ -50,22 +50,25 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   let uploadedItem: GalleryItem | null = null;
 
   if (action === 'upload') {
-    const storeId = process.env.CMS_BLOB_READ_WRITE_TOKEN_STORE_ID;
-    if (!storeId) return fail(503, 'The CMS storage isn\'t connected yet (CMS_BLOB_READ_WRITE_TOKEN_STORE_ID is not set).');
-
-    const file = form.get('file');
-    if (!(file instanceof File) || file.size === 0) return fail(400, 'No file provided.');
+    // The file itself is already in Blob storage by the time this runs —
+    // see admin/api/gallery/upload-url.ts's own comment for why this route
+    // no longer accepts the bytes directly (a Vercel Function's request
+    // body is hard-capped at 4.5MB; every gallery photo/video now goes
+    // client -> Blob directly via a presigned URL). This call just attaches
+    // the metadata to that already-uploaded object.
+    const url = String(form.get('url') ?? '');
+    const contentType = String(form.get('contentType') ?? '');
+    if (!url || (!IMAGE_TYPES.has(contentType) && !VIDEO_TYPES.has(contentType))) {
+      return fail(400, 'No uploaded file to attach.');
+    }
 
     const metaResult = validateGalleryItemMeta({ caption: form.get('caption'), dogId: form.get('dogId'), stage: form.get('stage') });
     if (!metaResult.ok) return fail(400, `Could not save: ${metaResult.errors.join('; ')}`);
 
-    const uploadResult = await storeUploadedMedia(file, storeId);
-    if (!uploadResult.ok) return fail(uploadResult.status, uploadResult.error);
-
     uploadedItem = {
       id: `item-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-      type: IMAGE_TYPES.has(uploadResult.contentType) ? 'photo' : 'video',
-      url: uploadResult.url,
+      type: IMAGE_TYPES.has(contentType) ? 'photo' : 'video',
+      url,
       caption: metaResult.item!.caption,
       dogId: metaResult.item!.dogId,
       stage: metaResult.item!.stage,
