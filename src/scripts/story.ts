@@ -4,6 +4,16 @@ import { track } from './consent';
 // a deliberate swipe rather than an incidental finger wobble.
 const SWIPE_THRESHOLD_PX = 40;
 
+// Slide-change animation: the outgoing slide shifts/fades out, then the
+// incoming one enters from the opposite side — direction-aware (RTL
+// mirrors it, same as the arrow keys/swipe above), gated on html.pdg-anim
+// (src/lib/inline-scripts.mjs's own reduced-motion opt-in, reused as-is
+// rather than a second matchMedia check). SLIDE_TRANSITION_MS must match
+// .story-slide's own CSS transition-duration below — they're two halves
+// of one animation, not independently tunable.
+const SLIDE_TRANSITION_MS = 160;
+const SLIDE_OFFSET_PX = 28;
+
 // "Meet the dog" story modal — click-based navigation (dots, prev/next,
 // arrow keys), touch-swipe navigation (left/right, RTL-aware, same as the
 // arrow keys below), focus trapped while open, focus returned on close,
@@ -55,12 +65,41 @@ export function initStory(): void {
       }
     }
 
-    function show(index: number) {
-      current = Math.max(0, Math.min(index, slides.length - 1));
+    // Explicit `number` (not ReturnType<typeof window.setTimeout>): with
+    // both DOM and Node types in scope, TS can otherwise infer window.
+    // setTimeout's return as Node's Timeout instead of the browser's own
+    // numeric handle.
+    let pendingSlideTimeout: number | null = null;
+
+    // Resets every slide to its final (non-transitioning) state for
+    // whichever one is now current — the shared end-state both the
+    // no-animation path and the animated path's delayed step settle into,
+    // so there's exactly one place that defines "settled," not two copies
+    // that could drift apart.
+    function settleSlides() {
       slides.forEach((s, i) => {
         s.classList.toggle('active', i === current);
         s.hidden = i !== current;
+        s.style.transition = '';
+        s.style.transform = '';
+        s.style.opacity = '';
       });
+    }
+
+    function show(index: number) {
+      const previousIndex = current;
+      current = Math.max(0, Math.min(index, slides.length - 1));
+
+      // A rapid second tap/swipe while the first transition is still
+      // mid-flight fast-forwards the pending one instantly rather than
+      // leaving two overlapping animations to fight over the same
+      // elements' inline styles.
+      if (pendingSlideTimeout !== null) {
+        window.clearTimeout(pendingSlideTimeout);
+        pendingSlideTimeout = null;
+        settleSlides();
+      }
+
       dots.forEach((d, i) => {
         d.classList.toggle('active', i === current);
         d.setAttribute('aria-current', i === current ? 'step' : 'false');
@@ -68,6 +107,40 @@ export function initStory(): void {
       prevBtn?.classList.toggle('visible', current > 0);
       if (nextBtn) nextBtn.textContent = current === slides.length - 1 ? closeLabel : nextLabel;
       syncMedia();
+
+      const outgoing = slides[previousIndex];
+      const incoming = slides[current];
+      const canAnimate = document.documentElement.classList.contains('pdg-anim') && outgoing && incoming && outgoing !== incoming;
+      if (!canAnimate) {
+        settleSlides();
+        return;
+      }
+
+      const rtl = document.documentElement.dir === 'rtl';
+      const forward = current > previousIndex;
+      const offset = (forward ? -1 : 1) * (rtl ? -1 : 1) * SLIDE_OFFSET_PX;
+
+      outgoing.style.transform = `translateX(${offset}px)`;
+      outgoing.style.opacity = '0';
+
+      pendingSlideTimeout = window.setTimeout(() => {
+        pendingSlideTimeout = null;
+        outgoing.classList.remove('active');
+        outgoing.hidden = true;
+        outgoing.style.transition = '';
+        outgoing.style.transform = '';
+        outgoing.style.opacity = '';
+
+        incoming.classList.add('active');
+        incoming.hidden = false;
+        incoming.style.transition = 'none';
+        incoming.style.transform = `translateX(${-offset}px)`;
+        incoming.style.opacity = '0';
+        void incoming.offsetWidth; // force layout so the "from" state above actually applies before transitioning
+        incoming.style.transition = '';
+        incoming.style.transform = '';
+        incoming.style.opacity = '';
+      }, SLIDE_TRANSITION_MS);
     }
 
     function open(trigger: HTMLElement) {

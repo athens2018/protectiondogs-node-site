@@ -224,6 +224,17 @@ const dots = Array.from({ length: dotCount }, (_, i) => i);
     flex: 1;
   }
 
+  /* Duration must match src/scripts/story.ts's own SLIDE_TRANSITION_MS —
+     the two are one animation split across CSS (how it looks) and JS
+     (when the outgoing/incoming slide swap actually happens), not
+     independently tunable. Skipped entirely (no transition at all) unless
+     html.pdg-anim is set — story.ts checks the same class before ever
+     touching these inline styles, so a reduced-motion visitor never gets
+     even the instant fallback wrapped in a transition it didn't ask for. */
+  .pdg-anim .story-slide {
+    transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out);
+  }
+
   .story-slide h4 {
     color: var(--text-strong);
     margin-bottom: var(--space-3);
