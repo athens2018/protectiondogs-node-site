@@ -14,7 +14,28 @@ function json(status: number, body: unknown): Response {
   return new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 }
 
-export const POST: APIRoute = async ({ request, cookies }) => {
+export const POST: APIRoute = async (context) => {
+  try {
+    return await handlePost(context);
+  } catch (err) {
+    // Last-resort net: every code path below is already guarded, but this
+    // exists so an unforeseen throw (e.g. from getGallerySection/
+    // saveGallerySection, which are themselves supposed to be total —
+    // src/lib/cms.ts) still comes back as JSON the app's executeJson() can
+    // parse ("Unexpected response from the server" was this exact gap,
+    // 2026-09-12: something threw here, Astro's own default error page —
+    // HTML, not JSON — reached the client instead of anything this file
+    // wrote) rather than an opaque platform error page.
+    console.error('[admin/gallery/items] unhandled error:', err instanceof Error ? err.stack ?? err.message : String(err));
+    const authHeader = context.request.headers.get('authorization');
+    const message = `Unexpected server error: ${err instanceof Error ? err.message : String(err)}`;
+    return authHeader
+      ? json(500, { ok: false, error: message })
+      : redirect(`/admin/gallery/?error=${encodeURIComponent(message)}#items`);
+  }
+};
+
+const handlePost: APIRoute = async ({ request, cookies }) => {
   // A Bearer request is the portal native app (private-portal/native-app,
   // src/pages/admin/api/mobile-login.ts) uploading directly — it wants a
   // JSON response, not a redirect to a web page it can't render. The web

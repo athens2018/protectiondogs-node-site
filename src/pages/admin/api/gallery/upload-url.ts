@@ -33,7 +33,22 @@ function extForContentType(contentType: string): string {
   return table[contentType] ?? 'bin';
 }
 
-export const POST: APIRoute = async ({ request, cookies }) => {
+export const POST: APIRoute = async (context) => {
+  try {
+    return await handlePost(context);
+  } catch (err) {
+    // Last-resort net, matching items.ts's own — an unforeseen throw here
+    // must still come back as JSON the caller's executeJson() can parse,
+    // not Astro's default (HTML) error page.
+    console.error('[admin/gallery/upload-url] unhandled error:', err instanceof Error ? err.stack ?? err.message : String(err));
+    return new Response(
+      JSON.stringify({ ok: false, error: `Unexpected server error: ${err instanceof Error ? err.message : String(err)}` }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } },
+    );
+  }
+};
+
+const handlePost: APIRoute = async ({ request, cookies }) => {
   const access = checkAdminAccess(cookies, request.headers.get('authorization'));
   if (!access.ok) return new Response(JSON.stringify({ ok: false, error: 'unauthorized' }), { status: 401, headers: { 'Content-Type': 'application/json' } });
 
@@ -104,8 +119,14 @@ export const POST: APIRoute = async ({ request, cookies }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    console.error('[admin/gallery/upload-url] failed:', err instanceof Error ? err.message : String(err));
-    return new Response(JSON.stringify({ ok: false, error: 'Could not prepare the upload. Please try again.' }), {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('[admin/gallery/upload-url] failed:', message);
+    // Surfaced verbatim (not a generic "please try again") so a failure
+    // here is diagnosable from the app/admin page's own error text alone —
+    // this is brand-new API surface (issueSignedToken/presignUrl) with no
+    // production track record yet, unlike the rest of this codebase's
+    // Blob calls.
+    return new Response(JSON.stringify({ ok: false, error: `Could not prepare the upload: ${message}` }), {
       status: 502,
       headers: { 'Content-Type': 'application/json' },
     });
