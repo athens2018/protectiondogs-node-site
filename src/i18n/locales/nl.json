@@ -2165,5 +2165,11 @@
     },
     "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Alle rechten voorbehouden."
   },
-  "ui": {}
+  "ui": {},
+  "galleryTeaser": {
+    "eyebrow": "Achter de schermen",
+    "heading": "Volg de echte training",
+    "text": "Vraag toegang aan tot onze privégalerij — echte, dagelijkse trainingsbeelden, geen uitgekozen hoogtepunten.",
+    "cta": "Toegang aanvragen"
+  }
 }

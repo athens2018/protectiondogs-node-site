@@ -1,0 +1,63 @@
+---
+// A compact banner advertising the private, request-access gallery
+// (src/pages/gallery/) — placed right after the Dogs section on the
+// homepage so it reads as "next to a dog." Just a link out; the gallery
+// page itself owns the actual request form.
+import Button from '../ui/Button.astro';
+
+interface Props {
+  eyebrow: string;
+  heading: string;
+  text: string;
+  cta: string;
+}
+
+const { eyebrow, heading, text, cta } = Astro.props;
+---
+
+<section class="gallery-teaser">
+  <div class="container container--narrow">
+    <div class="gallery-teaser__card reveal">
+      <p class="gallery-teaser__eyebrow">{eyebrow}</p>
+      <h2 class="gallery-teaser__heading">{heading}</h2>
+      <p class="gallery-teaser__text">{text}</p>
+      <Button href="/gallery/" variant="outline" size="lg">{cta}</Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-teaser {
+    padding-block: var(--space-7);
+  }
+
+  .gallery-teaser__card {
+    text-align: center;
+    padding: var(--space-7) var(--space-6);
+    border: 1px solid var(--line-gold);
+    border-radius: var(--radius-md);
+    background: var(--gold-10);
+  }
+
+  .gallery-teaser__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--text-sm);
+    color: var(--gold);
+    margin-bottom: var(--space-2);
+  }
+
+  .gallery-teaser__heading {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: var(--text-strong);
+    margin-bottom: var(--space-3);
+  }
+
+  .gallery-teaser__text {
+    color: var(--text-muted);
+    max-width: 42ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-5);
+  }
+</style>

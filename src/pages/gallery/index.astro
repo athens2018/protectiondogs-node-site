@@ -1,5 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Card from '../../components/ui/Card.astro';
+import Field from '../../components/ui/Field.astro';
+import Button from '../../components/ui/Button.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
 import { getGallerySection, getDogsSection, recordGalleryMutation, resolveLocaleString } from '../../lib/cms';
 import { readAccessToken, setGalleryAccessCookie, accessTokenMatches } from '../../lib/gallery-auth';
 
@@ -49,92 +53,93 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
 
 <Base locale="en" title="Private Gallery — Protection Dogs GR" description="Real training footage, by request only." robots="noindex, nofollow">
   <main id="main-content" class="gallery-page">
-    <div class="container container--narrow">
-      {visitor ? (
-        <Fragment>
-          <div class="gallery-header">
-            <h1>Hi {visitor.name}</h1>
-            <p class="gallery-header__sub">
+    {visitor ? (
+      <Fragment>
+        <div class="gallery-hero">
+          <div class="container container--narrow">
+            <p class="gallery-hero__eyebrow">Private Gallery</p>
+            <h1 class="gallery-hero__heading">Hi {visitor.name}</h1>
+            <p class="gallery-hero__sub">
               {visitorDogName ? `Here's the real, day-to-day footage of ${visitorDogName}'s development.` : "Here's the real, day-to-day training footage — not the highlight reel."}
             </p>
           </div>
+        </div>
 
+        <div class="container container--wide">
           {visibleItems.length === 0 ? (
             <p class="gallery-empty">Nothing here yet — check back soon.</p>
           ) : (
             <div class="gallery-grid" data-gallery-grid data-token={token}>
               {visibleItems.map((item) => (
-                <div class="gallery-item" data-item-id={item.id}>
-                  {item.type === 'photo' ? (
-                    <img src={item.url} alt={item.caption || 'Training photo'} loading="lazy" />
-                  ) : (
-                    <video src={item.url} controls preload="metadata" playsinline />
-                  )}
-                  {item.caption && <p class="gallery-item__caption">{item.caption}</p>}
-                  <div class="gallery-item__actions">
-                    <button type="button" class="gallery-interest" data-item-id={item.id}>
-                      ♥ Interested <span class="gallery-interest__count">({item.interestCount})</span>
-                    </button>
+                <Card tone="elevated" interactive padding="md" as="article" class="gallery-item" data-item-id={item.id}>
+                  <div class="gallery-item__media">
+                    {item.type === 'photo' ? (
+                      <img src={item.url} alt={item.caption || 'Training photo'} loading="lazy" />
+                    ) : (
+                      <video src={item.url} controls preload="metadata" playsinline />
+                    )}
                   </div>
-                </div>
+                  {item.stage && <p class="gallery-item__stage">{item.stage}</p>}
+                  {item.caption && <p class="gallery-item__caption">{item.caption}</p>}
+                  <button type="button" class="gallery-interest" data-item-id={item.id}>
+                    ♥ Interested <span class="gallery-interest__count">({item.interestCount})</span>
+                  </button>
+                </Card>
               ))}
             </div>
           )}
 
-          <div class="gallery-contact">
-            <p>Have a question about what you're seeing?</p>
+          <Card tone="gold" padding="lg" class="gallery-contact">
+            <p class="gallery-contact__prompt">Have a question about what you're seeing?</p>
             <a
-              class="gallery-contact__button"
               id="gallery-contact-link"
+              class="btn btn--primary"
               data-token={token}
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi — I've been looking at the private gallery and had a question.")}`}
               target="_blank"
               rel="noopener"
             >
-              Contact now on WhatsApp
+              <span class="btn__label">Contact now on WhatsApp</span>
+              <span class="btn__sheen" aria-hidden="true"></span>
             </a>
-          </div>
-        </Fragment>
-      ) : (
-        <div class="gallery-request">
-          <h1>Private Gallery</h1>
-          <p>
+          </Card>
+        </div>
+      </Fragment>
+    ) : (
+      <div class="gallery-hero gallery-hero--request">
+        <div class="container container--narrow">
+          <SectionHeader eyebrow="Private Gallery" heading="Follow the Real Training" level="h1" align="center" />
+          <p class="gallery-hero__sub">
             This is real, unpolished training footage — not curated for social media. Access is by request, so tell
             us a little about yourself and we'll send you a personal link.
           </p>
+
           {requestStatus === 'revoked' && <p class="gallery-request__notice">That link is no longer active — you're welcome to request access again below.</p>}
 
-          <form id="gallery-request-form" class="gallery-request-form">
-            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
-            <div class="admin-form-row">
-              <div class="field">
-                <label class="field__label" for="gallery-req-name">Your name</label>
-                <input class="field__control" id="gallery-req-name" name="name" type="text" required />
+          <Card tone="elevated" padding="lg" class="gallery-request-card">
+            <form id="gallery-request-form" class="gallery-request-form">
+              <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+              <div class="admin-form-row">
+                <Field id="gallery-req-name" name="name" label="Your name" kind="text" required />
+                <Field id="gallery-req-email" name="email" label="Your email" kind="email" required />
               </div>
-              <div class="field">
-                <label class="field__label" for="gallery-req-email">Your email</label>
-                <input class="field__control" id="gallery-req-email" name="email" type="email" required />
-              </div>
-            </div>
-            {dogOptionsForForm.length > 0 && (
-              <div class="field">
-                <label class="field__label" for="gallery-req-dog">Is there a specific dog you're interested in?</label>
-                <select class="field__control" id="gallery-req-dog" name="dogId">
-                  <option value="">— not sure yet / general interest —</option>
-                  {dogOptionsForForm.map((d) => <option value={d.id}>{d.name}</option>)}
-                </select>
-              </div>
-            )}
-            <div class="field">
-              <label class="field__label" for="gallery-req-answer">What's drawing you to a protection dog right now?</label>
-              <textarea class="field__control" id="gallery-req-answer" name="qualifyingAnswer" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary">Request access</button>
-            <p id="gallery-request-status" class="gallery-request-status" role="status" aria-live="polite"></p>
-          </form>
+              {dogOptionsForForm.length > 0 && (
+                <Field
+                  id="gallery-req-dog"
+                  name="dogId"
+                  label="Is there a specific dog you're interested in?"
+                  kind="select"
+                  options={[{ value: '', label: '— not sure yet / general interest —', selected: true }, ...dogOptionsForForm.map((d) => ({ value: d.id, label: d.name, selected: false }))]}
+                />
+              )}
+              <Field id="gallery-req-answer" name="qualifyingAnswer" label="What's drawing you to a protection dog right now?" kind="textarea" rows={3} required />
+              <Button type="submit" variant="primary" size="lg" block>Request access</Button>
+              <p id="gallery-request-status" class="gallery-request-status" role="status" aria-live="polite"></p>
+            </form>
+          </Card>
         </div>
-      )}
-    </div>
+      </div>
+    )}
   </main>
 </Base>
 
@@ -145,55 +150,91 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
 
 <style>
   .gallery-page {
-    padding-block: var(--space-8);
     min-height: 60vh;
+    padding-bottom: var(--space-8);
   }
 
-  .gallery-header {
+  .gallery-hero {
     text-align: center;
+    padding-block: var(--space-8) var(--space-7);
+    background: linear-gradient(180deg, var(--gold-10), transparent);
+    border-bottom: 1px solid var(--line);
     margin-bottom: var(--space-7);
   }
 
-  .gallery-header h1,
-  .gallery-request h1 {
-    font-family: var(--font-serif);
-    color: var(--gold);
+  .gallery-hero--request {
+    border-bottom: none;
   }
 
-  .gallery-header__sub {
+  .gallery-hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--text-sm);
+    color: var(--gold);
+    margin-bottom: var(--space-2);
+  }
+
+  .gallery-hero__heading {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    color: var(--text-strong);
+  }
+
+  .gallery-hero__sub {
     color: var(--text-muted);
+    max-width: 52ch;
+    margin-inline: auto;
+    margin-top: var(--space-3);
   }
 
   .gallery-empty {
     text-align: center;
     color: var(--text-muted);
+    padding-block: var(--space-6);
   }
 
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--space-5);
     margin-bottom: var(--space-8);
   }
 
-  .gallery-item img,
-  .gallery-item video {
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .gallery-item__media {
+    margin: calc(var(--space-4) * -1) calc(var(--space-4) * -1) 0;
+    overflow: hidden;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .gallery-item__media img,
+  .gallery-item__media video {
     width: 100%;
-    border-radius: var(--radius-sm);
     display: block;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .gallery-item__stage {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+    color: var(--gold);
   }
 
   .gallery-item__caption {
-    margin-top: var(--space-2);
     color: var(--text);
     font-size: var(--text-sm);
-  }
-
-  .gallery-item__actions {
-    margin-top: var(--space-2);
+    line-height: var(--leading-relaxed);
   }
 
   .gallery-interest {
+    align-self: flex-start;
     background: none;
     border: 1px solid var(--line-gold);
     border-radius: var(--radius-sm);
@@ -201,6 +242,11 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
     color: var(--gold);
     cursor: pointer;
     font-size: var(--text-sm);
+    transition: background-color var(--dur-base) var(--ease-out);
+  }
+
+  .gallery-interest:hover:not([disabled]) {
+    background: var(--gold-10);
   }
 
   .gallery-interest[disabled] {
@@ -210,46 +256,35 @@ const dogOptionsForForm = dogsSection.dogs.filter((d) => d.status !== 'placed').
 
   .gallery-contact {
     text-align: center;
-    padding-block: var(--space-6);
-    border-top: 1px solid var(--line);
+    margin-bottom: var(--space-8);
   }
 
-  .gallery-contact__button {
-    display: inline-block;
-    margin-top: var(--space-3);
-    padding: 0.8rem 1.6rem;
-    background: var(--gold);
-    color: var(--bg);
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .gallery-request {
-    max-width: 560px;
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  .gallery-request p {
+  .gallery-contact__prompt {
     color: var(--text-muted);
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-4);
   }
 
   .gallery-request__notice {
     color: var(--error);
+    text-align: center;
+  }
+
+  .gallery-request-card {
+    max-width: 560px;
+    margin: var(--space-6) auto 0;
   }
 
   .gallery-request-form {
-    text-align: start;
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
+    text-align: start;
   }
 
   .gallery-request-status {
     min-height: 1.2em;
     font-size: var(--text-sm);
     color: var(--gold);
+    text-align: center;
   }
 </style>

@@ -8,6 +8,7 @@ import Footer from '../components/chrome/Footer.astro';
 import Hero from '../components/sections/Hero.astro';
 import About from '../components/sections/About.astro';
 import Dogs from '../components/sections/Dogs.astro';
+import GalleryTeaser from '../components/sections/GalleryTeaser.astro';
 import BoboStoryModal from '../components/sections/BoboStoryModal.astro';
 import WatchDevelop from '../components/sections/WatchDevelop.astro';
 import Training from '../components/sections/Training.astro';
@@ -180,6 +181,7 @@ const jsonldBlocks = Object.entries(content.meta.jsonld ?? {}).map(([key, block]
 
     <About {...content.about} />
     <Dogs {...dogsProps} />
+    <GalleryTeaser {...content.galleryTeaser} />
     <WatchDevelop {...content.watchDevelop} />
     <Training {...content.training} />
     <Testing {...content.testing} />

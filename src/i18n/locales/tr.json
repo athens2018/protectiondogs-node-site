@@ -2167,5 +2167,11 @@
     },
     "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. Tüm hakları saklıdır."
   },
-  "ui": {}
+  "ui": {},
+  "galleryTeaser": {
+    "eyebrow": "Perde Arkası",
+    "heading": "Gerçek Eğitimi Takip Edin",
+    "text": "Özel galerimize erişim talep edin — seçilmiş anlar değil, gerçek, günlük eğitim görüntüleri.",
+    "cta": "Erişim talep et"
+  }
 }

@@ -2200,5 +2200,11 @@
     },
     "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. All rights reserved."
   },
-  "ui": {}
+  "ui": {},
+  "galleryTeaser": {
+    "eyebrow": "Behind the Scenes",
+    "heading": "Follow the Real Training",
+    "text": "Request access to our private gallery — real, day-to-day training footage, not a highlight reel.",
+    "cta": "Request access"
+  }
 }

@@ -151,7 +151,10 @@ const sortedItems = [...section.items].sort((a, b) => new Date(b.uploadedAt).get
           />
           <Field id="gallery-stage" name="stage" label="Training stage (optional)" kind="text" placeholder="e.g. Puppy foundation" />
         </div>
-        <Field id="gallery-caption" name="caption" label="Caption — one short, real line, not sales talk" kind="text" />
+        <div class="admin-form-row" style="align-items:end;">
+          <Field id="gallery-caption" name="caption" label="Caption — jot down what's real, not sales talk" kind="text" />
+          <Button id="gallery-caption-fix" variant="outline">AI fix</Button>
+        </div>
         <div>
           <Button type="submit" variant="primary">Upload</Button>
         </div>
@@ -196,3 +199,8 @@ const sortedItems = [...section.items].sort((a, b) => new Date(b.uploadedAt).get
     )}
   </div>
 </AdminLayout>
+
+<script>
+  import { initAdminGalleryForm } from '../../../scripts/admin-gallery-form';
+  initAdminGalleryForm();
+</script>

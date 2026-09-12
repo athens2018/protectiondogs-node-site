@@ -2165,5 +2165,11 @@
     },
     "copyright": "&copy; <span id=\"copyright-year\">2026</span> Protection Dogs GR. 無断転載を禁じます。"
   },
-  "ui": {}
+  "ui": {},
+  "galleryTeaser": {
+    "eyebrow": "舞台裏",
+    "heading": "本当のトレーニングを追う",
+    "text": "非公開ギャラリーへのアクセスをリクエストしてください — 厳選されたハイライトではなく、リアルで日々のトレーニング映像です。",
+    "cta": "アクセスをリクエスト"
+  }
 }
